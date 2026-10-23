@@ -48,6 +48,8 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 KIT = HERE.parent
+# an exported (public) kit carries EXPORT_MANIFEST.json at its root; the private source repo never does
+EXPORTED = (KIT.parent / "EXPORT_MANIFEST.json").is_file()
 CATALOG = HERE / "catalog.json"
 CATALOG_MD = HERE / "CATALOG.md"
 BUILTIN = HERE / "sources" / "builtin_assets.json"
@@ -491,7 +493,8 @@ def validate(cat: dict) -> list[str]:
         for field, folder in (("thumbnail", THUMBS), ("turntable", TURNTABLES)):
             if not e.get(field):
                 errs.append("%s: no %s (render it: kit/catalog/render_previews.gd)" % (i, field))
-            elif folder.is_dir() and not (KIT / e[field]).is_file():
+            elif folder.is_dir() and not EXPORTED and not (KIT / e[field]).is_file():
+                # an exported kit withholds previews rendered with uncleared generative textures (PUB3)
                 errs.append("%s: %s %s does not exist (render it: kit/catalog/render_previews.gd -- --only %s)"
                             % (i, field, e[field], i))
     # tier variants name a tier (WorldTiers.ORDER) and an entry of this catalogue
@@ -532,7 +535,7 @@ def provenance_errors() -> list[str]:
             errs.append("provenance %s: %s is not a row of kit/inventory/licences.json" % (p, m))
         if not str(r.get("evidence", "")).strip():
             errs.append("provenance %s: no evidence" % p)
-    if (pb.ROOT / ".git").exists():   # the source repo: rows must match the builder (and cover every binary)
+    if (pb.ROOT / ".git").exists() and not EXPORTED:   # the source repo: rows must match the builder (and cover every binary)
         fresh, unmatched = pb.build()
         errs += ["no provenance rule for %s (add one to RULES in kit/catalog/provenance_build.py)" % p for p in unmatched]
         if pb.dump(fresh) != pb.OUT.read_text(encoding="utf-8"):

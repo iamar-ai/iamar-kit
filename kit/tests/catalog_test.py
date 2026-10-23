@@ -347,6 +347,9 @@ def main() -> None:
     assert prov["kit/catalog/assets/props/well.glb"]["made_by"] == "procedural"
     assert all(prov["kit/" + e["thumbnail"]]["made_by"].startswith("third-party:")
                for e in entries if e["source"].get("origin") == "builtin")
+    if catalog.EXPORTED:   # the public kit has no licences.json and no source repo to compare against
+        print("catalog_test: OK (%d entries, exported kit: seeded provenance mistakes skipped)" % len(entries))
+        return
     # seeded mistakes: bad made_by, unknown licence row, no evidence, and the file is then stale
     real_out = pb.OUT
     with tempfile.TemporaryDirectory() as td:

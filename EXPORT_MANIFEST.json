@@ -1,6 +1,6 @@
 {
  "schema": "export_manifest/1",
- "commit": "48b93043c94ec6163d3938798226db6ef5919772",
+ "commit": "cb31206f1eddab6df3b984a18ac6a5f8480834fe",
  "files": [
   {
    "path": ".gitignore",
@@ -2791,8 +2791,8 @@
   },
   {
    "path": "kit/catalog/catalog.py",
-   "sha256": "df2f5f6010089998ca136adb7a287ee71dfcc439053eb16e2c60291b89c869c9",
-   "bytes": 46557,
+   "sha256": "a2854c0a2ae690c262561b571b2e550407f979c6b8055180f78f0c3bb7348fdc",
+   "bytes": 46858,
    "rewrites": 8
   },
   {
@@ -4874,8 +4874,8 @@
   },
   {
    "path": "kit/tests/catalog_test.py",
-   "sha256": "fd31384ce7cf01dcf6f739fbf9b67cec0eeb660af38d61f86eabd8b6e648540f",
-   "bytes": 25180,
+   "sha256": "d712d2571d3b76eddca57516b162e2417a51697279f72f3b415142efd1d44822",
+   "bytes": 25410,
    "rewrites": 10
   },
   {
