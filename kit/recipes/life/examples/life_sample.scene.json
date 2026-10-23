@@ -1,0 +1,38 @@
+{
+  "format": "iamar-scene",
+  "format_version": 0,
+  "x-note": "Life sample: idle NPC, wind sway, wandering creatures, an ambient bed and a positional fire. Assets are relative to the world folder; see README 'What is not verified'.",
+  "environment": {
+    "day_length_minutes": 20
+  },
+  "terrain": {
+    "type": "flat",
+    "size": [120, 120]
+  },
+  "objects": [
+    {"id": "tree_north", "asset": "assets/trees/common_tree_1.glb", "position": [-6, 0, -14], "rotation": [0, 35, 0], "collision": "box", "sway": true},
+    {"id": "tree_east", "asset": "assets/trees/common_tree_3.glb", "position": [9, 0, -10], "rotation": [0, 110, 0], "collision": "box", "sway": true},
+    {"id": "hearth_stone", "asset": "assets/props/hearth_stone.glb", "position": [2, 0, 6], "collision": "box"}
+  ],
+  "sounds": [
+    {"id": "meadow_bed", "file": "assets/audio/meadow_bed.ogg", "loop": true, "autoplay": true, "volume_db": -12},
+    {"id": "fire_crackle", "file": "assets/audio/fire_crackle.ogg", "position": [2, 0.6, 6], "radius": 12, "loop": true, "autoplay": true}
+  ],
+  "npcs": [
+    {
+      "id": "gate_keeper",
+      "name": "Gate Keeper Ysolde",
+      "title": "Gatehouse",
+      "kind": "villager",
+      "look": {"hero": "villager_woman", "height": 1.7},
+      "position": [-3, 0, 4],
+      "yaw": 180,
+      "idle": "idle",
+      "greeting": ["The gate is open until dusk."]
+    }
+  ],
+  "creatures": [
+    {"id": "hens", "kind": "chicken", "position": [12, 0, 2], "count": 3, "wander_radius": 6},
+    {"id": "frogs", "kind": "frog", "position": [-12, 0, 8], "count": 2, "wander_radius": 3}
+  ]
+}

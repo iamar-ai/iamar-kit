@@ -1,0 +1,80 @@
+{
+ "format": "iamar-scene",
+ "format_version": 0,
+ "primitives": [
+  {
+   "id": "ground",
+   "shape": "box",
+   "size": [
+    80,
+    0.5,
+    80
+   ],
+   "position": [
+    0,
+    -0.25,
+    0
+   ],
+   "color": "#938e83",
+   "collision": "box"
+  }
+ ],
+ "spawn_points": [
+  {
+   "id": "default",
+   "position": [
+    0,
+    0.1,
+    14
+   ],
+   "yaw": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": "b002",
+   "asset": "assets/B002.glb",
+   "position": [
+    -14,
+    0,
+    0
+   ],
+   "collision": "box"
+  },
+  {
+   "id": "b003",
+   "asset": "assets/B003.glb",
+   "position": [
+    0,
+    0,
+    0
+   ],
+   "collision": "box"
+  },
+  {
+   "id": "b005",
+   "asset": "assets/B005.glb",
+   "position": [
+    14,
+    0,
+    0
+   ],
+   "collision": "box"
+  },
+  {
+   "id": "b003_far",
+   "asset": "assets/B003.glb",
+   "position": [
+    0,
+    0,
+    -30
+   ],
+   "rotation": [
+    0,
+    180,
+    0
+   ],
+   "collision": "box"
+  }
+ ]
+}

@@ -1,0 +1,353 @@
+{
+ "format": "iamar-catalog-insects",
+ "version": 1,
+ "note": "Insects with their wing motion as glTF clips, in kit/catalog/assets/<file>, made by export_insects.gd and measured by insects.py record. Never edit by hand.",
+ "licence": "CC0-1.0",
+ "models": [
+  {
+   "models_id": "insect_butterfly_small_white",
+   "file": "creatures/insects/butterfly_small_white.glb",
+   "name": "small white butterfly",
+   "category": "insect",
+   "description": "A small white butterfly, white wings with a dark tip and a black spot; the commonest in the city's gardens. About 9 cm across. Real size: place it at scale 2-3 where it must read from eye height.",
+   "synonyms": [
+    "cabbage white",
+    "white butterfly",
+    "butterfly",
+    "insect",
+    "garden insect",
+    "meadow",
+    "flutter",
+    "pollinator"
+   ],
+   "collision": "none",
+   "origin": "city",
+   "sha256": "e0861f1041a4494408043d16a4814639437bbecaa3cfe71fe2bcde04b1ab8b0a",
+   "bytes": 110832,
+   "place_scale": 1.0,
+   "triangles": 256,
+   "size": [
+    0.09,
+    0.01,
+    0.07
+   ],
+   "skinned": false,
+   "animations": [
+    "flap",
+    "glide",
+    "rest"
+   ],
+   "images": 2,
+   "physics_body": false,
+   "play": "flap",
+   "behaviours": [
+    "wingbeat (clip flap)",
+    "glide (clip glide)",
+    "perched basking (clip rest)"
+   ],
+   "builder": "kit/catalog/assets/export_insects.gd",
+   "cite": "the iamar browser source (not public) a025eeba scripts/world/butterflies.gd (mesh, SPECIES), scripts/world/butterfly_motion.gd (wing poses), assets/butterflies/atlas.png (tools/make_butterfly_atlas.py); exported by kit/catalog/assets/export_insects.gd"
+  },
+  {
+   "models_id": "insect_butterfly_brimstone",
+   "file": "creatures/insects/butterfly_brimstone.glb",
+   "name": "brimstone butterfly",
+   "category": "insect",
+   "description": "A brimstone butterfly, sulphur-yellow leaf-shaped wings with a hooked point; rests with wings closed. About 10 cm across. Real size: place it at scale 2-3 where it must read from eye height.",
+   "synonyms": [
+    "yellow butterfly",
+    "sulphur",
+    "butterfly",
+    "insect",
+    "garden insect",
+    "meadow",
+    "flutter",
+    "pollinator"
+   ],
+   "collision": "none",
+   "origin": "city",
+   "sha256": "97217f65494a15a24b26d4fad7eb733d087c113d7de923cb0fce13ae13dcbfb1",
+   "bytes": 121172,
+   "place_scale": 1.0,
+   "triangles": 256,
+   "size": [
+    0.1,
+    0.01,
+    0.08
+   ],
+   "skinned": false,
+   "animations": [
+    "flap",
+    "glide",
+    "rest"
+   ],
+   "images": 2,
+   "physics_body": false,
+   "play": "flap",
+   "behaviours": [
+    "wingbeat (clip flap)",
+    "glide (clip glide)",
+    "perched basking (clip rest)"
+   ],
+   "builder": "kit/catalog/assets/export_insects.gd",
+   "cite": "the iamar browser source (not public) a025eeba scripts/world/butterflies.gd (mesh, SPECIES), scripts/world/butterfly_motion.gd (wing poses), assets/butterflies/atlas.png (tools/make_butterfly_atlas.py); exported by kit/catalog/assets/export_insects.gd"
+  },
+  {
+   "models_id": "insect_butterfly_small_tortoiseshell",
+   "file": "creatures/insects/butterfly_small_tortoiseshell.glb",
+   "name": "small tortoiseshell butterfly",
+   "category": "insect",
+   "description": "A small tortoiseshell butterfly, orange wings with black and yellow bars and a blue-studded border; basks with wings open. Real size: place it at scale 2-3 where it must read from eye height.",
+   "synonyms": [
+    "orange butterfly",
+    "tortoiseshell",
+    "butterfly",
+    "insect",
+    "garden insect",
+    "meadow",
+    "flutter",
+    "pollinator"
+   ],
+   "collision": "none",
+   "origin": "city",
+   "sha256": "ea53054e675dadb3c20d8ddf6c3f26e7573a7b5538a59ff4ee35c74ca24bb072",
+   "bytes": 125924,
+   "place_scale": 1.0,
+   "triangles": 256,
+   "size": [
+    0.09,
+    0.01,
+    0.07
+   ],
+   "skinned": false,
+   "animations": [
+    "flap",
+    "glide",
+    "rest"
+   ],
+   "images": 2,
+   "physics_body": false,
+   "play": "flap",
+   "behaviours": [
+    "wingbeat (clip flap)",
+    "glide (clip glide)",
+    "perched basking (clip rest)"
+   ],
+   "builder": "kit/catalog/assets/export_insects.gd",
+   "cite": "the iamar browser source (not public) a025eeba scripts/world/butterflies.gd (mesh, SPECIES), scripts/world/butterfly_motion.gd (wing poses), assets/butterflies/atlas.png (tools/make_butterfly_atlas.py); exported by kit/catalog/assets/export_insects.gd"
+  },
+  {
+   "models_id": "insect_butterfly_common_blue",
+   "file": "creatures/insects/butterfly_common_blue.glb",
+   "name": "common blue butterfly",
+   "category": "insect",
+   "description": "A common blue butterfly, small bright violet-blue wings edged in dark grey, a pale spotted underside; the smallest of the six, about 6 cm across. Real size: place it at scale 2-3 where it must read from eye height.",
+   "synonyms": [
+    "blue butterfly",
+    "little blue",
+    "butterfly",
+    "insect",
+    "garden insect",
+    "meadow",
+    "flutter",
+    "pollinator"
+   ],
+   "collision": "none",
+   "origin": "city",
+   "sha256": "a25cbb9a59cb8d4adf84bca2f7fb053011f9039be6cf4a9b781c55e524ec031e",
+   "bytes": 121576,
+   "place_scale": 1.0,
+   "triangles": 256,
+   "size": [
+    0.06,
+    0.01,
+    0.05
+   ],
+   "skinned": false,
+   "animations": [
+    "flap",
+    "glide",
+    "rest"
+   ],
+   "images": 2,
+   "physics_body": false,
+   "play": "flap",
+   "behaviours": [
+    "wingbeat (clip flap)",
+    "glide (clip glide)",
+    "perched basking (clip rest)"
+   ],
+   "builder": "kit/catalog/assets/export_insects.gd",
+   "cite": "the iamar browser source (not public) a025eeba scripts/world/butterflies.gd (mesh, SPECIES), scripts/world/butterfly_motion.gd (wing poses), assets/butterflies/atlas.png (tools/make_butterfly_atlas.py); exported by kit/catalog/assets/export_insects.gd"
+  },
+  {
+   "models_id": "insect_butterfly_peacock",
+   "file": "creatures/insects/butterfly_peacock.glb",
+   "name": "peacock butterfly",
+   "category": "insect",
+   "description": "A peacock butterfly, deep red wings each with a big blue-and-yellow eye spot; dark underside; basks with wings open. Real size: place it at scale 2-3 where it must read from eye height.",
+   "synonyms": [
+    "eye spot butterfly",
+    "red butterfly",
+    "butterfly",
+    "insect",
+    "garden insect",
+    "meadow",
+    "flutter",
+    "pollinator"
+   ],
+   "collision": "none",
+   "origin": "city",
+   "sha256": "eee3a945e566c008d2aa742e2809f38a5eb2d1a8e5208621b0d6b24534f4ba2b",
+   "bytes": 122044,
+   "place_scale": 1.0,
+   "triangles": 256,
+   "size": [
+    0.1,
+    0.01,
+    0.08
+   ],
+   "skinned": false,
+   "animations": [
+    "flap",
+    "glide",
+    "rest"
+   ],
+   "images": 2,
+   "physics_body": false,
+   "play": "flap",
+   "behaviours": [
+    "wingbeat (clip flap)",
+    "glide (clip glide)",
+    "perched basking (clip rest)"
+   ],
+   "builder": "kit/catalog/assets/export_insects.gd",
+   "cite": "the iamar browser source (not public) a025eeba scripts/world/butterflies.gd (mesh, SPECIES), scripts/world/butterfly_motion.gd (wing poses), assets/butterflies/atlas.png (tools/make_butterfly_atlas.py); exported by kit/catalog/assets/export_insects.gd"
+  },
+  {
+   "models_id": "insect_butterfly_red_admiral",
+   "file": "creatures/insects/butterfly_red_admiral.glb",
+   "name": "red admiral butterfly",
+   "category": "insect",
+   "description": "A red admiral butterfly, velvety black wings crossed by red bands with white spots at the tips; the largest of the six. Real size: place it at scale 2-3 where it must read from eye height.",
+   "synonyms": [
+    "black and red butterfly",
+    "admiral",
+    "butterfly",
+    "insect",
+    "garden insect",
+    "meadow",
+    "flutter",
+    "pollinator"
+   ],
+   "collision": "none",
+   "origin": "city",
+   "sha256": "abfb99639cacecde793369e3914637ce02c899b533d270ea583cdd901aacddc4",
+   "bytes": 116656,
+   "place_scale": 1.0,
+   "triangles": 256,
+   "size": [
+    0.11,
+    0.01,
+    0.08
+   ],
+   "skinned": false,
+   "animations": [
+    "flap",
+    "glide",
+    "rest"
+   ],
+   "images": 2,
+   "physics_body": false,
+   "play": "flap",
+   "behaviours": [
+    "wingbeat (clip flap)",
+    "glide (clip glide)",
+    "perched basking (clip rest)"
+   ],
+   "builder": "kit/catalog/assets/export_insects.gd",
+   "cite": "the iamar browser source (not public) a025eeba scripts/world/butterflies.gd (mesh, SPECIES), scripts/world/butterfly_motion.gd (wing poses), assets/butterflies/atlas.png (tools/make_butterfly_atlas.py); exported by kit/catalog/assets/export_insects.gd"
+  },
+  {
+   "models_id": "insect_bumblebee",
+   "file": "creatures/insects/bumblebee.glb",
+   "name": "bumblebee",
+   "category": "insect",
+   "description": "A fuzzy bumblebee about 2 cm long, black with two yellow bands and a white tail, clear wings swept back; hovers buzzing over flowers. Real size: place it at scale 2-3 where it must read from eye height.",
+   "synonyms": [
+    "bee",
+    "bumble bee",
+    "honeybee",
+    "insect",
+    "pollinator",
+    "garden insect",
+    "buzzing"
+   ],
+   "collision": "none",
+   "origin": "kit",
+   "sha256": "68682daa2ed41a8ee31f29b0cbbdd4ad557e402fed432f51599595629d35cca5",
+   "bytes": 62024,
+   "place_scale": 1.0,
+   "triangles": 416,
+   "size": [
+    0.02,
+    0.01,
+    0.02
+   ],
+   "skinned": false,
+   "animations": [
+    "fly",
+    "rest"
+   ],
+   "images": 1,
+   "physics_body": false,
+   "play": "fly",
+   "behaviours": [
+    "hovering buzz with a bob (clip fly)",
+    "resting on a flower (clip rest)"
+   ],
+   "builder": "kit/catalog/assets/export_insects.gd",
+   "cite": "made for the kit by kit/catalog/assets/export_insects.gd in the city butterflies' build (the city has no bumblebee model: bees are a sound there, MpSoundscape 'bees')"
+  },
+  {
+   "models_id": "insect_dragonfly",
+   "file": "creatures/insects/dragonfly.glb",
+   "name": "dragonfly",
+   "category": "insect",
+   "description": "An emperor-like dragonfly about 7.5 cm long: big green eyes, green thorax, a long sky-blue abdomen ringed in black, four long clear wings held straight out. Real size: place it at scale 2-3 where it must read from eye height.",
+   "synonyms": [
+    "damselfly",
+    "darner",
+    "emperor dragonfly",
+    "insect",
+    "pond insect",
+    "water insect"
+   ],
+   "collision": "none",
+   "origin": "kit",
+   "sha256": "d242e944ae63b05e346f74e3d3a575c9bf700f9203061f7b5b024cded141b6f6",
+   "bytes": 82936,
+   "place_scale": 1.0,
+   "triangles": 552,
+   "size": [
+    0.1,
+    0.01,
+    0.07
+   ],
+   "skinned": false,
+   "animations": [
+    "fly",
+    "rest"
+   ],
+   "images": 1,
+   "physics_body": false,
+   "play": "fly",
+   "behaviours": [
+    "hovering, fore and hind wings beating out of phase (clip fly)",
+    "perched with wings out (clip rest)"
+   ],
+   "builder": "kit/catalog/assets/export_insects.gd",
+   "cite": "made for the kit by kit/catalog/assets/export_insects.gd in the city butterflies' build (the city has no dragonfly model: dragonflies are glowing motes over the mill pond, Waterworks/Fx.motes)"
+  }
+ ]
+}

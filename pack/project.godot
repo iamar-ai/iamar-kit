@@ -1,0 +1,13 @@
+; Stub project used only to export iamar-kit.pck (tools/build_pack.sh copies
+; scripts/kit/*.gd next to it and runs `godot --headless --export-pack`).
+; It is not the iamar project: the browser provides every class the kit tools use.
+config_version=5
+
+[application]
+
+config/name="iamar-kit-pack"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"

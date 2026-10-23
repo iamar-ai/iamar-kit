@@ -1,0 +1,831 @@
+{
+  "format": "iamar-catalog-vocabulary",
+  "version": 1,
+  "note": "Categories of the catalogue (the vision's coverage list, done-when 7), the words that find them, and the ordered rules that file a built-in model under one. A rule matches when any of its words is a whole word of '<pack> <name>' (camelCase and _ - split, lower case). First matching rule wins.",
+  "categories": [
+    {
+      "id": "animal-small",
+      "label": "small animal",
+      "group": "creatures",
+      "synonyms": [
+        "critter",
+        "rodent",
+        "small creature",
+        "pet"
+      ]
+    },
+    {
+      "id": "bird",
+      "label": "bird",
+      "group": "creatures",
+      "synonyms": [
+        "fowl",
+        "poultry",
+        "small animal"
+      ]
+    },
+    {
+      "id": "fish",
+      "label": "fish",
+      "group": "creatures",
+      "synonyms": [
+        "catch",
+        "seafood"
+      ]
+    },
+    {
+      "id": "insect",
+      "label": "insect",
+      "group": "creatures",
+      "synonyms": [
+        "bug",
+        "butterfly",
+        "bee",
+        "small animal"
+      ]
+    },
+    {
+      "id": "horse",
+      "label": "horse",
+      "group": "creatures",
+      "synonyms": [
+        "pony",
+        "steed",
+        "mount",
+        "animal"
+      ]
+    },
+    {
+      "id": "mythical",
+      "label": "mythical creature",
+      "group": "creatures",
+      "synonyms": [
+        "dragon",
+        "griffin",
+        "monster",
+        "beast"
+      ]
+    },
+    {
+      "id": "livestock",
+      "label": "livestock",
+      "group": "creatures",
+      "synonyms": [
+        "farm animal",
+        "animal",
+        "cattle",
+        "sheep",
+        "pig"
+      ]
+    },
+    {
+      "id": "wildlife",
+      "label": "wildlife",
+      "group": "creatures",
+      "synonyms": [
+        "wild animal",
+        "animal",
+        "deer",
+        "fox",
+        "wolf",
+        "bear"
+      ]
+    },
+    {
+      "id": "tree",
+      "label": "tree",
+      "group": "flora",
+      "synonyms": [
+        "forest",
+        "woods",
+        "trunk",
+        "log",
+        "timber"
+      ]
+    },
+    {
+      "id": "flower",
+      "label": "flower",
+      "group": "flora",
+      "synonyms": [
+        "blossom",
+        "bloom",
+        "petal",
+        "flora"
+      ]
+    },
+    {
+      "id": "crop",
+      "label": "crop",
+      "group": "flora",
+      "synonyms": [
+        "farm",
+        "field",
+        "harvest",
+        "vegetable",
+        "produce"
+      ]
+    },
+    {
+      "id": "ground-flora",
+      "label": "ground plant",
+      "group": "flora",
+      "synonyms": [
+        "grass",
+        "bush",
+        "shrub",
+        "fern",
+        "foliage",
+        "undergrowth",
+        "mushroom",
+        "plant",
+        "vegetation"
+      ]
+    },
+    {
+      "id": "rock",
+      "label": "rock",
+      "group": "terrain",
+      "synonyms": [
+        "stone",
+        "boulder",
+        "pebble",
+        "cliff"
+      ]
+    },
+    {
+      "id": "terrain",
+      "label": "terrain piece",
+      "group": "terrain",
+      "synonyms": [
+        "ground",
+        "floor tile",
+        "hill",
+        "landscape"
+      ]
+    },
+    {
+      "id": "road",
+      "label": "road or path",
+      "group": "terrain",
+      "synonyms": [
+        "street",
+        "path",
+        "paving",
+        "cobble",
+        "walkway"
+      ]
+    },
+    {
+      "id": "building",
+      "label": "building",
+      "group": "architecture",
+      "synonyms": [
+        "house",
+        "structure",
+        "shelter",
+        "home"
+      ]
+    },
+    {
+      "id": "building-part",
+      "label": "building part",
+      "group": "architecture",
+      "synonyms": [
+        "modular",
+        "wall",
+        "roof",
+        "door",
+        "window",
+        "floor",
+        "stairs",
+        "kit piece"
+      ]
+    },
+    {
+      "id": "landmark",
+      "label": "landmark",
+      "group": "architecture",
+      "synonyms": [
+        "monument",
+        "centrepiece",
+        "focal point",
+        "tower",
+        "fountain"
+      ]
+    },
+    {
+      "id": "interior",
+      "label": "interior",
+      "group": "architecture",
+      "synonyms": [
+        "room",
+        "indoor",
+        "inside"
+      ]
+    },
+    {
+      "id": "bridge",
+      "label": "bridge",
+      "group": "architecture",
+      "synonyms": [
+        "crossing",
+        "span"
+      ]
+    },
+    {
+      "id": "gate",
+      "label": "gate",
+      "group": "architecture",
+      "synonyms": [
+        "gateway",
+        "entrance",
+        "portcullis"
+      ]
+    },
+    {
+      "id": "fence",
+      "label": "fence or hedge",
+      "group": "architecture",
+      "synonyms": [
+        "barrier",
+        "railing",
+        "boundary",
+        "hedge",
+        "palisade"
+      ]
+    },
+    {
+      "id": "furniture",
+      "label": "furniture",
+      "group": "objects",
+      "synonyms": [
+        "furnishing",
+        "seat",
+        "interior"
+      ]
+    },
+    {
+      "id": "lamp",
+      "label": "lamp or light",
+      "group": "objects",
+      "synonyms": [
+        "light",
+        "lighting",
+        "lantern",
+        "torch",
+        "candle"
+      ]
+    },
+    {
+      "id": "signage",
+      "label": "sign or banner",
+      "group": "objects",
+      "synonyms": [
+        "sign",
+        "signpost",
+        "banner",
+        "flag",
+        "wayfinding"
+      ]
+    },
+    {
+      "id": "statue",
+      "label": "statue",
+      "group": "objects",
+      "synonyms": [
+        "sculpture",
+        "monument",
+        "obelisk"
+      ]
+    },
+    {
+      "id": "tool",
+      "label": "tool or weapon",
+      "group": "objects",
+      "synonyms": [
+        "weapon",
+        "equipment",
+        "implement"
+      ]
+    },
+    {
+      "id": "vehicle",
+      "label": "vehicle",
+      "group": "objects",
+      "synonyms": [
+        "cart",
+        "wagon",
+        "siege engine",
+        "transport"
+      ]
+    },
+    {
+      "id": "prop",
+      "label": "prop",
+      "group": "objects",
+      "synonyms": [
+        "object",
+        "item",
+        "clutter",
+        "decoration",
+        "container"
+      ]
+    },
+    {
+      "id": "character",
+      "label": "character",
+      "group": "people",
+      "synonyms": [
+        "person",
+        "body",
+        "npc",
+        "human",
+        "figure"
+      ]
+    },
+    {
+      "id": "hair",
+      "label": "hair",
+      "group": "people",
+      "synonyms": [
+        "hairstyle",
+        "beard",
+        "eyebrows"
+      ]
+    },
+    {
+      "id": "clothing",
+      "label": "clothing",
+      "group": "people",
+      "synonyms": [
+        "outfit",
+        "clothes",
+        "garment",
+        "costume"
+      ]
+    },
+    {
+      "id": "animation",
+      "label": "animation",
+      "group": "people",
+      "synonyms": [
+        "animations",
+        "rig",
+        "motion",
+        "skeleton"
+      ]
+    },
+    {
+      "id": "audio",
+      "label": "audio",
+      "group": "audio",
+      "synonyms": [
+        "sound",
+        "music",
+        "ambience",
+        "sfx"
+      ]
+    }
+  ],
+  "rules": [
+    [
+      "animation",
+      [
+        "anims",
+        "ual1"
+      ]
+    ],
+    [
+      "hair",
+      [
+        "hair",
+        "eyebrows",
+        "beard"
+      ]
+    ],
+    [
+      "character",
+      [
+        "chars",
+        "superhero"
+      ]
+    ],
+    [
+      "fish",
+      [
+        "fish"
+      ]
+    ],
+    [
+      "vehicle",
+      [
+        "cart",
+        "wagon",
+        "siege",
+        "ballista",
+        "catapult",
+        "trebuchet",
+        "ram"
+      ]
+    ],
+    [
+      "statue",
+      [
+        "statue",
+        "obelisk"
+      ]
+    ],
+    [
+      "landmark",
+      [
+        "fountain",
+        "watermill",
+        "windmill",
+        "blade"
+      ]
+    ],
+    [
+      "bridge",
+      [
+        "bridge"
+      ]
+    ],
+    [
+      "gate",
+      [
+        "gate"
+      ]
+    ],
+    [
+      "fence",
+      [
+        "fence",
+        "hedge",
+        "fortified"
+      ]
+    ],
+    [
+      "lamp",
+      [
+        "lantern",
+        "torch",
+        "candle",
+        "candlestick",
+        "chandelier"
+      ]
+    ],
+    [
+      "signage",
+      [
+        "signpost",
+        "banner",
+        "flag",
+        "pennant"
+      ]
+    ],
+    [
+      "road",
+      [
+        "road",
+        "rockpath",
+        "path"
+      ]
+    ],
+    [
+      "building",
+      [
+        "tent"
+      ]
+    ],
+    [
+      "furniture",
+      [
+        "chair",
+        "stool",
+        "bench",
+        "table",
+        "bed",
+        "bedroll",
+        "cabinet",
+        "shelf",
+        "bookcase",
+        "nightstand",
+        "workbench",
+        "stall"
+      ]
+    ],
+    [
+      "tool",
+      [
+        "axe",
+        "sword",
+        "pickaxe",
+        "hammer",
+        "hoe",
+        "shovel",
+        "shield",
+        "anvil",
+        "whetstone",
+        "weaponstand",
+        "dummy",
+        "knife",
+        "fork",
+        "spoon"
+      ]
+    ],
+    [
+      "building-part",
+      [
+        "wall",
+        "roof",
+        "door",
+        "doorframe",
+        "window",
+        "windowshutters",
+        "floor",
+        "stairs",
+        "stair",
+        "balcony",
+        "overhang",
+        "chimney",
+        "pillar",
+        "corner",
+        "holecover",
+        "tower",
+        "planks",
+        "poles",
+        "support",
+        "dormer",
+        "border",
+        "brick",
+        "arch",
+        "panel",
+        "structure",
+        "hole"
+      ]
+    ],
+    [
+      "crop",
+      [
+        "crop",
+        "crops",
+        "carrot",
+        "melon",
+        "pumpkin",
+        "turnip",
+        "corn",
+        "wheat"
+      ]
+    ],
+    [
+      "flower",
+      [
+        "flower",
+        "flowers",
+        "petal",
+        "lily"
+      ]
+    ],
+    [
+      "tree",
+      [
+        "tree",
+        "pine",
+        "commontree",
+        "deadtree",
+        "twistedtree",
+        "stump",
+        "log",
+        "trunk"
+      ]
+    ],
+    [
+      "rock",
+      [
+        "rock",
+        "rocks",
+        "stone",
+        "cliff",
+        "pebble"
+      ]
+    ],
+    [
+      "ground-flora",
+      [
+        "grass",
+        "bush",
+        "plant",
+        "fern",
+        "clover",
+        "mushroom",
+        "moss",
+        "vine",
+        "patch"
+      ]
+    ],
+    [
+      "terrain",
+      [
+        "ground"
+      ]
+    ],
+    [
+      "prop",
+      []
+    ]
+  ],
+  "placement": {
+    "tree": "On terrain, scattered with varied rotation and scale; keep paths clear.",
+    "flower": "On terrain in clusters near paths, beds and walls.",
+    "crop": "In rows inside a fenced field.",
+    "interior": "Inside its building, at the building's position and rotation; with \"collision\": \"mesh\" its counters and stalls block the player.",
+    "ground-flora": "Scattered on terrain to break up flat ground; hide wall and rock bases.",
+    "rock": "Half sunk into the terrain so no floating edge shows.",
+    "furniture": "Inside a building, on the floor, against walls; leave walking lanes.",
+    "building-part": "Snap to the pack's own grid with other pieces of the same pack; close every visible gap.",
+    "lamp": "At doors, path junctions and bridge ends; lit at night.",
+    "signage": "At eye height near junctions and entrances (wayfinding).",
+    "fence": "Along field, garden and path edges; join the ends.",
+    "road": "Flush with the terrain; connect every entrance.",
+    "prop": "Near the place it belongs to (market, workshop, kitchen); group in small clusters."
+  },
+  "style_rules": {
+    "note": "C5: every entry gets style_compat when overrides.json does not set it. A category in neutral_categories (nature, creatures, characters, terrain) fits any style; a medieval pack or the iamar city / generators fit iamar-medieval; everything else from the other packs is neutral. 'other' is for assets written for a different look and is set per id in overrides.json.",
+    "neutral_categories": [
+      "animal-small",
+      "bird",
+      "fish",
+      "insect",
+      "horse",
+      "mythical",
+      "livestock",
+      "wildlife",
+      "tree",
+      "flower",
+      "crop",
+      "ground-flora",
+      "rock",
+      "terrain",
+      "road",
+      "character",
+      "hair",
+      "clothing",
+      "animation",
+      "audio"
+    ],
+    "medieval_packs": [
+      "Kenney Castle Kit",
+      "Kenney Fantasy Town Kit 2.0",
+      "Quaternius Medieval Village MegaKit",
+      "Quaternius Fantasy Props MegaKit"
+    ],
+    "medieval_origins": [
+      "city",
+      "generator",
+      "kit"
+    ]
+  },
+  "aliases_note": "assets search: a query word that finds nothing in an entry is also tried as these catalogue words (one point less than the word itself), so everyday names reach the objects. Every target must find at least one entry (kit/tests/catalog_test.py checks it).",
+  "aliases": {
+    "ship": [
+      "boat"
+    ],
+    "canoe": [
+      "rowboat"
+    ],
+    "kayak": [
+      "rowboat"
+    ],
+    "dinghy": [
+      "rowboat"
+    ],
+    "skiff": [
+      "rowboat"
+    ],
+    "pier": [
+      "dock"
+    ],
+    "jetty": [
+      "dock"
+    ],
+    "wharf": [
+      "dock"
+    ],
+    "quay": [
+      "dock"
+    ],
+    "parasol": [
+      "umbrella"
+    ],
+    "deckchair": [
+      "lounger"
+    ],
+    "sunbed": [
+      "lounger"
+    ],
+    "closet": [
+      "wardrobe"
+    ],
+    "tub": [
+      "bathtub"
+    ],
+    "carpet": [
+      "rug"
+    ],
+    "fir": [
+      "pine"
+    ],
+    "conifer": [
+      "pine"
+    ],
+    "evergreen": [
+      "pine"
+    ],
+    "boulder": [
+      "rock"
+    ],
+    "pebble": [
+      "rock"
+    ],
+    "tavern": [
+      "inn"
+    ],
+    "pub": [
+      "inn"
+    ],
+    "church": [
+      "chapel"
+    ],
+    "smithy": [
+      "blacksmith"
+    ],
+    "forge": [
+      "blacksmith"
+    ],
+    "shop": [
+      "store"
+    ],
+    "barn": [
+      "stable"
+    ],
+    "car": [
+      "cart",
+      "wagon"
+    ],
+    "carriage": [
+      "cart",
+      "wagon"
+    ],
+    "streetlight": [
+      "lamp"
+    ],
+    "lantern": [
+      "lamp"
+    ],
+    "torch": [
+      "lamp"
+    ],
+    "path": [
+      "road"
+    ],
+    "street": [
+      "road"
+    ]
+  },
+  "make_note": "assets search: when nothing fits, MAKE lines say how to make it. A query word in a rule's words prints its say line; every miss also prints the Blender starter (the last rule, words []).",
+  "make": [
+    {
+      "words": [
+        "house",
+        "home",
+        "cottage",
+        "cabin",
+        "hut",
+        "villa",
+        "bungalow",
+        "building",
+        "inn",
+        "tavern",
+        "pub",
+        "chapel",
+        "church",
+        "shop",
+        "store",
+        "smithy",
+        "blacksmith",
+        "forge",
+        "alchemist",
+        "stable",
+        "barn",
+        "dwelling",
+        "residence"
+      ],
+      "say": "iamar-world assets building <house|inn|chapel|blacksmith|alchemist|general_store|stable> <out.glb> [--width 8 --depth 6 --floors 2 --style plaster|stone|brick] (a furnished, walkable building); a house from its rooms: iamar-world assets building house <out.glb> --rooms bedroom:3,living,kitchen,bath:2 [--style beach|modern]"
+    },
+    {
+      "words": [],
+      "say": "model it in Blender: copy kit/blender/starter_build.py to <world folder>/tools/build.py, change it, then iamar-world blender-run tools/build.py -- <world folder> (build order and budgets: kit/blender/README.md)"
+    }
+  ]
+}

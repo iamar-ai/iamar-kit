@@ -1,0 +1,87 @@
+{
+  "vision": "A quiet pine forest with a lake that visitors walk through at dusk.",
+  "audience": {
+    "access": "public",
+    "concurrent": 20
+  },
+  "type": "nature",
+  "extra_types": [],
+  "track": "B",
+  "style_profile": "worlds/pine_lake/style.json",
+  "mood": {
+    "words": [
+      "calm",
+      "misty",
+      "wild"
+    ],
+    "time": "dusk",
+    "weather": "light mist"
+  },
+  "setup": {
+    "blender": false,
+    "gpu": false,
+    "scripts_ok": false,
+    "build_tier": 0
+  },
+  "tier_target": "medium",
+  "budgets": {
+    "triangles": 300000,
+    "texture_size": 2048,
+    "texture_bytes": 134217728,
+    "download_mb": 180
+  },
+  "reuse": [
+    {
+      "catalog_id": "tree_pine",
+      "use": "forest"
+    },
+    {
+      "catalog_id": "deer",
+      "use": "clearing"
+    }
+  ],
+  "connections": {
+    "portal_from_city": false,
+    "name": "iamar://example-nature",
+    "hosting": "own-computer"
+  },
+  "features": [
+    {
+      "id": "creature_deer",
+      "kind": "script"
+    },
+    {
+      "id": "ambient_wind",
+      "kind": "audio"
+    }
+  ],
+  "checkpoints": [
+    "greybox",
+    "scale check",
+    "paint"
+  ],
+  "open_questions": [],
+  "answers": [
+    {
+      "id": "N1",
+      "value": "Temperate forest with a clearing",
+      "source": "default",
+      "shown": true
+    },
+    {
+      "id": "N2",
+      "value": "One river and a pond",
+      "source": "default",
+      "shown": true
+    },
+    {
+      "id": "N3",
+      "value": "deer",
+      "source": "chosen"
+    }
+  ],
+  "approval": {
+    "date": "2026-10-20",
+    "user_words": "Yes, build it."
+  }
+}

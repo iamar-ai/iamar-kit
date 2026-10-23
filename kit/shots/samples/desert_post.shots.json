@@ -1,0 +1,10 @@
+{
+ "eye_height": 1.7,
+ "cameras": [
+  {"name": "arrival", "at": [0, 0.1, 14], "yaw": 0},
+  {"name": "street", "at": [0, 0, 7], "look": [-6, 2, -18]},
+  {"name": "house_a", "at": [-1.5, 0, 6], "look": [-6, 2, 0]}
+ ],
+ "times": ["day", "dusk", "night"],
+ "budget": {"draws": 150}
+}

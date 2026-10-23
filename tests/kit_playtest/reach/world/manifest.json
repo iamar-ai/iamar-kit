@@ -1,0 +1,34 @@
+{
+  "api_version": "0.4",
+  "author": {
+    "name": "kit-test"
+  },
+  "budgets": {
+    "audio_bytes": 16777216,
+    "lights": 16,
+    "objects": 400,
+    "package_bytes": 64000000,
+    "script_bytes": 4194304,
+    "texture_bytes": 67108864,
+    "texture_size": 2048,
+    "triangles": 150000
+  },
+  "description": "Playtest sample: script entities in and out of the interact key's reach.",
+  "features": [
+    "sky",
+    "terrain",
+    "scripts"
+  ],
+  "format": "iamar-world",
+  "format_version": 0,
+  "id": "pt-reach",
+  "name": "Playtest reach sample",
+  "scene": "scene.json",
+  "spawn": "spawn",
+  "version": "0.1.0",
+  "scripts": [
+    {
+      "path": "scripts/world.wasm"
+    }
+  ]
+}

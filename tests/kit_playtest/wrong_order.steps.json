@@ -1,0 +1,15 @@
+{
+ "steps": [
+  {
+   "do": "talk",
+   "npc": "miller",
+   "choose": "Here is your sack.",
+   "expect": [
+    {
+     "quest": "sack",
+     "state": "done"
+    }
+   ]
+  }
+ ]
+}

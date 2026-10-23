@@ -1,0 +1,82 @@
+{
+  "vision": "A small orbital station with a viewing deck over a slowly turning planet.",
+  "audience": {
+    "access": "buddies",
+    "concurrent": 10
+  },
+  "type": "other",
+  "extra_types": [],
+  "track": "B",
+  "style_profile": "worlds/orbit_station/style.json",
+  "mood": {
+    "words": [
+      "quiet",
+      "vast",
+      "clean"
+    ],
+    "time": "night",
+    "weather": "clear"
+  },
+  "setup": {
+    "blender": false,
+    "gpu": false,
+    "scripts_ok": false,
+    "build_tier": 0
+  },
+  "tier_target": "medium",
+  "budgets": {
+    "triangles": 250000,
+    "texture_size": 2048,
+    "texture_bytes": 100663296,
+    "download_mb": 100
+  },
+  "reuse": [
+    {
+      "catalog_id": "bench_plain",
+      "use": "deck"
+    }
+  ],
+  "connections": {
+    "portal_from_city": false,
+    "name": "iamar://example-other",
+    "hosting": "own-computer"
+  },
+  "features": [
+    {
+      "id": "script_lowgrav",
+      "kind": "script"
+    },
+    {
+      "id": "audio_hum",
+      "kind": "audio"
+    }
+  ],
+  "checkpoints": [
+    "greybox",
+    "scale check",
+    "paint"
+  ],
+  "open_questions": [],
+  "answers": [
+    {
+      "id": "O1",
+      "value": "A small orbital station with a viewing deck over a slowly turning planet.",
+      "source": "chosen"
+    },
+    {
+      "id": "O2",
+      "value": "Walk",
+      "source": "default",
+      "shown": true
+    },
+    {
+      "id": "O3",
+      "value": "low gravity",
+      "source": "chosen"
+    }
+  ],
+  "approval": {
+    "date": "2026-10-20",
+    "user_words": "Yes, build it."
+  }
+}

@@ -1,0 +1,1409 @@
+{
+ "format": "iamar-recipes",
+ "version": 1,
+ "note": "The source of truth for how iamar worlds are engineered. 'kit' says whether the browser applies a recipe today (automatic), the builder can author it today (manual), or it has no supported package field/tool yet (planned). Planned recipes are reference/backlog, not acceptance requirements: skip and report them; never invent fields.",
+ "recipes": [
+  {
+   "id": "lod_chain",
+   "title": "Distance LOD chain",
+   "area": "geometry",
+   "purpose": "Far objects use much lower-poly versions, so the triangle budget goes to what is near.",
+   "when": "Every model larger than a crate, and every merged area mesh.",
+   "defaults": {
+    "lod_ratios": [
+     1.0,
+     0.5,
+     0.2
+    ],
+    "lod_threshold_pixels": 4.0
+   },
+   "steps": [
+    "Model the full-detail version in Blender.",
+    "Make LODs at about 50% and 20% of the triangles (Decimate, planar for buildings, collapse for organic shapes).",
+    "Far away, swap to an impostor card (see impostor).",
+    "Let the engine pick by screen size."
+   ],
+   "kit": "automatic",
+   "check": "perf: triangles per view in the busiest and the widest views.",
+   "cost": "More disk and memory per model; none at run time.",
+   "source": "oakhaven b22d441 (distance LODs for merged props), project.godot mesh_lod threshold_pixels=4 (higher visibly breaks baked buildings); the browser applies it to every world (scripts/kit/world_techniques.gd, off with manifest techniques: {\"lod_chain\": false})",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "impostor",
+   "title": "Impostor cards far away",
+   "area": "geometry",
+   "purpose": "Distant trees, buildings and mountains become a flat textured card: a few triangles instead of thousands.",
+   "when": "Anything regularly seen beyond about 80-150 m.",
+   "defaults": {
+    "start_m": 120
+   },
+   "steps": [
+    "Give the far object \"impostor\": <metres> in scene.json (about 80-150).",
+    "Run `iamar-world impostors <folder>` (renders 8 views of the model into a small atlas; needs a display), then `iamar-world tiers` so lower tiers get smaller atlases. Objects reused by hash (assets use) are skipped: they are not in the folder, so model your own copy if it needs a card.",
+    "The browser swaps model and card at that distance; many cards of one model are drawn together."
+   ],
+   "kit": "manual",
+   "check": "preview the widest view; perf triangles drop.",
+   "cost": "A texture per model.",
+   "source": "docs/WORLD_TIERS.md (impostor cards), oakhaven 802210a/906af53",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "merge_static",
+   "title": "Merge static meshes per area",
+   "area": "geometry",
+   "purpose": "Many small props become one mesh per area and material: far fewer draw calls.",
+   "when": "Props that never move: fences, crates, barrels, shelves, small furniture.",
+   "defaults": {
+    "cell_m": 96
+   },
+   "steps": [
+    "Nothing to do in a world package: the browser merges static pieces that look the same (same material colour, texture and settings) per 96 m area into one mesh with its own LOD chain (scripts/kit/world_techniques.gd, off with manifest techniques: {\"merge_static\": false}).",
+    "Help it: give props that belong together the same material (one shared colour atlas) instead of a material per model.",
+    "Impostor cards and custom shaders keep their own draw.",
+    "Know where the areas are: they are 96 m squares in x and z. From browser 446b4862 they start at the smallest x and z of the pieces that can merge, so a town up to 96 m across is one area wherever it sits. Older browsers (including the pinned kit runtime, kit/runtime.lock, until it moves past 446b4862) start them at the world origin, with edges at x = 0 and z = 0: a town laid out around (0, 0) is cut into four areas and every shared look draws four times (harbour blind test a5: 187 draws for one view, 126 after moving the whole town by (+67, 0, +45) into one area). For those, keep the town inside one square from 0 to 96 (spawn near (48, 0, 48)) or move everything by one offset when you write scene.json."
+   ],
+   "kit": "automatic",
+   "check": "perf: draw calls per view under budget.",
+   "cost": "One bigger mesh per area; culling is coarser.",
+   "source": "oakhaven scripts/world/prop_batch.gd (PropBatch, keeps per-instance transforms for the bake export), 'Fewer prop draw calls'; world packages: oakhaven lakeside village 446 -> 126 draw calls",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "instancing",
+   "title": "Instance repeated props",
+   "area": "geometry",
+   "purpose": "One mesh drawn many times in a single call (MultiMesh): grass, flowers, rocks, trees.",
+   "when": "The same model placed more than about 10 times.",
+   "defaults": {},
+   "steps": [
+    "Place one model many times with an instance list instead of copies."
+   ],
+   "kit": "automatic",
+   "check": "perf: draw calls.",
+   "cost": "Instances share one LOD choice per batch.",
+   "source": "oakhaven scripts/world/prop_batch.gd MultiMesh; the browser applies it to every world (scripts/kit/world_techniques.gd, off with manifest techniques: {\"instancing\": false})",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "foliage_thinning",
+   "title": "Thin far foliage",
+   "area": "geometry",
+   "purpose": "Grass and flowers fade out with distance; trees are split into cells so culling works.",
+   "when": "Any ground cover or forest.",
+   "defaults": {
+    "visibility_end_m": 90,
+    "margin_m": 8
+   },
+   "steps": [
+    "Split foliage into cells (e.g. 30-45 m).",
+    "Reduce density with distance and stop at a visibility range."
+   ],
+   "kit": "automatic",
+   "check": "perf in open views.",
+   "cost": "Far ground looks a little barer.",
+   "source": "oakhaven b22d441 (thinned far foliage, split tree cells), prop_batch.gd visibility_range_end; the browser applies it to every world (scripts/kit/world_techniques.gd, off with manifest techniques: {\"foliage_thinning\": false})",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "collision_proxy",
+   "title": "Simple collision shapes",
+   "area": "geometry",
+   "purpose": "Physics uses boxes and capsules, not the visual triangles.",
+   "when": "Everything except floors and stairs people walk on.",
+   "defaults": {},
+   "steps": [
+    "Use collision: box for houses you do not enter, rocks, crates.",
+    "Use mesh only where people walk.",
+    "Props are obstacles, not ground."
+   ],
+   "kit": "manual",
+   "check": "validate warns about mesh collision on big decorative models.",
+   "cost": "None.",
+   "source": "docs/WORLD_FORMAT.md 4.4 collision; oakhaven 'props are obstacles, not ground'",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "weld_vertices",
+   "title": "Weld identical vertices",
+   "area": "geometry",
+   "purpose": "A mesh built as separate triangles (3 vertices per triangle, nothing shared) is indexed: corners that are equal in every attribute become one vertex. Same picture, far fewer vertices to build, upload and hold.",
+   "when": "Any mesh you assemble in code or export as a triangle soup; check with vertices per triangle (about 3.0 = soup, 0.6-2.2 = indexed).",
+   "defaults": {},
+   "steps": [
+    "Merge only vertices equal in EVERY attribute (position, normal, tangent, colour, UV, lightmap UV, bones); keep hard edges and UV/lightmap seams split.",
+    "Keep the triangle order, so anything that hashes or bakes the mesh sees the same corners.",
+    "Weld before generating LODs; never weld across a lightmap seam or the bake shifts."
+   ],
+   "kit": "manual",
+   "check": "vertex counts before/after per mesh; the same views shot before and after with the clock frozen are pixel-identical.",
+   "cost": "A little build time.",
+   "source": "iamar-fps F11 1ebfb903 (city vertices 3.40M -> 3.12M, far prop copies -81 %, lamp glows -82 %; docs/perf/fps_f11_index_soup.md)",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "occluders",
+   "title": "Occluders on big walls and buildings",
+   "area": "visibility",
+   "purpose": "Things hidden behind a castle wall or a hall are not drawn at all.",
+   "when": "Large solid walls, buildings and hills between areas.",
+   "defaults": {},
+   "steps": [
+    "Add simple occluder boxes inside big solid shapes.",
+    "Turn occlusion culling on."
+   ],
+   "kit": "planned",
+   "check": "perf: draw calls behind walls drop.",
+   "cost": "A little CPU per frame.",
+   "source": "oakhaven b22d441 (castle and garden occluders), project use_occlusion_culling=true",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "tiny_no_shadow",
+   "title": "No live shadows on tiny props",
+   "area": "visibility",
+   "purpose": "Small props do not cast real-time shadows (the bake already darkens under them).",
+   "when": "Props smaller than about 1 m.",
+   "defaults": {
+    "max_size_m": 1.0
+   },
+   "steps": [
+    "Set cast_shadow false on small props."
+   ],
+   "kit": "automatic",
+   "check": "perf: shadow draw calls.",
+   "cost": "None visible.",
+   "source": "oakhaven b22d441; the browser applies it to every world (scripts/kit/world_techniques.gd, off with manifest techniques: {\"tiny_no_shadow\": false})",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "light_pool",
+   "title": "A pool of real lights",
+   "area": "visibility",
+   "purpose": "Only the few lamps nearest the camera get a real light; the rest glow through their material.",
+   "when": "Towns and halls with many lamps.",
+   "defaults": {
+    "real_lights": 6
+   },
+   "steps": [
+    "Register every lamp with its position.",
+    "Each moment, give the nearest few a real light.",
+    "Place each light from its fixture's transform (never a separately typed position)."
+   ],
+   "kit": "automatic",
+   "check": "night screenshots: glows sit in the fixtures.",
+   "cost": "Far lamps light nothing around them (until night lamps are baked).",
+   "source": "oakhaven scripts/world/light_pool.gd (POOL=6), d5a0e98 Buildings.light_at; the browser applies it to every world (scripts/kit/world_techniques.gd, off with manifest techniques: {\"light_pool\": false})",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "bake_sky_sun",
+   "title": "Blender Cycles light bake (sky and sun)",
+   "area": "lighting",
+   "purpose": "Sky light and sunlight with soft shadows are baked into a texture, so static glTF scenery is lit for free without double-lighting.",
+   "when": "Static architecture and big props that you author in Blender; primitives and reused assets stay live-lit.",
+   "defaults": {
+    "texel_m": 0.1,
+    "max_size": 4096,
+    "samples": 128
+   },
+   "steps": [
+    "Export the static model or area from Blender as a .glb with its ordinary materials (and any lamps as Blender lights).",
+    "Run `iamar-world blender-run kit/blender/bake_unlit.py -- in.glb assets/out.glb [samples]` (options: --sun x,y,z towards the sun in glTF axes, --sky-strength, --no-sun for interiors, --texel, --max-size, --per-object). It adds a non-overlapping lightmap UV set, sizes the texture from the surface area, bakes colour x (sky + sun + bounce + lamps) + glow with Cycles (GPU when found) and exports one texture per mesh with KHR_materials_unlit, so the browser shows the bake once instead of lighting it twice.",
+    "Skinned, animated and alpha (foliage, invisible collision) meshes stay live-lit with their own materials; keep moving characters, creatures, doors and flames out of baked files.",
+    "Look at the result (`iamar-world blender-run kit/blender/look.py -- /tmp/look assets/out.glb --shading flat`), then in `iamar-world preview`.",
+    "Bake interiors separately from shells, and rebake after any geometry change."
+   ],
+   "kit": "manual",
+   "check": "preview the static model from lit and shadowed sides; confirm the bake is visible once and no surface is black.",
+   "cost": "Bake time and one lightmap texture per object.",
+   "source": "kit/AGENT_KIT.md baked-lighting gotcha and Blender glTF KHR_materials_unlit; oakhaven tools/blender/mission_hall.py bake, tools/bake_light.py GPU selection",
+   "tool": "kit/blender/bake_unlit.py",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "bake_ao_vertex",
+   "title": "Baked ambient occlusion in vertex colours (the time-independent bake)",
+   "area": "lighting",
+   "purpose": "Characters, animals and props get soft contact darkness baked in, so they sit in the world; in a world whose clock runs, the static models get it instead of a time-of-day bake, so it holds at every hour and on the low tier (no shadows).",
+   "when": "Anything that moves (so it cannot use a lightmap), small props, and low-poly buildings with the soft --max-edge settings. Every static model you authored when `day_length_minutes` > 0: a time-of-day bake (bake_sky_sun, bake_vertex_light) is right at one hour only.",
+   "defaults": {
+    "distance_m": 0.5,
+    "floor": 0.25,
+    "samples": 64
+   },
+   "steps": [
+    "Run `iamar-world blender-run kit/blender/bake_vertex_ao.py -- in.glb assets/out.glb --distance <about a tenth of the model's size>` (--local when parts move apart). It bakes AO with Cycles and multiplies it into COLOR_0 (existing vertex colours are kept); skins and animations are exported unchanged.",
+    "The browser multiplies vertex colours into the base colour, so materials stay ordinary lit materials: the live sun, clock and shadows still light the model.",
+    "Neighbours: `python3 kit/style/lighting/lighting.py ao-args --world W --object ID [--reach 3]` prints `--occluder` options for the world's other placed .glb models near the object (in its frame; swaying and animated ones left out). Add them to the bake so the street or quay a house stands on gets the dark band round its foot, and a house the darkness of its neighbour. Terrain and primitives cannot be baked or occlude: make a ground that should take contact darkness a .glb.",
+    "AO is only as fine as the mesh: add a few edge loops where contact shadows should fall (a 0.5 m grid on a street or yard .glb).",
+    "Low-poly buildings: corner darkness spreads over whole wall faces (plaster 0.85 became 0.59). Add `--max-edge 2 --floor 0.6 --strength 0.7` (splits long edges first, about twice the triangles; check the tier budget), or give buildings no AO at all and rely on live sun and shadows.",
+    "The output's asset.extras.iamar_bake.kind is `sky_ao`; `iamar-world audit dark-bake` lists those objects (`sky_ao_objects`) and warns on a running clock when nothing is baked or an unlit time-of-day bake is used. FAILED: harbour blind test a5 kept every model live-lit because the lighting README said a running clock rules out baking, so the low tier had no contact shadows anywhere."
+   ],
+   "kit": "manual",
+   "check": "`python3 kit/tests/blender/sky_ao_bake_test.py`: a ground baked with its neighbour is dark only under and beside the turned house, white elsewhere, lit materials, sky_ao marker reported by audit dark-bake. Preview: no floating look.",
+   "cost": "A short bake at build time; nothing at run time.",
+   "source": "oakhaven AnimalKit (hemisphere-ray AO), tools/bake_chicken_ao.py; running clock: docs/reviews/2026-10-22-an agent-blindtest-harbour-a5.md gap 1, an internal task",
+   "tool": "kit/blender/bake_vertex_ao.py",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "bake_vertex_light",
+   "title": "Painted maps + baked light (light in vertex colours)",
+   "area": "lighting",
+   "purpose": "Painted architecture keeps its shared 256 px/m library maps and still gets baked sky, sun and bounce light: the light is stored per vertex, not in a texture.",
+   "when": "Static houses, walls and big props that use painted maps (`materials use`) and must pass `materials texel`. A glTF material has one colour texture and the browser reads no lightmap slot, so bake_sky_sun would replace the painted map by a 10-40 px/m bake.",
+   "defaults": {
+    "grid_m": 1.0,
+    "samples": 64
+   },
+   "steps": [
+    "UV-map the model to the painted maps at 256 px/m (a 1024 map per 4 m, or a 512 map per 2 m: `materials use --size 512` keeps five textured houses inside the 64 MiB budget, because every .glb pays for its own embedded maps).",
+    "Run `iamar-world blender-run kit/blender/bake_vertex_light.py -- in.glb assets/out.glb [samples] [--grid 1.0]` (the same --sun, --sky-strength, --no-sun and --lamp options as bake_unlit.py). It cuts the static meshes on a --grid lattice, splits hard edges, bakes light with Cycles into COLOR_0 and exports the original materials unlit.",
+    "Skinned, animated, alpha and emissive meshes stay live-lit with their own materials.",
+    "LODs: decimate the unbaked model (`lods.py`), then bake each level (LOD1 --grid 2, LOD2 --grid 0). FAILED: decimating the baked model removes the grid and the light with it (1,400 triangles fell to 44, lit only at the corners).",
+    "Open sheets (cloaks, banners, generated meshes with flipped triangles): Cycles bakes the side a normal points to, and a double-sided face shows one COLOR_0 from both sides. The bake turns double-sided faces whose normal side is enclosed and whose back is open to the open side (--no-orient keeps the normals). FAILED before that: about 400 cloak faces of the catalogue hero_w1 baked black and the browser showed a black cloak from behind. A sheet whose two sides must differ needs thickness or a flipped single-sided copy (kit/recipes/statue/statue.py).",
+    "Check with `iamar-world materials texel`, `materials budget`, `lint` and `audit all` on the world."
+   ],
+   "kit": "manual",
+   "check": "`python3 kit/tests/blender/vertex_light_test.py`: five baked houses pass texel, budget, lint and audit; sun side brighter than shade side. `python3 kit/tests/blender/bake_vertex_light_sheet_test.py`: a cloak facing the body, hero_w1 and the statue recipe bake with no visible face under 0.05.",
+   "cost": "Triangles grow with the grid (a 6 x 5 m house: about 1,000 at 1 m, 3,000 at 0.5 m); shadows are only as sharp as the grid.",
+   "source": "kit/blindtest/harbour/attempt-3/gaps.md G5, G6 (harbour blind test attempt 3, 071465c); browser the iamar browser source (not public) scripts/worlds/world_package.gd _glb_vertex_colours (COLOR_0 multiplies albedo) and Godot GLTFDocument KHR_materials_unlit -> unshaded (checked headless, an internal task); open sheets: an internal task (iamar.26 black cloak), an internal task",
+   "tool": "kit/blender/bake_vertex_light.py",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "lightmaps_lossless",
+   "title": "Keep lightmaps lossless",
+   "area": "lighting",
+   "purpose": "Lightmaps are not VRAM-compressed: compression pads them to a multiple of 4 and shifts the light.",
+   "when": "Every lightmap, unless the bake writes block-aligned sizes.",
+   "defaults": {},
+   "steps": [
+    "Import lightmap PNGs with lossless compression.",
+    "Know the cost: Godot keeps them RGB8 (lossless and VRAM-uncompressed both; channel_pack does not apply), and GPUs store RGB8 padded to 4 bytes a texel, so a 2-channel sky/sun map costs as much as RGBA.",
+    "To compress (BC5/RGTC, a quarter of the memory): make the bake write sizes that are a multiple of 4 (with the lightmap UVs scaled to match) and rebake; then check the hard-shadow views, where BC5 errs most (up to ~31/255 before filtering)."
+   ],
+   "kit": "planned",
+   "check": "screenshot diff after import changes.",
+   "cost": "More VRAM than compressed: iamar city 198 maps, 90 Mpx, ~458 MB lossless vs ~115 MB BC5.",
+   "source": "oakhaven 00b844a perf pass; iamar-fps F3a 0f1c6e94 (docs/perf/fps_f3a_lightmap_vram.md: BC5 error, RG8 PortableCompressedTexture2D identical but 7-8x slower to load, RG8 DDS reads back as LA8)",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "live_only_moving",
+   "title": "Live light only for what moves",
+   "area": "lighting",
+   "purpose": "Characters get live shadows only where the bake has sun; lamps stay live via the light pool.",
+   "when": "Always.",
+   "defaults": {},
+   "steps": [
+    "Use the bake for static things; live light and shadow only for characters and moving objects."
+   ],
+   "kit": "planned",
+   "check": "perf: shadow cost.",
+   "cost": "None.",
+   "source": "oakhaven bake.gd notes",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "bevel_normals",
+   "title": "Bevel and normal maps from high-poly",
+   "area": "lighting",
+   "purpose": "Bevels and fine detail are baked from a high-poly version into normal maps, so low-poly meshes read as carved.",
+   "when": "Buildings, furniture, weapons.",
+   "defaults": {
+    "size": 2048,
+    "cage": 0.02,
+    "distance": 0.04
+   },
+   "steps": [
+    "Model or bevel a high-poly version in the same place and scale as the game mesh; export both as .glb.",
+    "Run `iamar-world blender-run kit/blender/bake_normals.py -- high.glb low.glb assets/out.glb --size 1024`. The low mesh needs non-overlapping UVs (or --unwrap). It wires the tangent-space map into every material of the low mesh, exports tangents (--save-map also keeps the PNG; keep it outside assets/).",
+    "Do not combine with bake_sky_sun on the same model: unlit materials ignore normal maps (bake the light from the high-poly instead)."
+   ],
+   "kit": "manual",
+   "check": "preview close-ups.",
+   "cost": "A normal map per material.",
+   "source": "Graphics list item 3; iamar-models tools/mesh3d/bake_v2.py; kit/blender/starter_build.py uses real bevels",
+   "tool": "kit/blender/bake_normals.py",
+   "layer": "style",
+   "tier": 0
+  },
+  {
+   "id": "shared_wind",
+   "title": "One shared wind",
+   "area": "materials",
+   "purpose": "Grass, flowers, trees and flags all sway from one wind value: one uniform, no per-object scripts.",
+   "when": "Any vegetation or cloth.",
+   "defaults": {},
+   "steps": [
+    "Drive vertex-shader sway from one global wind value."
+   ],
+   "kit": "planned",
+   "check": "perf: no per-frame scripts for sway.",
+   "cost": "None.",
+   "source": "oakhaven 'One shared wind for grass, flowers, trees and flags'",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "atmosphere",
+   "title": "Time-of-day palettes, haze and weather",
+   "area": "materials",
+   "purpose": "Sky, fog, haze and glow follow the time of day; rain and storms; wetness as one shader parameter.",
+   "when": "Outdoor worlds.",
+   "defaults": {},
+   "steps": [
+    "Use the browser's environment settings (scene.environment) rather than custom per-object effects."
+   ],
+   "kit": "manual",
+   "check": "preview at several hours.",
+   "cost": "Small.",
+   "source": "oakhaven 'Atmosphere and weather', Mats.set_wetness",
+   "layer": "style",
+   "tier": 0
+  },
+  {
+   "id": "texture_compression",
+   "title": "VRAM texture compression and mipmaps",
+   "area": "textures",
+   "purpose": "Textures are BC7 (desktop) and ETC2/ASTC (Apple Silicon) with mipmaps: about half the video memory.",
+   "when": "Every texture except lightmaps.",
+   "defaults": {},
+   "steps": [
+    "Import with VRAM compression (high quality) and mipmaps on; enable ETC2/ASTC import for macOS."
+   ],
+   "kit": "planned",
+   "check": "perf: VRAM in the busiest view.",
+   "cost": "More disk than lossless.",
+   "source": "oakhaven 00b844a (457 -> 250 MB on Amber), 887bd83 (ETC2/ASTC)",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "texture_sizes",
+   "title": "Right-sized textures and atlases",
+   "area": "textures",
+   "purpose": "Small textures for small or far things, atlases to share one material across many props.",
+   "when": "Every material.",
+   "defaults": {},
+   "steps": [
+    "Pick the smallest size that looks right at the closest normal view.",
+    "Share atlases between props in one area."
+   ],
+   "kit": "manual",
+   "check": "validate: texture budget.",
+   "cost": "Authoring time.",
+   "source": "WORLD_FORMAT budgets",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "painted_materials",
+   "title": "Seamless hand-painted material textures",
+   "area": "textures",
+   "purpose": "Stone, ashlar, granite, plaster, timber, slate, glazed tiles, shingles, thatch, cobbles, iron and a trim sheet, painted procedurally so every texture tiles exactly and shares one texel density.",
+   "when": "Buildings, roofs and streets that need a coherent painted look without photo textures or downloads.",
+   "defaults": {
+    "tile_m": 4.0,
+    "size": 1024
+   },
+   "steps": [
+    "Run `python3 kit/tools/paint_materials.py <world>/textures --materials stone,timber,slate --size 512` (numpy and Pillow only; --tint NAME=#RRGGBB colours one; --list names them).",
+    "UV-map models at 4 m per texture repeat (one UV unit = 4 m) so every material keeps the same texel density; roof UVs run down the slope; trim mouldings map onto one of the trim sheet's 8 strips.",
+    "Use the PNG as the material's Base Color in Blender, then bake light (bake_sky_sun) or leave it live-lit."
+   ],
+   "kit": "manual",
+   "check": "preview: no visible seams or stretching; texel density alike on neighbouring surfaces.",
+   "cost": "One texture per material, shared between models.",
+   "source": "oakhaven tools/mp_textures/paint_library.py (the masterplan city's painted library)",
+   "tool": "kit/tools/paint_materials.py",
+   "layer": "style",
+   "tier": 0
+  },
+  {
+   "id": "texel_budget",
+   "title": "Texel density and texture budget",
+   "area": "textures",
+   "purpose": "Near surfaces stay as sharp as the city's (256 px per metre) and the world's texture memory stays inside its budget, checked by a command instead of by eye.",
+   "when": "Every world that uses painted materials, before the independent review gate.",
+   "defaults": {
+    "tile_m": 4.0,
+    "px_per_m": 256
+   },
+   "steps": [
+    "Write the profile's tints into the world: `iamar-world materials use <world> --profile <world>/style.json` (13 library maps tinted per layer; `--size 512` or `256` for a low tier).",
+    "UV-map at 1 UV unit = 4 m, then run `iamar-world materials texel <glb|world> ...`: it fails any surface below the rule.",
+    "Run `iamar-world materials budget <world> --profile <profile>`: it sums texture memory against the budget; drop sizes (texture_sizes) until it passes.",
+    "`iamar-world materials list|check|sample` show the library, verify its hashes and build the sample world."
+   ],
+   "kit": "manual",
+   "check": "`materials texel` and `materials budget` exit 0 before review.",
+   "cost": "None at run time.",
+   "source": "iamar-kit b073489 kit/style/materials/materials.py (an internal task)",
+   "tool": "kit/style/materials/materials.py",
+   "layer": "style",
+   "tier": 0
+  },
+  {
+   "id": "gltf_cache",
+   "title": "Converted-model cache",
+   "area": "textures",
+   "purpose": "Converted glTF scenes are cached, so a second visit opens faster.",
+   "when": "Automatic in the browser.",
+   "defaults": {},
+   "steps": [
+    "Nothing to do as a builder."
+   ],
+   "kit": "automatic",
+   "check": "",
+   "cost": "Disk cache.",
+   "source": "oakhaven scripts/worlds/world_cache.gd",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "textures_once",
+   "title": "Store every texture once",
+   "area": "textures",
+   "purpose": "A model whose maps are embedded in a .glb gets them extracted again by Godot's import, so the repository and the build carry each texture twice. Ship the model as glTF with separate files instead.",
+   "when": "Every textured model you add (sculpted statues, baked props).",
+   "defaults": {},
+   "steps": [
+    "Export glTF separate: `name.gltf` + `name.bin` + `name_albedo.png` + `name_normal.png`, one folder per model (Blender: export_format GLTF_SEPARATE; `iamar-models tools/mesh3d/bake_stone.py ... out.gltf` does it).",
+    "Name the images after the model so two models never share a texture file name.",
+    "Point the game at the .gltf; shoot the same views before and after: only animated things may differ."
+   ],
+   "kit": "manual",
+   "check": "repository size of the asset folder; before/after shots.",
+   "cost": "None.",
+   "source": "iamar gate statues 0e042740 (four statues 57 MB -> 29 MB, no visible change)",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "streaming",
+   "title": "Stream terrain in chunks",
+   "area": "loading",
+   "purpose": "Only the terrain near the player is built and refined.",
+   "when": "Worlds larger than a few hundred metres.",
+   "defaults": {
+    "chunk_m": 90
+   },
+   "steps": [
+    "Split terrain into chunks and build near ones first."
+   ],
+   "kit": "planned",
+   "check": "frame-time metrics while walking.",
+   "cost": "Code complexity.",
+   "source": "oakhaven scripts/world/terrain.gd CHUNK=90",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "progressive_build",
+   "title": "Build progressively, in time slices",
+   "area": "loading",
+   "purpose": "Heavy building work runs in small slices across frames (and on worker threads) so the game never freezes.",
+   "when": "Big worlds and any build step over a few milliseconds.",
+   "defaults": {
+    "slice_ms": 10
+   },
+   "steps": [
+    "Split work into slices of about 10 ms per frame.",
+    "Commit meshes on worker threads.",
+    "Hide the first heavy frames behind the world-switch fade and progress bar."
+   ],
+   "kit": "planned",
+   "check": "perf: no frame over 50 ms after load.",
+   "cost": "Things appear over a few seconds.",
+   "source": "oakhaven town.gd slice_usec=10000, 'take the load stutters off the main thread', 00b844a progress bar",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "physics_interp",
+   "title": "Physics interpolation",
+   "area": "loading",
+   "purpose": "Movement is smooth at any frame rate.",
+   "when": "Always.",
+   "defaults": {},
+   "steps": [
+    "Keep physics interpolation on (project setting)."
+   ],
+   "kit": "automatic",
+   "check": "",
+   "cost": "None.",
+   "source": "oakhaven project.godot physics_interpolation=true",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "quality_presets",
+   "title": "Quality presets and auto-tune",
+   "area": "quality",
+   "purpose": "Fast / Balanced / higher presets with a first-run auto-tune; worlds must look pleasant on the lowest.",
+   "when": "Every world.",
+   "defaults": {},
+   "steps": [
+    "Design for the low tier first, then add detail that lights up on better GPUs."
+   ],
+   "kit": "manual",
+   "check": "perf on Amber-class hardware (HD 5750, 1 GB) at 30 fps.",
+   "cost": "Testing several tiers.",
+   "source": "oakhaven presets and _auto_tune; GPU tiers item (planned)",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "native_gl_windows",
+   "title": "Native OpenGL on Windows",
+   "area": "quality",
+   "purpose": "On Windows x86 the GL Compatibility renderer runs straight on the driver's OpenGL; ANGLE (OpenGL over Direct3D) is only for devices known to need it. Faster and it draws correctly.",
+   "when": "Every project on the Compatibility renderer that ships for Windows.",
+   "defaults": {},
+   "steps": [
+    "project.godot: `rendering/gl_compatibility/driver.windows=\"opengl3\"`.",
+    "`force_angle_on_devices`: Godot's default list (old Radeon HD/R, Intel HD, old Iris) plus `{vendor: Microsoft, name: *}` (OpenGL-on-D3D12, the only GL on Windows ARM64/Snapdragon) and `{vendor: Qualcomm, name: *}`; setting the key replaces the defaults, so write them out.",
+    "Leave `fallback_to_angle` on: a PC whose native GL fails to start gets ANGLE.",
+    "Do not use a two-feature key such as `driver.windows.arm64`: Godot 4.7 ignores it silently."
+   ],
+   "kit": "manual",
+   "check": "frame time A/B with `--rendering-driver opengl3` vs `opengl3_angle` at fixed views (tests/masterplan_city/render_time_probe.gd); shots compared.",
+   "cost": "None.",
+   "source": "iamar-fps F5 ef84861d (Intel Arc 140V: mean frame -26 %, p95 -40 %, render CPU -25 %; ANGLE drew torn cloud bands and wall dither; docs/perf/fps_f5_windows_driver.md)",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "movement_feel",
+   "title": "Responsive movement",
+   "area": "feel",
+   "purpose": "Jump grace (coyote time and a jump buffer), step-up only on steep collisions, floor snap, an eased camera that never clips into walls and fits rooms indoors.",
+   "when": "Built into the browser; keep walkable slopes and doorways reasonable.",
+   "defaults": {
+    "jump_grace_s": 0.15,
+    "floor_snap_m": 0.9
+   },
+   "steps": [
+    "Keep doorways at least 2.2 m high, stairs shallow, walkable slopes under 40 degrees."
+   ],
+   "kit": "automatic",
+   "check": "walk every path and portal.",
+   "cost": "None.",
+   "source": "oakhaven player.gd JUMP_GRACE, floor_snap_length, c17e70d",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "network",
+   "title": "Lean networking",
+   "area": "network",
+   "purpose": "Fast unreliable 15 Hz state, reliable events, Opus voice by distance, rarest-first parallel piece download, peers sharing pieces, per-peer rate limits.",
+   "when": "Built into the browser.",
+   "defaults": {},
+   "steps": [
+    "Keep packages small so first visits are fast; nothing to do in world data."
+   ],
+   "kit": "automatic",
+   "check": "",
+   "cost": "None.",
+   "source": "oakhaven scripts/net/*, scripts/shell/world_fetcher.gd, world_swarm.gd",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "ui_pages",
+   "title": "Build a page once, then patch it",
+   "area": "interface",
+   "purpose": "Shops, journals, notice boards and menus as world UI pages: JSON the browser builds from its own controls, kept cheap by building once and changing single nodes.",
+   "when": "Any world UI beyond a line of text or one button (ui_text / ui_button / ui_bar stay for those).",
+   "defaults": {
+    "max_pages": 8,
+    "max_page_nodes": 512,
+    "page_nodes_total": 2000,
+    "page_bytes": 65536,
+    "patch_bytes": 8192,
+    "patches_per_s": 60
+   },
+   "steps": [
+    "Describe the page as data with the typed builders in api/typescript/iamar-world.d.ts (UiPage, UiNode): column/row/grid/panel for layout, text/heading/image, button/link/input/textarea/checkbox/slider/select for input, list for long lists. No HTML, no URLs.",
+    "Give every node the script will patch, read or hear from its own `id` (1-65535, unique in the page).",
+    "Call `ui_page_set` for every page in on_init (they start hidden), then `ui_page_show` when needed. After that send only `ui_page_patch(page, node, {...})` for what changed; never re-set a page to change one label.",
+    "Handle `on_ui_event(page, node, kind)`: 1 click, 2 change, 3 submit, 4 link, 5 the player closed a modal. Read an input with `ui_value` when you need it.",
+    "Style with a page `theme` (bg, fg, accent, border, font) and per-node `style`; colours are #rrggbb[aa], sizes px or \"50%\".",
+    "Lower the manifest UI budgets to what the world uses (max_pages, max_page_nodes, page_nodes_total, max_surfaces, max_page_images) and declare api_version 0.4."
+   ],
+   "kit": "manual",
+   "check": "`iamar-world validate` checks the manifest budgets; tests/typescript-world/ui_shop_sandbox.gd shows the pattern under test.",
+   "cost": "A built page costs nothing while idle; a full re-set rebuilds every control (sliced over frames for big pages).",
+   "source": "iamar-ui-pages U1-U4 (docs/WORLD_UI_PAGES_DRAFT.md, api/ui_page.schema.json); example examples/typescript-ui-shop/",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "ui_page_modes",
+   "title": "Overlay, modal or surface",
+   "area": "interface",
+   "purpose": "Pick where a page appears: a corner panel, a centred dialog that takes the keys, or a sign drawn on an object in the world.",
+   "when": "Overlay (mode 1) for small always-on panels (coins, objectives); modal (2) for things the player reads or fills in (journal, dialogue choices, a form); surface (3) for things that belong to a place (shop counter, notice board, a screen).",
+   "defaults": {
+    "max_surfaces": 4,
+    "surface_px": [
+     512,
+     512
+    ],
+    "surface_update_m": 40,
+    "surface_click_m": 15,
+    "modal_reopen_s": 1.5
+   },
+   "steps": [
+    "Overlay: keep it small; overlays share one column drawn under the browser's own UI, so they never cover it.",
+    "Modal: open it on a key (`input_bind`) or a button. Esc and the frame's close button always close it and send kind 5: save what the player typed then. For 1.5 s after the player closes a modal, a new one is refused (E_LIMIT); do not retry in a loop.",
+    "Surface: spawn a box (the page fills its +Z face) or a plane (its top), `ui_page_surface(page, w, h)` with the face's aspect (128-1024 px a side), then `ui_page_show(page, 3, entity)`. At most 4 surfaces; past 40 m they stop updating, the player clicks them within 15 m.",
+    "Game keys are muted while the player types in a page field; do not bind letters you need while a modal is open."
+   ],
+   "kit": "manual",
+   "check": "Walk up to every surface and open every modal in the preview; Esc closes each modal.",
+   "cost": "A surface renders only after a change (patch, input); idle surfaces cost no GPU time.",
+   "source": "iamar-ui-pages U4/U5 (scripts/sandbox/world_ui/ui_page_host.gd, ui_page_surface.gd); example examples/typescript-ui-shop/",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "ui_page_lists",
+   "title": "Long lists and pictures in pages",
+   "area": "interface",
+   "purpose": "Inventories, logs and notice boards with hundreds of rows stay smooth, and pages can show the world's own pictures.",
+   "when": "Any list longer than about 20 rows; any icon or picture in a page.",
+   "defaults": {
+    "list_items": 1000,
+    "max_page_images": 32,
+    "image_px": 2048
+   },
+   "steps": [
+    "Use a `list` node (items + max_height): only the rows in view are built, up to 1000 items. Replace its rows with one patch of `items`; do not patch rows one by one.",
+    "Keep rows simple and alike (a panel with a text and a button); give rows ids only when the script needs their events.",
+    "Images are `asset:<path>.png|jpg|webp` inside the signed package, decoded off the main thread: at most 32 per script, 2048 px a side, 16 MiB decoded in all. Use small icons (64-256 px), not photos."
+   ],
+   "kit": "manual",
+   "check": "Scroll the longest list in the preview; images that break a limit show an empty frame and one log line.",
+   "cost": "Rows outside the view cost nothing; each image costs its decoded size in memory.",
+   "source": "iamar-ui-pages U6 (scripts/sandbox/world_ui/ui_page_list.gd, ui_page_images.gd)",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "ui_shared_pages",
+   "title": "Pages every visitor sees the same",
+   "area": "interface",
+   "purpose": "Scoreboards, shared notice boards and votes that show the same thing to everyone in the room, although every visitor's browser builds its own copy of the page.",
+   "when": "Any page whose content belongs to the room rather than to one visitor; a visitor's own coins, journal or settings stay local (kv).",
+   "defaults": {
+    "messages_per_s": 20,
+    "message_bytes": 1024,
+    "state_every_s": 0.25
+   },
+   "steps": [
+    "Every visitor runs their own copy of the script and builds the pages once in on_init, as usual. Only the content is shared, never the page itself.",
+    "One copy keeps the truth: the one where `is_authority()` is 1 (the visitor with the smallest player key). It alone changes the shared state.",
+    "Other copies send requests, not results: `message_to(authority, {\"t\":\"ring\"})`, where the authority's id is the player with the smallest `player_key` (the same rule). The authority applies its own requests directly.",
+    "The authority judges a request by its sender (the player id on_message_from gives it), never by a name or key inside the bytes; rate-limits each sender and cleans text (control and bidi characters out, length capped).",
+    "After a change the authority broadcasts the whole state with `world_message`, at most every 0.25 s (a burst costs one message), kept under 1 KiB (drop the oldest rows to fit). Every copy patches it into its pages (`ui_page_patch` of the list `items` and the texts that changed).",
+    "A copy accepts a state only from the player it counts as the authority, and from the same authority only a newer revision. A newcomer gets the state because the authority marks it dirty in on_enter.",
+    "Every copy keeps the last state, so when the authority leaves, the next one (its own is_authority turns 1 in on_tick) bumps the revision and carries on. is_authority is coordination, not security: a hostile visitor can arrange to be it."
+   ],
+   "kit": "manual",
+   "check": "tests/typescript-world/ui_shared_sandbox.gd runs four visitors' copies wired like the net bridge: same pages everywhere, forged states and keys ignored, a late visitor and an authority handover.",
+   "cost": "One message per change burst to each visitor; pages are only patched, never rebuilt.",
+   "source": "iamar-ui-pages U16; example examples/typescript-ui-shared/",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "hidden_triangle_cull",
+   "title": "Drop triangles nobody can see",
+   "area": "measurement",
+   "purpose": "Faces buried inside other geometry or never visible from any walkable place are removed before export: fewer triangles for free.",
+   "when": "Merged areas and big buildings assembled from overlapping parts.",
+   "defaults": {},
+   "steps": [
+    "A kit command will find faces never seen from the walkable area and strip them; until then delete hidden faces by hand in Blender."
+   ],
+   "kit": "planned",
+   "check": "perf: triangles per view drop, preview unchanged.",
+   "cost": "Build time.",
+   "source": "oakhaven tools/city_vis, landmark far-LOD bake",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "perf_rank",
+   "title": "Rank models by cost",
+   "area": "measurement",
+   "purpose": "perf will list which models and shaders cost the most triangles and draw calls in each view, so you fix the worst first.",
+   "when": "Whenever a view is over budget.",
+   "defaults": {},
+   "steps": [
+    "A `perf --rank` option will list the top models per view; until then compare perf numbers with models hidden."
+   ],
+   "kit": "planned",
+   "check": "perf.",
+   "cost": "None.",
+   "source": "oakhaven tri_rank and shader_census tools",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "open_edge_check",
+   "title": "Find holes and open edges",
+   "area": "measurement",
+   "purpose": "validate will report models with open edges or gaps between parts, where light leaks through a bake or the sky shows through a wall.",
+   "when": "Every baked or enclosed model.",
+   "defaults": {},
+   "steps": [
+    "Until the check exists, look for gaps in Blender (Select > Select All by Trait > Non Manifold) before baking."
+   ],
+   "kit": "planned",
+   "check": "validate.",
+   "cost": "None.",
+   "source": "oakhaven masterplan_closure_audit",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "measure",
+   "title": "Measure on the low-end machine",
+   "area": "measurement",
+   "purpose": "Every change is measured before and after on Amber-class hardware, with fixed-view screenshots compared.",
+   "when": "Always.",
+   "defaults": {},
+   "steps": [
+    "Run perf in the busiest view and the widest view.",
+    "Compare fixed-view screenshots before and after.",
+    "Report the numbers."
+   ],
+   "kit": "manual",
+   "check": "perf, preview.",
+   "cost": "Time.",
+   "source": "oakhaven tools/perf_probe.gd, autotest frame-time metrics",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "display_refresh",
+   "title": "Check the display before blaming vsync",
+   "area": "measurement",
+   "purpose": "A game pinned at exactly 30 fps with an idle GPU is often the monitor: vsync can only show as many frames as the display refreshes.",
+   "when": "Whenever frame time sits at exactly 33.3 ms (or 16.7 ms) while the GPU and script times are far below it.",
+   "defaults": {},
+   "steps": [
+    "Read the display mode first (Linux: `xrandr`; Windows: display settings / DisplayServer.screen_get_refresh_rate()).",
+    "4K offered only at 30/25/24 Hz with a 297 MHz pixel clock means an HDMI 1.4 link (TV input, cable or DP-to-HDMI adapter): fix it in hardware or run a 60 Hz mode.",
+    "On the Compatibility renderer, adaptive vsync acts as plain vsync on OpenGL, so changing it buys nothing."
+   ],
+   "kit": "manual",
+   "check": "display mode listed in the perf report.",
+   "cost": "None.",
+   "source": "iamar-fps F1 (the GPU host 3840x2160 at 29.97 Hz; 2560x1440@60 and 1080p@120 available)",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "cloud_shadows",
+   "title": "Cloud shadows",
+   "area": "art",
+   "purpose": "Slow-scrolling cloud shadows drift over the land: one texture sample in the terrain and baked shaders, big sense of life.",
+   "when": "Outdoor worlds.",
+   "defaults": {
+    "density": 0.4,
+    "speed_m_s": 3.0
+   },
+   "steps": [
+    "Enable the browser's cloud-shadow layer in scene.environment (density, speed, scale)."
+   ],
+   "kit": "planned",
+   "check": "preview over 10 s.",
+   "cost": "One texture sample.",
+   "source": "Graphics ideas 2026-10-01 #1",
+   "layer": "style",
+   "tier": 0
+  },
+  {
+   "id": "terrain_blend",
+   "title": "Terrain texture blending by slope and height",
+   "area": "art",
+   "purpose": "Grass, dirt, rock and gravel chosen by slope and height with soft height-blended edges; triplanar rock on cliffs so nothing stretches.",
+   "when": "Any terrain.",
+   "defaults": {},
+   "steps": [
+    "Assign terrain layers with slope and height ranges.",
+    "Use triplanar mapping on steep faces."
+   ],
+   "kit": "planned",
+   "check": "preview cliffs and hills.",
+   "cost": "A few texture samples.",
+   "source": "Graphics ideas #2",
+   "layer": "style",
+   "tier": 0
+  },
+  {
+   "id": "ground_clutter",
+   "title": "Ground clutter",
+   "area": "art",
+   "purpose": "Pebbles, fallen leaves, clover and mushrooms near paths and trees, instanced with LODs.",
+   "when": "Wherever people walk outdoors.",
+   "defaults": {
+    "visibility_end_m": 40
+   },
+   "steps": [
+    "Scatter small instanced props by rules (near paths, under trees, by water).",
+    "Thin them with distance."
+   ],
+   "kit": "planned",
+   "check": "perf: draw calls stay in budget.",
+   "cost": "Instanced; small.",
+   "source": "Graphics ideas #3",
+   "layer": "style",
+   "tier": 0
+  },
+  {
+   "id": "path_wear",
+   "title": "Worn paths",
+   "area": "art",
+   "purpose": "Darker trampled edges, cart ruts and puddle hollows along roads, painted into vertex colour or a terrain mask.",
+   "when": "Roads and busy paths.",
+   "defaults": {},
+   "steps": [
+    "Paint wear along path splines into the terrain mask."
+   ],
+   "kit": "planned",
+   "check": "preview roads.",
+   "cost": "Nearly free.",
+   "source": "Graphics ideas #4",
+   "layer": "style",
+   "tier": 0
+  },
+  {
+   "id": "anisotropic",
+   "title": "Anisotropic filtering",
+   "area": "art",
+   "purpose": "Ground textures stay sharp at grazing angles instead of blurring toward the horizon.",
+   "when": "Ground, roads, floors.",
+   "defaults": {
+    "level": 8
+   },
+   "steps": [
+    "Import ground textures with anisotropic filtering (4x-8x)."
+   ],
+   "kit": "automatic",
+   "check": "preview long roads.",
+   "cost": "Nearly free.",
+   "source": "Graphics ideas #5",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "instance_tint",
+   "title": "Per-instance colour variation",
+   "area": "art",
+   "purpose": "Every tree, bush, rock, roof and wall gets a slight random tint and brightness shift so copies stop looking copied.",
+   "when": "Every repeated model.",
+   "defaults": {
+    "hue": 0.04,
+    "value": 0.08
+   },
+   "steps": [
+    "Give each placement a small random tint (hue +-4%, value +-8%) through instance colour."
+   ],
+   "kit": "planned",
+   "check": "preview a forest and a street.",
+   "cost": "Free.",
+   "source": "Graphics ideas #6",
+   "layer": "style",
+   "tier": 0
+  },
+  {
+   "id": "lod_crossfade",
+   "title": "Smooth LOD transitions",
+   "area": "art",
+   "purpose": "A dithered crossfade between LOD levels, so trees and buildings stop visibly popping.",
+   "when": "Every LOD chain.",
+   "defaults": {
+    "fade_m": 4.0
+   },
+   "steps": [
+    "Enable dithered LOD fade on LOD meshes."
+   ],
+   "kit": "planned",
+   "check": "walk toward a forest.",
+   "cost": "A little fill rate during the fade.",
+   "source": "Graphics ideas #7",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "leaf_translucency",
+   "title": "Backlit leaves",
+   "area": "art",
+   "purpose": "Leaves and grass glow softly when the sun is behind them (wrap and transmission light in the foliage shader).",
+   "when": "All foliage.",
+   "defaults": {
+    "translucency": 0.35
+   },
+   "steps": [
+    "Use the foliage material with translucency on."
+   ],
+   "kit": "planned",
+   "check": "preview against the low sun.",
+   "cost": "A few shader instructions.",
+   "source": "Graphics ideas #8",
+   "layer": "style",
+   "tier": 0
+  },
+  {
+   "id": "grass_interaction",
+   "title": "Grass that parts",
+   "area": "art",
+   "purpose": "Grass and flowers bend away from the player, townsfolk and horses as they walk through.",
+   "when": "Grassy areas.",
+   "defaults": {},
+   "steps": [
+    "Nothing to do as a builder once the browser feature exists; use the standard grass material."
+   ],
+   "kit": "automatic",
+   "check": "walk through grass.",
+   "cost": "Small.",
+   "source": "Graphics ideas #9",
+   "layer": "style",
+   "tier": 0
+  },
+  {
+   "id": "foot_ik",
+   "title": "Feet that follow the ground",
+   "area": "art",
+   "purpose": "Foot IK plants feet on slopes and stairs instead of floating or sinking.",
+   "when": "All characters (browser feature).",
+   "defaults": {},
+   "steps": [
+    "Keep stairs and slopes as real collision so feet can find them."
+   ],
+   "kit": "automatic",
+   "check": "walk up stairs and hills.",
+   "cost": "Small CPU per nearby character.",
+   "source": "Graphics ideas #10",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "look_at",
+   "title": "Characters look at each other",
+   "area": "art",
+   "purpose": "Heads turn toward nearby players and whoever they are talking to.",
+   "when": "NPCs and players (browser feature).",
+   "defaults": {
+    "radius_m": 6
+   },
+   "steps": [
+    "Give NPCs a look_at radius if they should notice visitors."
+   ],
+   "kit": "automatic",
+   "check": "talk to an NPC.",
+   "cost": "Tiny.",
+   "source": "Graphics ideas #11",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "faces",
+   "title": "Lively faces",
+   "area": "art",
+   "purpose": "Eye highlights, blinking and varied idle animations so crowds do not move in sync.",
+   "when": "All characters.",
+   "defaults": {},
+   "steps": [
+    "Use the built-in bodies, or give custom characters eye highlights and several idles."
+   ],
+   "kit": "manual",
+   "check": "preview NPC close-ups.",
+   "cost": "Tiny.",
+   "source": "Graphics ideas #12",
+   "layer": "style",
+   "tier": 0
+  },
+  {
+   "id": "blob_shadows",
+   "title": "Soft ground shadows at distance",
+   "area": "art",
+   "purpose": "A simple soft shadow under every character and animal far away, where live shadows are off.",
+   "when": "All characters and animals (browser feature).",
+   "defaults": {},
+   "steps": [
+    "Nothing to do for built-in characters; custom creatures declare a shadow radius."
+   ],
+   "kit": "automatic",
+   "check": "preview a crowd at distance.",
+   "cost": "One decal-like quad each.",
+   "source": "Graphics ideas #13",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "lit_windows",
+   "title": "Lit windows at night",
+   "area": "art",
+   "purpose": "Windows glow warmly from inside, some flicker like candlelight, turning on and off through the evening (emissive only, no real lights).",
+   "when": "Every building with windows.",
+   "defaults": {},
+   "steps": [
+    "Give window panes the window-glow material (it follows the time of day)."
+   ],
+   "kit": "planned",
+   "check": "night preview.",
+   "cost": "Free (emissive).",
+   "source": "Graphics ideas #14",
+   "layer": "style",
+   "tier": 0
+  },
+  {
+   "id": "interior_dressing",
+   "title": "Lived-in interiors",
+   "area": "art",
+   "purpose": "Clutter, rugs, shelves, hanging herbs and dust motes in sunbeams, so insides feel lived in.",
+   "when": "Every interior people can enter.",
+   "defaults": {},
+   "steps": [
+    "Dress each room with merged clutter props and a few motes in light shafts."
+   ],
+   "kit": "manual",
+   "check": "preview every room.",
+   "cost": "Merged props; small.",
+   "source": "Graphics ideas #15",
+   "layer": "style",
+   "tier": 0
+  },
+  {
+   "id": "stall_dressing",
+   "title": "Market stall dressing",
+   "area": "art",
+   "purpose": "Shelves, hanging goods, cloth bolts and piles on every market stall, so a stall reads as a shop and not a blank counter.",
+   "when": "Every world with market stalls or shop counters the visitor can see.",
+   "defaults": {
+    "triangles_per_stall": 2600,
+    "min_goods_per_stall": 15
+   },
+   "steps": [
+    "Stock the back wall: two shelf rows with jars, folded cloth or bowls; never flat dark panels (they read as holes).",
+    "Lay the counter in three depths: low goods at the front edge, taller in the middle, tallest at the back.",
+    "Hang goods from the canopy edge or a side post: strings of pots or gourds, cloth strips, a lantern.",
+    "Pile and bolt the goods: spice mounds in shallow bowls, cloth bolts stacked 3-2-1 with one drape over the edge, brass in clusters of mixed heights.",
+    "At least 15 goods per stall (8+ on the counter, 4+ on shelves, 3+ hanging); count reused catalogue props at their real lod0 triangles (full recipe: kit/recipes/market/README.md)."
+   ],
+   "kit": "manual",
+   "check": "stall shots at eye height show stocked shelves, a three-deep counter and hanging goods; the dressed models pass lint.",
+   "cost": "About 1,000-1,600 triangles of dressing per stall on top of the ~800-1,000-triangle shell.",
+   "source": "desert blind-test review gap 2 (docs/reviews/2026-10-21-an agent-blindtest-desert-a2.md; rv_saffa_goods, rv_cloth_stall, rv_brass_stall; an internal task); full recipe and before/after example: kit/recipes/market/README.md",
+   "layer": "style",
+   "tier": 0
+  },
+  {
+   "id": "ambient_creatures",
+   "title": "Ambient creatures",
+   "area": "art",
+   "purpose": "Flocks of birds crossing the sky, crows on roofs, fish jumping, a few cats and dogs, laundry blowing in the wind.",
+   "when": "Outdoor and town worlds.",
+   "defaults": {},
+   "steps": [
+    "Declare ambient life in scene.json (birds, fish, pets) with counts per area."
+   ],
+   "kit": "planned",
+   "check": "preview over a minute.",
+   "cost": "A few cheap animated meshes.",
+   "source": "Graphics ideas #16",
+   "layer": "style",
+   "tier": 0
+  },
+  {
+   "id": "sculpt_from_image",
+   "title": "Sculpt a hero statue from an image",
+   "area": "art",
+   "purpose": "A statue or hero prop is generated from a picture (image-to-3D), cut to a game budget and given the sculpt's detail as baked maps: it reads as carved stone at a fraction of the triangles.",
+   "when": "Statues, figureheads, gate guardians: one-off showpieces seen up close.",
+   "defaults": {
+    "triangles": 8000,
+    "map_size": 2048
+   },
+   "steps": [
+    "Make an ORIGINAL concept (`iamar-models tools/mesh3d/refimg.py`, SDXL text-only, about 8-10 options; or the client's own AI-generated image). Never feed commercial art or someone else's sculpt.",
+    "Change one part without redrawing the figure: paint a mask (white = redraw, black = keep, feathered) and run `python kit/gpu/sculpt.py inpaint concept.png mask.png out/parts --prompt \"the part, in the figure's material\"` (SDXL inpainting, `kit/gpu/stages/inpaint_part.py`; the South Gate mage got a new staff this way).",
+    "Shape: `gen3d_v2.py img prefix 20000 0.0 shape` (Hunyuan3D-2, about 80k faces, ~2-3 min on an 11 GB GPU), then `... 8000 0.0 low` (decimate + xatlas UVs). 8k triangles is the sweet spot for a 3-4 m statue: 12k looks no better, 5k and below facet faces and cloaks.",
+    "A thin straight part the generator lost (a sword blade): `python kit/gpu/sculpt.py blade x_high.glb x_high_blade.glb --root=x,y,z --tip=x,y,z` (`kit/gpu/stages/add_blade.py`) on the high mesh, then redo the low mesh so the blade is in its UVs and the bake.",
+    "Bake: `blender -b --python <iamar-models>/tools/mesh3d/bake_stone.py -- hi.glb low.glb out.gltf 2048` (tangent normal map + sky occlusion times a pale stone colour, glTF separate).",
+    "Look from 4 sides (`kit/blender/look.py`), place it, and turn it so it faces the way the scene needs (find the front from a landmark of the pose: the drawn bow, not the elbow).",
+    "Shoot it in the world by day and night from both sides and commit the shots."
+   ],
+   "kit": "manual",
+   "check": "shots by day and night; LOD levels exist (8000/2000/1000/500).",
+   "cost": "Two 2048 maps per statue (~6-8 MB); GPU minutes per statue.",
+   "source": "iamar gate statues 2026-10-13 (2d2f7ad9, af5a8efa, 40a3b0c1, ac36f688, 0e042740; docs/masterplan_audit/gate_statues/). Licence: Hunyuan3D-2 output may not be used in the EU, the UK or South Korea.",
+   "layer": "style",
+   "tier": 1
+  },
+  {
+   "id": "multiview_sculpt",
+   "title": "Sculpt from several generated views",
+   "area": "art",
+   "purpose": "One concept picture becomes a set of consistent views (front, sides, back) with a multi-view diffusion model, and the image-to-3D step builds the mesh from all of them: the far side is modelled and painted from its own view instead of guessed, so no mirror step and no blurred back.",
+   "when": "Any sculpted part seen from all round (a creature head on a skeleton, a statue in a square); worth it when a single-view sculpt shows a soft or wrong back.",
+   "defaults": {
+    "views": 4,
+    "view_size": 768,
+    "triangles": 2500,
+    "map_size": 1024
+   },
+   "steps": [
+    "Crop the part from the concept and cut away what is not it (a polygon mask times background removal; `iamar-models tools/mesh3d/mv_views.py --mask`).",
+    "Views: `mv_views.py <img> <prefix> --mask poly.png --az 0 90 180 270 --text \"...\"` (MV-Adapter on SDXL, 768 px, ~90 s on an 11 GB GPU; four views fit, six do not). Make a contact sheet of the concept and the views and look at it: the back view is the weakest.",
+    "Shape: `head_mv.py <prefix> <out> 4000 0.0 shape` (Hunyuan3D-2mv from front/left/back/right, about 80k faces), then `... low` (cut, decimate keeping topology, large-chart UVs) and `... paint --paint 000,090,270` (Hunyuan3D-2 paint from several views onto the cage's own UVs).",
+    "Levels and bake: `blender -b --python <iamar-models>/tools/mesh3d/head_lods.py -- <out> <dir> <name> 2500,1500,700 --rot 0,0,180` (normal map from the high shape, coarser levels by collapse on the same UVs, glTF separate with one mesh per level), then `head_tex.py` (recolour the paint's grey fill, optional glow mask).",
+    "Test 1500 / 2500 / 4000 triangles at the distance it is seen and keep the lowest that holds the silhouette landmarks (horns, jaw, brow); pay for it by coarsening what the player sees less."
+   ],
+   "kit": "manual",
+   "check": "contact sheet of the views; triangles per level within the asset's old budget (dragon_lod_parts_test breeds); shots by day and night.",
+   "cost": "GPU minutes per part; two 1024 maps per part.",
+   "source": "iamar stable dragon breeds 2026-10-14 (an internal task; docs/masterplan_audit/stable_dragons/). MV-Adapter (huanngzh, Apache-2.0); Hunyuan3D-2mv / -2 output may not be used in the EU, the UK or South Korea.",
+   "layer": "style",
+   "tier": 2
+  },
+  {
+   "id": "concept_targets",
+   "title": "Painted concept targets from fixed cameras",
+   "area": "art",
+   "purpose": "Before polishing a view, paint what it SHOULD look like from the same camera, so every later pass (textures, light, layout) is judged against a picture instead of a feeling.",
+   "when": "Every world, before the art passes: 2-15 views a visitor really sees (arrival, main street, landmark, each quarter); after the greybox is approved.",
+   "defaults": {
+    "size": [
+     1536,
+     864
+    ],
+    "api_size": "1536x1024",
+    "model": "gpt-image-1.5",
+    "quality": "high",
+    "input_fidelity": "low"
+   },
+   "steps": [
+    "Write a concept set (`kit/concept/README.md`): the size, one STYLE block from the world's style profile or style bible, and per camera eye, at and a SCENE text.",
+    "`python kit/concept/concept.py cams SET WORLD OUT --run` shoots each camera with `iamar-world preview` (OUT/<camera>_now.png).",
+    "`concept.py paint SET OUT` stretches each frame to the image API size, repaints it (SCENE + STYLE + LAYOUT + AVOID, the user's own key from the environment) and stretches it back so pixels line up; no key: `--provider manual` and `concept.py import`.",
+    "`concept.py compare SET OUT` writes now | target | blend | edges sheets; look at every one and reject paintings that moved the layout (no automatic score does this reliably).",
+    "Match the look with paint, light and texture; layout changes go through the plan, not the painting."
+   ],
+   "kit": "manual",
+   "check": "kit/tests/concept/concept_test.py (mocked image API); compare sheets reviewed by a different agent.",
+   "cost": "About 70-130 s and one paid image call per view; nothing at run time.",
+   "source": "the iamar browser source (not public) c2ec3b5e (P0 visual targets: docs/masterplan_targets cameras.json, prompts.json, tests/masterplan_city/concept_cam_shots.gd), docs/MASTERPLAN_ART_TECHNIQUES.md 'Painted concept targets' (10/10 kept first try); automatic layout score FAILED (kit/concept/README.md)",
+   "tool": "kit/concept/concept.py",
+   "layer": "engineering",
+   "tier": 1
+  },
+  {
+   "id": "gltf_texture_colours",
+   "title": "Vertex colours in package worlds: which browser draws them, and in which colour space",
+   "area": "packaging",
+   "purpose": "glTF COLOR_0 multiplies the base colour, but Godot's runtime glTF import leaves vertex_color_use_as_albedo off. Browsers before the iamar browser source (not public) d7d034da (an internal task-10-20) therefore draw a model painted only with vertex colours white in a world package; from d7d034da on, WorldPackage turns the flag on for every surface with COLOR_0 and picks the colour space.",
+   "when": "Every .glb a world package ships that carries COLOR_0 (status: FAILED on browsers before d7d034da, WORKS from d7d034da on; Godot 4.7.2).",
+   "defaults": {
+    "palette_block_px": 8,
+    "vertex_colour_extras_key": "iamar_vertex_colour"
+   },
+   "steps": [
+    "Colour space: a .glb exported by Godot (asset.generator 'Godot Engine ...', as the catalogue's city exports are) is read as sRGB, because Godot writes its colours as they are; any other file is read as linear (the glTF spec: Blender writes linear). To say it outright, set asset.extras.iamar_vertex_colour to \"srgb\" or \"linear\".",
+    "For worlds that must also look right on older browsers, put the colours in a texture: a small palette image (one 8 px block per colour, so far mip levels keep them) with each face's UV on its block, or bake vertex colours to a texture in Blender; then leave COLOR_0 out or white, since it multiplies the texture.",
+    "Swayed trees (scene.json \"sway\": true) keep the colours and the colour space in the wind material (wind_plant use_vcol, vcol_srgb).",
+    "Look at the model through the browser's own path (a sample world, or WorldPackage._glb_decode) before shipping; the editor's import shows the colours whatever the runtime does."
+   ],
+   "kit": "manual",
+   "check": "the iamar browser source (not public) tests/package_vertex_colour/vcol_test.gd (colours on, sRGB/linear choice, textured models untouched, swayed trees); kit/tests/catalog/city_assets_test.gd (every vertex-painted catalogue model draws its colours).",
+   "cost": "None with a browser from d7d034da; one small texture per model for older browsers.",
+   "source": "the iamar browser source (not public) d7d034da scripts/worlds/world_package.gd _glb_decode (_glb_vertex_colours, _glb_vcol_srgb), shaders/wind_plant.gdshaderinc vcol_srgb; iamar-kit kit/catalog/assets/export_insects.gd (_pal_material, the texture route); before the fix the city's vertex-painted exports in kit/catalog/assets (C2a) loaded white",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "gltf_clip_fps",
+   "title": "Animation clips that survive the 30 fps import",
+   "area": "packaging",
+   "purpose": "Godot's glTF import resamples every clip at 30 frames a second, so a stroke faster than 15 Hz aliases away (a 15 Hz sine sampled at 30 fps is all zeros: a dragonfly's wings stood still).",
+   "when": "Any looping clip in a .glb a world plays with scene.json objects \"animation\": wings, flags, wheels, flickers.",
+   "defaults": {
+    "clip_fps": 30,
+    "max_stroke_hz": 15
+   },
+   "steps": [
+    "Keep motion at or under 15 Hz; for a buzz, flick between two poses on every 30 fps frame (cos at 15 Hz).",
+    "Make clip lengths whole 30 fps frames (0.4 s = 12 frames) so the loop has no seam.",
+    "Test the imported clip, not the one you wrote: advance the AnimationPlayer in small steps and measure the motion."
+   ],
+   "kit": "manual",
+   "check": "kit/tests/catalog/city_assets_test.gd (insect wings swing > 0.3 rad over a clip).",
+   "cost": "None.",
+   "source": "iamar-kit kit/catalog/assets/export_insects.gd (CLIP_FPS, BUZZ_HZ); the iamar browser source (not public) scripts/worlds/world_builder.gd _play loops the clip",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "painted_look_bake",
+   "title": "Bake a shader-painted look into a texture before exporting an object as glTF",
+   "area": "packaging",
+   "purpose": "A look a shader makes (the city's mp_painted: wood grain, stone courses, iron, trims, contact shade, glow, all from per-vertex look codes) cannot travel in a glTF; exported with only its vertex colour the object is one flat colour per face. Run the shader's colour logic into a per-object atlas instead and keep the mesh.",
+   "when": "Every MeshKit object (props, furniture) a world package or the catalogue ships, and any object whose look comes from a custom shader (status: WORKS, an internal task: 45 props and 11 furniture pieces; a first bake from the raw vertex colours FAILED, see steps).",
+   "defaults": {
+    "px_per_m": 128,
+    "max_atlas_px": 1024,
+    "gutter_px": 2,
+    "image": "JPEG q0.85",
+    "glow_night_level": 0.35
+   },
+   "steps": [
+    "One chart per face (a MeshKit quad = two triangles sharing an edge and its UVs; other triangles alone) at 128 px/m with a 2 px gutter of the face's own edge colour, shelf-packed into the smallest power-of-two atlas; a bigger object is baked coarser to stay within 1024 px.",
+    "Per texel interpolate position, normal, face UV and contact shade and evaluate the shader's colour code (kit/catalog/assets/painted_baker.gd ports mp_painted.gdshaderinc 1:1, noise included).",
+    "Decode the vertex colour from sRGB first: Godot hands a spatial shader COLOR decoded, and raw values baked 1.4-4x too bright and washed out (measured against the live shader, unshaded).",
+    "Keep triangles and winding, replace TEXCOORD_0, drop COLOR_0 and UV2 (the file then looks the same in every viewer and browser); iron, strap trim and glass go to their own surface for roughness and metallic; glow becomes an emission texture at a fixed dusk level.",
+    "Leave out what needs the world (light bake and sky stains, street and ivy maps, rain): the world's own light and bake apply.",
+    "Catalogue props: import_city_models.py, bake_painted.gd, import_city_models.py --baked; furniture: export_city_pieces.gd bakes itself."
+   ],
+   "kit": "manual",
+   "check": "godot --headless --path <the iamar browser source (not public) checkout> -s kit/tests/catalog/painted_bake_test.gd (mesh kept, iron split, glow, grain varies, mean = the shader's colour, every shipped prop and furniture file textured); python3 kit/catalog/assets/import_city_models.py --check fails on a flat prop or furniture file.",
+   "cost": "A 256-1024 px JPEG per object (3.4 MB for the 45 catalogue props); 15-60 s of one CPU core per object.",
+   "source": "iamar-kit 1374cbc kit/catalog/assets/painted_baker.gd, bake_painted.gd, assets/README.md 'The painted look, baked', docs/evidence/job3129_city_vs_bake.jpg; the iamar browser source (not public) shaders/mp_painted.gdshaderinc",
+   "tool": "kit/catalog/assets/painted_baker.gd",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "masterplan_house",
+   "title": "Masterplan houses, convex-wing roofs and door arches from a style profile",
+   "area": "geometry",
+   "purpose": "A finished-looking town house in under 3000 triangles: the city's own house builder (stone or limewash ground storey, quoins and timber corner posts, half-timbered upper storeys, a jettied front on carved brackets, an oriel, a round corner tower, a framed door under a round stone arch, windows with shutters) under a hipped roof that covers any L-, T- or U-shaped footprint, closed and culled, with LODs.",
+   "when": "Every iamar-family building that is not a landmark; a custom look reuses it with its own style profile (colours, dimensions, painted layers).",
+   "defaults": {
+    "budget_lod0": 3000,
+    "lods": 3,
+    "quoin_course_m": 0.36,
+    "eave_overhang_m": [
+     0.42,
+     0.66
+    ],
+    "cap_w_m": 0.17
+   },
+   "steps": [
+    "`iamar-world style-gen house out.glb --profile <profile> --region <region> --seed N --footprint rect|narrow|L|T|U|WxD|points.json --world preview --check`: writes LOD0-2, fits LOD0 to the profile's building budget (drops shutters, sills, side quoins, then timber braces, posts and rails) and runs the closure, roof and zfight audits on every LOD.",
+    "Timber frame on the upper storeys: `--timber plain|post|studs|braced|crossed` or, by default, picked by seed from the region's (else the profile's) `timber_frame_weights`; the iamar profile frames town houses ([0, 1, 3, 3, 2]) and keeps the city's quarter weights (mages mostly plain). Rails and posts stand 6 cm proud, braces 3 cm, all clear of windows, shutters, quoins, oriel and tower; a Track B profile without weights stays plain. Never leave an iamar town house a plaster box between quoins: the harbour blind test a5 did (review gap R3).",
+    "Roof alone over any footprint: `iamar-world style-gen roof out.glb --footprint L --eaves 6`; a door surround: `iamar-world style-gen arch out.glb --width 1.3 --ceiling 3.6`.",
+    "Paint the profile's layers (`check_style.py --paint textures --profile <profile>`) and pass `--textures textures`: each part takes its layer's painted texture (1 UV unit = 4 m), a paint colour on a shared layer stays in the base colour factor.",
+    "Tall houses: the roof stays a third to a half of the height when the profile gives `roof_height_fraction` (iamar does); style-gen prints `WARN roof` when a narrow wing (an L or U arm, a 6 m deep house of 3+ storeys) cannot reach it under the pitch ceiling: make it deeper or lower.",
+    "Vary houses by seed and region; never place one seed twice side by side (the variety rules, kit/style/variety).",
+    "Then bake light (kit/blender bake_unlit.py) and run the review gate."
+   ],
+   "kit": "automatic",
+   "check": "kit/tests/style/gen/style_gen_test.py (audits on every LOD, budget, plan area of the roof = footprint, determinism), kit/tests/style/gen/frame_test.py (each timber pattern's pieces, audits, profile defaults); `--check` per build.",
+   "cost": "None at run time; one generator run per house.",
+   "source": "the iamar browser source (not public) scripts/world/masterplan/mp_roof.gd (A20 convex wings, the maintainer 2026-10-09 'see the roofs rather than mesh openings'), mp_style.gd (dress_corners, jetty_brackets, door_arch, corner_tower), mp_buildings.gd (_emit_oriel; _base_style and _emit_facade_varied timber-frame language and quarter weights); ported in iamar-kit kit/style/gen (an internal task; timber frame an internal task, harbour a5 review docs/reviews/2026-10-22-an agent-blindtest-harbour-a5.md gap 3)",
+   "tool": "kit/style/gen/gen.py",
+   "layer": "style",
+   "tier": 0
+  },
+  {
+   "id": "lit_lantern",
+   "title": "Lanterns that read as lit at dusk and night",
+   "area": "lighting",
+   "purpose": "Street and wall lanterns whose glass glows warm from every side, paired with a point light that lights the street around them.",
+   "when": "Every lamp a brief promises at dusk or night (quays, doors, lanes, bridge ends).",
+   "defaults": {
+    "glow": 1.3,
+    "light_energy": 1.4,
+    "light_range_m": 9,
+    "post_height_m": 2.6,
+    "budget_lod0": 300
+   },
+   "steps": [
+    "`iamar-world style-gen lantern assets/lantern.glb [--mount post|wall] [--height 2.6] [--glow 1.3] --json`: an open iron frame (base plate, four corner bars, pyramid cap) around emissive glass in the profile's `lamp_glow`, LOD0-2 within the prop budget; `--world preview --check` shows it at night with its light.",
+    "Copy the report's `light` into scene.json `lights` once per lantern, adding the object's position (rotated by its yaw): a point light at the glass centre, energy 1.4, range 9, no shadows. Keep to the manifest's `lights` budget (under 8 in a small world; the browser gives the nearest few a real light, light_pool).",
+    "Never put the glass inside a closed shell: the harbour blind test hid emissive glass inside a solid iron lathe and its lanterns read as dark grey boxes at night.",
+    "Keep `--glow` at 1-2: higher clips the glass to white in the browser's linear tonemap and loses the warm colour.",
+    "Lanterns are props: keep them live-lit (pipeline --light ao, not a light bake), and bake their light into the walls with bake_night when the world is seen at night."
+   ],
+   "kit": "manual",
+   "check": "kit/tests/style/gen/style_gen_test.py (glass visible: no iron face in front of it, emissive strength set, audits on every LOD, light at the glass centre); night shots: the glass is warm, not white, and a pool of light lies on the ground; kit/style/lighting/gallery/night_bake.",
+   "cost": "~100 triangles per lantern; one real light each (the nearest few are live).",
+   "source": "harbour blind-test review (docs/reviews/2026-10-20-an agent-blindtest-harbour.md gap 3, sheet_n); iamar-kit kit/style/gen/lantern.py (an internal task)",
+   "tool": "kit/style/gen/gen.py",
+   "layer": "style",
+   "tier": 0
+  },
+  {
+   "id": "bake_night",
+   "title": "Bake the time of day the world is seen at",
+   "area": "lighting",
+   "purpose": "A light bake is one time of day: walls baked in daylight stay day-bright under a black night sky. Baking the night (moonlight, a dim blue sky and the lanterns as lamps) gives dark walls with warm pools by each lamp.",
+   "when": "A world that sits at dusk or night, or whose brief promises lamps at night, with light-baked (unlit) architecture.",
+   "defaults": {
+    "watts_per_energy": 45,
+    "reach_m": 12,
+    "samples": 64
+   },
+   "steps": [
+    "Choose the world's lighting preset (kit/style/lighting presets; a world with running time keeps its walls live-lit instead: one bake cannot show both day and night).",
+    "Place the lanterns and their point lights in scene.json first (lit_lantern).",
+    "Per baked object: `python3 kit/style/lighting/lighting.py bake-args <preset> --world <world> --object <id>` prints bake_unlit options: the preset's sun or moon (direction, colour, energy x pi), its ambient as the sky, and every point light within its range + 12 m as `--lamp x,y,z,r,g,b,watts` in the object's own frame (45 W per unit of energy).",
+    "`iamar-world blender-run kit/blender/bake_unlit.py -- in.glb assets/out.glb 64 --texel 0.03 <those options>`.",
+    "Shoot the world at the time it is set to and at night (`iamar-world shots --times dusk,night`) and compare with the daylight bake (kit/style/lighting/night_bake_demo.py does both on a sample house)."
+   ],
+   "kit": "manual",
+   "check": "kit/tests/style/lighting_test.py (bake-args: preset sun, sky and lamps in the object's frame); kit/style/lighting/gallery/night_bake/night_bake_pair.jpg (before: daylight bake at night; after: night bake).",
+   "cost": "One extra bake per object for each look you ship; the bake shows one time of day only.",
+   "source": "harbour blind-test review gap 3 (sheet_n: walls stay bright at night); iamar-kit kit/style/lighting/lighting.py bake-args, kit/blender/bake_unlit.py --lamp (an internal task)",
+   "tool": "kit/style/lighting/lighting.py",
+   "layer": "engineering",
+   "tier": 0
+  },
+  {
+   "id": "sky_ambient_still_sun",
+   "title": "Sky ambient only with a still sun",
+   "area": "lighting",
+   "purpose": "Ambient light taken from the sky makes the renderer rebuild the sky's light every time the sun moves; with a still sun it is built once and costs nothing after.",
+   "when": "Any world that sets environment.ambient.source to \"sky\".",
+   "defaults": {
+    "ambient_source": "color"
+   },
+   "steps": [
+    "Keep `ambient.source: \"color\"` (the default) unless the sky's tint on shadowed sides really matters; pick the colour from the sky's horizon, darker.",
+    "Use `ambient.source: \"sky\"` only with a fixed `time_of_day` or `sun.direction` (today's format has no moving sun).",
+    "A sky that is only the background, with colour ambient, never builds sky light at all."
+   ],
+   "kit": "manual",
+   "check": "compare a shot with colour and sky ambient; keep sky only if the difference is visible.",
+   "cost": "Sky ambient + a moving sun: +10 ms CPU / +9 ms GPU per frame on software GL (iamar tools/k5_5_sky_probe.gd); a still sun: one rebuild at load.",
+   "source": "iamar docs/perf/K5_5_ENVIRONMENT_RULES.md (an internal task): Godot GLES3 rebuilds sky radiance on any sky-visible light change when the sky feeds ambient/reflections; stepping the sun 0.05 deg/0.5 s only recovers ~2.5 ms",
+   "layer": "engineering",
+   "tier": 0
+  }
+ ]
+}

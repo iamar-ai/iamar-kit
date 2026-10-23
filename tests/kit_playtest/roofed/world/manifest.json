@@ -1,0 +1,28 @@
+{
+  "api_version": "0.4",
+  "author": {
+    "name": "kit-test"
+  },
+  "budgets": {
+    "audio_bytes": 16777216,
+    "lights": 16,
+    "objects": 400,
+    "package_bytes": 64000000,
+    "script_bytes": 4194304,
+    "texture_bytes": 67108864,
+    "texture_size": 2048,
+    "triangles": 150000
+  },
+  "description": "Playtest sample: a roof slab over open ground; goto [x,z] under it must stand on the ground.",
+  "features": [
+    "sky",
+    "terrain"
+  ],
+  "format": "iamar-world",
+  "format_version": 0,
+  "id": "pt-roofed",
+  "name": "Playtest roofed hall",
+  "scene": "scene.json",
+  "spawn": "spawn",
+  "version": "0.1.0"
+}

@@ -1,0 +1,17 @@
+{
+  "about": "The Little Harbour (kit/blindtest/harbour/attempt-2/world): the lost_net errand end to end. The bell step fails: the bell hangs 2.48 m up, out of the interact key's 2.5 m reach (an internal task).",
+  "hour": 17.5,
+  "ignore": ["gull.glb", "boat_sail.glb"],
+  "steps": [
+    {"do": "talk", "npc": "harbour_master", "choose": "accept",
+     "expect": [{"quest": "lost_net", "state": "active", "step": 0}, {"choice": "Accept: The Lost Net"}]},
+    {"do": "pickup", "quest": "lost_net", "expect": [{"quest": "lost_net", "state": "active", "step": 1}]},
+    {"do": "talk", "npc": "harbour_master", "choose": "Here is your net.",
+     "expect": [{"quest": "lost_net", "step": 2}, {"dialog": "My net!"}]},
+    {"do": "goto", "trigger": "bell", "expect": [{"quest": "lost_net", "state": "ready"}]},
+    {"do": "use", "entity": "bell.glb", "settle": 2.0,
+     "expect": [{"sound": "bell"}, {"moved": "flag.glb"}, {"light": "light", "above": 1.0}]},
+    {"do": "talk", "npc": "harbour_master", "choose": "complete",
+     "expect": [{"quest": "lost_net", "state": "done"}, {"dialog": "There she rings"}]}
+  ]
+}

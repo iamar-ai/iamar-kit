@@ -1,0 +1,676 @@
+{
+ "format": "iamar-catalog-pieces-export",
+ "version": 1,
+ "note": "Single pieces exported from the city's room, crop-bed and flora builders by kit/catalog/assets/export_city_pieces.gd (run against the iamar browser source (not public)). Never edit by hand: rerun the export, then import_city_models.py --pieces.",
+ "iamar_commit": "001ff0e6",
+ "pieces": [
+  {
+   "file": "furniture/armchair.glb",
+   "name": "armchair",
+   "category": "furniture",
+   "description": "A deep upholstered fireside armchair in muted wine cloth with rolled arms and oak feet, from the inn's snug. Seats one (the city's sit spot is at its front).",
+   "synonyms": [
+    "easy chair",
+    "fireside chair",
+    "upholstered chair",
+    "inn",
+    "seat"
+   ],
+   "collision": "box",
+   "builder": "MpInnWing._armchair",
+   "builder_commit": "001ff0e6",
+   "triangles": 274,
+   "culled_faces": 0,
+   "seats": [
+    {
+     "pos": [
+      0.0,
+      0.0,
+      0.06
+     ],
+     "yaw": -3.142,
+     "kind": "Chair"
+    }
+   ],
+   "painted_bake": {
+    "atlas": [
+     512,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 153,
+    "patterns": {
+     "2": 40,
+     "9": 224,
+     "18": 10
+    },
+    "glow": false
+   }
+  },
+  {
+   "file": "furniture/oak_chair.glb",
+   "name": "oak chair",
+   "category": "furniture",
+   "description": "A plain oak chair with four square legs and a low back, from the guild hall's tables.",
+   "synonyms": [
+    "chair",
+    "wooden chair",
+    "dining chair",
+    "seat",
+    "guild hall"
+   ],
+   "collision": "box",
+   "builder": "MpGuildhallInterior._chair",
+   "builder_commit": "001ff0e6",
+   "triangles": 64,
+   "culled_faces": 0,
+   "seats": [
+    {
+     "pos": [
+      0.0,
+      0.0,
+      0.05
+     ],
+     "yaw": -3.142,
+     "kind": "Hall"
+    }
+   ],
+   "painted_bake": {
+    "atlas": [
+     256,
+     256
+    ],
+    "px_per_m": 128.0,
+    "charts": 32,
+    "patterns": {
+     "18": 12,
+     "2": 52
+    },
+    "glow": false
+   }
+  },
+  {
+   "file": "furniture/high_chair.glb",
+   "name": "high chair",
+   "category": "furniture",
+   "description": "A guild master's high-backed oak chair with a red cushion and a gilded crest on the back.",
+   "synonyms": [
+    "throne",
+    "master's chair",
+    "high-backed chair",
+    "seat",
+    "guild hall"
+   ],
+   "collision": "box",
+   "builder": "MpGuildhallInterior._chair (high)",
+   "builder_commit": "001ff0e6",
+   "triangles": 84,
+   "culled_faces": 1,
+   "seats": [
+    {
+     "pos": [
+      0.0,
+      0.0,
+      0.05
+     ],
+     "yaw": -3.142,
+     "kind": "Hall"
+    }
+   ],
+   "painted_bake": {
+    "atlas": [
+     256,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 42,
+    "patterns": {
+     "18": 12,
+     "2": 52,
+     "9": 10,
+     "8": 10
+    },
+    "glow": false
+   }
+  },
+  {
+   "file": "furniture/trestle_table.glb",
+   "name": "trestle table",
+   "category": "furniture",
+   "description": "A 2 m plank trestle table on oak end trestles with a plank bench along each side, set with pewter mugs and green bottles; the tavern and hall table.",
+   "synonyms": [
+    "table",
+    "dining table",
+    "long table",
+    "tavern table",
+    "feast table",
+    "benches"
+   ],
+   "collision": "box",
+   "builder": "MpInteriorKits.trestle",
+   "builder_commit": "001ff0e6",
+   "triangles": 114,
+   "culled_faces": 6,
+   "seats": [],
+   "painted_bake": {
+    "atlas": [
+     512,
+     1024
+    ],
+    "px_per_m": 128.0,
+    "charts": 60,
+    "patterns": {
+     "2": 96,
+     "0": 18
+    },
+    "glow": false
+   }
+  },
+  {
+   "file": "furniture/hall_bench.glb",
+   "name": "hall bench",
+   "category": "furniture",
+   "description": "A 2.2 m plank bench on two oak end blocks that goes beside a trestle table; seats three.",
+   "synonyms": [
+    "bench",
+    "seat",
+    "form",
+    "tavern bench",
+    "pew"
+   ],
+   "collision": "box",
+   "builder": "MpInteriorKits.bench",
+   "builder_commit": "001ff0e6",
+   "triangles": 32,
+   "culled_faces": 2,
+   "seats": [
+    {
+     "pos": [
+      -0.6,
+      0.0,
+      0.05
+     ],
+     "yaw": -3.142,
+     "kind": "Bench"
+    },
+    {
+     "pos": [
+      0.0,
+      0.0,
+      0.05
+     ],
+     "yaw": -3.142,
+     "kind": "Bench"
+    },
+    {
+     "pos": [
+      0.6,
+      0.0,
+      0.05
+     ],
+     "yaw": -3.142,
+     "kind": "Bench"
+    }
+   ],
+   "painted_bake": {
+    "atlas": [
+     512,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 16,
+    "patterns": {
+     "2": 32
+    },
+    "glow": false
+   }
+  },
+  {
+   "file": "furniture/cot_bed.glb",
+   "name": "cot bed",
+   "category": "furniture",
+   "description": "A simple wooden cot bed with a cream mattress and a pillow, for barracks, healers and back rooms.",
+   "synonyms": [
+    "bed",
+    "cot",
+    "bunk",
+    "sleeping place",
+    "infirmary bed"
+   ],
+   "collision": "box",
+   "builder": "MpInteriors._cot",
+   "builder_commit": "001ff0e6",
+   "triangles": 30,
+   "culled_faces": 1,
+   "seats": [],
+   "painted_bake": {
+    "atlas": [
+     512,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 15,
+    "patterns": {
+     "2": 10,
+     "9": 10,
+     "4": 10
+    },
+    "glow": false
+   }
+  },
+  {
+   "file": "furniture/shop_shelf.glb",
+   "name": "shop shelf",
+   "category": "furniture",
+   "description": "A tall open timber shelf, four boards, the two at hand height stocked with jars and pots; stands against a wall (no back panel).",
+   "synonyms": [
+    "shelf",
+    "shelves",
+    "shelving",
+    "rack",
+    "apothecary shelf",
+    "pantry shelf"
+   ],
+   "collision": "box",
+   "builder": "MpInteriors._shelf (goods jars)",
+   "builder_commit": "001ff0e6",
+   "triangles": 243,
+   "culled_faces": 13,
+   "seats": [],
+   "painted_bake": {
+    "atlas": [
+     512,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 154,
+    "patterns": {
+     "2": 78,
+     "4": 60,
+     "7": 105
+    },
+    "glow": true
+   }
+  },
+  {
+   "file": "furniture/bookshelf.glb",
+   "name": "bookshelf",
+   "category": "furniture",
+   "description": "A tall open timber shelf with runs of coloured book spines on the two lower boards; stands against a wall (no back panel).",
+   "synonyms": [
+    "bookcase",
+    "shelf",
+    "library",
+    "books",
+    "study"
+   ],
+   "collision": "box",
+   "builder": "MpInteriors._shelf (goods books)",
+   "builder_commit": "001ff0e6",
+   "triangles": 108,
+   "culled_faces": 13,
+   "seats": [],
+   "painted_bake": {
+    "atlas": [
+     512,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 54,
+    "patterns": {
+     "2": 48,
+     "9": 60
+    },
+    "glow": false
+   }
+  },
+  {
+   "file": "furniture/kitchen_dresser.glb",
+   "name": "kitchen dresser",
+   "category": "furniture",
+   "description": "An oak kitchen dresser: a cupboard with two panelled doors and an open plate rack above, set with pewter jugs, bowls and mugs; stands against a wall.",
+   "synonyms": [
+    "dresser",
+    "cupboard",
+    "sideboard",
+    "hutch",
+    "kitchen",
+    "crockery"
+   ],
+   "collision": "box",
+   "builder": "MpInnWing._build_dresser",
+   "builder_commit": "001ff0e6",
+   "triangles": 391,
+   "culled_faces": 8,
+   "seats": [],
+   "painted_bake": {
+    "atlas": [
+     512,
+     1024
+    ],
+    "px_per_m": 128.0,
+    "charts": 246,
+    "patterns": {
+     "2": 88,
+     "1": 303
+    },
+    "glow": false
+   }
+  },
+  {
+   "file": "furniture/hearth.glb",
+   "name": "hearth",
+   "category": "building-part",
+   "description": "A stone hearth with glowing coals and a flame and a stone hood above (2.6 m tall); stands against a wall, the chimney is the building's.",
+   "synonyms": [
+    "fireplace",
+    "fire",
+    "hearth fire",
+    "stove",
+    "kitchen"
+   ],
+   "collision": "box",
+   "builder": "MpInteriors._hearth",
+   "builder_commit": "001ff0e6",
+   "triangles": 36,
+   "culled_faces": 4,
+   "seats": [],
+   "painted_bake": {
+    "atlas": [
+     512,
+     1024
+    ],
+    "px_per_m": 128.0,
+    "charts": 18,
+    "patterns": {
+     "1": 16,
+     "0": 20
+    },
+    "glow": true
+   }
+  },
+  {
+   "file": "furniture/iron-bound_chest.glb",
+   "name": "iron-bound chest",
+   "category": "furniture",
+   "description": "A wooden storage chest bound with black iron and a brass lock plate.",
+   "synonyms": [
+    "chest",
+    "trunk",
+    "coffer",
+    "strongbox",
+    "storage"
+   ],
+   "collision": "box",
+   "builder": "MpInteriors._chests",
+   "builder_commit": "001ff0e6",
+   "triangles": 30,
+   "culled_faces": 1,
+   "seats": [],
+   "painted_bake": {
+    "atlas": [
+     256,
+     256
+    ],
+    "px_per_m": 128.0,
+    "charts": 15,
+    "patterns": {
+     "2": 10,
+     "8": 20
+    },
+    "glow": false
+   }
+  },
+  {
+   "file": "crops/cabbage.glb",
+   "name": "cabbage",
+   "category": "crop",
+   "description": "A cabbage: a low dome of blue-green leaves in a seven-leaf skirt, about 0.5 m across.",
+   "synonyms": [
+    "cabbage",
+    "kale",
+    "vegetable",
+    "kitchen garden",
+    "crop"
+   ],
+   "collision": "none",
+   "builder": "MpCropBeds._dome(0.24, 0.22)",
+   "builder_commit": "001ff0e6",
+   "triangles": 21
+  },
+  {
+   "file": "crops/lettuce.glb",
+   "name": "lettuce",
+   "category": "crop",
+   "description": "A lettuce: a small bright-green leafy dome.",
+   "synonyms": [
+    "lettuce",
+    "salad",
+    "greens",
+    "vegetable",
+    "crop"
+   ],
+   "collision": "none",
+   "builder": "MpCropBeds._dome(0.17, 0.12)",
+   "builder_commit": "001ff0e6",
+   "triangles": 21
+  },
+  {
+   "file": "crops/leek.glb",
+   "name": "leek",
+   "category": "crop",
+   "description": "A leek: three crossed blades, white at the foot and dark green at the tips.",
+   "synonyms": [
+    "leek",
+    "allium",
+    "vegetable",
+    "crop"
+   ],
+   "collision": "none",
+   "builder": "MpCropBeds._leek",
+   "builder_commit": "001ff0e6",
+   "triangles": 9
+  },
+  {
+   "file": "crops/carrot.glb",
+   "name": "carrot",
+   "category": "crop",
+   "description": "A carrot: a feathery tuft of bright leaves over the orange shoulder of the root.",
+   "synonyms": [
+    "carrot",
+    "root vegetable",
+    "vegetable",
+    "crop"
+   ],
+   "collision": "none",
+   "builder": "MpCropBeds._carrot",
+   "builder_commit": "001ff0e6",
+   "triangles": 33
+  },
+  {
+   "file": "crops/onion.glb",
+   "name": "onion",
+   "category": "crop",
+   "description": "An onion: a pale bulb with thin upright blue-green spikes.",
+   "synonyms": [
+    "onion",
+    "shallot",
+    "allium",
+    "vegetable",
+    "crop"
+   ],
+   "collision": "none",
+   "builder": "MpCropBeds._onion",
+   "builder_commit": "001ff0e6",
+   "triangles": 26
+  },
+  {
+   "file": "crops/squash.glb",
+   "name": "squash",
+   "category": "crop",
+   "description": "A squash plant: a sprawling mound of big dark leaves with an orange fruit beside it.",
+   "synonyms": [
+    "squash",
+    "pumpkin",
+    "gourd",
+    "marrow",
+    "vegetable",
+    "crop"
+   ],
+   "collision": "none",
+   "builder": "MpCropBeds._squash",
+   "builder_commit": "001ff0e6",
+   "triangles": 42
+  },
+  {
+   "file": "crops/runner_beans.glb",
+   "name": "runner beans",
+   "category": "crop",
+   "description": "Runner beans: a 1.5 m wigwam of three tied canes leafed up their length, with a few red flowers.",
+   "synonyms": [
+    "beans",
+    "bean poles",
+    "cane wigwam",
+    "climbing beans",
+    "crop"
+   ],
+   "collision": "none",
+   "builder": "MpCropBeds._beans",
+   "builder_commit": "001ff0e6",
+   "triangles": 21
+  },
+  {
+   "file": "flora/daisies.glb",
+   "name": "daisies",
+   "category": "flower",
+   "description": "A clump of white daisies with yellow hearts on a painted card pair (two crossed quads, 4 triangles).",
+   "synonyms": [
+    "daisy",
+    "white flowers",
+    "wildflowers",
+    "meadow flowers"
+   ],
+   "collision": "none",
+   "builder": "MpFlora flower (atlas cell 2)",
+   "builder_commit": "001ff0e6",
+   "triangles": 4
+  },
+  {
+   "file": "flora/buttercups.glb",
+   "name": "buttercups",
+   "category": "flower",
+   "description": "A clump of yellow buttercups on a painted card pair (4 triangles).",
+   "synonyms": [
+    "buttercup",
+    "yellow flowers",
+    "wildflowers",
+    "meadow flowers"
+   ],
+   "collision": "none",
+   "builder": "MpFlora flower (atlas cell 3)",
+   "builder_commit": "001ff0e6",
+   "triangles": 4
+  },
+  {
+   "file": "flora/pink_campion.glb",
+   "name": "pink campion",
+   "category": "flower",
+   "description": "A clump of pink meadow flowers on a painted card pair (4 triangles).",
+   "synonyms": [
+    "pink flowers",
+    "campion",
+    "wildflowers",
+    "meadow flowers"
+   ],
+   "collision": "none",
+   "builder": "MpFlora flower (atlas cell 4)",
+   "builder_commit": "001ff0e6",
+   "triangles": 4
+  },
+  {
+   "file": "flora/grass_tuft.glb",
+   "name": "grass tuft",
+   "category": "ground-flora",
+   "description": "A tuft of meadow grass on a painted card pair (4 triangles); scatter it by the hundred.",
+   "synonyms": [
+    "grass",
+    "tuft",
+    "meadow grass",
+    "ground cover",
+    "undergrowth"
+   ],
+   "collision": "none",
+   "builder": "MpFlora tuft (atlas cell 0)",
+   "builder_commit": "001ff0e6",
+   "triangles": 4
+  },
+  {
+   "file": "flora/tall_grass.glb",
+   "name": "tall grass",
+   "category": "ground-flora",
+   "description": "A tuft of tall seeding grass on a painted card pair (4 triangles).",
+   "synonyms": [
+    "long grass",
+    "wild grass",
+    "seed heads",
+    "meadow grass",
+    "ground cover"
+   ],
+   "collision": "none",
+   "builder": "MpFlora tuft (atlas cell 1)",
+   "builder_commit": "001ff0e6",
+   "triangles": 4
+  },
+  {
+   "file": "flora/reeds.glb",
+   "name": "reeds",
+   "category": "ground-flora",
+   "description": "A clump of 1.9 m pond reeds and bulrushes on three crossed painted cards (6 triangles), for pond edges and moats.",
+   "synonyms": [
+    "reeds",
+    "bulrushes",
+    "cattails",
+    "rushes",
+    "pond plants",
+    "water plants"
+   ],
+   "collision": "none",
+   "builder": "MpFlora reeds (atlas cell 5)",
+   "builder_commit": "001ff0e6",
+   "triangles": 6
+  },
+  {
+   "file": "flora/lily_pad.glb",
+   "name": "lily pad",
+   "category": "ground-flora",
+   "description": "A flowering water-lily pad, one painted card that lies on the water (2 triangles).",
+   "synonyms": [
+    "water lily",
+    "lily pad",
+    "pond plant",
+    "lotus"
+   ],
+   "collision": "none",
+   "builder": "MpFlora lily (atlas cell 6)",
+   "builder_commit": "001ff0e6",
+   "triangles": 2
+  },
+  {
+   "file": "flora/pond_stone.glb",
+   "name": "pond stone",
+   "category": "rock",
+   "description": "A chunky river stone (24 triangles), warm lit top to mossy foot, for pond edges and paths.",
+   "synonyms": [
+    "stone",
+    "rock",
+    "pebble",
+    "boulder",
+    "river stone"
+   ],
+   "collision": "none",
+   "builder": "MpFlora._stone",
+   "builder_commit": "001ff0e6",
+   "triangles": 24
+  }
+ ]
+}

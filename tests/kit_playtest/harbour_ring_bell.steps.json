@@ -1,0 +1,127 @@
+{
+ "about": "kit/blindtest/harbour/attempt-3/world (attempt 3): a talk with no choice closes the dialog, and ring_bell's on_complete (show pier_lantern_lit + pier_lantern_light, hide pier_lantern_dark, play bell) shows as EFFECT lines and passes expects (an internal task). The lantern's light is checked at the pier: the world's light pool keeps only the 6 lights nearest the camera on, so from the harbour master it is off.",
+ "hour": 17.5,
+ "ignore": [
+  "gull.glb",
+  "boat_a.glb",
+  "boat_b.glb"
+ ],
+ "steps": [
+  {
+   "do": "talk",
+   "npc": "fisher",
+   "expect": [
+    {
+     "choice": "Farewell"
+    }
+   ]
+  },
+  {
+   "do": "talk",
+   "npc": "harbour_master",
+   "choose": "accept",
+   "expect": [
+    {
+     "quest": "lost_net",
+     "state": "active"
+    },
+    {
+     "visible": "pier_lantern_lit",
+     "is": false
+    },
+    {
+     "visible": "pier_lantern_dark"
+    }
+   ]
+  },
+  {
+   "do": "goto",
+   "at": [
+    -23,
+    6
+   ]
+  },
+  {
+   "do": "pickup",
+   "quest": "lost_net",
+   "expect": [
+    {
+     "quest": "lost_net",
+     "state": "ready"
+    }
+   ]
+  },
+  {
+   "do": "talk",
+   "npc": "harbour_master",
+   "choose": "complete",
+   "expect": [
+    {
+     "quest": "lost_net",
+     "state": "done"
+    }
+   ]
+  },
+  {
+   "do": "talk",
+   "npc": "harbour_master",
+   "choose": "accept",
+   "expect": [
+    {
+     "quest": "ring_bell",
+     "state": "active"
+    }
+   ]
+  },
+  {
+   "do": "goto",
+   "trigger": "bell",
+   "settle": 2.0,
+   "expect": [
+    {
+     "quest": "ring_bell",
+     "state": "ready"
+    }
+   ]
+  },
+  {
+   "do": "talk",
+   "npc": "harbour_master",
+   "choose": "complete",
+   "settle": 2.0,
+   "expect": [
+    {
+     "quest": "ring_bell",
+     "state": "done"
+    },
+    {
+     "sound": "bell"
+    },
+    {
+     "visible": "pier_lantern_lit"
+    },
+    {
+     "visible": "pier_lantern_dark",
+     "is": false
+    }
+   ]
+  },
+  {
+   "do": "goto",
+   "at": [
+    17,
+    -52
+   ],
+   "settle": 1.5,
+   "expect": [
+    {
+     "visible": "pier_lantern_light"
+    },
+    {
+     "light": "pier_lantern_light",
+     "above": 1.0
+    }
+   ]
+  }
+ ]
+}

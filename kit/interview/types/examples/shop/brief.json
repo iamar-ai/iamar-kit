@@ -1,0 +1,91 @@
+{
+  "vision": "A small spice shop on a market street where visitors browse twelve goods.",
+  "audience": {
+    "access": "public",
+    "concurrent": 10
+  },
+  "type": "shop",
+  "extra_types": [],
+  "track": "A",
+  "style_profile": "iamar",
+  "mood": {
+    "words": [
+      "fragrant",
+      "busy",
+      "warm"
+    ],
+    "time": "morning",
+    "weather": "clear"
+  },
+  "setup": {
+    "blender": false,
+    "gpu": false,
+    "scripts_ok": false,
+    "build_tier": 0
+  },
+  "tier_target": "low",
+  "budgets": {
+    "triangles": 120000,
+    "texture_size": 1024,
+    "texture_bytes": 50331648,
+    "download_mb": 60
+  },
+  "reuse": [
+    {
+      "catalog_id": "shelf_wood",
+      "use": "shop"
+    },
+    {
+      "catalog_id": "basket",
+      "use": "stall"
+    }
+  ],
+  "connections": {
+    "portal_from_city": true,
+    "name": "iamar://example-shop",
+    "hosting": "own-computer"
+  },
+  "features": [
+    {
+      "id": "npc_shopkeeper",
+      "kind": "npc"
+    },
+    {
+      "id": "ui_price_board",
+      "kind": "ui"
+    },
+    {
+      "id": "script_browse",
+      "kind": "script"
+    }
+  ],
+  "checkpoints": [
+    "greybox",
+    "scale check",
+    "paint"
+  ],
+  "open_questions": [],
+  "answers": [
+    {
+      "id": "H1",
+      "value": "12 goods in one shop",
+      "source": "default",
+      "shown": true
+    },
+    {
+      "id": "H2",
+      "value": "Showcase only; link out to the real shop",
+      "source": "default",
+      "shown": true
+    },
+    {
+      "id": "H3",
+      "value": "stalls on a street",
+      "source": "chosen"
+    }
+  ],
+  "approval": {
+    "date": "2026-10-20",
+    "user_words": "Yes, build it."
+  }
+}

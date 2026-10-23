@@ -1,0 +1,220 @@
+{
+ "schema": "iamar-material-library/1",
+ "about": "Seamless hand-painted-style colour maps any style can tint. Painted around a warm neutral grey (mean ~0.6); `materials.py use` tints them to a style profile. Rebuild with `materials.py build` (deterministic painter).",
+ "painter": "kit/tools/paint_materials.py",
+ "author": "iamar kit",
+ "source": "kit/style/materials (painted by kit/tools/paint_materials.py)",
+ "origin": "original: every pixel is painted by kit/tools/paint_materials.py from periodic noise and block layouts; no photographs, no third-party textures, no generated-model input",
+ "licence": "iamar project licence (not yet chosen by the maintainer: kit/inventory/licences.json row original-procedural). Free to use in iamar worlds.",
+ "licences_row": "original-procedural",
+ "evidence": "the iamar browser source (not public) scripts/world/masterplan/mp_materials.gd header (13 painted layers incl. the trim sheet, 256 px per metre, warm balance) and docs/MASTERPLAN_ART_TECHNIQUES.md; kit/tools/paint_materials.py",
+ "rule": {
+  "near_px_per_m": 256,
+  "tolerance": 0.2,
+  "far_px_per_m": 64,
+  "waste_px_per_m": 1024,
+  "why": "The city paints every near surface at 256 px/m (1024 px per 4 m tile); a surface under ~205 px/m looks blurry beside it. Far LODs (LOD1..LOD9) are seen from 30 m and more and need a quarter. Above 1024 px/m nobody can see the texels.",
+  "how": "UV-map at 4 m per UV unit (Blender: 1 UV unit = 4 m) with a 1024 px library map; primitives and terrain layers: uv_scale 4 with a 1024 px map."
+ },
+ "budget": {
+  "world_texture_bytes": 67108864,
+  "model_texture_bytes": 4194304,
+  "max_texture_size": 2048,
+  "why": "The whole city draws its buildings with 13 shared 1024 px layers (52 MiB at w x h x 4). A world that shares library maps stays near that; a generated building embeds about 17 MiB of its own (kit/style/lighting/README.md), so four of them already pass 64 MiB. The manifest's texture_bytes and texture_size are checked as well (the browser refuses a world over them)."
+ },
+ "layers": {
+  "stone": {
+   "kind": "surface",
+   "roles": "small coursed rubble stone: ground storeys, walls, garden walls",
+   "file": "library/stone.jpg",
+   "size": 1024,
+   "mean_rgb": [
+    0.649,
+    0.612,
+    0.538
+   ],
+   "sha256": "fbb410d1eb3c5500e975aed5e6d1dd38349072e13b7f6d1dfc291d8b7d630dec"
+  },
+  "ashlar": {
+   "kind": "surface",
+   "roles": "big dressed pale ashlar: civic ground storeys, quoins, arches",
+   "file": "library/ashlar.jpg",
+   "size": 1024,
+   "mean_rgb": [
+    0.647,
+    0.612,
+    0.54
+   ],
+   "sha256": "0b3d3b828c41d41f62243878b7a944fe12176806682acf00360919d88fad27d7"
+  },
+  "granite": {
+   "kind": "surface",
+   "roles": "rough dark granite: fortifications, heavy plinths",
+   "file": "library/granite.jpg",
+   "size": 1024,
+   "mean_rgb": [
+    0.654,
+    0.613,
+    0.531
+   ],
+   "sha256": "a8ddc4734f2497b9a7a46cd190607d959c28dbaf4c61ff3db9ddc19507080e75"
+  },
+  "plaster": {
+   "kind": "surface",
+   "roles": "lime plaster with stains: upper storeys, interiors",
+   "file": "library/plaster.jpg",
+   "size": 1024,
+   "mean_rgb": [
+    0.666,
+    0.614,
+    0.519
+   ],
+   "sha256": "9d55e4ba9946a4008aac10c4915f9f403b940da7b575b7489b2287180e915c7c"
+  },
+  "timber": {
+   "kind": "surface",
+   "roles": "oak planks, grain along u: frames, beams, doors, floors",
+   "file": "library/timber.jpg",
+   "size": 1024,
+   "mean_rgb": [
+    0.675,
+    0.616,
+    0.509
+   ],
+   "sha256": "064fbc4cd380ce668aabf863f66c3b4a2abf883dda746b3e79b3ab53cbc1b407"
+  },
+  "slate": {
+   "kind": "roof",
+   "roles": "slate roof; v runs down the slope (image top = ridge)",
+   "file": "library/slate.jpg",
+   "size": 1024,
+   "mean_rgb": [
+    0.646,
+    0.612,
+    0.54
+   ],
+   "sha256": "46a347d437f4c6eea9b06a69acc338649ad03edba796138e29a5bac9b6b9dd60"
+  },
+  "slate_dark": {
+   "kind": "roof",
+   "roles": "heavy dark slate roof; v down the slope",
+   "file": "library/slate_dark.jpg",
+   "size": 1024,
+   "mean_rgb": [
+    0.643,
+    0.613,
+    0.542
+   ],
+   "sha256": "6f7db9d1ded2c5e10b4318996ca99b6ab66631af1dd957a8ab1da55d81ea8d74"
+  },
+  "glazed": {
+   "kind": "roof",
+   "roles": "glazed barrel roof tiles; v down the slope",
+   "file": "library/glazed.jpg",
+   "size": 1024,
+   "mean_rgb": [
+    0.643,
+    0.611,
+    0.54
+   ],
+   "sha256": "951715c6db861b4bbe6e676138a0ce945ac7661925fa6bf537c89c911e25be03"
+  },
+  "shingle": {
+   "kind": "roof",
+   "roles": "mossy wooden shingles; v down the slope",
+   "file": "library/shingle.jpg",
+   "size": 1024,
+   "mean_rgb": [
+    0.648,
+    0.617,
+    0.533
+   ],
+   "sha256": "4020b42b517ea6fc858fc494106da390e047f14843ff2f0eeb0149861b029864"
+  },
+  "thatch": {
+   "kind": "roof",
+   "roles": "thatch; v down the slope",
+   "file": "library/thatch.jpg",
+   "size": 1024,
+   "mean_rgb": [
+    0.676,
+    0.617,
+    0.507
+   ],
+   "sha256": "2de485a625babe37d3dd6e670ea00a469fae7e8b67a7a70a4f3475d94e83389c"
+  },
+  "cobble": {
+   "kind": "ground",
+   "roles": "cobbled street, squares, yards",
+   "file": "library/cobble.jpg",
+   "size": 1024,
+   "mean_rgb": [
+    0.651,
+    0.613,
+    0.533
+   ],
+   "sha256": "3c2c718eb8346ddf586a20390f44ff579a00310fec9d53145edb9aa0a0081461"
+  },
+  "iron": {
+   "kind": "surface",
+   "roles": "hammered iron plate with rivets: straps, hinges, lamps, gates",
+   "file": "library/iron.jpg",
+   "size": 1024,
+   "mean_rgb": [
+    0.634,
+    0.608,
+    0.557
+   ],
+   "sha256": "5ab526bc6b6c8269e101341cebc56c9be3bf7faaeb14b355aa8afc589655966c"
+  },
+  "trim": {
+   "kind": "trim",
+   "roles": "trim sheet: 8 horizontal strips (cornice, frame, moulding, carved, dentil, rope, beam, strap), each 1/8 of the height, tiling along u; map a moulding's UVs onto one strip instead of modelling it",
+   "file": "library/trim.jpg",
+   "size": 1024,
+   "mean_rgb": [
+    0.657,
+    0.613,
+    0.529
+   ],
+   "sha256": "26e7f1cf08291cfb5f8f6b644d23cd3f2e910a7f3c72f3d9dc0efb1c5cb0030d",
+   "strips": [
+    "cornice",
+    "frame",
+    "moulding",
+    "carved",
+    "dentil",
+    "rope",
+    "beam",
+    "strap"
+   ]
+  },
+  "grass": {
+   "file": "library/grass.jpg",
+   "size": 1024,
+   "mean_rgb": [
+    0.642,
+    0.744,
+    0.414
+   ],
+   "sha256": "357517d088bd10a0d12c5b487dd1a221583370afde9187791ff011f99cb968d2",
+   "kind": "ground",
+   "roles": "meadow, lawn and hill terrain bands; ground with no direction"
+  },
+  "sand": {
+   "file": "library/sand.jpg",
+   "size": 1024,
+   "mean_rgb": [
+    0.696,
+    0.618,
+    0.486
+   ],
+   "sha256": "0a5d5bc3c45b327e83827a5845dbbefb6f4c7ee683389d9887178d35fa983823",
+   "kind": "ground",
+   "roles": "sand, dust and dry-ground terrain bands (ripples run along u)"
+  }
+ },
+ "size": 1024,
+ "tile_m": 4.0,
+ "texels_per_metre": 256.0
+}

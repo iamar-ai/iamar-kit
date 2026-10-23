@@ -1,0 +1,6 @@
+{
+ "about": "tests/kit_playtest/roofed: goto [x, z] under a roof slab (underside 3.2 m, top 3.6 m) stands on the ground, not on the roof (an internal task).",
+ "steps": [
+  {"do": "goto", "at": [20, 0], "expect": [{"player_y": [-0.2, 0.5]}]}
+ ]
+}

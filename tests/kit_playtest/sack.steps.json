@@ -1,0 +1,83 @@
+{
+ "about": "tests/kit_playtest/world: the three-step sack quest end to end.",
+ "steps": [
+  {
+   "do": "talk",
+   "npc": "miller",
+   "choose": "accept",
+   "expect": [
+    {
+     "quest": "sack",
+     "state": "active",
+     "step": 0
+    },
+    {
+     "choice": "Accept: The Flour Sack"
+    }
+   ]
+  },
+  {
+   "do": "goto",
+   "pickup": "sack",
+   "expect": [
+    {
+     "quest": "sack",
+     "step": 0
+    }
+   ]
+  },
+  {
+   "do": "pickup",
+   "quest": "sack",
+   "expect": [
+    {
+     "quest": "sack",
+     "state": "active",
+     "step": 1
+    }
+   ]
+  },
+  {
+   "do": "talk",
+   "npc": "miller",
+   "choose": "Here is your sack.",
+   "expect": [
+    {
+     "quest": "sack",
+     "step": 2
+    },
+    {
+     "dialog": "My flour!"
+    }
+   ]
+  },
+  {
+   "do": "goto",
+   "trigger": "well",
+   "expect": [
+    {
+     "quest": "sack",
+     "state": "ready"
+    }
+   ]
+  },
+  {
+   "do": "wait",
+   "s": 0.5
+  },
+  {
+   "do": "talk",
+   "npc": "miller",
+   "choose": "complete",
+   "expect": [
+    {
+     "quest": "sack",
+     "state": "done"
+    },
+    {
+     "dialog": "Splendid"
+    }
+   ]
+  }
+ ]
+}

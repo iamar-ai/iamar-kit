@@ -1,0 +1,73 @@
+{
+ "format": "iamar-scene",
+ "format_version": 0,
+ "primitives": [
+  {
+   "id": "ground",
+   "shape": "box",
+   "size": [
+    60.0,
+    0.5,
+    60.0
+   ],
+   "position": [
+    0,
+    -0.25,
+    0
+   ],
+   "color": "#8f8a70",
+   "collision": "box"
+  }
+ ],
+ "spawn_points": [
+  {
+   "id": "default",
+   "position": [
+    0,
+    0.1,
+    12
+   ],
+   "yaw": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": "house_a",
+   "asset": "assets/house.glb",
+   "position": [
+    -6,
+    0,
+    0
+   ],
+   "collision": "mesh",
+   "x-class": "building"
+  },
+  {
+   "id": "house_b",
+   "asset": "assets/house.glb",
+   "position": [
+    6,
+    0,
+    -2
+   ],
+   "rotation": [
+    0,
+    90,
+    0
+   ],
+   "collision": "mesh",
+   "x-class": "building"
+  },
+  {
+   "id": "crate",
+   "asset": "assets/crate.glb",
+   "position": [
+    0,
+    0,
+    6
+   ],
+   "collision": "box",
+   "x-class": "prop"
+  }
+ ]
+}

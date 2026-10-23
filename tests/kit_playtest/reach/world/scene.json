@@ -1,0 +1,49 @@
+{
+ "format": "iamar-scene",
+ "format_version": 0,
+ "environment": {
+  "ambient": {
+   "color": "#808080",
+   "energy": 1.0,
+   "source": "sky"
+  },
+  "sky": {
+   "type": "procedural"
+  },
+  "sun": {
+   "color": "#fff4e0",
+   "enabled": true,
+   "energy": 1.0,
+   "shadows": true
+  },
+  "time_of_day": 10.5
+ },
+ "terrain": {
+  "materials": [
+   {
+    "color": "#6f9a4a"
+   }
+  ],
+  "position": [
+   0,
+   0,
+   0
+  ],
+  "size": [
+   120,
+   120
+  ],
+  "type": "flat"
+ },
+ "spawn_points": [
+  {
+   "id": "spawn",
+   "position": [
+    0,
+    0,
+    8
+   ],
+   "yaw": 0
+  }
+ ]
+}

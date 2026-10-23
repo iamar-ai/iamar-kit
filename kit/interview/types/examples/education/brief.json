@@ -1,0 +1,91 @@
+{
+  "vision": "A cell biology lab that 30 teenagers explore in a 45-minute class.",
+  "audience": {
+    "access": "private",
+    "concurrent": 30
+  },
+  "type": "education",
+  "extra_types": [],
+  "track": "B",
+  "style_profile": "worlds/cell_lab/style.json",
+  "mood": {
+    "words": [
+      "curious",
+      "bright",
+      "clear"
+    ],
+    "time": "noon",
+    "weather": "clear"
+  },
+  "setup": {
+    "blender": false,
+    "gpu": false,
+    "scripts_ok": false,
+    "build_tier": 0
+  },
+  "tier_target": "low",
+  "budgets": {
+    "triangles": 150000,
+    "texture_size": 1024,
+    "texture_bytes": 67108864,
+    "download_mb": 80
+  },
+  "reuse": [
+    {
+      "catalog_id": "table_lab",
+      "use": "lab"
+    },
+    {
+      "catalog_id": "sign_board",
+      "use": "stations"
+    }
+  ],
+  "connections": {
+    "portal_from_city": false,
+    "name": "iamar://example-education",
+    "hosting": "own-computer"
+  },
+  "features": [
+    {
+      "id": "ui_quiz",
+      "kind": "ui"
+    },
+    {
+      "id": "script_station",
+      "kind": "script"
+    },
+    {
+      "id": "quest_cell_parts",
+      "kind": "quest"
+    }
+  ],
+  "checkpoints": [
+    "greybox",
+    "scale check",
+    "paint"
+  ],
+  "open_questions": [],
+  "answers": [
+    {
+      "id": "E1",
+      "value": "Learners can name the parts of a cell",
+      "source": "default",
+      "shown": true
+    },
+    {
+      "id": "E2",
+      "value": "A class of 30 teenagers",
+      "source": "default",
+      "shown": true
+    },
+    {
+      "id": "E3",
+      "value": "a lab experiment",
+      "source": "chosen"
+    }
+  ],
+  "approval": {
+    "date": "2026-10-20",
+    "user_words": "Yes, build it."
+  }
+}

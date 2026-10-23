@@ -1,0 +1,75 @@
+{
+ "format": "iamar-scene",
+ "format_version": 0,
+ "primitives": [
+  {
+   "id": "ground",
+   "shape": "box",
+   "size": [
+    80,
+    0.5,
+    80
+   ],
+   "position": [
+    0,
+    -0.25,
+    0
+   ],
+   "color": "#e0c79a",
+   "collision": "box"
+  }
+ ],
+ "spawn_points": [
+  {
+   "id": "default",
+   "position": [
+    0,
+    0.1,
+    14
+   ],
+   "yaw": 0
+  }
+ ],
+ "objects": [
+  {
+   "id": "house_a",
+   "asset": "assets/adobe_house.glb",
+   "position": [
+    -6,
+    0,
+    0
+   ],
+   "collision": "box"
+  },
+  {
+   "id": "house_b",
+   "asset": "assets/adobe_house_wide.glb",
+   "position": [
+    6,
+    0,
+    0
+   ],
+   "collision": "box"
+  },
+  {
+   "id": "house_c",
+   "asset": "assets/adobe_house.glb",
+   "position": [
+    -6,
+    0,
+    -20
+   ],
+   "scale": 1.15,
+   "collision": "box"
+  },
+  {
+   "id": "lamp",
+   "asset": "assets/brass_lamp.glb",
+   "position": [
+    0,
+    0,
+    4
+   ]
+  }
+ ]
+}

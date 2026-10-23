@@ -1,0 +1,21 @@
+MV-Adapter memory patch for 11-12 GB cards (iamar city, the build host's RTX 2080 Ti, 2026-10-14;
+the iamar-models mesh archive (not public) tools/mesh3d/mvadapter_11gb.patch). Against huanngzh/MV-Adapter
+commit 4277e0018232bac82bb2c103caf0893cedb711be. The pipeline cloned the reference
+hidden-state cache every step, doubling its memory; passing it uncloned lets four 768 px
+views fit in 9.7 GB. Apply once in your clone:
+    git -C <MV-Adapter clone> apply <kit>/gpu/patches/mvadapter_11gb.patch
+kit/gpu/gpu_check.py --stage views reports whether the clone is patched.
+
+diff --git a/mvadapter/pipelines/pipeline_mvadapter_i2mv_sdxl.py b/mvadapter/pipelines/pipeline_mvadapter_i2mv_sdxl.py
+index 79d1128..354c173 100644
+--- a/mvadapter/pipelines/pipeline_mvadapter_i2mv_sdxl.py
++++ b/mvadapter/pipelines/pipeline_mvadapter_i2mv_sdxl.py
+@@ -650,7 +650,7 @@ class MVAdapterI2MVSDXLPipeline(StableDiffusionXLPipeline, CustomAdapterMixin):
+ 
+         cross_attention_kwargs = {
+             "mv_scale": mv_scale,
+-            "ref_hidden_states": {k: v.clone() for k, v in ref_hidden_states.items()},
++            "ref_hidden_states": ref_hidden_states,  # (w4: no clone, 11 GB card)
+             "ref_scale": reference_conditioning_scale,
+             "num_views": num_images_per_prompt,
+             **(self.cross_attention_kwargs or {}),

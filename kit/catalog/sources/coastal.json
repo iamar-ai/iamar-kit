@@ -1,0 +1,636 @@
+{
+ "format": "iamar-catalog-coastal",
+ "version": 1,
+ "note": "The coastal and home set in kit/catalog/assets/coastal/: models made by export_coastal.gd, measured by coastal.py record. Never edit by hand.",
+ "licence": "CC0-1.0",
+ "models": [
+  {
+   "models_id": "coastal_palm_tree",
+   "file": "coastal/palm_tree.glb",
+   "name": "palm tree",
+   "category": "tree",
+   "description": "A coconut palm 6.4 m tall: a ringed trunk curving away from the wind, nine drooping fronds folded along their midribs and a bunch of four coconuts under the crown. Sways in the shared wind.",
+   "synonyms": [
+    "palm",
+    "coconut palm",
+    "coconut tree",
+    "palm tree",
+    "tropical tree",
+    "beach",
+    "coast",
+    "seaside",
+    "island",
+    "tropical",
+    "coconut"
+   ],
+   "collision": "box",
+   "origin": "kit-coastal",
+   "pack": "iamar coastal and home",
+   "style": "iamar coastal and modern home",
+   "style_compat": [
+    "neutral"
+   ],
+   "tags": [
+    "beach",
+    "coastal and home"
+   ],
+   "sha256": "6754a74fe80b14d6205e89a0f6ff5880a0b3f8ce6143466047254e3c6a16a347",
+   "bytes": 108916,
+   "place_scale": 1.0,
+   "triangles": 701,
+   "size": [
+    5.67,
+    6.34,
+    4.91
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "behaviours": [
+    "sways in the wind (scene.json \"sway\": true)"
+   ],
+   "builder": "kit/catalog/assets/export_coastal.gd",
+   "cite": "made for the kit by kit/catalog/assets/export_coastal.gd (an internal task, iamar-creator-ux: the beach-house brief)"
+  },
+  {
+   "models_id": "coastal_dock",
+   "file": "coastal/dock.glb",
+   "name": "dock",
+   "category": "bridge",
+   "description": "A wooden dock 2 m wide and 9 m long on eight piles: weathered deck boards with gaps, stringers, a ladder down into the water at the far end and two mooring cleats. The origin is the water's surface at the shore end; the deck is 0.6 m above it and runs out along -Z, so place it at the water's height with the origin on the beach and turn it to face the sea. Walk on it with \"collision\": \"mesh\".",
+   "synonyms": [
+    "dock",
+    "pier",
+    "jetty",
+    "boardwalk",
+    "landing stage",
+    "wharf",
+    "quay",
+    "boat dock",
+    "beach",
+    "lake",
+    "harbour",
+    "harbor",
+    "walkway",
+    "coast",
+    "seaside"
+   ],
+   "collision": "mesh",
+   "origin": "kit-coastal",
+   "pack": "iamar coastal and home",
+   "style": "iamar coastal and modern home",
+   "style_compat": [
+    "neutral"
+   ],
+   "tags": [
+    "beach",
+    "coastal and home"
+   ],
+   "sha256": "59bfce71f807b67ebb5c182d8cea0895c675e53a28aff07cf91df3439c4ecc77",
+   "bytes": 84364,
+   "place_scale": 1.0,
+   "triangles": 548,
+   "size": [
+    2.11,
+    3.0,
+    9.08
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "behaviours": [],
+   "builder": "kit/catalog/assets/export_coastal.gd",
+   "cite": "made for the kit by kit/catalog/assets/export_coastal.gd (an internal task, iamar-creator-ux: the beach-house brief)"
+  },
+  {
+   "models_id": "coastal_beach_umbrella",
+   "file": "coastal/beach_umbrella.glb",
+   "name": "beach umbrella",
+   "category": "prop",
+   "description": "A beach umbrella 2.4 m tall: a white pole pushed 0.35 m into the sand, an eight-panel canopy 2.3 m across in alternating teal and off-white with a scalloped valance, and ribs underneath.",
+   "synonyms": [
+    "umbrella",
+    "parasol",
+    "sunshade",
+    "beach umbrella",
+    "sun umbrella",
+    "shade",
+    "beach",
+    "seaside",
+    "patio",
+    "pool"
+   ],
+   "collision": "box",
+   "origin": "kit-coastal",
+   "pack": "iamar coastal and home",
+   "style": "iamar coastal and modern home",
+   "style_compat": [
+    "neutral"
+   ],
+   "tags": [
+    "beach",
+    "coastal and home"
+   ],
+   "sha256": "4c8791e8e82b21d9012536d896b1c9b9d0f35983e95d0da902538f995c5b024c",
+   "bytes": 23792,
+   "place_scale": 1.0,
+   "triangles": 144,
+   "size": [
+    2.3,
+    2.7,
+    2.3
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "behaviours": [],
+   "builder": "kit/catalog/assets/export_coastal.gd",
+   "cite": "made for the kit by kit/catalog/assets/export_coastal.gd (an internal task, iamar-creator-ux: the beach-house brief)"
+  },
+  {
+   "models_id": "coastal_sun_lounger",
+   "file": "coastal/sun_lounger.glb",
+   "name": "sun lounger",
+   "category": "furniture",
+   "description": "A teak sun lounger 1.95 m long: four legs, slatted bed, a backrest raised at 40 degrees at the +Z end and a striped cream and teal cushion pad. Pair it with the beach umbrella and towel.",
+   "synonyms": [
+    "lounger",
+    "sun lounger",
+    "deck chair",
+    "deckchair",
+    "sunbed",
+    "chaise longue",
+    "chaise",
+    "beach chair",
+    "pool chair",
+    "recliner",
+    "beach",
+    "pool",
+    "patio",
+    "seaside"
+   ],
+   "collision": "box",
+   "origin": "kit-coastal",
+   "pack": "iamar coastal and home",
+   "style": "iamar coastal and modern home",
+   "style_compat": [
+    "neutral"
+   ],
+   "tags": [
+    "beach",
+    "coastal and home"
+   ],
+   "sha256": "58b012527a3c6bd6d7702438c7547ef7a0a98d9620a65df6e79a3d911902bcd2",
+   "bytes": 32456,
+   "place_scale": 1.0,
+   "triangles": 202,
+   "size": [
+    0.67,
+    0.89,
+    2.06
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "behaviours": [],
+   "builder": "kit/catalog/assets/export_coastal.gd",
+   "cite": "made for the kit by kit/catalog/assets/export_coastal.gd (an internal task, iamar-creator-ux: the beach-house brief)"
+  },
+  {
+   "models_id": "coastal_beach_towel",
+   "file": "coastal/beach_towel.glb",
+   "name": "beach towel",
+   "category": "prop",
+   "description": "A striped beach towel 1.7 x 0.85 m laid flat on the sand in red, yellow, teal and off-white bands, one corner folded back. Flat (1 cm), so it needs no collision.",
+   "synonyms": [
+    "towel",
+    "beach towel",
+    "bath towel",
+    "blanket",
+    "picnic blanket",
+    "beach",
+    "seaside",
+    "sunbathing"
+   ],
+   "collision": "none",
+   "origin": "kit-coastal",
+   "pack": "iamar coastal and home",
+   "style": "iamar coastal and modern home",
+   "style_compat": [
+    "neutral"
+   ],
+   "tags": [
+    "beach",
+    "coastal and home"
+   ],
+   "sha256": "99afaa8b28c5f85a2fd7167fff8f4950d1a75dc6517b097486ef4e33106530b7",
+   "bytes": 5152,
+   "place_scale": 1.0,
+   "triangles": 20,
+   "size": [
+    0.85,
+    0.02,
+    1.7
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "behaviours": [],
+   "builder": "kit/catalog/assets/export_coastal.gd",
+   "cite": "made for the kit by kit/catalog/assets/export_coastal.gd (an internal task, iamar-creator-ux: the beach-house brief)"
+  },
+  {
+   "models_id": "coastal_sea_shells",
+   "file": "coastal/sea_shells.glb",
+   "name": "sea shells",
+   "category": "ground-flora",
+   "description": "A scatter of sea shells over about 1 x 0.8 m: four scallops, three whelks, three clams and an orange starfish, lying on the sand at the tide line. Scatter a few copies along the shore, turned differently.",
+   "synonyms": [
+    "shell",
+    "shells",
+    "seashell",
+    "seashells",
+    "sea shell",
+    "scallop",
+    "clam",
+    "whelk",
+    "conch",
+    "starfish",
+    "sea star",
+    "beach",
+    "tide line",
+    "shore",
+    "seaside"
+   ],
+   "collision": "none",
+   "origin": "kit-coastal",
+   "pack": "iamar coastal and home",
+   "style": "iamar coastal and modern home",
+   "style_compat": [
+    "neutral"
+   ],
+   "tags": [
+    "beach",
+    "coastal and home"
+   ],
+   "sha256": "7a8c97e1d2d5051854c70afd984def7266a8e5c86aed2edd0a0d7a2d516830ac",
+   "bytes": 54952,
+   "place_scale": 1.0,
+   "triangles": 351,
+   "size": [
+    1.04,
+    0.07,
+    0.74
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "behaviours": [],
+   "builder": "kit/catalog/assets/export_coastal.gd",
+   "cite": "made for the kit by kit/catalog/assets/export_coastal.gd (an internal task, iamar-creator-ux: the beach-house brief)"
+  },
+  {
+   "models_id": "coastal_coral",
+   "file": "coastal/coral.glb",
+   "name": "coral cluster",
+   "category": "ground-flora",
+   "description": "A coral cluster 1.4 m across on a reef rock: a yellow brain coral dome, pink and orange staghorn coral, a purple sea fan and three orange tube sponges. The origin is the sea floor: place it under clear water, where fish swim over it.",
+   "synonyms": [
+    "coral",
+    "reef",
+    "coral reef",
+    "brain coral",
+    "staghorn",
+    "sea fan",
+    "sponge",
+    "underwater",
+    "sea floor",
+    "seabed",
+    "ocean",
+    "tropical",
+    "dive",
+    "snorkel"
+   ],
+   "collision": "box",
+   "origin": "kit-coastal",
+   "pack": "iamar coastal and home",
+   "style": "iamar coastal and modern home",
+   "style_compat": [
+    "neutral"
+   ],
+   "tags": [
+    "beach",
+    "coastal and home"
+   ],
+   "sha256": "5106b946fdfc9897c89b789c29daf6184c4f93329049125c5715607e3f541987",
+   "bytes": 83164,
+   "place_scale": 1.0,
+   "triangles": 539,
+   "size": [
+    1.36,
+    0.86,
+    1.38
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "behaviours": [],
+   "builder": "kit/catalog/assets/export_coastal.gd",
+   "cite": "made for the kit by kit/catalog/assets/export_coastal.gd (an internal task, iamar-creator-ux: the beach-house brief)"
+  },
+  {
+   "models_id": "coastal_kelp",
+   "file": "coastal/kelp.glb",
+   "name": "kelp",
+   "category": "ground-flora",
+   "description": "A bed of giant kelp: eight olive-brown blades 1.4 to 2.6 m tall rising from a rocky holdfast, waving in the swell (clip sway, each blade out of phase). The origin is the sea floor: place it under water at least 2 m deep.",
+   "synonyms": [
+    "kelp",
+    "seaweed",
+    "sea weed",
+    "algae",
+    "sea grass",
+    "seagrass",
+    "kelp forest",
+    "underwater",
+    "sea floor",
+    "seabed",
+    "ocean",
+    "water plant"
+   ],
+   "collision": "none",
+   "origin": "kit-coastal",
+   "pack": "iamar coastal and home",
+   "style": "iamar coastal and modern home",
+   "style_compat": [
+    "neutral"
+   ],
+   "tags": [
+    "beach",
+    "coastal and home"
+   ],
+   "sha256": "160afc872170b586cbf4014890708f11d237ed93a2cb2a68fb9e296455eb1f45",
+   "bytes": 54384,
+   "place_scale": 1.0,
+   "triangles": 296,
+   "size": [
+    0.91,
+    2.54,
+    0.91
+   ],
+   "skinned": false,
+   "animations": [
+    "sway"
+   ],
+   "images": 1,
+   "physics_body": false,
+   "behaviours": [
+    "waving in the swell (clip sway)"
+   ],
+   "builder": "kit/catalog/assets/export_coastal.gd",
+   "cite": "made for the kit by kit/catalog/assets/export_coastal.gd (an internal task, iamar-creator-ux: the beach-house brief)",
+   "play": "sway",
+   "moves": {
+    "sway": [
+     "Blade3",
+     0.1
+    ]
+   }
+  },
+  {
+   "models_id": "coastal_sofa",
+   "file": "coastal/sofa.glb",
+   "name": "sofa",
+   "category": "furniture",
+   "description": "A modern three-seat sofa 2.1 m wide with the seat at 0.45 m: slate-blue upholstery, three seat and three back cushions, rolled arms, walnut legs and a cream scatter cushion. It faces +Z; put its back (-Z) to a wall or behind a rug in a living room.",
+   "synonyms": [
+    "sofa",
+    "couch",
+    "settee",
+    "lounge",
+    "three-seater",
+    "living room",
+    "sitting room",
+    "lounge room",
+    "seat",
+    "modern"
+   ],
+   "collision": "box",
+   "origin": "kit-coastal",
+   "pack": "iamar coastal and home",
+   "style": "iamar coastal and modern home",
+   "style_compat": [
+    "neutral"
+   ],
+   "tags": [
+    "home",
+    "coastal and home"
+   ],
+   "sha256": "4a8cdbcc65d76406bf6327dc5b335f6a63425d1314596612042b5fb847efc9bf",
+   "bytes": 38160,
+   "place_scale": 1.0,
+   "triangles": 240,
+   "size": [
+    2.1,
+    0.93,
+    0.9
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "behaviours": [],
+   "builder": "kit/catalog/assets/export_coastal.gd",
+   "cite": "made for the kit by kit/catalog/assets/export_coastal.gd (an internal task, iamar-creator-ux: the beach-house brief)"
+  },
+  {
+   "models_id": "coastal_kitchen_counter",
+   "file": "coastal/kitchen_counter.glb",
+   "name": "kitchen counter",
+   "category": "furniture",
+   "description": "A fitted kitchen counter 2.4 m long and 0.9 m high: sage-green base cabinets with doors and a drawer row, a pale stone worktop, an inset steel sink with a swan-neck tap, a black four-ring hob and a tiled splashback. Doors face +Z; put the back (-Z) against a wall.",
+   "synonyms": [
+    "kitchen",
+    "counter",
+    "kitchen counter",
+    "worktop",
+    "countertop",
+    "cabinet",
+    "cupboard",
+    "sink",
+    "hob",
+    "stove",
+    "cooker",
+    "kitchenette",
+    "modern"
+   ],
+   "collision": "box",
+   "origin": "kit-coastal",
+   "pack": "iamar coastal and home",
+   "style": "iamar coastal and modern home",
+   "style_compat": [
+    "neutral"
+   ],
+   "tags": [
+    "home",
+    "coastal and home"
+   ],
+   "sha256": "a796cb0c2a468865d158c8a8b3f4bf689abfac543e96a3dfa006673e6a0df884",
+   "bytes": 90116,
+   "place_scale": 1.0,
+   "triangles": 586,
+   "size": [
+    2.4,
+    1.4,
+    0.66
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "behaviours": [],
+   "builder": "kit/catalog/assets/export_coastal.gd",
+   "cite": "made for the kit by kit/catalog/assets/export_coastal.gd (an internal task, iamar-creator-ux: the beach-house brief)"
+  },
+  {
+   "models_id": "coastal_bathtub",
+   "file": "coastal/bathtub.glb",
+   "name": "bathtub",
+   "category": "furniture",
+   "description": "A freestanding bath 1.7 x 0.78 m: an off-white enamel shell with a rolled rim and a deep basin, a walnut plinth and a chrome mixer tap at the +X end. Put it in a bathroom with its long side to a wall.",
+   "synonyms": [
+    "bath",
+    "bathtub",
+    "tub",
+    "bath tub",
+    "bathroom",
+    "washroom",
+    "soaking tub",
+    "modern"
+   ],
+   "collision": "box",
+   "origin": "kit-coastal",
+   "pack": "iamar coastal and home",
+   "style": "iamar coastal and modern home",
+   "style_compat": [
+    "neutral"
+   ],
+   "tags": [
+    "home",
+    "coastal and home"
+   ],
+   "sha256": "5e0cde2d815a70c381d2eccbeac4b0302099fcc7b78b5cac8ba6c50be1749efd",
+   "bytes": 21088,
+   "place_scale": 1.0,
+   "triangles": 126,
+   "size": [
+    1.7,
+    0.75,
+    0.78
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "behaviours": [],
+   "builder": "kit/catalog/assets/export_coastal.gd",
+   "cite": "made for the kit by kit/catalog/assets/export_coastal.gd (an internal task, iamar-creator-ux: the beach-house brief)"
+  },
+  {
+   "models_id": "coastal_wardrobe",
+   "file": "coastal/wardrobe.glb",
+   "name": "wardrobe",
+   "category": "furniture",
+   "description": "A double wardrobe 1.2 m wide, 0.6 m deep and 2.1 m tall in light oak: two doors with a shadow gap, long steel bar handles, a plinth and a top cornice. Doors face +Z; stand its back (-Z) against a bedroom wall.",
+   "synonyms": [
+    "wardrobe",
+    "closet",
+    "armoire",
+    "cupboard",
+    "clothes cabinet",
+    "bedroom",
+    "storage",
+    "modern"
+   ],
+   "collision": "box",
+   "origin": "kit-coastal",
+   "pack": "iamar coastal and home",
+   "style": "iamar coastal and modern home",
+   "style_compat": [
+    "neutral"
+   ],
+   "tags": [
+    "home",
+    "coastal and home"
+   ],
+   "sha256": "5a1941b20ac7b9e1c22f81fcb4deafae456c94e1e493120e04c84f1e837245c0",
+   "bytes": 21360,
+   "place_scale": 1.0,
+   "triangles": 128,
+   "size": [
+    1.24,
+    2.1,
+    0.66
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "behaviours": [],
+   "builder": "kit/catalog/assets/export_coastal.gd",
+   "cite": "made for the kit by kit/catalog/assets/export_coastal.gd (an internal task, iamar-creator-ux: the beach-house brief)"
+  },
+  {
+   "models_id": "coastal_rug",
+   "file": "coastal/rug.glb",
+   "name": "rug",
+   "category": "furniture",
+   "description": "A woven rug 2.4 x 1.7 m: a red field with a central blue and gold medallion, a cream inner border, a deep blue outer border and a fringe at both short ends. Flat (1 cm), so it needs no collision; lay it under a sofa or beside a bed.",
+   "synonyms": [
+    "rug",
+    "carpet",
+    "mat",
+    "floor rug",
+    "area rug",
+    "persian rug",
+    "living room",
+    "bedroom",
+    "floor covering"
+   ],
+   "collision": "none",
+   "origin": "kit-coastal",
+   "pack": "iamar coastal and home",
+   "style": "iamar coastal and modern home",
+   "style_compat": [
+    "neutral"
+   ],
+   "tags": [
+    "home",
+    "coastal and home"
+   ],
+   "sha256": "4e778745811da2965dcb6682bca07434bb6d91db65697e917b5e8e21e350c2ae",
+   "bytes": 15392,
+   "place_scale": 1.0,
+   "triangles": 88,
+   "size": [
+    2.6,
+    0.01,
+    1.7
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "behaviours": [],
+   "builder": "kit/catalog/assets/export_coastal.gd",
+   "cite": "made for the kit by kit/catalog/assets/export_coastal.gd (an internal task, iamar-creator-ux: the beach-house brief)"
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "id": "harbour_founder_statue",
+ "kind": "statue",
+ "concept": {
+  "original": true,
+  "source": "user-approved text prompt, own SDXL or hand sketch (no third-party art)"
+ },
+ "subject_fill": 0.8,
+ "high_tris": 80000,
+ "lod0_tris": 8000,
+ "lods": [
+  8000,
+  2000,
+  1000,
+  500
+ ],
+ "map_px": 2048,
+ "base_stripped": true,
+ "danglers_removed": true,
+ "neck_kept": true,
+ "maps_dilated": true,
+ "face_repainted": false,
+ "generator": {
+  "tool": "any image-to-3D or hand sculpt",
+  "licence": "recorded per tool; Hunyuan3D-2 excludes EU/UK/KR"
+ },
+ "shots": [
+  "day_front",
+  "day_back",
+  "night_front",
+  "night_back"
+ ]
+}

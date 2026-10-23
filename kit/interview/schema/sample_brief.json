@@ -1,0 +1,27 @@
+{
+  "vision": "A harbour village where my grandchildren can explore and fish.",
+  "audience": {"access": "buddies", "concurrent": 8},
+  "type": "town",
+  "extra_types": ["nature"],
+  "track": "A",
+  "style_profile": "iamar",
+  "mood": {"words": ["cosy", "calm", "playful"], "time": "golden hour", "weather": "clear"},
+  "setup": {"blender": false, "gpu": false, "scripts_ok": false, "build_tier": 0},
+  "tier_target": "low",
+  "budgets": {"triangles": 150000, "texture_size": 1024, "texture_bytes": 67108864, "download_mb": 100},
+  "reuse": [{"catalog_id": "tree_oak", "use": "village green"}],
+  "connections": {"portal_from_city": true, "name": "iamar://mira-harbour", "hosting": "own-computer"},
+  "features": [
+    {"id": "npc_fisher", "kind": "npc"},
+    {"id": "quest_first_catch", "kind": "quest"},
+    {"id": "script_tide_bell", "kind": "script"}
+  ],
+  "checkpoints": ["greybox", "scale check", "paint"],
+  "open_questions": [],
+  "answers": [
+    {"id": "A1", "value": "A harbour village where my grandchildren can explore and fish.", "source": "chosen"},
+    {"id": "A2", "value": "up to 10 at once", "source": "default", "shown": true},
+    {"id": "D2", "value": "100 MB", "source": "default", "shown": true}
+  ],
+  "approval": {"date": "2026-10-20", "user_words": "Yes, build it."}
+}

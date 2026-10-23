@@ -1,0 +1,4407 @@
+{
+ "format": "iamar-catalog-city-models",
+ "version": 1,
+ "note": "Representative city buildings per quarter and reusable landmarks, copied from the iamar-models mesh archive (not public) and re-centred to a bottom-centre pivot by kit/catalog/assets/import_city_buildings.py. Files live in kit/catalog/assets/<file>. Never edit by hand: rerun the import.",
+ "models_commit": "de6b2675",
+ "licence": "CC0-1.0",
+ "models": [
+  {
+   "models_id": "B001",
+   "file": "buildings/b001.glb",
+   "name": "warriors' quarter bird supply shop",
+   "category": "building",
+   "description": "A large two-storey corner shop on an L-shaped plan: whitewashed walls in a dark timber frame, red-brown window frames, two shop doors and broad hipped slate roofs with dormers and a chimney. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Open on its -z side, 1.2 m (it shared a party wall with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "bird shop",
+    "pet shop",
+    "corner shop",
+    "store",
+    "half-timbered house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Bird supply shop",
+   "floors": 2,
+   "open_sides": [
+    {
+     "side": 3,
+     "length_m": 1.2,
+     "faces": "-z",
+     "angle_deg": 272,
+     "ends": [
+      [
+       6.953,
+       2.835
+      ],
+      [
+       8.113,
+       2.885
+      ]
+     ]
+    }
+   ],
+   "sha256": "09fe2a1c674c30ca6ffd85595442122d6161cf3eb56450642d43f5e4ddd7880c",
+   "bytes": 813684,
+   "source_sha256": "22b40e4233e14dd46aabcf7d90a2c5f2065233da9d211930ea8b47026cda9fb6",
+   "recentred_by": [
+    86.263,
+    -0.006,
+    6.675
+   ],
+   "place_scale": 1.0,
+   "triangles": 4565,
+   "models_json_triangles": 4312,
+   "size": [
+    19.49,
+    10.14,
+    28.98
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B001.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B005",
+   "file": "buildings/b005.glb",
+   "name": "mages' quarter wandmaker",
+   "category": "building",
+   "description": "A three-storey wandmaker's shop on an L-shaped plan: pale walls with violet string courses, ochre window surrounds, a shop door and a blue hipped roof with a chimney. From the mages' quarter: pale walls with violet trim, tall blue roofs. Open on its -x side, 4.1 m and its +x side, 6.8 m and its +z side, 6.6 m and its +x side, 1.8 m and its -x side, 8 m and its -z side, 1.6 m (it shared party walls with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "wand shop",
+    "wandmaker",
+    "magic shop",
+    "store",
+    "town house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: mages' quarter",
+   "quarter": "DIST_M",
+   "plan_purpose": "Wands",
+   "floors": 3,
+   "open_sides": [
+    {
+     "side": 0,
+     "length_m": 4.1,
+     "faces": "-x",
+     "angle_deg": 193,
+     "ends": [
+      [
+       -7.309,
+       -1.808
+      ],
+      [
+       -6.369,
+       -5.798
+      ]
+     ]
+    },
+    {
+     "side": 3,
+     "length_m": 6.8,
+     "faces": "+x",
+     "angle_deg": 13,
+     "ends": [
+      [
+       7.201,
+       -2.728
+      ],
+      [
+       5.631,
+       3.852
+      ]
+     ]
+    },
+    {
+     "side": 5,
+     "length_m": 6.6,
+     "faces": "+z",
+     "angle_deg": 87,
+     "ends": [
+      [
+       6.851,
+       4.272
+      ],
+      [
+       0.301,
+       4.562
+      ]
+     ]
+    },
+    {
+     "side": 6,
+     "length_m": 1.8,
+     "faces": "+x",
+     "angle_deg": 357,
+     "ends": [
+      [
+       0.301,
+       4.562
+      ],
+      [
+       0.381,
+       6.342
+      ]
+     ]
+    },
+    {
+     "side": 8,
+     "length_m": 8.0,
+     "faces": "-x",
+     "angle_deg": 180,
+     "ends": [
+      [
+       -5.689,
+       6.162
+      ],
+      [
+       -5.689,
+       -1.808
+      ]
+     ]
+    },
+    {
+     "side": 9,
+     "length_m": 1.6,
+     "faces": "-z",
+     "angle_deg": 270,
+     "ends": [
+      [
+       -5.689,
+       -1.808
+      ],
+      [
+       -7.309,
+       -1.808
+      ]
+     ]
+    }
+   ],
+   "sha256": "b2fd3f22f687e2cbf8814adeb8872de55d5cbc518dd6312ab86fdbae19a5c619",
+   "bytes": 376880,
+   "source_sha256": "fd5024a8bcb02e1e84c0fc852f5003690f00e0e1de5031bdcfef9af62828c9aa",
+   "recentred_by": [
+    -15.689,
+    -0.336,
+    6.342
+   ],
+   "place_scale": 1.0,
+   "triangles": 2066,
+   "models_json_triangles": 1934,
+   "size": [
+    14.72,
+    14.16,
+    14.04
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B005.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B007",
+   "file": "buildings/b007.glb",
+   "name": "warriors' quarter smithy",
+   "category": "building",
+   "description": "A two-storey smithy with an attic: plaster walls in a dark timber frame with cross braces, small red-framed windows, a hipped slate roof and two chimneys. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Open on its +x side, 2.1 m and its +x side, 6.4 m (it shared party walls with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "smith",
+    "smithy",
+    "blacksmith",
+    "workshop",
+    "half-timbered house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Smith",
+   "floors": 2,
+   "open_sides": [
+    {
+     "side": 4,
+     "length_m": 2.1,
+     "faces": "+x",
+     "angle_deg": 355,
+     "ends": [
+      [
+       3.881,
+       -8.736
+      ],
+      [
+       4.051,
+       -6.616
+      ]
+     ]
+    },
+    {
+     "side": 6,
+     "length_m": 6.4,
+     "faces": "+x",
+     "angle_deg": 0,
+     "ends": [
+      [
+       2.591,
+       -6.566
+      ],
+      [
+       2.591,
+       -0.126
+      ]
+     ]
+    }
+   ],
+   "sha256": "211af458eea3ab8a8d66e4edcfd2d6710b1395b8baf2fe04ac891dac1d569248",
+   "bytes": 577440,
+   "source_sha256": "3ceae3872a4ba29140a8633b68a03fe9738a6207b052bf6cf242da61b83fd06c",
+   "recentred_by": [
+    17.591,
+    -0.32,
+    1.534
+   ],
+   "place_scale": 1.0,
+   "triangles": 3197,
+   "models_json_triangles": 3062,
+   "size": [
+    8.2,
+    10.47,
+    18.75
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B007.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B008",
+   "file": "buildings/b008.glb",
+   "name": "mages' quarter curio shop",
+   "category": "building",
+   "description": "A long two-storey curio shop: pale walls in a timber frame with violet trim, small framed windows, a shop door under a front gable, a dormer and broad blue hipped roofs with a chimney. From the mages' quarter: pale walls with violet trim, tall blue roofs. Open on its -x side, 1.8 m and its -z side, 7 m and its -z side, 4.1 m and its +x side, 6.8 m (it shared party walls with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "curio shop",
+    "curiosities",
+    "antiques",
+    "magic shop",
+    "store"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: mages' quarter",
+   "quarter": "DIST_M",
+   "plan_purpose": "Curios",
+   "floors": 2,
+   "open_sides": [
+    {
+     "side": 1,
+     "length_m": 1.8,
+     "faces": "-x",
+     "angle_deg": 179,
+     "ends": [
+      [
+       -2.681,
+       -2.05
+      ],
+      [
+       -2.721,
+       -3.83
+      ]
+     ]
+    },
+    {
+     "side": 2,
+     "length_m": 7.0,
+     "faces": "-z",
+     "angle_deg": 267,
+     "ends": [
+      [
+       -2.721,
+       -3.83
+      ],
+      [
+       4.229,
+       -4.14
+      ]
+     ]
+    },
+    {
+     "side": 3,
+     "length_m": 4.1,
+     "faces": "-z",
+     "angle_deg": 284,
+     "ends": [
+      [
+       4.229,
+       -4.14
+      ],
+      [
+       8.189,
+       -3.17
+      ]
+     ]
+    },
+    {
+     "side": 4,
+     "length_m": 6.8,
+     "faces": "+x",
+     "angle_deg": 17,
+     "ends": [
+      [
+       8.189,
+       -3.17
+      ],
+      [
+       6.179,
+       3.3
+      ]
+     ]
+    }
+   ],
+   "sha256": "60e0af44c2f22886977b0953f4984eeae389129c71e7fe75d7c4ccfa98fc1b97",
+   "bytes": 317304,
+   "source_sha256": "02926b9fcc51b944262a404d8d05071c5baf2fb66d9720bd16c0956c7d7edc56",
+   "recentred_by": [
+    -18.711,
+    -0.716,
+    -2.05
+   ],
+   "place_scale": 1.0,
+   "triangles": 1791,
+   "models_json_triangles": 1729,
+   "size": [
+    16.47,
+    10.26,
+    8.45
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B008.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B021",
+   "file": "buildings/b021.glb",
+   "name": "warriors' quarter blacksmith forge",
+   "category": "building",
+   "description": "A long two-storey forge: plaster walls with red-framed windows, an open timber arcade along the ground floor where the work is done, a hipped slate roof with a dormer; the city's working forge. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Open on its +z side, 1.2 m and its -x side, 3 m and its -z side, 8.9 m and its -z side, 7.5 m and its +x side, 6.4 m (it shared party walls with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "forge",
+    "blacksmith",
+    "smithy",
+    "workshop",
+    "smith",
+    "ironworks"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Blacksmith forge",
+   "floors": 2,
+   "open_sides": [
+    {
+     "side": 0,
+     "length_m": 1.2,
+     "faces": "+z",
+     "angle_deg": 90,
+     "ends": [
+      [
+       7.6,
+       2.432
+      ],
+      [
+       6.35,
+       2.432
+      ]
+     ]
+    },
+    {
+     "side": 3,
+     "length_m": 3.0,
+     "faces": "-x",
+     "angle_deg": 172,
+     "ends": [
+      [
+       -7.18,
+       3.492
+      ],
+      [
+       -7.6,
+       0.542
+      ]
+     ]
+    },
+    {
+     "side": 4,
+     "length_m": 8.9,
+     "faces": "-z",
+     "angle_deg": 239,
+     "ends": [
+      [
+       -7.6,
+       0.542
+      ],
+      [
+       0.06,
+       -4.008
+      ]
+     ]
+    },
+    {
+     "side": 5,
+     "length_m": 7.5,
+     "faces": "-z",
+     "angle_deg": 270,
+     "ends": [
+      [
+       0.06,
+       -4.008
+      ],
+      [
+       7.6,
+       -3.998
+      ]
+     ]
+    },
+    {
+     "side": 6,
+     "length_m": 6.4,
+     "faces": "+x",
+     "angle_deg": 0,
+     "ends": [
+      [
+       7.6,
+       -3.998
+      ],
+      [
+       7.6,
+       2.432
+      ]
+     ]
+    }
+   ],
+   "sha256": "e7d942d7bb5c32c401c1284cc44b907832915dd92d689a08f58c824e067047e3",
+   "bytes": 196092,
+   "source_sha256": "c963c3465a29c619d20dbc5a84429c275c1dd8281fea389e53c01d3be3ad448b",
+   "recentred_by": [
+    41.95,
+    -0.568,
+    -24.218
+   ],
+   "place_scale": 1.0,
+   "triangles": 1076,
+   "models_json_triangles": 1026,
+   "size": [
+    15.3,
+    8.67,
+    8.24
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B021.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B023",
+   "file": "buildings/b023.glb",
+   "name": "warriors' quarter bakery",
+   "category": "building",
+   "description": "A three-storey bakery with a half-timbered front (cross-braced panels), red window frames, a shop door, a gabled dormer and a slate roof with a chimney. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Open on its -x side, 4.7 m and its -z side, 4.1 m (it shared party walls with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "bakery",
+    "baker",
+    "bakehouse",
+    "store",
+    "half-timbered house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Baker",
+   "floors": 3,
+   "open_sides": [
+    {
+     "side": 2,
+     "length_m": 4.7,
+     "faces": "-x",
+     "angle_deg": 179,
+     "ends": [
+      [
+       -5.577,
+       4.19
+      ],
+      [
+       -5.677,
+       -0.52
+      ]
+     ]
+    },
+    {
+     "side": 3,
+     "length_m": 4.1,
+     "faces": "-z",
+     "angle_deg": 269,
+     "ends": [
+      [
+       -5.677,
+       -0.52
+      ],
+      [
+       -1.587,
+       -0.61
+      ]
+     ]
+    }
+   ],
+   "sha256": "331fde52c56b4e468bb31da9a2a9f88dfc660b9aef6ddb0f1e44e214d19ed37b",
+   "bytes": 629748,
+   "source_sha256": "ef129993b59c924b524a65001827c97f395dd7371f250c0fa00cebf3925c22b4",
+   "recentred_by": [
+    13.413,
+    -0.72,
+    -23.17
+   ],
+   "place_scale": 1.0,
+   "triangles": 3441,
+   "models_json_triangles": 3354,
+   "size": [
+    11.45,
+    12.86,
+    9.37
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B023.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B024",
+   "file": "buildings/b024.glb",
+   "name": "mages' quarter tailor",
+   "category": "building",
+   "description": "A tall three-storey tailor's shop: pale walls with violet trim, arched ground-floor doors, a bay window and a very steep blue hipped roof with dormers and a chimney. From the mages' quarter: pale walls with violet trim, tall blue roofs. Open on its +x side, 9.9 m and its -z side, 1.8 m (it shared party walls with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "tailor",
+    "dressmaker",
+    "clothier",
+    "store",
+    "tall house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: mages' quarter",
+   "quarter": "DIST_M",
+   "plan_purpose": "Tailor",
+   "floors": 3,
+   "open_sides": [
+    {
+     "side": 0,
+     "length_m": 9.9,
+     "faces": "+x",
+     "angle_deg": 12,
+     "ends": [
+      [
+       4.983,
+       -4.086
+      ],
+      [
+       2.913,
+       5.614
+      ]
+     ]
+    },
+    {
+     "side": 6,
+     "length_m": 1.8,
+     "faces": "-z",
+     "angle_deg": 285,
+     "ends": [
+      [
+       3.263,
+       -4.546
+      ],
+      [
+       4.983,
+       -4.086
+      ]
+     ]
+    }
+   ],
+   "sha256": "48d448d4561aeba194ed085c8b0d72f8a576ff8bab397f8115e711ae69a065fa",
+   "bytes": 605412,
+   "source_sha256": "5ddb62471569bd2eea3e196139efa9d001a72a3f1f7e53ba8d3b521ce390bbbe",
+   "recentred_by": [
+    -6.737,
+    -0.8,
+    -22.636
+   ],
+   "place_scale": 1.0,
+   "triangles": 3284,
+   "models_json_triangles": 3172,
+   "size": [
+    10.08,
+    16.66,
+    12.26
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "bdcc95bc",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B024.glb (the iamar browser source (not public) bdcc95bc, plan sha256 62746e9dc333...)"
+  },
+  {
+   "models_id": "B028",
+   "file": "buildings/b028.glb",
+   "name": "herbalists' quarter armourer",
+   "category": "building",
+   "description": "A three-storey armourer's shop with a rounded corner bay: cream walls, green shutters, flower boxes under the windows and a broad ochre hipped roof with a chimney. From the herbalists' and healers' quarter: cream walls, ochre roofs, flower boxes. Open on its +x side, 4.6 m and its +z side, 6.4 m (it shared party walls with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "armourer",
+    "armory",
+    "armoury",
+    "store",
+    "corner house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: herbalists' quarter",
+   "quarter": "DIST_H",
+   "plan_purpose": "Armor",
+   "floors": 3,
+   "open_sides": [
+    {
+     "side": 5,
+     "length_m": 4.6,
+     "faces": "+x",
+     "angle_deg": 357,
+     "ends": [
+      [
+       1.673,
+       6.714
+      ],
+      [
+       1.393,
+       2.134
+      ]
+     ]
+    },
+    {
+     "side": 6,
+     "length_m": 6.4,
+     "faces": "+z",
+     "angle_deg": 87,
+     "ends": [
+      [
+       1.393,
+       2.134
+      ],
+      [
+       -5.027,
+       2.514
+      ]
+     ]
+    }
+   ],
+   "sha256": "7a07f2d2b3119f2eac9b59dd68ce96e484b0c209fc8e32017ff2412c02df882c",
+   "bytes": 987148,
+   "source_sha256": "283454ee3df4886c0f06dcbd5792cc5f7c419c0713519df5a7ce40f1cf4796b7",
+   "recentred_by": [
+    -92.987,
+    0.08,
+    -27.196
+   ],
+   "place_scale": 1.0,
+   "triangles": 5530,
+   "models_json_triangles": 5436,
+   "size": [
+    11.07,
+    12.27,
+    14.26
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B028.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B029",
+   "file": "buildings/b029.glb",
+   "name": "herbalists' quarter bakery",
+   "category": "building",
+   "description": "A three-storey corner bakery: cream walls, green shutters and flower boxes, a canted corner bay and an ochre hipped roof with chimneys. From the herbalists' and healers' quarter: cream walls, ochre roofs, flower boxes. Open on its -z side, 8.1 m and its +x side, 1 m and its -z side, 1 m and its -z side, 2.2 m and its +x side, 1.3 m and its +x side, 2.3 m and its +z side, 2.1 m and its +x side, 3.4 m (it shared party walls with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "bakery",
+    "baker",
+    "bakehouse",
+    "store",
+    "corner house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: herbalists' quarter",
+   "quarter": "DIST_H",
+   "plan_purpose": "Baker",
+   "floors": 3,
+   "open_sides": [
+    {
+     "side": 0,
+     "length_m": 8.1,
+     "faces": "-z",
+     "angle_deg": 228,
+     "ends": [
+      [
+       -6.677,
+       -3.548
+      ],
+      [
+       -0.607,
+       -8.948
+      ]
+     ]
+    },
+    {
+     "side": 1,
+     "length_m": 1.0,
+     "faces": "+x",
+     "angle_deg": 319,
+     "ends": [
+      [
+       -0.607,
+       -8.948
+      ],
+      [
+       0.083,
+       -8.168
+      ]
+     ]
+    },
+    {
+     "side": 2,
+     "length_m": 1.0,
+     "faces": "-z",
+     "angle_deg": 279,
+     "ends": [
+      [
+       0.083,
+       -8.168
+      ],
+      [
+       1.103,
+       -7.998
+      ]
+     ]
+    },
+    {
+     "side": 3,
+     "length_m": 2.2,
+     "faces": "-z",
+     "angle_deg": 242,
+     "ends": [
+      [
+       1.103,
+       -7.998
+      ],
+      [
+       3.043,
+       -9.018
+      ]
+     ]
+    },
+    {
+     "side": 5,
+     "length_m": 1.3,
+     "faces": "+x",
+     "angle_deg": 28,
+     "ends": [
+      [
+       6.493,
+       -2.758
+      ],
+      [
+       5.873,
+       -1.608
+      ]
+     ]
+    },
+    {
+     "side": 6,
+     "length_m": 2.3,
+     "faces": "+x",
+     "angle_deg": 331,
+     "ends": [
+      [
+       5.873,
+       -1.608
+      ],
+      [
+       7.003,
+       0.402
+      ]
+     ]
+    },
+    {
+     "side": 7,
+     "length_m": 2.1,
+     "faces": "+z",
+     "angle_deg": 48,
+     "ends": [
+      [
+       7.003,
+       0.402
+      ],
+      [
+       5.433,
+       1.802
+      ]
+     ]
+    },
+    {
+     "side": 8,
+     "length_m": 3.4,
+     "faces": "+x",
+     "angle_deg": 12,
+     "ends": [
+      [
+       5.433,
+       1.802
+      ],
+      [
+       4.713,
+       5.152
+      ]
+     ]
+    }
+   ],
+   "sha256": "7ad80430e5500d73110297ba65ef6df0a4220240eb8b1900c6bbef723f79ff1b",
+   "bytes": 779996,
+   "source_sha256": "bea8b048bb450a391c418adf3bf27ba1302e0bc3d1674921a45f00bac363ee7d",
+   "recentred_by": [
+    -100.777,
+    0.078,
+    -19.688
+   ],
+   "place_scale": 1.0,
+   "triangles": 4382,
+   "models_json_triangles": 4231,
+   "size": [
+    14.09,
+    13.27,
+    18.51
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B029.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B033",
+   "file": "buildings/b033.glb",
+   "name": "mages' quarter workshop",
+   "category": "building",
+   "description": "A narrow three-storey workshop (the plan's arcane smith) with a pointed blue roof and a chimney. From the mages' quarter: pale walls with violet trim, tall blue roofs. Open on its +z side, 10.8 m (it shared a party wall with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "smith",
+    "workshop",
+    "magic shop",
+    "store",
+    "narrow house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: mages' quarter",
+   "quarter": "DIST_M",
+   "plan_purpose": "Smith",
+   "floors": 3,
+   "open_sides": [
+    {
+     "side": 0,
+     "length_m": 10.8,
+     "faces": "+z",
+     "angle_deg": 89,
+     "ends": [
+      [
+       5.175,
+       2.447
+      ],
+      [
+       -5.575,
+       2.687
+      ]
+     ]
+    }
+   ],
+   "sha256": "3704af085107e1b34158418a02deade918a6a051e6fc1952e9d89f9b3fdbcfee",
+   "bytes": 360504,
+   "source_sha256": "44b8e910ff3c4555494217f7b3f7000f45a7a94f450cb8d3c725bb8201c4752d",
+   "recentred_by": [
+    -8.265,
+    -0.77,
+    -36.723
+   ],
+   "place_scale": 1.0,
+   "triangles": 1925,
+   "models_json_triangles": 1828,
+   "size": [
+    12.54,
+    14.0,
+    5.65
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B033.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B036",
+   "file": "buildings/b036.glb",
+   "name": "mages' quarter rune carver",
+   "category": "building",
+   "description": "A three-storey rune carver's shop: pale walls with violet string courses, a canted corner, an arched shop window and a blue hipped roof with two chimneys. From the mages' quarter: pale walls with violet trim, tall blue roofs. Open on its +x side, 8.1 m and its -z side, 4.7 m and its -z side, 1.3 m (it shared party walls with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "rune carver",
+    "runes",
+    "magic shop",
+    "stone carver",
+    "store"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: mages' quarter",
+   "quarter": "DIST_M",
+   "plan_purpose": "Runes",
+   "floors": 3,
+   "open_sides": [
+    {
+     "side": 0,
+     "length_m": 8.1,
+     "faces": "+x",
+     "angle_deg": 335,
+     "ends": [
+      [
+       2.962,
+       -5.384
+      ],
+      [
+       6.372,
+       1.976
+      ]
+     ]
+    },
+    {
+     "side": 3,
+     "length_m": 4.7,
+     "faces": "-z",
+     "angle_deg": 235,
+     "ends": [
+      [
+       -6.098,
+       -2.654
+      ],
+      [
+       -2.248,
+       -5.384
+      ]
+     ]
+    },
+    {
+     "side": 6,
+     "length_m": 1.3,
+     "faces": "-z",
+     "angle_deg": 270,
+     "ends": [
+      [
+       1.702,
+       -5.384
+      ],
+      [
+       2.962,
+       -5.384
+      ]
+     ]
+    }
+   ],
+   "sha256": "fe83b9660028da0437623769404c976d2388d6abda226b8e7a13ad15401879b9",
+   "bytes": 300212,
+   "source_sha256": "58566a3119441255af744848898f8edf14e497aed48bac6cbdc7ad3ab033b75e",
+   "recentred_by": [
+    -36.388,
+    -0.716,
+    -38.034
+   ],
+   "place_scale": 1.0,
+   "triangles": 1668,
+   "models_json_triangles": 1559,
+   "size": [
+    13.32,
+    13.0,
+    12.2
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B036.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B038",
+   "file": "buildings/b038.glb",
+   "name": "herbalists' quarter bookshop",
+   "category": "building",
+   "description": "A small single-storey bookshop under a tall ochre pyramid roof: a half-timbered front gable, wide shop windows, a deep open entrance porch and a bench outside. From the herbalists' and healers' quarter: cream walls, ochre roofs, flower boxes. Open on its +x side, 4.6 m and its -z side, 5.6 m (it shared party walls with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "bookshop",
+    "bookseller",
+    "books",
+    "library",
+    "cottage"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: herbalists' quarter",
+   "quarter": "DIST_H",
+   "plan_purpose": "Books",
+   "floors": 1,
+   "open_sides": [
+    {
+     "side": 0,
+     "length_m": 4.6,
+     "faces": "+x",
+     "angle_deg": 357,
+     "ends": [
+      [
+       2.798,
+       -3.177
+      ],
+      [
+       3.058,
+       1.413
+      ]
+     ]
+    },
+    {
+     "side": 4,
+     "length_m": 5.6,
+     "faces": "-z",
+     "angle_deg": 267,
+     "ends": [
+      [
+       -2.792,
+       -2.867
+      ],
+      [
+       2.798,
+       -3.177
+      ]
+     ]
+    }
+   ],
+   "sha256": "3bdab32a20433e58765c1112d86a58283bb1321f35368573ebf95643dd10d19d",
+   "bytes": 208544,
+   "source_sha256": "9373cbe3a343479d34d7d1fb1e72ab748d3950fc92fa7d9ee44cc47a50b0e04a",
+   "recentred_by": [
+    -91.602,
+    0.079,
+    -32.497
+   ],
+   "place_scale": 1.0,
+   "triangles": 1124,
+   "models_json_triangles": 1071,
+   "size": [
+    6.78,
+    6.23,
+    6.52
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B038.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B039",
+   "file": "buildings/b039.glb",
+   "name": "civic heart jousting supplies",
+   "category": "building",
+   "description": "A long two-storey shop on an irregular plan: white plaster with dark frames, a polygonal corner tower with a pointed spire, dormers and a blue slate roof; the city's jousting supply store. From the civic heart (homes and crafts): white plaster, dark timber frames, blue-slate roofs.",
+   "synonyms": [
+    "shop",
+    "jousting",
+    "tack shop",
+    "saddler",
+    "store",
+    "tower house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: civic heart",
+   "quarter": "CIVIC",
+   "plan_purpose": "Jousting supply store",
+   "floors": 2,
+   "open_sides": [],
+   "sha256": "ee2b3eb9cd94cf2b10edab6a7af2916d602290797183309afbd589720d220e19",
+   "bytes": 940316,
+   "source_sha256": "09a586d2ed567cdfc9def9de44109df20fa2dc17fea67618a764e04b58e84923",
+   "recentred_by": [
+    116.492,
+    -0.3,
+    -47.354
+   ],
+   "place_scale": 1.0,
+   "triangles": 5189,
+   "models_json_triangles": 4860,
+   "size": [
+    12.68,
+    11.04,
+    26.08
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B039.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B043",
+   "file": "buildings/b043.glb",
+   "name": "warriors' quarter wandmaker",
+   "category": "building",
+   "description": "A three-storey wandmaker's shop: grey-green plaster in a dark timber frame, a first-floor bay window, arched doors, dormers in a slate hipped roof and a chimney. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Open on its -x side, 10.5 m and its -z side, 2.5 m and its -z side, 6.2 m (it shared party walls with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "wandmaker",
+    "magic shop",
+    "store",
+    "town house",
+    "half-timbered house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Wands",
+   "floors": 3,
+   "open_sides": [
+    {
+     "side": 4,
+     "length_m": 10.5,
+     "faces": "-x",
+     "angle_deg": 187,
+     "ends": [
+      [
+       -7.329,
+       4.575
+      ],
+      [
+       -6.099,
+       -5.875
+      ]
+     ]
+    },
+    {
+     "side": 6,
+     "length_m": 2.5,
+     "faces": "-z",
+     "angle_deg": 261,
+     "ends": [
+      [
+       -3.249,
+       -5.365
+      ],
+      [
+       -0.759,
+       -5.755
+      ]
+     ]
+    },
+    {
+     "side": 7,
+     "length_m": 6.2,
+     "faces": "-z",
+     "angle_deg": 273,
+     "ends": [
+      [
+       -0.759,
+       -5.755
+      ],
+      [
+       5.473,
+       -5.385
+      ]
+     ]
+    }
+   ],
+   "sha256": "ec07ed531fefd47e14b603d03af87b7964d3a1191446696cb9b84f17c50b190e",
+   "bytes": 505564,
+   "source_sha256": "9046caad696066e6fd6645a9bc159b937b68c04d820fd0e984ee24a0f4950254",
+   "recentred_by": [
+    69.091,
+    -0.507,
+    -52.925
+   ],
+   "place_scale": 1.0,
+   "triangles": 2771,
+   "models_json_triangles": 2649,
+   "size": [
+    14.81,
+    15.66,
+    13.07
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "bdcc95bc",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B043.glb (the iamar browser source (not public) bdcc95bc, plan sha256 62746e9dc333...)"
+  },
+  {
+   "models_id": "B046",
+   "file": "buildings/b046.glb",
+   "name": "mages' quarter armourer",
+   "category": "building",
+   "description": "A narrow three-storey armourer's shop, 5.6 m wide: pale walls, a shop window, a dormer in a steep blue hipped roof; built into a terrace between two neighbours. From the mages' quarter: pale walls with violet trim, tall blue roofs. Open on its +z side, 10.8 m and its -z side, 10.8 m and its +x side, 5.6 m (it shared party walls with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "armourer",
+    "armory",
+    "narrow house",
+    "store",
+    "terraced house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: mages' quarter",
+   "quarter": "DIST_M",
+   "plan_purpose": "Armor",
+   "floors": 3,
+   "open_sides": [
+    {
+     "side": 0,
+     "length_m": 10.8,
+     "faces": "+z",
+     "angle_deg": 89,
+     "ends": [
+      [
+       5.747,
+       2.675
+      ],
+      [
+       -5.053,
+       2.915
+      ]
+     ]
+    },
+    {
+     "side": 2,
+     "length_m": 10.8,
+     "faces": "-z",
+     "angle_deg": 269,
+     "ends": [
+      [
+       -5.173,
+       -2.675
+      ],
+      [
+       5.617,
+       -2.915
+      ]
+     ]
+    },
+    {
+     "side": 3,
+     "length_m": 5.6,
+     "faces": "+x",
+     "angle_deg": 359,
+     "ends": [
+      [
+       5.617,
+       -2.915
+      ],
+      [
+       5.747,
+       2.675
+      ]
+     ]
+    }
+   ],
+   "sha256": "fd2994dce32501109014b7649d00a928251653fd7ec0465485ab9f2de1a518f9",
+   "bytes": 112488,
+   "source_sha256": "9fb2a0e3a196421d77199759422327e9d7c1c273b2c09c96bd17db919d2658b1",
+   "recentred_by": [
+    -7.983,
+    -1.2,
+    -47.365
+   ],
+   "place_scale": 1.0,
+   "triangles": 590,
+   "models_json_triangles": 571,
+   "size": [
+    11.59,
+    12.95,
+    6.08
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B046.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B051",
+   "file": "buildings/b051.glb",
+   "name": "warriors' quarter weaponsmith",
+   "category": "building",
+   "description": "A long, shallow single-storey weaponsmith's shop (10 by 2.6 m): wide shop windows, a central door, a gabled dormer and a slate roof; a lean shopfront for a market row. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Open on its -z side, 10.1 m (it shared a party wall with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "weaponsmith",
+    "weapons",
+    "armory",
+    "market shop",
+    "shopfront"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Weapons",
+   "floors": 1,
+   "open_sides": [
+    {
+     "side": 3,
+     "length_m": 10.1,
+     "faces": "-z",
+     "angle_deg": 272,
+     "ends": [
+      [
+       -4.975,
+       -1.712
+      ],
+      [
+       5.145,
+       -1.322
+      ]
+     ]
+    }
+   ],
+   "sha256": "691244fa4bfb612eae438a4e5afc2aca669273c641946f64734f155d74cf0bb3",
+   "bytes": 167912,
+   "source_sha256": "cace0f652687a406b71cbbe1288a487343546f3445a0dea1ec1b2602ec6c5674",
+   "recentred_by": [
+    31.855,
+    -0.832,
+    -58.912
+   ],
+   "place_scale": 1.0,
+   "triangles": 914,
+   "models_json_triangles": 875,
+   "size": [
+    11.45,
+    6.15,
+    3.72
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B051.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B052",
+   "file": "buildings/b052.glb",
+   "name": "warriors' quarter armourer",
+   "category": "building",
+   "description": "A long, very shallow three-storey frontage (19.5 by 2.8 m): rows of red-framed windows, a half-timbered gable, two shop doors and a slate roof; a street facade for a row. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Open on its -z side, 11.9 m and its -z side, 1.2 m (it shared party walls with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "armourer",
+    "facade",
+    "street front",
+    "row house",
+    "terraced house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Armor",
+   "floors": 3,
+   "open_sides": [
+    {
+     "side": 2,
+     "length_m": 11.9,
+     "faces": "-z",
+     "angle_deg": 270,
+     "ends": [
+      [
+       -3.239,
+       -1.695
+      ],
+      [
+       8.711,
+       -1.695
+      ]
+     ]
+    },
+    {
+     "side": 3,
+     "length_m": 1.2,
+     "faces": "-z",
+     "angle_deg": 310,
+     "ends": [
+      [
+       8.711,
+       -1.695
+      ],
+      [
+       9.611,
+       -0.945
+      ]
+     ]
+    }
+   ],
+   "sha256": "de8aa9fcc1abd278272706eba1253d06430df220152a51800435475c34d28d75",
+   "bytes": 636836,
+   "source_sha256": "2ec6ccfd879627b2162bee8caabdf9f8dbffbffaf7666c92feb484f5b1689d50",
+   "recentred_by": [
+    17.121,
+    -0.878,
+    -58.695
+   ],
+   "place_scale": 1.0,
+   "triangles": 3589,
+   "models_json_triangles": 3466,
+   "size": [
+    20.45,
+    14.49,
+    3.98
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B052.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B053",
+   "file": "buildings/b053.glb",
+   "name": "mages' quarter house",
+   "category": "building",
+   "description": "A tall three-storey house with a steep front gable, rows of small framed windows and a high blue roof. From the mages' quarter: pale walls with violet trim, tall blue roofs. Open on its +x side, 7.9 m (it shared a party wall with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "house",
+    "home",
+    "tall house",
+    "dwelling",
+    "magic",
+    "terraced house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: mages' quarter",
+   "quarter": "DIST_M",
+   "plan_purpose": "Home",
+   "floors": 3,
+   "open_sides": [
+    {
+     "side": 1,
+     "length_m": 7.9,
+     "faces": "+x",
+     "angle_deg": 335,
+     "ends": [
+      [
+       5.485,
+       -3.744
+      ],
+      [
+       8.795,
+       3.436
+      ]
+     ]
+    }
+   ],
+   "sha256": "24cafa3b9e9d28450197ab80f9a5c007087c5c51fd8d450f785e167768db4bbb",
+   "bytes": 714568,
+   "source_sha256": "6e3a495d14e7fa90f9b4c80c66fd039147d3668b2963e604d4e5d32f4ea507cc",
+   "recentred_by": [
+    -23.585,
+    -0.925,
+    -61.784
+   ],
+   "place_scale": 1.0,
+   "triangles": 3877,
+   "models_json_triangles": 3737,
+   "size": [
+    17.68,
+    18.37,
+    8.79
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "bdcc95bc",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B053.glb (the iamar browser source (not public) bdcc95bc, plan sha256 62746e9dc333...)"
+  },
+  {
+   "models_id": "B055",
+   "file": "buildings/b055.glb",
+   "name": "civic heart healer's shop",
+   "category": "building",
+   "description": "A two-storey healer's shop with a shop door, half-timbered walls, a gabled dormer and a hipped roof; closed on every side, so it stands alone. From the civic heart (homes and crafts): white plaster, dark timber frames, blue-slate roofs.",
+   "synonyms": [
+    "shop",
+    "healer",
+    "apothecary",
+    "clinic",
+    "store",
+    "half-timbered house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: civic heart",
+   "quarter": "CIVIC",
+   "plan_purpose": "Healer",
+   "floors": 2,
+   "open_sides": [],
+   "sha256": "4310f4b7e74b39be58be058676db2ea11948f43f2cade73ccb4b3c8570c447de",
+   "bytes": 437564,
+   "source_sha256": "7e361418a7526bcd68898af70d27e009aae55f5e6c2c8efe1479bc452b24800b",
+   "recentred_by": [
+    90.501,
+    -0.329,
+    -104.838
+   ],
+   "place_scale": 1.0,
+   "triangles": 2436,
+   "models_json_triangles": 2334,
+   "size": [
+    9.69,
+    9.44,
+    7.65
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B055.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B056",
+   "file": "buildings/b056.glb",
+   "name": "civic heart town house",
+   "category": "building",
+   "description": "A two-storey town house with a cross-gabled dormer, two front doors and a blue hipped roof; its other walls are plain, as neighbours stood against them. From the civic heart (homes and crafts): white plaster, dark timber frames, blue-slate roofs. Open on its +x side, 8.9 m and its -x side, 1.7 m and its -x side, 10.3 m (it shared party walls with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "house",
+    "home",
+    "town house",
+    "dwelling",
+    "residence",
+    "terraced house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: civic heart",
+   "quarter": "CIVIC",
+   "plan_purpose": "Home",
+   "floors": 2,
+   "open_sides": [
+    {
+     "side": 1,
+     "length_m": 8.9,
+     "faces": "+x",
+     "angle_deg": 349,
+     "ends": [
+      [
+       4.607,
+       -5.764
+      ],
+      [
+       6.377,
+       3.006
+      ]
+     ]
+    },
+    {
+     "side": 3,
+     "length_m": 1.7,
+     "faces": "-x",
+     "angle_deg": 212,
+     "ends": [
+      [
+       -3.393,
+       4.976
+      ],
+      [
+       -4.273,
+       6.376
+      ]
+     ]
+    },
+    {
+     "side": 4,
+     "length_m": 10.3,
+     "faces": "-x",
+     "angle_deg": 169,
+     "ends": [
+      [
+       -4.273,
+       6.376
+      ],
+      [
+       -6.303,
+       -3.724
+      ]
+     ]
+    }
+   ],
+   "sha256": "a0a9236b02840d837290157872f3a75652cb674e67e643d638600252003ca215",
+   "bytes": 178496,
+   "source_sha256": "7653c76ed0a8c4b02ecc6dbaee60d1748170f295e8c9c91f607977a9b5a9cdb4",
+   "recentred_by": [
+    115.097,
+    -0.369,
+    -110.724
+   ],
+   "place_scale": 1.0,
+   "triangles": 947,
+   "models_json_triangles": 894,
+   "size": [
+    12.85,
+    9.4,
+    12.85
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B056.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B067",
+   "file": "buildings/b067.glb",
+   "name": "warriors' quarter spice seller",
+   "category": "building",
+   "description": "A two-storey spice seller's shop with a curved street front: half-timbered upper floor, stone below, gabled dormers and a slate hipped roof. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Open on its -x side, 4.9 m (it shared a party wall with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "spice seller",
+    "spices",
+    "grocer",
+    "store",
+    "half-timbered house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Spice seller",
+   "floors": 2,
+   "open_sides": [
+    {
+     "side": 6,
+     "length_m": 4.9,
+     "faces": "-x",
+     "angle_deg": 180,
+     "ends": [
+      [
+       -4.685,
+       0.615
+      ],
+      [
+       -4.685,
+       -4.275
+      ]
+     ]
+    }
+   ],
+   "sha256": "81e85cbcb2613e176f8d7b2772b4305b5faf48f16dfcd1292e0ba438a173e64a",
+   "bytes": 399784,
+   "source_sha256": "cdca584842fd1df0910a05a1e21eef1f908fbba33bcd839a963e124b36130c04",
+   "recentred_by": [
+    11.315,
+    -0.4,
+    -125.805
+   ],
+   "place_scale": 1.0,
+   "triangles": 2211,
+   "models_json_triangles": 2144,
+   "size": [
+    9.47,
+    8.68,
+    9.99
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B067.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B069",
+   "file": "buildings/b069.glb",
+   "name": "warriors' quarter cobbler",
+   "category": "building",
+   "description": "A two-storey cobbler's shop with a bay corner, dark timber frame over stone, a front gable and a slate roof. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Open on its -z side, 6.5 m (it shared a party wall with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "cobbler",
+    "shoemaker",
+    "store",
+    "workshop",
+    "row house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Cobbler",
+   "floors": 2,
+   "open_sides": [
+    {
+     "side": 0,
+     "length_m": 6.5,
+     "faces": "-z",
+     "angle_deg": 270,
+     "ends": [
+      [
+       -3.195,
+       -4.365
+      ],
+      [
+       3.305,
+       -4.365
+      ]
+     ]
+    }
+   ],
+   "sha256": "3cd51ec2f2681405bf79f20e305d7fecb68de23dfcfbebdfb3ff75db209d05fe",
+   "bytes": 365196,
+   "source_sha256": "ffc6b4f18b9858db1feaf4548afa16bae855771acd87e6fa11777c29f2ce6145",
+   "recentred_by": [
+    -10.495,
+    -0.4,
+    -134.015
+   ],
+   "place_scale": 1.0,
+   "triangles": 2013,
+   "models_json_triangles": 1966,
+   "size": [
+    7.69,
+    8.61,
+    8.91
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B069.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B084",
+   "file": "buildings/b084.glb",
+   "name": "civic heart tailor",
+   "category": "building",
+   "description": "A single-storey tailor's shop: wide shop windows either side of a timber door, a hipped blue roof with a gabled dormer and a tall chimney. From the civic heart (homes and crafts): white plaster, dark timber frames, blue-slate roofs. Open on its +x side, 8.8 m (it shared a party wall with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "tailor",
+    "clothier",
+    "cottage",
+    "store",
+    "bungalow"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: civic heart",
+   "quarter": "CIVIC",
+   "plan_purpose": "Tailor",
+   "floors": 1,
+   "open_sides": [
+    {
+     "side": 0,
+     "length_m": 8.8,
+     "faces": "+x",
+     "angle_deg": 0,
+     "ends": [
+      [
+       3.354,
+       -4.4
+      ],
+      [
+       3.354,
+       4.4
+      ]
+     ]
+    }
+   ],
+   "sha256": "c878718360a6541aec0339315c4f3ad2e00ea100bd0f01e54dcca7158ba68135",
+   "bytes": 223844,
+   "source_sha256": "c23364c67a7ea4177d35b24bb07ba075dd7d940f93462f9cde8d1e9dce4a26d5",
+   "recentred_by": [
+    23.354,
+    -0.688,
+    -150.8
+   ],
+   "place_scale": 1.0,
+   "triangles": 1240,
+   "models_json_triangles": 1189,
+   "size": [
+    6.93,
+    7.33,
+    10.18
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B084.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B098",
+   "file": "buildings/b098.glb",
+   "name": "warriors' quarter chandler",
+   "category": "building",
+   "description": "A two-storey chandler's shop: plaster walls with red window frames, a half-timbered corner bay, a shop door and a dark hipped slate roof with a chimney. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Open on its +x side, 9.8 m and its -x side, 1.3 m and its -x side, 9.3 m (it shared party walls with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "chandler",
+    "candle maker",
+    "candles",
+    "store",
+    "town house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Chandler",
+   "floors": 2,
+   "open_sides": [
+    {
+     "side": 2,
+     "length_m": 9.8,
+     "faces": "+x",
+     "angle_deg": 0,
+     "ends": [
+      [
+       6.783,
+       -5.038
+      ],
+      [
+       6.783,
+       4.802
+      ]
+     ]
+    },
+    {
+     "side": 4,
+     "length_m": 1.3,
+     "faces": "-x",
+     "angle_deg": 192,
+     "ends": [
+      [
+       -5.467,
+       4.802
+      ],
+      [
+       -5.737,
+       6.102
+      ]
+     ]
+    },
+    {
+     "side": 6,
+     "length_m": 9.3,
+     "faces": "-x",
+     "angle_deg": 180,
+     "ends": [
+      [
+       -6.617,
+       6.102
+      ],
+      [
+       -6.617,
+       -3.198
+      ]
+     ]
+    }
+   ],
+   "sha256": "3f0ce3f5bd0ce5d42b3f2633fffe5006132d893e3debc1e8da192804976a92ed",
+   "bytes": 380744,
+   "source_sha256": "9e7fdb399af9cce74b6d23671187a5d1ce4d77521afd920706cbe19b71ec3c6d",
+   "recentred_by": [
+    78.133,
+    -0.37,
+    -163.398
+   ],
+   "place_scale": 1.0,
+   "triangles": 2043,
+   "models_json_triangles": 1964,
+   "size": [
+    13.7,
+    9.95,
+    13.66
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B098.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B099",
+   "file": "buildings/b099.glb",
+   "name": "civic heart toolmaker",
+   "category": "building",
+   "description": "A two-storey toolmaker's shop: big ground-floor windows, a half-timbered gabled dormer with a finial and a blue hipped roof. From the civic heart (homes and crafts): white plaster, dark timber frames, blue-slate roofs. Open on its +x side, 4.2 m and its +x side, 5 m and its -x side, 9.8 m (it shared party walls with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "toolmaker",
+    "tools",
+    "hardware",
+    "store",
+    "town house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: civic heart",
+   "quarter": "CIVIC",
+   "plan_purpose": "Tools",
+   "floors": 2,
+   "open_sides": [
+    {
+     "side": 1,
+     "length_m": 4.2,
+     "faces": "+x",
+     "angle_deg": 16,
+     "ends": [
+      [
+       5.19,
+       -4.056
+      ],
+      [
+       4.04,
+       -0.056
+      ]
+     ]
+    },
+    {
+     "side": 2,
+     "length_m": 5.0,
+     "faces": "+x",
+     "angle_deg": 359,
+     "ends": [
+      [
+       4.04,
+       -0.056
+      ],
+      [
+       4.11,
+       4.914
+      ]
+     ]
+    },
+    {
+     "side": 4,
+     "length_m": 9.8,
+     "faces": "-x",
+     "angle_deg": 180,
+     "ends": [
+      [
+       -5.16,
+       4.914
+      ],
+      [
+       -5.16,
+       -4.916
+      ]
+     ]
+    }
+   ],
+   "sha256": "4ffa0eb7c4b720e904b818513f34dc616d1bc4db76ad3f8fce7a56acae1df5d0",
+   "bytes": 181580,
+   "source_sha256": "6866f70e4680c493155402086e7cde17d125bef59926d2d25320f08d39f4f9ed",
+   "recentred_by": [
+    66.14,
+    -0.4,
+    -163.286
+   ],
+   "place_scale": 1.0,
+   "triangles": 984,
+   "models_json_triangles": 954,
+   "size": [
+    10.5,
+    8.99,
+    11.19
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B099.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B105",
+   "file": "buildings/b105.glb",
+   "name": "warriors' quarter house",
+   "category": "building",
+   "description": "A two-storey house with a stone ground floor, dark timber frame above, a chimney and a dark slate roof. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Open on its +z side, 6.5 m (it shared a party wall with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "house",
+    "home",
+    "town house",
+    "dwelling",
+    "terraced house",
+    "row house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Home",
+   "floors": 2,
+   "open_sides": [
+    {
+     "side": 5,
+     "length_m": 6.5,
+     "faces": "+z",
+     "angle_deg": 90,
+     "ends": [
+      [
+       3.303,
+       4.11
+      ],
+      [
+       -3.197,
+       4.11
+      ]
+     ]
+    }
+   ],
+   "sha256": "5211f171505e8c8b24850eca7f387ff74421da2d834a503d80dff308bac463e1",
+   "bytes": 305060,
+   "source_sha256": "fa5e74eb0893f559b866c8ae09efad9b724104dd99ce9a17faeaedaaf513b38f",
+   "recentred_by": [
+    10.603,
+    -0.4,
+    -143.11
+   ],
+   "place_scale": 1.0,
+   "triangles": 1740,
+   "models_json_triangles": 1675,
+   "size": [
+    7.6,
+    9.45,
+    8.43
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B105.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B106",
+   "file": "buildings/b106.glb",
+   "name": "herbalists' quarter healer's shop",
+   "category": "building",
+   "description": "A two-storey healer's shop with a front gable and dormer, shop windows, flower boxes and a broad roof. From the herbalists' and healers' quarter: cream walls, ochre roofs, flower boxes. Open on its -z side, 7.3 m (it shared a party wall with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "healer",
+    "apothecary",
+    "herbalist",
+    "store",
+    "row house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: herbalists' quarter",
+   "quarter": "DIST_H",
+   "plan_purpose": "Healer",
+   "floors": 2,
+   "open_sides": [
+    {
+     "side": 3,
+     "length_m": 7.3,
+     "faces": "-z",
+     "angle_deg": 270,
+     "ends": [
+      [
+       -3.372,
+       -5.384
+      ],
+      [
+       3.908,
+       -5.384
+      ]
+     ]
+    }
+   ],
+   "sha256": "dc447fd9dc117b0805f35e2b966c76b001b598b85d95bf285f811bc7123cda68",
+   "bytes": 395252,
+   "source_sha256": "be5eaddce768485a88914337a7263305828b21435361a844b5150eced9e3923f",
+   "recentred_by": [
+    -24.522,
+    -0.6,
+    -155.884
+   ],
+   "place_scale": 1.0,
+   "triangles": 2264,
+   "models_json_triangles": 2213,
+   "size": [
+    8.03,
+    9.78,
+    10.89
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B106.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B107",
+   "file": "buildings/b107.glb",
+   "name": "herbalists' quarter house",
+   "category": "building",
+   "description": "A two-storey house with a steep gable, timber frame, green shutters and flower boxes under the windows. From the herbalists' and healers' quarter: cream walls, ochre roofs, flower boxes. Open on its -z side, 6.1 m (it shared a party wall with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "house",
+    "home",
+    "town house",
+    "dwelling",
+    "terraced house",
+    "row house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: herbalists' quarter",
+   "quarter": "DIST_H",
+   "plan_purpose": "Home",
+   "floors": 2,
+   "open_sides": [
+    {
+     "side": 0,
+     "length_m": 6.1,
+     "faces": "-z",
+     "angle_deg": 265,
+     "ends": [
+      [
+       -3.31,
+       -3.766
+      ],
+      [
+       2.81,
+       -4.276
+      ]
+     ]
+    }
+   ],
+   "sha256": "39f2ec6779e05af62efa749bb420fc65cd911c0e6a539e3059cff136a45eabab",
+   "bytes": 539240,
+   "source_sha256": "d4ddaef94db03b78c576438a18dd86d5d155072e48bcbbc8f492422c415510a4",
+   "recentred_by": [
+    -32.45,
+    -0.8,
+    -159.576
+   ],
+   "place_scale": 1.0,
+   "triangles": 2986,
+   "models_json_triangles": 2912,
+   "size": [
+    7.95,
+    9.74,
+    8.65
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B107.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B120",
+   "file": "buildings/b120.glb",
+   "name": "herbalists' quarter herbalist",
+   "category": "building",
+   "description": "A three-storey herbalist's shop with a bent street front: cream walls, green shutters and flower boxes, shop windows below and an ochre hipped roof. From the herbalists' and healers' quarter: cream walls, ochre roofs, flower boxes. Open on its +z side, 8.1 m and its -x side, 6.3 m and its +x side, 2.8 m and its -z side, 4.7 m and its +x side, 3.8 m and its +x side, 2.8 m (it shared party walls with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "herbalist",
+    "herbs",
+    "apothecary",
+    "healer",
+    "store"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: herbalists' quarter",
+   "quarter": "DIST_H",
+   "plan_purpose": "Herbs",
+   "floors": 3,
+   "open_sides": [
+    {
+     "side": 0,
+     "length_m": 8.1,
+     "faces": "+z",
+     "angle_deg": 102,
+     "ends": [
+      [
+       0.334,
+       4.317
+      ],
+      [
+       -7.606,
+       2.637
+      ]
+     ]
+    },
+    {
+     "side": 1,
+     "length_m": 6.3,
+     "faces": "-x",
+     "angle_deg": 192,
+     "ends": [
+      [
+       -7.606,
+       2.637
+      ],
+      [
+       -6.306,
+       -3.503
+      ]
+     ]
+    },
+    {
+     "side": 5,
+     "length_m": 2.8,
+     "faces": "+x",
+     "angle_deg": 13,
+     "ends": [
+      [
+       7.524,
+       -2.203
+      ],
+      [
+       6.894,
+       0.527
+      ]
+     ]
+    },
+    {
+     "side": 6,
+     "length_m": 4.7,
+     "faces": "-z",
+     "angle_deg": 299,
+     "ends": [
+      [
+       6.894,
+       0.527
+      ],
+      [
+       2.754,
+       -1.743
+      ]
+     ]
+    },
+    {
+     "side": 7,
+     "length_m": 3.8,
+     "faces": "+x",
+     "angle_deg": 29,
+     "ends": [
+      [
+       2.754,
+       -1.743
+      ],
+      [
+       0.904,
+       1.617
+      ]
+     ]
+    },
+    {
+     "side": 8,
+     "length_m": 2.8,
+     "faces": "+x",
+     "angle_deg": 12,
+     "ends": [
+      [
+       0.904,
+       1.617
+      ],
+      [
+       0.334,
+       4.317
+      ]
+     ]
+    }
+   ],
+   "sha256": "764054816e4fe7292a09a19aafb2ff3ed7496f52d146ac9e65c224dad2baa3ef",
+   "bytes": 245744,
+   "source_sha256": "c9a1861d95c3fdb3865b200793c5fb06897318d35d39485cedb860cb6f795528",
+   "recentred_by": [
+    -20.746,
+    -0.352,
+    -169.603
+   ],
+   "place_scale": 1.0,
+   "triangles": 1346,
+   "models_json_triangles": 1281,
+   "size": [
+    15.31,
+    12.64,
+    8.73
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B120.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B124",
+   "file": "buildings/b124.glb",
+   "name": "civic heart house",
+   "category": "building",
+   "description": "A two-storey town house with an L-shaped plan, half-timbered upper floor and a hipped roof with a chimney; closed on every side, so it stands alone. From the civic heart (homes and crafts): white plaster, dark timber frames, blue-slate roofs.",
+   "synonyms": [
+    "house",
+    "home",
+    "town house",
+    "dwelling",
+    "residence",
+    "half-timbered house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: civic heart",
+   "quarter": "CIVIC",
+   "plan_purpose": "Home",
+   "floors": 2,
+   "open_sides": [],
+   "sha256": "783cfa5fbab9d84b2ea30122e725693f45eaa7ee90be1509fa804ebbea4e26a2",
+   "bytes": 560872,
+   "source_sha256": "8be6c6d0eff5015ca1a23cc9e63fb14a3d871905ba2dc038a9275d0ce6266f15",
+   "recentred_by": [
+    69.574,
+    -0.218,
+    -180.426
+   ],
+   "place_scale": 1.0,
+   "triangles": 3056,
+   "models_json_triangles": 2927,
+   "size": [
+    9.26,
+    11.13,
+    17.26
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B124.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B127",
+   "file": "buildings/b127.glb",
+   "name": "herbalists' quarter toolmaker",
+   "category": "building",
+   "description": "A large three-storey corner building: cream walls with dark frames, green shutters on every window, a dormer and broad ochre hipped roofs; the quarter's toolmaker. From the herbalists' and healers' quarter: cream walls, ochre roofs, flower boxes. Open on its -x side, 6.4 m and its -z side, 7.3 m and its +x side, 5 m and its +x side, 5.2 m (it shared party walls with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "toolmaker",
+    "tools",
+    "hardware",
+    "corner house",
+    "store"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: herbalists' quarter",
+   "quarter": "DIST_H",
+   "plan_purpose": "Tools",
+   "floors": 3,
+   "open_sides": [
+    {
+     "side": 1,
+     "length_m": 6.4,
+     "faces": "-x",
+     "angle_deg": 192,
+     "ends": [
+      [
+       0.928,
+       -10.321
+      ],
+      [
+       -0.402,
+       -4.051
+      ]
+     ]
+    },
+    {
+     "side": 2,
+     "length_m": 7.3,
+     "faces": "-z",
+     "angle_deg": 282,
+     "ends": [
+      [
+       -0.402,
+       -4.051
+      ],
+      [
+       6.748,
+       -2.521
+      ]
+     ]
+    },
+    {
+     "side": 3,
+     "length_m": 5.0,
+     "faces": "+x",
+     "angle_deg": 12,
+     "ends": [
+      [
+       6.748,
+       -2.521
+      ],
+      [
+       5.708,
+       2.389
+      ]
+     ]
+    },
+    {
+     "side": 5,
+     "length_m": 5.2,
+     "faces": "+x",
+     "angle_deg": 12,
+     "ends": [
+      [
+       4.918,
+       2.269
+      ],
+      [
+       3.838,
+       7.399
+      ]
+     ]
+    }
+   ],
+   "sha256": "e70927c678ec5a087c071eab5990434a092d1b5dd9849af237d72a2a38f74453",
+   "bytes": 959880,
+   "source_sha256": "015083b32de7367d15cfe4ec94498b35e8df899cca5ab9385eb1295fbe626524",
+   "recentred_by": [
+    -13.562,
+    -0.342,
+    -176.281
+   ],
+   "place_scale": 1.0,
+   "triangles": 5495,
+   "models_json_triangles": 5399,
+   "size": [
+    13.59,
+    11.87,
+    21.73
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B127.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B132",
+   "file": "buildings/b132.glb",
+   "name": "civic heart bakery",
+   "category": "building",
+   "description": "A two-storey bakery with a steep cross gable: half-timbered upper floor, shop windows and doors below, a small balcony and a blue roof. From the civic heart (homes and crafts): white plaster, dark timber frames, blue-slate roofs. Open on its -x side, 10.7 m and its -z side, 8.9 m (it shared party walls with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "bakery",
+    "baker",
+    "bakehouse",
+    "store",
+    "half-timbered house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: civic heart",
+   "quarter": "CIVIC",
+   "plan_purpose": "Baker",
+   "floors": 2,
+   "open_sides": [
+    {
+     "side": 0,
+     "length_m": 10.7,
+     "faces": "-x",
+     "angle_deg": 180,
+     "ends": [
+      [
+       -4.741,
+       5.014
+      ],
+      [
+       -4.741,
+       -5.706
+      ]
+     ]
+    },
+    {
+     "side": 1,
+     "length_m": 8.9,
+     "faces": "-z",
+     "angle_deg": 270,
+     "ends": [
+      [
+       -4.741,
+       -5.706
+      ],
+      [
+       4.119,
+       -5.706
+      ]
+     ]
+    }
+   ],
+   "sha256": "f1e6c67e1886c31895b357424be64b75efeb648d729cf79c2cd675dcccd11f5f",
+   "bytes": 161620,
+   "source_sha256": "11176d21e60e7251dc10ec5c78dc1477543c42747620a1c25168a75728cefd25",
+   "recentred_by": [
+    22.869,
+    0.007,
+    -188.706
+   ],
+   "place_scale": 1.0,
+   "triangles": 890,
+   "models_json_triangles": 821,
+   "size": [
+    9.66,
+    11.02,
+    11.6
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "bdcc95bc",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B132.glb (the iamar browser source (not public) bdcc95bc, plan sha256 62746e9dc333...)"
+  },
+  {
+   "models_id": "B133",
+   "file": "buildings/b133.glb",
+   "name": "civic heart rune carver",
+   "category": "building",
+   "description": "A three-storey rune carver's shop built as a cluster of blocks, each under its own blue hipped roof, with a chimney and a shop door. From the civic heart (homes and crafts): white plaster, dark timber frames, blue-slate roofs. Open on its +z side, 5.9 m and its -x side, 6.5 m and its -z side, 4.2 m (it shared party walls with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "rune carver",
+    "runes",
+    "stone carver",
+    "store",
+    "town house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: civic heart",
+   "quarter": "CIVIC",
+   "plan_purpose": "Runes",
+   "floors": 3,
+   "open_sides": [
+    {
+     "side": 11,
+     "length_m": 5.9,
+     "faces": "+z",
+     "angle_deg": 100,
+     "ends": [
+      [
+       0.86,
+       6.117
+      ],
+      [
+       -4.9,
+       5.057
+      ]
+     ]
+    },
+    {
+     "side": 12,
+     "length_m": 6.5,
+     "faces": "-x",
+     "angle_deg": 187,
+     "ends": [
+      [
+       -4.9,
+       5.057
+      ],
+      [
+       -4.15,
+       -1.383
+      ]
+     ]
+    },
+    {
+     "side": 13,
+     "length_m": 4.2,
+     "faces": "-z",
+     "angle_deg": 278,
+     "ends": [
+      [
+       -4.15,
+       -1.383
+      ],
+      [
+       -8.35,
+       -1.983
+      ]
+     ]
+    }
+   ],
+   "sha256": "142f9b25d951ba8385eb34303271b157d90a5c202877eb61258f7761d4c84da6",
+   "bytes": 717480,
+   "source_sha256": "4fa86566e978a1f1c45704dfe2f527cbfd62950e7261172ded15fac85010932b",
+   "recentred_by": [
+    15.65,
+    0.075,
+    -198.933
+   ],
+   "place_scale": 1.0,
+   "triangles": 4048,
+   "models_json_triangles": 3877,
+   "size": [
+    17.89,
+    14.61,
+    16.95
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B133.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B137",
+   "file": "buildings/b137.glb",
+   "name": "herbalists' quarter arcaded shop row",
+   "category": "building",
+   "description": "A two-storey shop row: cream walls, green shutters and flower boxes, round-arched shop loggia on stone piers on the ground floor, gabled dormers and an ochre roof. From the herbalists' and healers' quarter: cream walls, ochre roofs, flower boxes. Open on its -x side, 6 m and its +x side, 6.4 m (it shared party walls with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "shop row",
+    "arcade",
+    "loggia",
+    "market hall",
+    "row house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: herbalists' quarter",
+   "quarter": "DIST_H",
+   "plan_purpose": "Arcaded shop row",
+   "floors": 2,
+   "open_sides": [
+    {
+     "side": 1,
+     "length_m": 6.0,
+     "faces": "-x",
+     "angle_deg": 181,
+     "ends": [
+      [
+       -0.534,
+       -6.2
+      ],
+      [
+       -0.644,
+       -0.2
+      ]
+     ]
+    },
+    {
+     "side": 3,
+     "length_m": 6.4,
+     "faces": "+x",
+     "angle_deg": 12,
+     "ends": [
+      [
+       6.146,
+       -0.07
+      ],
+      [
+       4.816,
+       6.2
+      ]
+     ]
+    }
+   ],
+   "sha256": "40800452245d88ba453d7a0b46d295ce2ad5a076abe55c202758d5677b6face7",
+   "bytes": 960496,
+   "source_sha256": "f035762cd01c07f982464f4508e23528a9c38a1ee1b0306e0fe83165c87f3bef",
+   "recentred_by": [
+    -12.994,
+    -0.37,
+    -144.0
+   ],
+   "place_scale": 1.0,
+   "triangles": 5470,
+   "models_json_triangles": 5401,
+   "size": [
+    12.39,
+    11.27,
+    13.4
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B137.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B138",
+   "file": "buildings/b138.glb",
+   "name": "warriors' quarter cloth merchant",
+   "category": "building",
+   "description": "A small two-storey cloth merchant's shop with steep front gables: half-timbered walls, red-framed windows, shop windows below and a slate roof. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Open on its -z side, 6.5 m and its +x side, 5.3 m and its -z side, 2.6 m and its -z side, 1.3 m (it shared party walls with a neighbour): set it against a wall or another building there.",
+   "synonyms": [
+    "shop",
+    "cloth merchant",
+    "draper",
+    "fabric",
+    "store",
+    "half-timbered house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Cloth merchant",
+   "floors": 2,
+   "open_sides": [
+    {
+     "side": 1,
+     "length_m": 6.5,
+     "faces": "-z",
+     "angle_deg": 270,
+     "ends": [
+      [
+       -3.25,
+       -4.212
+      ],
+      [
+       3.25,
+       -4.212
+      ]
+     ]
+    },
+    {
+     "side": 4,
+     "length_m": 5.3,
+     "faces": "+x",
+     "angle_deg": 359,
+     "ends": [
+      [
+       1.05,
+       3.768
+      ],
+      [
+       0.96,
+       -1.542
+      ]
+     ]
+    },
+    {
+     "side": 5,
+     "length_m": 2.6,
+     "faces": "-z",
+     "angle_deg": 272,
+     "ends": [
+      [
+       0.96,
+       -1.542
+      ],
+      [
+       -1.65,
+       -1.632
+      ]
+     ]
+    },
+    {
+     "side": 8,
+     "length_m": 1.3,
+     "faces": "-z",
+     "angle_deg": 272,
+     "ends": [
+      [
+       -1.96,
+       -1.292
+      ],
+      [
+       -3.25,
+       -1.332
+      ]
+     ]
+    }
+   ],
+   "sha256": "8bf3d1fdfb05dcb9f9f736847c48e8a48907ae923aa7ccdb59cb8379dafa017e",
+   "bytes": 462452,
+   "source_sha256": "db95b746b6f2b7d686c60b543eb7f2d6b022af976db8330668a7c6fb0d4b1aad",
+   "recentred_by": [
+    10.55,
+    -0.4,
+    -151.432
+   ],
+   "place_scale": 1.0,
+   "triangles": 2578,
+   "models_json_triangles": 2512,
+   "size": [
+    7.49,
+    9.36,
+    8.52
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B138.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "AMP01",
+   "file": "landmarks/amp01.glb",
+   "name": "amphitheatre",
+   "category": "landmark",
+   "description": "A small open-air amphitheatre: curved stone tiers inside an arcaded outer wall around a wooden stage with red banners on poles, 25 m across.",
+   "synonyms": [
+    "amphitheater",
+    "theatre",
+    "theater",
+    "arena",
+    "stage",
+    "auditorium"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "quarter": null,
+   "plan_purpose": null,
+   "floors": null,
+   "open_sides": null,
+   "sha256": "98fdf0fe739b94ae5e53fc6ecb594e946ceadbae6eb3ac53c8ccabdee11d0e67",
+   "bytes": 578656,
+   "source_sha256": "f471e41f8fe1969c3e27b31e0a2e8e0cda034055a131aa49aa602a6a68f92a0d",
+   "recentred_by": [
+    4.91,
+    -0.9,
+    -75.009
+   ],
+   "place_scale": 1.0,
+   "triangles": 3006,
+   "models_json_triangles": 3006,
+   "size": [
+    24.98,
+    7.65,
+    15.86
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/AMP01.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "AQUEDUCT01",
+   "file": "landmarks/aqueduct01.glb",
+   "name": "stone aqueduct",
+   "category": "landmark",
+   "description": "A long two-tier aqueduct of pale stone: a row of tall arches carrying a second arcade, 82 m long and 14.5 m above ground, its piers reaching 3.7 m below it (into a river or moat).",
+   "synonyms": [
+    "aqueduct",
+    "arcade",
+    "arches",
+    "viaduct",
+    "water channel",
+    "roman bridge"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "quarter": null,
+   "plan_purpose": null,
+   "floors": null,
+   "open_sides": null,
+   "sha256": "84430b2d701fc3b265e02ae948e091af679f5078f7a1013af659893de7eff5b4",
+   "bytes": 1468412,
+   "source_sha256": "12e52fca8104f9b6f671cb198b1367b1bf56c62b4b136ed222456bb8900424d0",
+   "recentred_by": [
+    -140.189,
+    -0.0,
+    -41.099
+   ],
+   "place_scale": 1.0,
+   "triangles": 7230,
+   "models_json_triangles": 7182,
+   "size": [
+    81.57,
+    18.2,
+    23.29
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/AQUEDUCT01.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "AqueductFalls",
+   "file": "landmarks/aqueductfalls.glb",
+   "name": "aqueduct waterfall",
+   "category": "landmark",
+   "description": "A waterfall as it pours from the city's aqueduct: a curved sheet of falling water about 9 m high, crossed spray sheets and a foam pool at its foot, with painted water textures; 15 by 10 m.",
+   "synonyms": [
+    "waterfall",
+    "falls",
+    "cascade",
+    "water",
+    "spray",
+    "fountain"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "quarter": null,
+   "plan_purpose": null,
+   "floors": null,
+   "open_sides": null,
+   "sha256": "98ef730a1825b3865bd6d8c8d31c76fd53a7d41b54f84b46642dc2a13c710f3f",
+   "bytes": 1030652,
+   "source_sha256": "b58cc08f440a5279a122794e06160fa5e0c32a06aacbb69eadcba5f5b5ddba22",
+   "recentred_by": [
+    -94.15,
+    0.519,
+    -54.193
+   ],
+   "place_scale": 1.0,
+   "triangles": 4010,
+   "models_json_triangles": 4010,
+   "size": [
+    14.8,
+    9.18,
+    10.49
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 4,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "MpWaterfall",
+   "builder_commit": "c6100e8a",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 ground/AqueductFalls.glb (the iamar browser source (not public) c6100e8a, plan sha256 45014fbea706...)"
+  },
+  {
+   "models_id": "B058",
+   "file": "landmarks/b058.glb",
+   "name": "city hall",
+   "category": "landmark",
+   "description": "A three-storey white city hall with rows of blue-shuttered windows under a blue hipped roof, a square clock tower with clock faces, an open belfry and a red flag, and a red-canopied entrance between blue banners; 29 by 13 m, 32 m to the flag. From the civic heart (homes and crafts): white plaster, dark timber frames, blue-slate roofs. Standing alone it shows gaps into it at eye height on its +z side, where the city built it against its neighbours: set it against a wall or another building there.",
+   "synonyms": [
+    "city hall",
+    "town hall",
+    "council house",
+    "clock tower",
+    "guildhall",
+    "civic building"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: civic heart",
+   "quarter": "CIVIC",
+   "plan_purpose": "City Hall",
+   "floors": 3,
+   "open_sides": null,
+   "sha256": "2c783fad4802b7a552a6453ca0e8231942fbb5ef133a0154f71e6743f43be249",
+   "bytes": 1720412,
+   "source_sha256": "96c3c07f53024519da81b2985b89aa1d420e42a4b029539d477de91ad9058a9a",
+   "recentred_by": [
+    15.3,
+    -0.568,
+    -106.085
+   ],
+   "place_scale": 1.0,
+   "triangles": 9971,
+   "models_json_triangles": 9575,
+   "size": [
+    28.8,
+    31.73,
+    13.15
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/B058.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "B082",
+   "file": "landmarks/b082.glb",
+   "name": "trading hall",
+   "category": "landmark",
+   "description": "A white trading hall in two wings under blue roofs with a tall bell tower and pointed blue spire, a green market awning at its side; 24 by 14 m, 38 m to the spire. From the civic heart (homes and crafts): white plaster, dark timber frames, blue-slate roofs. Standing alone it shows gaps into it at eye height on its +x and +z sides, where the city built it against its neighbours: set it against a wall or another building there.",
+   "synonyms": [
+    "trading hall",
+    "exchange",
+    "market hall",
+    "guild hall",
+    "bell tower",
+    "merchants"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: civic heart",
+   "quarter": "CIVIC",
+   "plan_purpose": "Trading Hall",
+   "floors": 2,
+   "open_sides": null,
+   "sha256": "68170d7f8bf658352763b440706f06c03b67ac06e372963f359b58d4c24caac1",
+   "bytes": 575300,
+   "source_sha256": "fdcf2e32e28a6d208841098a754b10b25649a45445e0fd06379f56762d9bbd2b",
+   "recentred_by": [
+    96.633,
+    0.28,
+    -119.135
+   ],
+   "place_scale": 1.0,
+   "triangles": 3229,
+   "models_json_triangles": 3229,
+   "size": [
+    24.03,
+    38.28,
+    14.13
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/B082.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "BIRD01",
+   "file": "landmarks/bird01.glb",
+   "name": "giant-bird aerie",
+   "category": "landmark",
+   "description": "A long pale hall with arched windows under a slate-blue hipped roof and a round lookout tower crowned by a gallery and a brown conical roof, where giant birds land; a timber porch at one end; 33 by 32 m, 38 m tall. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Standing alone it shows gaps into it at eye height on its +x side, where the city built it against its neighbours: set it against a wall or another building there.",
+   "synonyms": [
+    "aerie",
+    "eyrie",
+    "roost",
+    "bird stable",
+    "tower",
+    "lookout"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Giant-bird stable",
+   "floors": 1,
+   "open_sides": null,
+   "sha256": "b511ef9d7043e195e3a504fccc6e9cff2c1f442164e12d9bf91ca40bb0c7df70",
+   "bytes": 1373472,
+   "source_sha256": "378ccef17fa1e9e245ecc36df6a6da2ada82c0b963fe49d266e1cd0c082a518e",
+   "recentred_by": [
+    63.533,
+    0.382,
+    19.304
+   ],
+   "place_scale": 1.0,
+   "triangles": 7635,
+   "models_json_triangles": 7635,
+   "size": [
+    32.53,
+    38.48,
+    31.53
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/BIRD01.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "BRIDGE_1",
+   "file": "landmarks/bridge_1.glb",
+   "name": "stone causeway bridge",
+   "category": "bridge",
+   "description": "The South Gate's long stone causeway: a flat paved deck with low parapets that widens in the middle, on a stone pier; 57 m long and 31 m at its widest.",
+   "synonyms": [
+    "bridge",
+    "stone bridge",
+    "causeway",
+    "moat bridge",
+    "crossing",
+    "viaduct"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "quarter": null,
+   "plan_purpose": null,
+   "floors": null,
+   "open_sides": null,
+   "sha256": "e6b9a128e27289b4d85b7f7ef18485c4e75b00c5f7e3478c29cb52174dc321ef",
+   "bytes": 1411200,
+   "source_sha256": "9d71a81b1715838b1436997b776b96d69a174542217a016b591180df2adba53c",
+   "recentred_by": [
+    -0.0,
+    -0.0,
+    -237.935
+   ],
+   "place_scale": 1.0,
+   "triangles": 6346,
+   "models_json_triangles": 6346,
+   "size": [
+    30.98,
+    5.02,
+    57.15
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 ground/BRIDGE_1.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "C01",
+   "file": "landmarks/c01.glb",
+   "name": "cathedral",
+   "category": "landmark",
+   "description": "A gothic cathedral: a long nave under a steep blue roof with pinnacled buttresses and tall arched windows, three spired towers over the west front, a rose window and a pointed arched portal; 61 by 38 m, 66 m tall. From the civic heart (homes and crafts): white plaster, dark timber frames, blue-slate roofs.",
+   "synonyms": [
+    "cathedral",
+    "church",
+    "minster",
+    "abbey",
+    "gothic church",
+    "spires"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: civic heart",
+   "quarter": "CIVIC",
+   "plan_purpose": "Cathedral",
+   "floors": 3,
+   "open_sides": null,
+   "sha256": "3904d7c7f8810cf21e76c19930f1e4903e0c49e9ae60089be4e42d328b0cfce1",
+   "bytes": 2636736,
+   "source_sha256": "005308774bfa09104a09ed1a3fde8a48e46815a15d60cdf6bff443a814213586",
+   "recentred_by": [
+    62.346,
+    0.7,
+    -86.0
+   ],
+   "place_scale": 1.0,
+   "triangles": 15276,
+   "models_json_triangles": 15228,
+   "size": [
+    61.03,
+    65.9,
+    37.86
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/C01.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "C02",
+   "file": "landmarks/c02.glb",
+   "name": "library",
+   "category": "landmark",
+   "description": "The city library: a broad three-storey pale stone building under a blue roof with a green copper dome and a portico of white columns at the front; 58 by 76 m, 42 m tall. From the herbalists' and healers' quarter: cream walls, ochre roofs, flower boxes.",
+   "synonyms": [
+    "library",
+    "dome",
+    "academy",
+    "museum",
+    "archive",
+    "hall"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: herbalists' quarter",
+   "quarter": "DIST_H",
+   "plan_purpose": "Library",
+   "floors": 3,
+   "open_sides": null,
+   "sha256": "a8420879a61a64e3a6e3c893aac2c235a36fb14d70bf15176ea11aa90bf010e9",
+   "bytes": 2646588,
+   "source_sha256": "0b905f6549861602c237f8f18c5f23140839721c13e50c366d580d19cd680ed3",
+   "recentred_by": [
+    -64.196,
+    0.527,
+    -99.58
+   ],
+   "place_scale": 1.0,
+   "triangles": 15421,
+   "models_json_triangles": 15421,
+   "size": [
+    58.27,
+    42.03,
+    75.72
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/C02.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "C03",
+   "file": "landmarks/c03.glb",
+   "name": "inn and tavern",
+   "category": "landmark",
+   "description": "A large two-storey inn and tavern: pale walls with rows of warmly lit windows under a broad slate roof with chimneys, an entrance with a hanging sign; 40 by 31 m. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Standing alone it shows gaps into it at eye height on its +z and -z sides, where the city built it against its neighbours: set it against a wall or another building there.",
+   "synonyms": [
+    "inn",
+    "tavern",
+    "pub",
+    "hostel",
+    "alehouse",
+    "lodging"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Inn / tavern",
+   "floors": 3,
+   "open_sides": null,
+   "sha256": "3c57a820ab6182bd1f935dd6ba2b34549e05686269d8211b259dc7f28aabefe1",
+   "bytes": 2340548,
+   "source_sha256": "01cf5abda655f82a3d6fb661a6f7a08f89d72f35643b62626df53216125f566f",
+   "recentred_by": [
+    24.696,
+    -0.16,
+    -45.575
+   ],
+   "place_scale": 1.0,
+   "triangles": 12951,
+   "models_json_triangles": 12951,
+   "size": [
+    39.61,
+    16.54,
+    30.65
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/C03.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "C04",
+   "file": "landmarks/c04.glb",
+   "name": "mage school",
+   "category": "landmark",
+   "description": "A mage school like a fairy-tale palace: white wings with rows of windows under blue roofs and dormers, framed by tall round lilac towers with blue conical roofs; 47 by 23 m, 59 m tall. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs.",
+   "synonyms": [
+    "mage school",
+    "wizard school",
+    "academy",
+    "palace",
+    "towers",
+    "magic"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Mage school",
+   "floors": 3,
+   "open_sides": null,
+   "sha256": "a195fa8d4a58659babe460b6fba47a386cfaae5c6bf350b265d7432bf4c3979c",
+   "bytes": 4103840,
+   "source_sha256": "172a2ecb639ed48e9b18cf3da1d0614c10aa9594ffcc1a4aeb43672029fef83a",
+   "recentred_by": [
+    -18.76,
+    -0.12,
+    26.675
+   ],
+   "place_scale": 1.0,
+   "triangles": 22809,
+   "models_json_triangles": 12343,
+   "size": [
+    46.6,
+    58.78,
+    22.69
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/C04.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "C05",
+   "file": "landmarks/c05.glb",
+   "name": "the temple",
+   "category": "landmark",
+   "description": "A long classical temple ringed by white columns under a low roof, 33 by 30 m (the city's temple, without its statue).",
+   "synonyms": [
+    "temple",
+    "shrine",
+    "sanctuary",
+    "colonnade",
+    "classical temple",
+    "columns"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "quarter": null,
+   "plan_purpose": "Temple of Athena",
+   "floors": 1,
+   "open_sides": null,
+   "sha256": "73b9052aea1cbcc4fa3b6d559cbeb65c07a248f1cd0e30738046f4764cc38fd3",
+   "bytes": 987180,
+   "source_sha256": "b8e9c87c5ec3f59179d324560e29f6694a2fe38219e674937a9002e92ed336d6",
+   "recentred_by": [
+    -48.51,
+    -0.873,
+    -183.355
+   ],
+   "place_scale": 1.0,
+   "triangles": 8746,
+   "models_json_triangles": 3808,
+   "size": [
+    32.71,
+    7.49,
+    30.23
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/C05.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "CASTLE01",
+   "file": "landmarks/castle01.glb",
+   "name": "castle",
+   "category": "landmark",
+   "description": "A great castle: a square curtain wall with crenellated walks and round corner and wall towers under blue conical roofs, a gate with a ramp, and inside a keep and hall with more spired towers; 81 by 87 m, 64 m tall.",
+   "synonyms": [
+    "castle",
+    "fortress",
+    "keep",
+    "citadel",
+    "towers",
+    "stronghold"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "quarter": null,
+   "plan_purpose": null,
+   "floors": null,
+   "open_sides": null,
+   "sha256": "38cacae7fca44483b4b131eaacf5787937a9faa7bc8fe6a99f2df441e9477e7f",
+   "bytes": 3531052,
+   "source_sha256": "b2e5cf1a465f2a0839ac28a787b9198025b3ac98abe16753eaa09e12925d4be2",
+   "recentred_by": [
+    -0.0,
+    -25.0,
+    230.35
+   ],
+   "place_scale": 1.0,
+   "triangles": 21390,
+   "models_json_triangles": 21390,
+   "size": [
+    81.4,
+    63.8,
+    86.7
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/CASTLE01.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "DRAGON01",
+   "file": "landmarks/dragon01.glb",
+   "name": "small-dragon stable",
+   "category": "landmark",
+   "description": "A long pale stone stable for small dragons under a blue hipped roof: a row of tall stall doors with glowing interiors down one side and a timber-framed open front with big wooden doors; 38 by 26 m, 15 m tall. From the mages' quarter: pale walls with violet trim, tall blue roofs. Standing alone it shows gaps into it at eye height on its +x and +z sides, where the city built it against its neighbours: set it against a wall or another building there.",
+   "synonyms": [
+    "dragon stable",
+    "dragon pen",
+    "stable",
+    "barn",
+    "lair",
+    "stalls"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: mages' quarter",
+   "quarter": "DIST_M",
+   "plan_purpose": "Small-dragon stable",
+   "floors": 1,
+   "open_sides": null,
+   "sha256": "81a8dd3220917c90146e6944fd94c3738d28bbe5cd1a967dc17d17239a6b802d",
+   "bytes": 768240,
+   "source_sha256": "6a86d75619ae187501cc186387b81156cde4b8b323247d4de3a7dd889f8ae193",
+   "recentred_by": [
+    -72.234,
+    0.318,
+    -5.92
+   ],
+   "place_scale": 1.0,
+   "triangles": 4198,
+   "models_json_triangles": 4198,
+   "size": [
+    37.59,
+    15.32,
+    25.76
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/DRAGON01.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "GATEHOUSE_1",
+   "file": "landmarks/gatehouse_1.glb",
+   "name": "grand gatehouse",
+   "category": "gate",
+   "description": "The city's grand South Gate: twin round towers with blue conical spires, battlements, blue-and-gold banners and a tall arched gateway; 46 m above ground, its foundation reaching 5 m into the moat.",
+   "synonyms": [
+    "gate",
+    "gatehouse",
+    "city gate",
+    "castle gate",
+    "towers",
+    "castle"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "quarter": null,
+   "plan_purpose": null,
+   "floors": null,
+   "open_sides": null,
+   "sha256": "fe2deb20b7604c217d9cc73d4528187a0ef8f65c815ee4887decd15649797246",
+   "bytes": 1454248,
+   "source_sha256": "d454b7671abe79677296d07c03466254044139b9acc1074289153feab51e6596",
+   "recentred_by": [
+    0.127,
+    -0.0,
+    -211.934
+   ],
+   "place_scale": 1.0,
+   "triangles": 7766,
+   "models_json_triangles": 7766,
+   "size": [
+    22.41,
+    51.3,
+    16.48
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/GATEHOUSE_1.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "GATEHOUSE_2",
+   "file": "landmarks/gatehouse_2.glb",
+   "name": "gatehouse",
+   "category": "gate",
+   "description": "A side gatehouse of the city wall: tall stone towers under two blue conical roofs with a gate passage, 34 m above ground, its foundation reaching 4 m into the moat.",
+   "synonyms": [
+    "gate",
+    "gatehouse",
+    "city gate",
+    "gate tower",
+    "tower",
+    "wall gate"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "quarter": null,
+   "plan_purpose": null,
+   "floors": null,
+   "open_sides": null,
+   "sha256": "cd412eda8cbc890235b96976ac277f320c0f03845f2fba8344dec6caac193956",
+   "bytes": 424020,
+   "source_sha256": "71eee10c4af129edf282caad81bd3bb8b8b2f6baf0ead235b4cca6aee6936d05",
+   "recentred_by": [
+    -117.562,
+    -0.0,
+    -27.891
+   ],
+   "place_scale": 1.0,
+   "triangles": 1899,
+   "models_json_triangles": 1899,
+   "size": [
+    18.6,
+    37.65,
+    23.22
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 ground/GATEHOUSE_2.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "GRAND_MASCHERONE",
+   "file": "landmarks/grand_mascherone.glb",
+   "name": "grand mascherone fountain",
+   "category": "landmark",
+   "description": "A grand wall fountain: a carved stone face (mascherone) in an ornate frame spouting into a round basin on a stepped stone platform.",
+   "synonyms": [
+    "wall fountain",
+    "fountain",
+    "stone face",
+    "mask fountain",
+    "spout",
+    "basin"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "quarter": null,
+   "plan_purpose": null,
+   "floors": null,
+   "open_sides": null,
+   "sha256": "588d09ea6aeb047833dc2736d2aeea1c2622e940d66e7dd15a7cf2780ff2b8fb",
+   "bytes": 364944,
+   "source_sha256": "7601c3fd7a28202fc77f1f3ee16bacaefe0049afa2b08610e910a6e816fd83c7",
+   "recentred_by": [
+    7.3,
+    0.2,
+    -191.0
+   ],
+   "place_scale": 1.0,
+   "triangles": 2090,
+   "models_json_triangles": 1904,
+   "size": [
+    6.4,
+    6.19,
+    8.0
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/GRAND_MASCHERONE.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "GZ01",
+   "file": "landmarks/gz01.glb",
+   "name": "community gazebo",
+   "category": "landmark",
+   "description": "A round open gazebo: white columns on a raised round platform under a red conical roof with a gilded finial, 13 m across; the city's community meeting place. From the civic heart (homes and crafts): white plaster, dark timber frames, blue-slate roofs.",
+   "synonyms": [
+    "gazebo",
+    "pavilion",
+    "bandstand",
+    "rotunda",
+    "meeting place",
+    "square"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: civic heart",
+   "quarter": "CIVIC",
+   "plan_purpose": "Large open-sided gazebo",
+   "floors": 1,
+   "open_sides": null,
+   "sha256": "a1869e79e2e8240d0c49d33cb93a0c18c165ad392b78f87a5cbae10c2b422a8a",
+   "bytes": 293904,
+   "source_sha256": "94910f01628f1f2b1ef036263db05624c9c523ab26f637ae936b09984cd0af08",
+   "recentred_by": [
+    14.53,
+    0.08,
+    -134.889
+   ],
+   "place_scale": 1.0,
+   "triangles": 1774,
+   "models_json_triangles": 1774,
+   "size": [
+    12.97,
+    10.28,
+    13.17
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/GZ01.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "HERO_E1",
+   "file": "landmarks/hero_e1.glb",
+   "name": "hero statue with spear and shield",
+   "category": "statue",
+   "description": "A pale carved-stone warrior holding a tall spear and a round shield, 5.4 m to the spear tip; one of the heroes lining the South Gate bridge.",
+   "synonyms": [
+    "statue",
+    "monument",
+    "sculpture",
+    "warrior",
+    "stone figure",
+    "spearman"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "quarter": null,
+   "plan_purpose": null,
+   "floors": null,
+   "open_sides": null,
+   "sha256": "d1715a66ac3f2aa3a4fabbef4c04ddcfea1ce7d67436857007edb48a0cb2d526",
+   "bytes": 108116,
+   "source_sha256": "d59d6bdf2419b647180e7c202de66b9e118efc3ec3aedaeb52038e417db24aaf",
+   "recentred_by": [
+    -0.203,
+    -0.007,
+    -0.185
+   ],
+   "place_scale": 1.0,
+   "triangles": 1894,
+   "models_json_triangles": null,
+   "size": [
+    1.76,
+    5.35,
+    1.28
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "MpStatues (posed Superhero_* model, baked)",
+   "builder_commit": "15961b3",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/HERO_E1.glb (the iamar browser source (not public) 15961b3, plan sha256 8b43e2413ae5...)"
+  },
+  {
+   "models_id": "HERO_E2",
+   "file": "landmarks/hero_e2.glb",
+   "name": "statue of a woman holding up an orb",
+   "category": "statue",
+   "description": "A pale carved-stone woman in a long gown holding a ringed orb above her head with both hands, 4.1 m tall; one of the heroes lining the South Gate bridge.",
+   "synonyms": [
+    "statue",
+    "monument",
+    "sculpture",
+    "woman",
+    "stone figure",
+    "orb",
+    "astronomer"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "quarter": null,
+   "plan_purpose": null,
+   "floors": null,
+   "open_sides": null,
+   "sha256": "5e6b44ed4f9a4767d8c70b23a68ed728ac63334a697315661f5c808d9c63bec0",
+   "bytes": 106916,
+   "source_sha256": "5ffede08f3109aedc03e0848a21af2876c10e1517ac3a7831640c6dcc4507db0",
+   "recentred_by": [
+    -0.001,
+    -0.002,
+    -0.154
+   ],
+   "place_scale": 1.0,
+   "triangles": 2004,
+   "models_json_triangles": null,
+   "size": [
+    1.88,
+    4.11,
+    1.92
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "MpStatues (posed Superhero_* model, baked)",
+   "builder_commit": "15961b3",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/HERO_E2.glb (the iamar browser source (not public) 15961b3, plan sha256 8b43e2413ae5...)"
+  },
+  {
+   "models_id": "HERO_E3",
+   "file": "landmarks/hero_e3.glb",
+   "name": "statue of a woman with a flower",
+   "category": "statue",
+   "description": "A pale carved-stone woman in a long gown holding out a flower, a satchel of herbs at her hip; one of the heroes lining the South Gate bridge.",
+   "synonyms": [
+    "statue",
+    "monument",
+    "sculpture",
+    "woman",
+    "stone figure",
+    "herbalist",
+    "healer"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "quarter": null,
+   "plan_purpose": null,
+   "floors": null,
+   "open_sides": null,
+   "sha256": "5ef145486d0499b43911abadbae7ecfbcd53ce0453c2109ddc97fe6c13ce35c2",
+   "bytes": 94500,
+   "source_sha256": "d12c40e67a0a4c8a9186ea95d3945f7be688ef4a56f52192fdc17e3d7a3b6160",
+   "recentred_by": [
+    -0.001,
+    -0.002,
+    -0.164
+   ],
+   "place_scale": 1.0,
+   "triangles": 2032,
+   "models_json_triangles": null,
+   "size": [
+    1.73,
+    3.3,
+    1.8
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "MpStatues (posed Superhero_* model, baked)",
+   "builder_commit": "15961b3",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/HERO_E3.glb (the iamar browser source (not public) 15961b3, plan sha256 8b43e2413ae5...)"
+  },
+  {
+   "models_id": "HERO_E4",
+   "file": "landmarks/hero_e4.glb",
+   "name": "statue of a swordswoman",
+   "category": "statue",
+   "description": "A pale carved-stone warrior woman in pauldrons and a long cape, both hands resting on a sword point-down; one of the heroes lining the South Gate bridge.",
+   "synonyms": [
+    "statue",
+    "monument",
+    "sculpture",
+    "warrior",
+    "stone figure",
+    "knight",
+    "sword"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "quarter": null,
+   "plan_purpose": null,
+   "floors": null,
+   "open_sides": null,
+   "sha256": "b0abf5cefdbe1bface8d849cee2d1f5decc8c2fda0afb2552a70c36ed2f0d07f",
+   "bytes": 120156,
+   "source_sha256": "eedf8903332819a2a0d32bd2ed971be2cfe70475fe6d3140e341afde907dc649",
+   "recentred_by": [
+    -0.0,
+    -0.0,
+    -0.151
+   ],
+   "place_scale": 1.0,
+   "triangles": 1996,
+   "models_json_triangles": null,
+   "size": [
+    1.17,
+    3.28,
+    1.22
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "MpStatues (posed Superhero_* model, baked)",
+   "builder_commit": "15961b3",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/HERO_E4.glb (the iamar browser source (not public) 15961b3, plan sha256 8b43e2413ae5...)"
+  },
+  {
+   "models_id": "HERO_E5",
+   "file": "landmarks/hero_e5.glb",
+   "name": "statue of a scholar with a book",
+   "category": "statue",
+   "description": "A pale carved-stone woman in a long gown and hood, one hand raised and an open book in the other; one of the heroes lining the South Gate bridge.",
+   "synonyms": [
+    "statue",
+    "monument",
+    "sculpture",
+    "scholar",
+    "stone figure",
+    "mage",
+    "book"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "quarter": null,
+   "plan_purpose": null,
+   "floors": null,
+   "open_sides": null,
+   "sha256": "cc4d146ce7049346e7fd0a3e0880113a3bce33b10cf4ed0a11853287abf3c8ca",
+   "bytes": 82972,
+   "source_sha256": "4a8faa9695760a92c605cdc80b4e475008d359ca371c8823e5a78f11ed33f0a7",
+   "recentred_by": [
+    -0.001,
+    -0.002,
+    -0.15
+   ],
+   "place_scale": 1.0,
+   "triangles": 1956,
+   "models_json_triangles": null,
+   "size": [
+    1.81,
+    3.61,
+    1.84
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "MpStatues (posed Superhero_* model, baked)",
+   "builder_commit": "15961b3",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/HERO_E5.glb (the iamar browser source (not public) 15961b3, plan sha256 8b43e2413ae5...)"
+  },
+  {
+   "models_id": "HERO_W1",
+   "file": "landmarks/hero_w1.glb",
+   "name": "hero statue with sword",
+   "category": "statue",
+   "description": "A pale carved-stone knight in armour and a long cloak resting on a sword, 3.3 m tall; one of the heroes lining the South Gate bridge.",
+   "synonyms": [
+    "statue",
+    "monument",
+    "sculpture",
+    "knight",
+    "stone figure",
+    "memorial"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "quarter": null,
+   "plan_purpose": null,
+   "floors": null,
+   "open_sides": null,
+   "sha256": "b05f6a4e2c36019ad02cd74e668763fc51420cf404d7e4a1219a878d07fc9936",
+   "bytes": 120120,
+   "source_sha256": "89d011860a72d3f207f75a3521a67c977f71aeee07cd8bb9ee32c70568c9949d",
+   "recentred_by": [
+    0.004,
+    -0.006,
+    -0.195
+   ],
+   "place_scale": 1.0,
+   "triangles": 1906,
+   "models_json_triangles": null,
+   "size": [
+    1.18,
+    3.3,
+    1.22
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "MpStatues (posed Superhero_* model, baked)",
+   "builder_commit": "15961b3",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/HERO_W1.glb (the iamar browser source (not public) 15961b3, plan sha256 8b43e2413ae5...)"
+  },
+  {
+   "models_id": "HERO_W2",
+   "file": "landmarks/hero_w2.glb",
+   "name": "statue of a mage with a book",
+   "category": "statue",
+   "description": "A pale carved-stone mage in a long gown and hood, one hand raised in a spell and an open book in the other (the twin of the scholar statue across the bridge); one of the heroes lining the South Gate bridge.",
+   "synonyms": [
+    "statue",
+    "monument",
+    "sculpture",
+    "mage",
+    "stone figure",
+    "wizard",
+    "book"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "quarter": null,
+   "plan_purpose": null,
+   "floors": null,
+   "open_sides": null,
+   "sha256": "31fca3179ae4e5baa16894a31ce6dd2be1a990eca5073e590374956a94457ae8",
+   "bytes": 82368,
+   "source_sha256": "1a845796a2df09edd856f7791f038ad7780c068e84ad2a52f8d2072ab0ae7cb3",
+   "recentred_by": [
+    0.03,
+    -0.004,
+    -0.209
+   ],
+   "place_scale": 1.0,
+   "triangles": 1864,
+   "models_json_triangles": null,
+   "size": [
+    1.87,
+    3.66,
+    1.84
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "MpStatues (posed Superhero_* model, baked)",
+   "builder_commit": "15961b3",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/HERO_W2.glb (the iamar browser source (not public) 15961b3, plan sha256 8b43e2413ae5...)"
+  },
+  {
+   "models_id": "HERO_W3",
+   "file": "landmarks/hero_w3.glb",
+   "name": "statue of a huntress with arrows",
+   "category": "statue",
+   "description": "A pale carved-stone woman in a long gown holding a sheaf of arrows upright, a basket of fruit on her other arm; one of the heroes lining the South Gate bridge.",
+   "synonyms": [
+    "statue",
+    "monument",
+    "sculpture",
+    "huntress",
+    "stone figure",
+    "archer",
+    "harvest"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "quarter": null,
+   "plan_purpose": null,
+   "floors": null,
+   "open_sides": null,
+   "sha256": "e5e6aa1f6c73da286809b098963be758f60701c1679e112a2e715cebb0c4cd83",
+   "bytes": 124036,
+   "source_sha256": "3b520fd0905569ab7e6667f42327e8128bfe3be11fa79548bc4705af1ff352fe",
+   "recentred_by": [
+    -0.001,
+    -0.002,
+    -0.143
+   ],
+   "place_scale": 1.0,
+   "triangles": 2010,
+   "models_json_triangles": null,
+   "size": [
+    1.66,
+    3.66,
+    1.69
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "MpStatues (posed Superhero_* model, baked)",
+   "builder_commit": "15961b3",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/HERO_W3.glb (the iamar browser source (not public) 15961b3, plan sha256 8b43e2413ae5...)"
+  },
+  {
+   "models_id": "HERO_W4",
+   "file": "landmarks/hero_w4.glb",
+   "name": "statue of a man with a lantern",
+   "category": "statue",
+   "description": "A pale carved-stone man in a cape holding a lantern high, a sword in his other hand; one of the heroes lining the South Gate bridge.",
+   "synonyms": [
+    "statue",
+    "monument",
+    "sculpture",
+    "lantern bearer",
+    "stone figure",
+    "watchman",
+    "guide"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "quarter": null,
+   "plan_purpose": null,
+   "floors": null,
+   "open_sides": null,
+   "sha256": "914071c847989d54ff9a1768d33ee7065b68dd5ec2f696c457aa93998e1a06b0",
+   "bytes": 125572,
+   "source_sha256": "47774cc572712fed306ec1c678865144640ccaa1e114491f096658db316a7050",
+   "recentred_by": [
+    -0.018,
+    -0.009,
+    -0.257
+   ],
+   "place_scale": 1.0,
+   "triangles": 1920,
+   "models_json_triangles": null,
+   "size": [
+    1.63,
+    3.48,
+    1.5
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "MpStatues (posed Superhero_* model, baked)",
+   "builder_commit": "15961b3",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/HERO_W4.glb (the iamar browser source (not public) 15961b3, plan sha256 8b43e2413ae5...)"
+  },
+  {
+   "models_id": "HERO_W5",
+   "file": "landmarks/hero_w5.glb",
+   "name": "statue of a spearman with shield",
+   "category": "statue",
+   "description": "A pale carved-stone warrior in a cape with a tall spear and a round shield; one of the heroes lining the South Gate bridge.",
+   "synonyms": [
+    "statue",
+    "monument",
+    "sculpture",
+    "warrior",
+    "stone figure",
+    "spearman",
+    "guard"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "quarter": null,
+   "plan_purpose": null,
+   "floors": null,
+   "open_sides": null,
+   "sha256": "ccfc3b278cb0253594bde2d00764d94b3e64fcb0572d444aa7642ef7227b0e18",
+   "bytes": 108152,
+   "source_sha256": "4b4fa7ad66af3ebbc5bf225336b5f4b7d63e177d7d423c0029b00d9ff5ff6c9c",
+   "recentred_by": [
+    -0.187,
+    -0.002,
+    -0.156
+   ],
+   "place_scale": 1.0,
+   "triangles": 1984,
+   "models_json_triangles": null,
+   "size": [
+    1.54,
+    5.32,
+    1.31
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "MpStatues (posed Superhero_* model, baked)",
+   "builder_commit": "15961b3",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/HERO_W5.glb (the iamar browser source (not public) 15961b3, plan sha256 8b43e2413ae5...)"
+  },
+  {
+   "models_id": "Portal_PORTAL04",
+   "file": "landmarks/portal_portal04.glb",
+   "name": "mage portal ring (open)",
+   "category": "landmark",
+   "description": "An upright ring of carved stone blocks 6.7 m across on a low round stone dais, a dark blue veil filling the ring and a light inside it (the city's mage portals; the city adds sparkles).",
+   "synonyms": [
+    "portal",
+    "gate",
+    "magic portal",
+    "teleporter",
+    "ring",
+    "archway"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "quarter": null,
+   "plan_purpose": null,
+   "floors": null,
+   "open_sides": null,
+   "sha256": "126e4bae49b8af65b013ec13139920c1340a076df82967b3c93451f1c12aa37b",
+   "bytes": 126852,
+   "source_sha256": "ec689ee326ec41c4cb5d4ae7c269662c8df4c057caf55d49b2a8bdb87b3c5505",
+   "recentred_by": [
+    41.95,
+    -0.063,
+    -135.59
+   ],
+   "place_scale": 1.0,
+   "triangles": 664,
+   "models_json_triangles": 664,
+   "size": [
+    6.7,
+    6.01,
+    6.7
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 props/Portal_PORTAL04.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "S01",
+   "file": "landmarks/s01.glb",
+   "name": "horse stable",
+   "category": "landmark",
+   "description": "A long horse stable: a row of open stalls under a broad blue-slate roof with a tack room at one end, 32 m long. From the civic heart (homes and crafts): white plaster, dark timber frames, blue-slate roofs.",
+   "synonyms": [
+    "stable",
+    "stables",
+    "barn",
+    "horse barn",
+    "stalls",
+    "livery"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: civic heart",
+   "quarter": "CIVIC",
+   "plan_purpose": "Horse stable",
+   "floors": 1,
+   "open_sides": null,
+   "sha256": "e86afc626a446529d8f156bbf9341f34e20406fca1e6609fa5d4e66c2f1ee4f1",
+   "bytes": 817288,
+   "source_sha256": "0a665028541a7dfc33d2890270dd751ac2cb83e994035449622e73ceae5c063d",
+   "recentred_by": [
+    48.079,
+    0.244,
+    -171.552
+   ],
+   "place_scale": 1.0,
+   "triangles": 4476,
+   "models_json_triangles": 4476,
+   "size": [
+    32.06,
+    7.44,
+    23.52
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/S01.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "STATUE_BRIDGE_1",
+   "file": "landmarks/statue_bridge_1.glb",
+   "name": "statue plinth",
+   "category": "statue",
+   "description": "A plain round two-step stone plinth (pedestal), 2.9 m across, ready for any statue on top.",
+   "synonyms": [
+    "plinth",
+    "pedestal",
+    "statue base",
+    "column base",
+    "monument base"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "quarter": null,
+   "plan_purpose": null,
+   "floors": null,
+   "open_sides": null,
+   "sha256": "7615fb668fad0bd55f73ba0860c069450a4e8b08cade84c1d27464e550911171",
+   "bytes": 88976,
+   "source_sha256": "8667ed4c584ac4538a15a609e8a5ffc7c2d7a76e9503ceda849f80414bfe4c42",
+   "recentred_by": [
+    -0.0,
+    -0.12,
+    -239.14
+   ],
+   "place_scale": 1.0,
+   "triangles": 528,
+   "models_json_triangles": 528,
+   "size": [
+    2.9,
+    1.6,
+    2.9
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/STATUE_BRIDGE_1.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "W01",
+   "file": "landmarks/w01.glb",
+   "name": "weapons hall",
+   "category": "landmark",
+   "description": "A long two-storey weapons hall bending around a corner: timber-framed pale walls, rows of blue-shuttered windows, a brown hipped roof and an arched stone entrance; 46 by 25 m. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Standing alone it shows gaps into it at eye height on its -x side, where the city built it against its neighbours: set it against a wall or another building there.",
+   "synonyms": [
+    "weapons shop",
+    "armory",
+    "armoury",
+    "weaponsmith",
+    "arms hall",
+    "barracks"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Big weapons shop",
+   "floors": 2,
+   "open_sides": null,
+   "sha256": "8febd1fe5b6e3e37da9377c5bf210d7bf09b0f512be3192fd8a2f5cc867c60ab",
+   "bytes": 1155824,
+   "source_sha256": "125836fff1a30a7b66112e479e03ff176537779f567da0c2784a83f1507699b4",
+   "recentred_by": [
+    32.754,
+    0.257,
+    26.973
+   ],
+   "place_scale": 1.0,
+   "triangles": 6557,
+   "models_json_triangles": 6557,
+   "size": [
+    45.77,
+    9.86,
+    25.32
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 landmarks/W01.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  }
+ ]
+}

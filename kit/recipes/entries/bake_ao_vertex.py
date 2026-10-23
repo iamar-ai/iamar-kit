@@ -1,0 +1,15 @@
+"""Recipe bake_ao_vertex (one recipe per file; kit/recipes/make_recipes.py collects them, sorted by ORDER)."""
+
+ORDER = 120
+r("bake_ao_vertex", "Baked ambient occlusion in vertex colours (the time-independent bake)", "lighting",
+  "Characters, animals and props get soft contact darkness baked in, so they sit in the world; in a world whose clock runs, the static models get it instead of a time-of-day bake, so it holds at every hour and on the low tier (no shadows).",
+  "Anything that moves (so it cannot use a lightmap), small props, and low-poly buildings with the soft --max-edge settings. Every static model you authored when `day_length_minutes` > 0: a time-of-day bake (bake_sky_sun, bake_vertex_light) is right at one hour only.",
+  ["Run `iamar-world blender-run kit/blender/bake_vertex_ao.py -- in.glb assets/out.glb --distance <about a tenth of the model's size>` (--local when parts move apart). It bakes AO with Cycles and multiplies it into COLOR_0 (existing vertex colours are kept); skins and animations are exported unchanged.",
+   "The browser multiplies vertex colours into the base colour, so materials stay ordinary lit materials: the live sun, clock and shadows still light the model.",
+   "Neighbours: `python3 kit/style/lighting/lighting.py ao-args --world W --object ID [--reach 3]` prints `--occluder` options for the world's other placed .glb models near the object (in its frame; swaying and animated ones left out). Add them to the bake so the street or quay a house stands on gets the dark band round its foot, and a house the darkness of its neighbour. Terrain and primitives cannot be baked or occlude: make a ground that should take contact darkness a .glb.",
+   "AO is only as fine as the mesh: add a few edge loops where contact shadows should fall (a 0.5 m grid on a street or yard .glb).",
+   "Low-poly buildings: corner darkness spreads over whole wall faces (plaster 0.85 became 0.59). Add `--max-edge 2 --floor 0.6 --strength 0.7` (splits long edges first, about twice the triangles; check the tier budget), or give buildings no AO at all and rely on live sun and shadows.",
+   "The output's asset.extras.iamar_bake.kind is `sky_ao`; `iamar-world audit dark-bake` lists those objects (`sky_ao_objects`) and warns on a running clock when nothing is baked or an unlit time-of-day bake is used. FAILED: harbour blind test a5 kept every model live-lit because the lighting README said a running clock rules out baking, so the low tier had no contact shadows anywhere."],
+  {"distance_m": 0.5, "floor": 0.25, "samples": 64},
+  "`python3 kit/tests/blender/sky_ao_bake_test.py`: a ground baked with its neighbour is dark only under and beside the turned house, white elsewhere, lit materials, sky_ao marker reported by audit dark-bake. Preview: no floating look.", "A short bake at build time; nothing at run time.", "oakhaven AnimalKit (hemisphere-ray AO), tools/bake_chicken_ao.py; running clock: docs/reviews/2026-10-22-an agent-blindtest-harbour-a5.md gap 1, an internal task", "manual",
+  "kit/blender/bake_vertex_ao.py")

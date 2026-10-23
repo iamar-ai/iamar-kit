@@ -1,0 +1,39 @@
+{
+  "schema": "iamar-lighting-preset/1",
+  "id": "night",
+  "title": "Moonlit night",
+  "description": "A silver moon high in the south-east, deep blue sky, blue-grey ambient so shapes still read, dark blue fog. Add warm point lights (windows, lanterns) for contrast.",
+  "derived_from": "kit/style/iamar/style.json atmosphere.presets.night (mp_look.gd LOOKS.night). Uses sun.direction for the moon because time_of_day 21.5 alone gives the sun zero energy in a package.",
+  "environment": {
+    "sky": {
+      "type": "procedural",
+      "top_color": "#0b1434",
+      "horizon_color": "#24345c",
+      "ground_color": "#141a28"
+    },
+    "time_of_day": 21.5,
+    "day_length_minutes": 0,
+    "sun": {
+      "enabled": true,
+      "color": "#b8c8f0",
+      "energy": 0.35,
+      "shadows": true,
+      "direction": [
+        0.4,
+        -0.8,
+        -0.45
+      ]
+    },
+    "ambient": {
+      "color": "#4e5c86",
+      "energy": 0.42,
+      "source": "color"
+    },
+    "fog": {
+      "enabled": true,
+      "color": "#1c2646",
+      "density": 0.003
+    },
+    "exposure": 1.1
+  }
+}

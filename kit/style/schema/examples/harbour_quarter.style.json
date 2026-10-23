@@ -1,0 +1,60 @@
+{
+  "schema": "iamar-style/1",
+  "id": "harbour_quarter",
+  "extends": "iamar",
+  "name": "Harbour quarter (example iamar-family extension, Track A)",
+  "description": "An iamar-family district: everything from the iamar profile, plus a harbour region with tarred timber, sea-weathered stone and green-blue paints. Shows how a Track A world adds a region and tightens a budget without restating the iamar look. Its materials.layers re-point the painted layers to the region by naming it first in `use`; without them style-gen gives a new region the civic slate roof.",
+  "regions": {
+    "harbour": {
+      "mood": "salt, tar and gulls: tarred timber, weathered grey stone, bright boat paints",
+      "roof": "#5a5f66",
+      "wall": "#e4dccb",
+      "timber": "#3b3026",
+      "trim": "#2f6464",
+      "ground_stone": "#9a958c",
+      "ground_stone_share": 0.7,
+      "timber_frame_weights": [1, 1, 3, 3, 2],
+      "paints": [
+        "#2f6464",
+        "#3c5a7a",
+        "#7a2e2a",
+        "#c0a050",
+        "#2f5a3c",
+        "#d9cfb8"
+      ],
+      "window_glow": "#ffb359",
+      "lamp": "#ffc060",
+      "fog_tint": "#b8c8d4",
+      "source": "example; colours chosen inside the iamar weathering rules"
+    }
+  },
+  "budgets": {
+    "triangles": {
+      "building": 2800
+    }
+  },
+  "materials": {
+    "layers": {
+      "harbour_roof_shingle": {
+        "layer": "shingle",
+        "tint": "#5a5f66",
+        "use": "harbour roofs (tarred shingle)"
+      },
+      "harbour_wall_plaster": {
+        "layer": "plaster",
+        "tint": "#e4dccb",
+        "use": "harbour upper storeys"
+      },
+      "harbour_ground_stone": {
+        "layer": "stone",
+        "tint": "#9a958c",
+        "use": "harbour ground storeys, quay walls"
+      },
+      "harbour_timber": {
+        "layer": "timber",
+        "tint": "#3b3026",
+        "use": "harbour frames, beams, boat timber"
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+[
+  {
+    "name": "unsigned_valid_folder",
+    "status": "unsigned",
+    "otherwise_valid": true,
+    "expected_rc": 1
+  },
+  {
+    "name": "unsigned_valid_archive",
+    "status": "unsigned",
+    "otherwise_valid": true,
+    "expected_rc": 1
+  },
+  {
+    "name": "valid_unknown_signer",
+    "status": "untrusted",
+    "otherwise_valid": true,
+    "expected_rc": 0
+  },
+  {
+    "name": "valid_trusted_signer",
+    "status": "trusted",
+    "otherwise_valid": true,
+    "expected_rc": 0
+  },
+  {
+    "name": "tampered_signature",
+    "status": "invalid",
+    "otherwise_valid": true,
+    "expected_rc": 1
+  },
+  {
+    "name": "missing_signature_with_signer_claim",
+    "status": "invalid",
+    "otherwise_valid": true,
+    "expected_rc": 1
+  },
+  {
+    "name": "valid_signature_invalid_package",
+    "status": "trusted",
+    "otherwise_valid": false,
+    "expected_rc": 1
+  }
+]
+

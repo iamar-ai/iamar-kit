@@ -1,0 +1,17 @@
+# Runtimes the kit fetches on first use when this computer has none (kit/runtime_fetch.sh,
+# kit/runtime_fetch.cmd). One line per runtime and platform:
+#   <runtime> <platform> <version> <url> <sha256> <top folder inside the archive>
+# node: the official Node.js LTS (nodejs.org/dist SHASUMS256.txt). browser: the public iamar
+# browser, which runs the kit commands (iamar-world). Change a pin only together with its sha256.
+node     linux-x64    24.22.0 https://nodejs.org/dist/v24.22.0/node-v24.22.0-linux-x64.tar.gz    28ea0a438de9a13bd7891fd758eee6c7819ee8af5442dfd8d45bd65e56d4228c node-v24.22.0-linux-x64
+node     linux-arm64  24.22.0 https://nodejs.org/dist/v24.22.0/node-v24.22.0-linux-arm64.tar.gz  b7e7991d5407815adfa74a2a9cd4db683552c8ce32ff4a295c22e972849c3f5d node-v24.22.0-linux-arm64
+node     darwin-x64   24.22.0 https://nodejs.org/dist/v24.22.0/node-v24.22.0-darwin-x64.tar.gz   495e3f273c645f3c4677d438304cdfc701729ea5dec5728f5c8e76a2dece4b91 node-v24.22.0-darwin-x64
+node     darwin-arm64 24.22.0 https://nodejs.org/dist/v24.22.0/node-v24.22.0-darwin-arm64.tar.gz 6a9724d9b50a5f22b4816cded441b5a8d9ddae546191a5e5b7efa5a5e2ee26d5 node-v24.22.0-darwin-arm64
+node     win-x64      24.22.0 https://nodejs.org/dist/v24.22.0/node-v24.22.0-win-x64.zip         f9683a19877e12a9b167305c8db71040d812876359de21f0d2e97c3f321f80c3 node-v24.22.0-win-x64
+node     win-arm64    24.22.0 https://nodejs.org/dist/v24.22.0/node-v24.22.0-win-arm64.zip       3a5c209a5bc59e65b3bc0fa13ed5e166a26bd3d55332847f498b76b037408d61 node-v24.22.0-win-arm64
+# browser: iamar release 12c0d9fe = iamar.29 (start-page Google sign-in, decision #76; was 0bef8c6d = iamar.21), at its fixed gated address on iamar.ai (the invitation
+# code is the HTTP Basic password; see tools/pin_browser_release.sh). Linux: one AppImage; Windows: iamar/ folder zip; macOS: iamar.app zip.
+browser  linux-x64    12c0d9fe   https://iamar.ai/download/city/12c0d9fe/iamar-29-linux-x86_64-12c0d9fe.AppImage 87a3e79ce0392c46babd44be44ee528be452b030468bec844db13462c34c5160 .
+browser  win-x64      12c0d9fe   https://iamar.ai/download/city/12c0d9fe/iamar-29-windows-x86_64-12c0d9fe.zip 779bd922b1e1012ea9821ef891e4937373a5daf4df0f70d88e6fc289768e4abb iamar
+browser  darwin-x64   12c0d9fe   https://iamar.ai/download/city/12c0d9fe/iamar-29-macos-12c0d9fe.zip e573d986dd7899fcc45c353068fa6d68fb3ac9c6f804160a21dee7dd2c548395 .
+browser  darwin-arm64 12c0d9fe   https://iamar.ai/download/city/12c0d9fe/iamar-29-macos-12c0d9fe.zip e573d986dd7899fcc45c353068fa6d68fb3ac9c6f804160a21dee7dd2c548395 .

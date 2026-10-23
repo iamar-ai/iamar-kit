@@ -1,0 +1,550 @@
+{
+ "format": "iamar-catalog-harbour",
+ "version": 1,
+ "note": "The harbour set in kit/catalog/assets/harbour/: models made by export_harbour.gd, sounds by harbour.py sounds, all measured by harbour.py record. Never edit by hand.",
+ "licence": "CC0-1.0",
+ "models": [
+  {
+   "models_id": "harbour_rowboat",
+   "file": "harbour/rowboat.glb",
+   "name": "rowboat",
+   "category": "vehicle",
+   "description": "A small clinker-built wooden rowboat, 3.8 m long, its top strake painted blue, with three thwarts, floor boards, iron rowlocks, two oars resting along the seats and the painter coiled in the bow. The origin is the waterline: place it at the water's height.",
+   "synonyms": [
+    "boat",
+    "row boat",
+    "dinghy",
+    "skiff",
+    "tender",
+    "rowing boat",
+    "harbour",
+    "harbor",
+    "quay",
+    "jetty",
+    "moored boat",
+    "oars"
+   ],
+   "collision": "box",
+   "origin": "kit",
+   "sha256": "ddd462c6ed869b93faa7618ea50221b73fb938dfc0349c19062f3bc2855aaf7e",
+   "bytes": 116780,
+   "place_scale": 1.0,
+   "triangles": 752,
+   "size": [
+    1.49,
+    0.81,
+    3.86
+   ],
+   "skinned": false,
+   "animations": [
+    "bob"
+   ],
+   "images": 1,
+   "physics_body": false,
+   "behaviours": [
+    "bobbing at its mooring (clip bob)"
+   ],
+   "builder": "kit/catalog/assets/export_harbour.gd",
+   "cite": "made for the kit by kit/catalog/assets/export_harbour.gd in the city's low-poly painted look (the city has no harbour: its water is the mill pond, the canals and the fountains)",
+   "play": "bob",
+   "moves": {
+    "bob": [
+     "Boat",
+     0.03
+    ]
+   }
+  },
+  {
+   "models_id": "harbour_fishing_boat",
+   "file": "harbour/fishing_boat.glb",
+   "name": "fishing boat",
+   "category": "vehicle",
+   "description": "A 6.8 m decked wooden fishing boat, green above the waterline, with a short mast and its tanned sail furled on the boom, a small cream cuddy forward, a tiller aft, two lobster pots, a fish box, a coil of rope and fenders over the side. The origin is the waterline: place it at the water's height, beside a quay.",
+   "synonyms": [
+    "boat",
+    "fishing smack",
+    "trawler",
+    "sailing boat",
+    "sailboat",
+    "ship",
+    "vessel",
+    "harbour",
+    "harbor",
+    "fishing",
+    "fisherman",
+    "mast",
+    "sail",
+    "moored boat"
+   ],
+   "collision": "box",
+   "origin": "kit",
+   "sha256": "6933120a6aacb0894dd96fe57baf708481fe2f3f98e4e486872811dd2a0a5d99",
+   "bytes": 247620,
+   "place_scale": 1.0,
+   "triangles": 1618,
+   "size": [
+    2.45,
+    6.15,
+    6.86
+   ],
+   "skinned": false,
+   "animations": [
+    "bob"
+   ],
+   "images": 1,
+   "physics_body": false,
+   "behaviours": [
+    "bobbing at its mooring (clip bob)"
+   ],
+   "builder": "kit/catalog/assets/export_harbour.gd",
+   "cite": "made for the kit by kit/catalog/assets/export_harbour.gd in the city's low-poly painted look (the city has no harbour: its water is the mill pond, the canals and the fountains)",
+   "play": "bob",
+   "moves": {
+    "bob": [
+     "Boat",
+     0.02
+    ]
+   }
+  },
+  {
+   "models_id": "harbour_bollard",
+   "file": "harbour/bollard.glb",
+   "name": "mooring bollard",
+   "category": "prop",
+   "description": "A cast-iron mooring bollard, dark iron-grey and rust-streaked, 0.6 m tall on a granite pad, with a rope made fast round its neck and trailing to the water. Line a quay with them, 4-6 m apart.",
+   "synonyms": [
+    "bollard",
+    "mooring post",
+    "quay",
+    "quayside",
+    "dock",
+    "wharf",
+    "pier",
+    "harbour",
+    "harbor",
+    "rope"
+   ],
+   "collision": "box",
+   "origin": "kit",
+   "sha256": "9228e17b7ced6e13a0897e149d0c0d1ff615a733cd53a1b856d4d9fad1eba3a6",
+   "bytes": 51376,
+   "place_scale": 1.0,
+   "triangles": 328,
+   "size": [
+    0.6,
+    0.66,
+    0.93
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "behaviours": [],
+   "builder": "kit/catalog/assets/export_harbour.gd",
+   "cite": "made for the kit by kit/catalog/assets/export_harbour.gd in the city's low-poly painted look (the city has no harbour: its water is the mill pond, the canals and the fountains)"
+  },
+  {
+   "models_id": "harbour_harbour_bell",
+   "file": "harbour/harbour_bell.glb",
+   "name": "harbour bell",
+   "category": "prop",
+   "description": "A bronze harbour bell 0.5 m across hung in a timber frame 2.7 m tall on a stone plinth, with a pull rope; it swings on its headstock when rung. Play its ring clip with the bell sound from a script when the bell is rung.",
+   "synonyms": [
+    "bell",
+    "ship's bell",
+    "ships bell",
+    "harbor bell",
+    "fog bell",
+    "alarm bell",
+    "bell frame",
+    "harbour",
+    "harbor",
+    "quay",
+    "ring"
+   ],
+   "collision": "box",
+   "origin": "kit",
+   "sha256": "319fe1d88129e4ab55fa8673fa8294a3dd3fbd9e4199ff180f156379fa4fa5ad",
+   "bytes": 66700,
+   "place_scale": 1.0,
+   "triangles": 414,
+   "size": [
+    1.75,
+    2.71,
+    0.72
+   ],
+   "skinned": false,
+   "animations": [
+    "ring"
+   ],
+   "images": 1,
+   "physics_body": false,
+   "behaviours": [
+    "swinging when rung (clip ring)"
+   ],
+   "builder": "kit/catalog/assets/export_harbour.gd",
+   "cite": "made for the kit by kit/catalog/assets/export_harbour.gd in the city's low-poly painted look (the city has no harbour: its water is the mill pond, the canals and the fountains)",
+   "play": "ring",
+   "moves": {
+    "ring": [
+     "Bell",
+     0.3
+    ]
+   }
+  },
+  {
+   "models_id": "harbour_net_pile",
+   "file": "harbour/net_pile.glb",
+   "name": "pile of fishing net",
+   "category": "prop",
+   "description": "A heap of brown fishing net, 2.2 x 1.7 m, in three folds with a string of cork floats round its edge, two glass floats on top and a coil of rope beside it; lay it on a quay, a deck or beside a net shed.",
+   "synonyms": [
+    "net",
+    "fishing net",
+    "nets",
+    "net pile",
+    "floats",
+    "glass floats",
+    "fishing",
+    "harbour",
+    "harbor",
+    "quay",
+    "fisherman"
+   ],
+   "collision": "none",
+   "origin": "kit",
+   "sha256": "454bf40136a5a557ffd2dbe71f84b67a69913ec9d8025c247a68545fecbf8191",
+   "bytes": 69956,
+   "place_scale": 1.0,
+   "triangles": 436,
+   "size": [
+    2.24,
+    0.51,
+    1.65
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 2,
+   "physics_body": false,
+   "behaviours": [],
+   "builder": "kit/catalog/assets/export_harbour.gd",
+   "cite": "made for the kit by kit/catalog/assets/export_harbour.gd in the city's low-poly painted look (the city has no harbour: its water is the mill pond, the canals and the fountains)"
+  },
+  {
+   "models_id": "harbour_fish_stall",
+   "file": "harbour/fish_stall.glb",
+   "name": "fishmonger's slab",
+   "category": "furniture",
+   "description": "A fishmonger's slab 2.2 m long on two oak trestles: a board tilted toward the buyer and covered in ice with three rows of silver herring, two posts behind it with a rail and three fish hung by the tail from it, a chalk price slate on the front and a chopping block at one end. Front (the buyer's side) is -Z. Line a fish hall with them, 3-4 m apart, or set one on a quay.",
+   "synonyms": [
+    "fish stall",
+    "fish slab",
+    "fishmonger",
+    "fish monger",
+    "fish market",
+    "market stall",
+    "stall",
+    "counter",
+    "fish",
+    "herring",
+    "ice",
+    "fish hall",
+    "harbour",
+    "harbor",
+    "quay",
+    "market"
+   ],
+   "collision": "box",
+   "origin": "kit",
+   "sha256": "36429babc7af06884f5e966bd061984f01520a4fab5fb6f3f6000c0974dd0952",
+   "bytes": 40804,
+   "place_scale": 1.0,
+   "triangles": 252,
+   "size": [
+    2.22,
+    1.91,
+    1.01
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "behaviours": [],
+   "builder": "kit/catalog/assets/export_harbour.gd",
+   "cite": "made for the kit by kit/catalog/assets/export_harbour.gd in the city's low-poly painted look (the city has no harbour: its water is the mill pond, the canals and the fountains)"
+  },
+  {
+   "models_id": "harbour_fish_crates",
+   "file": "harbour/fish_crates.glb",
+   "name": "stack of fish crates",
+   "category": "prop",
+   "description": "Three open wooden fish crates, 0.7 x 0.45 x 0.26 m each, two side by side and one across them, each packed with herring on ice. Stack a few by a fish hall's stalls, on a quay beside a boat or on a cart.",
+   "synonyms": [
+    "crate",
+    "crates",
+    "fish crate",
+    "fish box",
+    "fish boxes",
+    "box of fish",
+    "herring",
+    "fish",
+    "catch",
+    "fish hall",
+    "fish market",
+    "harbour",
+    "harbor",
+    "quay",
+    "dock"
+   ],
+   "collision": "box",
+   "origin": "kit",
+   "sha256": "cbf9c8647bfed14eaebb864e89d2c35d6b71e095bf9a1efdbdae8d058a16f07b",
+   "bytes": 28280,
+   "place_scale": 1.0,
+   "triangles": 174,
+   "size": [
+    1.46,
+    0.52,
+    0.54
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "behaviours": [],
+   "builder": "kit/catalog/assets/export_harbour.gd",
+   "cite": "made for the kit by kit/catalog/assets/export_harbour.gd in the city's low-poly painted look (the city has no harbour: its water is the mill pond, the canals and the fountains)"
+  },
+  {
+   "models_id": "harbour_hanging_net",
+   "file": "harbour/hanging_net.glb",
+   "name": "net hung to dry",
+   "category": "prop",
+   "description": "A brown fishing net hung to dry over a rack 2.6 m long: two A-frame ends and a pole 2.1 m up, the net falling to about half a metre above the floor on both sides and sagging between the ends, with cork floats along its hems. Stand it in a fish hall or a net shed, or along a quay.",
+   "synonyms": [
+    "hanging net",
+    "drying net",
+    "net hung to dry",
+    "net rack",
+    "drying rack",
+    "net loft",
+    "fish hall",
+    "net shed",
+    "fishing",
+    "harbour",
+    "harbor",
+    "quay",
+    "fisherman"
+   ],
+   "collision": "box",
+   "origin": "kit",
+   "sha256": "4bc113d80ea8743f266c069051599bff98b62e7764226df34128d34478266302",
+   "bytes": 55484,
+   "place_scale": 1.0,
+   "triangles": 332,
+   "size": [
+    2.76,
+    2.2,
+    1.19
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 2,
+   "physics_body": false,
+   "behaviours": [],
+   "builder": "kit/catalog/assets/export_harbour.gd",
+   "cite": "made for the kit by kit/catalog/assets/export_harbour.gd in the city's low-poly painted look (the city has no harbour: its water is the mill pond, the canals and the fountains)"
+  },
+  {
+   "models_id": "harbour_gull",
+   "file": "harbour/gull.glb",
+   "name": "herring gull",
+   "category": "bird",
+   "description": "An adult herring gull 0.58 m long: white with a pale grey back, black wing tips with white mirrors, a yellow bill with its red spot and pink legs. It stands on a bollard, a roof or a quay looking about (clip perch; the file's rest pose is the same, wings folded); its fly clip beats the wings with the legs tucked, for a gull a script moves through the air (entity_move_to, see kit/catalog/README.md).",
+   "synonyms": [
+    "gull",
+    "seagull",
+    "sea gull",
+    "seabird",
+    "sea bird",
+    "herring gull",
+    "bird",
+    "coast",
+    "harbour",
+    "harbor",
+    "seaside"
+   ],
+   "collision": "none",
+   "origin": "kit",
+   "sha256": "ee961f40f70dc167f89c11fb7719ada0215eebdf268d614bf0e80609051e0ac5",
+   "bytes": 50884,
+   "place_scale": 1.0,
+   "triangles": 268,
+   "size": [
+    0.31,
+    0.36,
+    0.86
+   ],
+   "skinned": false,
+   "animations": [
+    "fly",
+    "perch"
+   ],
+   "images": 1,
+   "physics_body": false,
+   "behaviours": [
+    "perched, looking about (clip perch)",
+    "wingbeat in flight (clip fly)"
+   ],
+   "builder": "kit/catalog/assets/export_harbour.gd",
+   "cite": "made for the kit by kit/catalog/assets/export_harbour.gd in the city's low-poly painted look (the city has no harbour: its water is the mill pond, the canals and the fountains)",
+   "play": "perch",
+   "moves": {
+    "perch": [
+     "Head",
+     0.2
+    ],
+    "fly": [
+     "WingR",
+     0.4
+    ]
+   }
+  },
+  {
+   "kind": "audio",
+   "models_id": "sound_sea_waves",
+   "file": "harbour/sounds/sea_waves.ogg",
+   "name": "sea waves (ambient loop)",
+   "category": "audio",
+   "description": "Waves washing against a harbour wall: a low swell of surf with a hiss as each wave breaks, about two waves every ten seconds. 16 s, mono, loops seamlessly; the bed under a harbour or a beach.",
+   "synonyms": [
+    "sea",
+    "waves",
+    "surf",
+    "ocean",
+    "sea sound",
+    "wave sound",
+    "water",
+    "shore",
+    "beach",
+    "coast",
+    "harbour",
+    "harbor",
+    "ambient",
+    "ambience",
+    "loop"
+   ],
+   "origin": "kit",
+   "sha256": "c962c34dc01cd6ef0fb6a1afc9e10169c99d92687028535f9b1382d16a27bcbb",
+   "bytes": 82019,
+   "audio": {
+    "channels": 1,
+    "rate": 22050,
+    "seconds": 16.0
+   },
+   "behaviours": [
+    "ambient loop"
+   ],
+   "sound": {
+    "id": "sea",
+    "loop": true,
+    "volume_db": -14
+   },
+   "builder": "kit/catalog/assets/harbour.py",
+   "cite": "synthesised for the kit by kit/catalog/assets/harbour.py sounds (seeded noise and partials, no recording)"
+  },
+  {
+   "kind": "audio",
+   "models_id": "sound_harbour_bell",
+   "file": "harbour/sounds/harbour_bell.ogg",
+   "name": "harbour bell strike",
+   "category": "audio",
+   "description": "One strike of a bronze bell (G4 with its hum, tierce and nominal partials), ringing out over about five seconds. Mono; play it at the bell's position, once, from a quest's play or a script.",
+   "synonyms": [
+    "bell",
+    "bell sound",
+    "bell ring",
+    "ring",
+    "chime",
+    "ship's bell",
+    "harbor bell",
+    "church bell",
+    "fog bell",
+    "alarm",
+    "harbour",
+    "harbor"
+   ],
+   "origin": "kit",
+   "sha256": "d92a7090c510de293d29ce39ef44e744f976ee15c7dee0f2b0ce0cd0a058c426",
+   "bytes": 12643,
+   "audio": {
+    "channels": 1,
+    "rate": 22050,
+    "seconds": 5.0
+   },
+   "behaviours": [
+    "positional, once"
+   ],
+   "sound": {
+    "id": "bell",
+    "position": [
+     0,
+     2,
+     0
+    ],
+    "radius": 60,
+    "loop": false,
+    "autoplay": false
+   },
+   "builder": "kit/catalog/assets/harbour.py",
+   "cite": "synthesised for the kit by kit/catalog/assets/harbour.py sounds (seeded noise and partials, no recording)"
+  },
+  {
+   "kind": "audio",
+   "models_id": "sound_gull_calls",
+   "file": "harbour/sounds/gull_calls.ogg",
+   "name": "gull calls",
+   "category": "audio",
+   "description": "A herring gull calling: two long mewing cries and a run of short laughing kyow-kyow notes, 3.6 s, mono. Loop it at a position on a roof or the quay, or play it now and then from a script.",
+   "synonyms": [
+    "gull",
+    "gulls",
+    "seagull",
+    "seagulls",
+    "gull call",
+    "bird call",
+    "seabird",
+    "sea bird",
+    "cry",
+    "harbour",
+    "harbor",
+    "coast",
+    "seaside"
+   ],
+   "origin": "kit",
+   "sha256": "a6a160eec1ba5d9b047cd9fa49f67cee5f77ab95f80c905a98bb6cc67ba5d0c4",
+   "bytes": 18510,
+   "audio": {
+    "channels": 1,
+    "rate": 22050,
+    "seconds": 3.6
+   },
+   "behaviours": [
+    "positional loop"
+   ],
+   "sound": {
+    "id": "gulls",
+    "position": [
+     0,
+     6,
+     0
+    ],
+    "radius": 40,
+    "loop": true,
+    "volume_db": -6
+   },
+   "builder": "kit/catalog/assets/harbour.py",
+   "cite": "synthesised for the kit by kit/catalog/assets/harbour.py sounds (seeded noise and partials, no recording)"
+  }
+ ]
+}

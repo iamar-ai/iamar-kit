@@ -1,0 +1,882 @@
+{
+ "format": "iamar-catalog-painted-bake",
+ "version": 1,
+ "note": "The city's painted look (shaders/mp_painted.gdshaderinc in the iamar browser source (not public)) baked into a texture per prop by kit/catalog/assets/bake_painted.gd (painted_baker.gd), after import_city_models.py copied the props from the iamar-models mesh archive (not public). source_sha256 = the copy recorded in city_models.json, sha256 = the baked file. Never edit by hand: rerun the import and the bake.",
+ "files": [
+  {
+   "file": "props/anvil.glb",
+   "source_sha256": "21ac8dc08a6250c3e5cd854c7dbee83b817708a027826dc9ab3c9fc1a3a5d050",
+   "sha256": "915e5313bc61ca925dc5b4e1dc91aae40feaab45c67822e5d6245f0a84f34fb3",
+   "bytes": 19432.0,
+   "atlas": [
+    256.0,
+    512.0
+   ],
+   "px_per_m": 128.0,
+   "charts": 40.0,
+   "triangles": 60.0,
+   "patterns": {
+    "2": 32.0,
+    "8": 28.0
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/archery_backstop.glb",
+   "source_sha256": "4c2e92a916122552e5d38655ca29802ea0671472061e184c10bc8062268df33e",
+   "sha256": "11c0cf7ee6348286b02b23cfa11a58ebeca9ff4f050432a915c3d6130ac34ea9",
+   "bytes": 121080,
+   "atlas": [
+    1024,
+    1024
+   ],
+   "px_per_m": 81.9,
+   "charts": 46,
+   "triangles": 92,
+   "patterns": {
+    "2": 12,
+    "6": 80
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/archery_target.glb",
+   "source_sha256": "ff2325045524b69452218c6201435c03d31ebe09a315ae15ff084a5d7e86ee7a",
+   "sha256": "05dc61e897094d1e8f43d50e2ad635a30705ff0ef611fac63fcf64f5d56b3d8f",
+   "bytes": 51464,
+   "atlas": [
+    256,
+    1024
+   ],
+   "px_per_m": 128.0,
+   "charts": 84,
+   "triangles": 108,
+   "patterns": {
+    "2": 24,
+    "6": 36,
+    "9": 36,
+    "8": 12
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/basket.glb",
+   "source_sha256": "b5d665020cf904f0271b2eefcdfb2ec288c43d1b36ab1d01a3a4a118ac81cfc9",
+   "sha256": "d2cf89a0c39bcfe10303dec493bfe76a8ff81084f928a60085478e13272972da",
+   "bytes": 42496,
+   "atlas": [
+    256,
+    512
+   ],
+   "px_per_m": 128.0,
+   "charts": 132,
+   "triangles": 176,
+   "patterns": {
+    "6": 70,
+    "0": 106
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/beehive.glb",
+   "source_sha256": "d6687247d1dc6f11b215e7500c32d27100987796f48c8d90e72a0e25330be023",
+   "sha256": "baa3b94405bf53a1307b4c6e19bd06903cd4195a329af79fcd1401fc6b968fe9",
+   "bytes": 46764,
+   "atlas": [
+    512,
+    512
+   ],
+   "px_per_m": 128.0,
+   "charts": 101,
+   "triangles": 152,
+   "patterns": {
+    "2": 12,
+    "6": 130,
+    "0": 10
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/bench.glb",
+   "source_sha256": "31c7428e677c4be12f7eb3d25695a71c6be28ab95b20ca1d8fa92abf49333428",
+   "sha256": "6367f9f1ac54e8c0621f66375bf8a5bdda283ea4cd169c5f3a83973b695db31d",
+   "bytes": 31656,
+   "atlas": [
+    512,
+    512
+   ],
+   "px_per_m": 128.0,
+   "charts": 16,
+   "triangles": 32,
+   "patterns": {
+    "1": 32
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/brass_star.glb",
+   "source_sha256": "e5e02c10155a38df679f160fb1775450522684e2f19312e8b73b0f597a29687d",
+   "sha256": "6537f6071f3e82c0b1093242af7bc81e6244a3b7d2707fa1dddb92096b45ce4d",
+   "bytes": 12180,
+   "atlas": [
+    128,
+    256
+   ],
+   "px_per_m": 128.0,
+   "charts": 24,
+   "triangles": 32,
+   "patterns": {
+    "8": 32
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/chimney.glb",
+   "source_sha256": "ae1ee7cb68343a1da249189fc3710aeafa19dc8a4edd46821324d74087f8aa8b",
+   "sha256": "c3ce51ef235eef81eeb0c0c894b96a95ad986606591db61374ec0b0148ec6ef8",
+   "bytes": 32384,
+   "atlas": [
+    512,
+    512
+   ],
+   "px_per_m": 128.0,
+   "charts": 12,
+   "triangles": 24,
+   "patterns": {
+    "1": 24
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/coal_sacks.glb",
+   "source_sha256": "5d901cb3fcb04e6212697706474190df5094b2b2d73c0dbedc94a8c220ed60a8",
+   "sha256": "c8e8aa452748cb1c2bba584c46c47bce87dcefaf2149bf03020bf69829543d47",
+   "bytes": 36296,
+   "atlas": [
+    512,
+    512
+   ],
+   "px_per_m": 128.0,
+   "charts": 114,
+   "triangles": 150,
+   "patterns": {
+    "9": 144,
+    "0": 6
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/crystal_finial.glb",
+   "source_sha256": "764f2069ba71f6f5a16679616a985e8649ac57443f105d4d1f6c8ca8f61f06b2",
+   "sha256": "a141c7ae4f84a21d28940f8b59203bd58df1f48e8bbdcae3dd9d182e0d74065a",
+   "bytes": 37940,
+   "atlas": [
+    512,
+    512
+   ],
+   "px_per_m": 128.0,
+   "charts": 48,
+   "triangles": 54,
+   "patterns": {
+    "8": 18,
+    "0": 36
+   },
+   "glow": true,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/fence.glb",
+   "source_sha256": "bb7e81bfb2bb9be7d9c7435080ac18382c95c48d017330d0b36326f25340300a",
+   "sha256": "4a28b180aa98beb812212a80518ad31c896e4c7e50cc353b7f31f2d7cc2a85f8",
+   "bytes": 20812,
+   "atlas": [
+    512,
+    512
+   ],
+   "px_per_m": 128.0,
+   "charts": 18,
+   "triangles": 36,
+   "patterns": {
+    "2": 36
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/floating_lantern.glb",
+   "source_sha256": "773b28aafa0ddd6b98a1dfda9e8d2842cffd72ddd57ae1b45df7c192ee721988",
+   "sha256": "c71967cd57b12f05a24b832b59eabb78b17854333b050bda1c3664b3885c1501",
+   "bytes": 20380,
+   "atlas": [
+    256,
+    256
+   ],
+   "px_per_m": 128.0,
+   "charts": 28,
+   "triangles": 40,
+   "patterns": {
+    "0": 12,
+    "8": 28
+   },
+   "glow": true,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/forge_mouth.glb",
+   "source_sha256": "2acddc019c5020eff119a021be25949e788d62aef812b632db9a23d0aaf9334c",
+   "sha256": "8d8e4d807539427d37dc5ce416b79facfc2b791eaadcbb3403528ff7747f9f81",
+   "bytes": 55664,
+   "atlas": [
+    512,
+    1024
+   ],
+   "px_per_m": 128.0,
+   "charts": 17,
+   "triangles": 34,
+   "patterns": {
+    "1": 24,
+    "0": 10
+   },
+   "glow": true,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/fountain.glb",
+   "source_sha256": "3a547563eacb2b16776c966fa71790fb42284e0c402a2e63cf9fe897900b54a6",
+   "sha256": "ab95d7655106c2f56bd1bde670f5242df50fa346e38c3173ae252c613473b816",
+   "bytes": 547480,
+   "atlas": [
+    1024,
+    1024
+   ],
+   "px_per_m": 52.4,
+   "charts": 1220,
+   "triangles": 2220,
+   "patterns": {
+    "4": 2136,
+    "1": 84
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/grindstone.glb",
+   "source_sha256": "4a966ef95fb1c2a1187e6fe0271993a86ac86229ed671013b60ab4ab5dc3b864",
+   "sha256": "898c96fe4ed288dc7774f8991d4b5a92966db08fe406dcb61c24dc5117b01530",
+   "bytes": 34932,
+   "atlas": [
+    512,
+    512
+   ],
+   "px_per_m": 128.0,
+   "charts": 54,
+   "triangles": 84,
+   "patterns": {
+    "2": 24,
+    "1": 48,
+    "8": 12
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/herb_bundles.glb",
+   "source_sha256": "2f1b0389dba2120db7bdedbd3dc6648134588d4ede17467b7fe15ccd63abcd6b",
+   "sha256": "2ade9e96ad433175d6825b666e20b4e68b072168b5ed850fe0d50b509b30908b",
+   "bytes": 20884,
+   "atlas": [
+    128,
+    128
+   ],
+   "px_per_m": 128.0,
+   "charts": 64,
+   "triangles": 98,
+   "patterns": {
+    "2": 12,
+    "8": 20,
+    "0": 66
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/herbal_lamp.glb",
+   "source_sha256": "7c44b1016040c53eeac558605cb7cb23996c0cb18db5b623c8a22f5e8d0c1e75",
+   "sha256": "d7cc5ee162ab879ecdae0290057e6ee2b2865499f794ae203c81556a789f6e3e",
+   "bytes": 31296,
+   "atlas": [
+    128,
+    1024
+   ],
+   "px_per_m": 128.0,
+   "charts": 50,
+   "triangles": 74,
+   "patterns": {
+    "2": 62,
+    "0": 12
+   },
+   "glow": true,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/hitching_rail.glb",
+   "source_sha256": "9a7f7971ebc51732cf21ef39e49661e64a86529bb6c16680461986e843005af9",
+   "sha256": "ce4dec542c0c3798d14a54421bab7415c555d33d43d5b2369aedf539e9b288aa",
+   "bytes": 65884,
+   "atlas": [
+    1024,
+    1024
+   ],
+   "px_per_m": 128.0,
+   "charts": 36,
+   "triangles": 72,
+   "patterns": {
+    "2": 60,
+    "0": 12
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/iron_bar_stack.glb",
+   "source_sha256": "2ff9523b5c8347387ea77081e0a5a6d3c31f5bb8339849775a297a0b776f8d7f",
+   "sha256": "acea2aa929493cea8b45032d4a1eb78b7d9d806cce270a720d7b35e0b622f17e",
+   "bytes": 69536,
+   "atlas": [
+    512,
+    1024
+   ],
+   "px_per_m": 128.0,
+   "charts": 89,
+   "triangles": 148,
+   "patterns": {
+    "8": 98,
+    "2": 40,
+    "0": 10
+   },
+   "glow": true,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/judges_box.glb",
+   "source_sha256": "708890f515cf66d00ea27e8d4e480cba9b0d33a317406eac0860ce948c4e59dc",
+   "sha256": "0b9d417939082dc17454cc3bf113ef338dca3d6eade782197847b9e0f29c5a20",
+   "bytes": 156048,
+   "atlas": [
+    1024,
+    1024
+   ],
+   "px_per_m": 41.9,
+   "charts": 105,
+   "triangles": 182,
+   "patterns": {
+    "2": 94,
+    "10": 24,
+    "8": 60,
+    "9": 4
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/mages_banner.glb",
+   "source_sha256": "7933f5b0c4638cca32a8c3c1122a5c1b6cce4232097691aab12ceb4e4703f8da",
+   "sha256": "642c957b24d06aea464a8421711eab4c359e8ec1b6b923f773786fe9b7644693",
+   "bytes": 22772,
+   "atlas": [
+    256,
+    512
+   ],
+   "px_per_m": 128.0,
+   "charts": 43,
+   "triangles": 66,
+   "patterns": {
+    "8": 42,
+    "2": 12,
+    "9": 12
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/manikin.glb",
+   "source_sha256": "cd4bcccef2c263eadb73de31bd6b44a9ca56e0af18d9619e1823474d82961694",
+   "sha256": "5ece5431270c90d1c0504eb18b2dac772625951d73872dce0d559bae577b57cf",
+   "bytes": 40288,
+   "atlas": [
+    512,
+    512
+   ],
+   "px_per_m": 128.0,
+   "charts": 84,
+   "triangles": 130,
+   "patterns": {
+    "2": 50,
+    "8": 80
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/market_stall.glb",
+   "source_sha256": "851553899a2a1307b431480070f17a3b000e1f7c780c546f693d4a0c3a771093",
+   "sha256": "b75c13f998e88ec54411eac88477fe25824bde84eb12e01fd22438e4fdbf7cac",
+   "bytes": 143976,
+   "atlas": [
+    1024,
+    1024
+   ],
+   "px_per_m": 102.4,
+   "charts": 168,
+   "triangles": 288,
+   "patterns": {
+    "2": 96,
+    "0": 168,
+    "10": 24
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/mascherone.glb",
+   "source_sha256": "e1ac6b8cd52a828bc91578ea11dafc4150ee63050ff7860832807e6d0486b609",
+   "sha256": "764169b4d7999999ad4a6dbb34b10e52fdd2523f677fda6ccc43b7b6ded5c827",
+   "bytes": 429532,
+   "atlas": [
+    1024,
+    1024
+   ],
+   "px_per_m": 81.9,
+   "charts": 1211,
+   "triangles": 2013,
+   "patterns": {
+    "4": 1723,
+    "1": 218,
+    "0": 60,
+    "8": 12
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/notice_board.glb",
+   "source_sha256": "36dbdc7dac8e9f6231684e6d7fb806d301bc8fa692226326ffe943deef6aabf6",
+   "sha256": "eaf1e74f0a2ea8edef169b7d5b3216cd912cf33062f594f40eb4910bab1f0c39",
+   "bytes": 70876,
+   "atlas": [
+    512,
+    1024
+   ],
+   "px_per_m": 128.0,
+   "charts": 85,
+   "triangles": 166,
+   "patterns": {
+    "2": 52,
+    "3": 24,
+    "0": 30,
+    "9": 60
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/park_bench.glb",
+   "source_sha256": "02e0f95e99763d960ae892a350b001570ebdd19b86f9631f521c7951822691d0",
+   "sha256": "1ab8f2942223537e4d55c6af7df5003010a97896597d610091a6db0558221d69",
+   "bytes": 35448,
+   "atlas": [
+    512,
+    512
+   ],
+   "px_per_m": 128.0,
+   "charts": 32,
+   "triangles": 64,
+   "patterns": {
+    "1": 20,
+    "2": 44
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/planter.glb",
+   "source_sha256": "4ecba946bc3f9ddea918e53a74c4ba2d745cb5e171858735fbb4ee1a3a6da81c",
+   "sha256": "a45d363e2b6bbe4eb54743717d54b75b2e2686cecfd557f6f0b0ec5bf1efc1c7",
+   "bytes": 28476,
+   "atlas": [
+    256,
+    512
+   ],
+   "px_per_m": 128.0,
+   "charts": 75,
+   "triangles": 120,
+   "patterns": {
+    "4": 24,
+    "0": 96
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/quench_barrel.glb",
+   "source_sha256": "33c7929f551de5065c981ce766e31f0e8d2b2ff474137f48e58066f0d35f3780",
+   "sha256": "30eb317754e06be96c60934e43c59098c74bdc8db6042fde8138427e947fcf72",
+   "bytes": 38260.0,
+   "atlas": [
+    512.0,
+    512.0
+   ],
+   "px_per_m": 128.0,
+   "charts": 80.0,
+   "triangles": 120.0,
+   "patterns": {
+    "2": 70.0,
+    "0": 10.0,
+    "8": 40.0
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/quintain.glb",
+   "source_sha256": "b67e21e554d626e7db885d5e2e4c5e75d1d870ea9cf777232496a6aab73033f7",
+   "sha256": "84f31fcf0e348f8b7f466d05818d0a92ec646226740fb8d0c2274f100b3db552",
+   "bytes": 35640,
+   "atlas": [
+    512,
+    512
+   ],
+   "px_per_m": 128.0,
+   "charts": 72,
+   "triangles": 104,
+   "patterns": {
+    "2": 60,
+    "9": 32,
+    "0": 12
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/rune_stone.glb",
+   "source_sha256": "3db8612dd3df5e36a1111de40c3167d279e17f9245229ca8300929c7119a301b",
+   "sha256": "c5aeb3efcfc9e33b70c85715500160ffb52ee401921cb09f066e3b3ef6943915",
+   "bytes": 58972,
+   "atlas": [
+    512,
+    512
+   ],
+   "px_per_m": 128.0,
+   "charts": 72,
+   "triangles": 96,
+   "patterns": {
+    "1": 48,
+    "0": 48
+   },
+   "glow": true,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/scroll_rack.glb",
+   "source_sha256": "b23c1ab5b0fbf984299544fdaadacdce62aa662ec84d68ab18d7f69e2efb978b",
+   "sha256": "367890b0ddbbdba31d7df58362b9e6e634418368c47dccdff1d370fdb4cbfcc6",
+   "bytes": 80904,
+   "atlas": [
+    512,
+    512
+   ],
+   "px_per_m": 128.0,
+   "charts": 222,
+   "triangles": 342,
+   "patterns": {
+    "2": 60,
+    "0": 162,
+    "9": 108,
+    "8": 12
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/sparring_ring.glb",
+   "source_sha256": "6fca83d2e14d8311a41bcc52baf8c4a823709cf9f59dba1341d85cd1dd702312",
+   "sha256": "713015db0baf763e18e9d33f31ee70f78bf67114e79f85aa40becddaa23ae2f4",
+   "bytes": 83680,
+   "atlas": [
+    512,
+    1024
+   ],
+   "px_per_m": 128.0,
+   "charts": 144,
+   "triangles": 288,
+   "patterns": {
+    "2": 144,
+    "0": 144
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/street_lamp.glb",
+   "source_sha256": "aafbb3a581fbcd6e088490d49d5866deed71f96da7ce86a2a8c4dcc88990ec94",
+   "sha256": "40e41fec8278accc53002e076cb55ab7f3ee8200b3c8465c5b25eecd3f811a90",
+   "bytes": 32888,
+   "atlas": [
+    128,
+    1024
+   ],
+   "px_per_m": 128.0,
+   "charts": 50,
+   "triangles": 74,
+   "patterns": {
+    "1": 24,
+    "8": 38,
+    "0": 12
+   },
+   "glow": true,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/street_plaque.glb",
+   "source_sha256": "041b6c4480ebf17c3d8f18d8d7e7de71a62f85291c188a225a8200a56954919a",
+   "sha256": "175ddce21a353d51acbb0755918ddcdc795cac399bc9fec97eb0f99fc969d53a",
+   "bytes": 15204,
+   "atlas": [
+    256,
+    256
+   ],
+   "px_per_m": 128.0,
+   "charts": 11,
+   "triangles": 22,
+   "patterns": {
+    "1": 12,
+    "0": 10
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/tilt_barrier.glb",
+   "source_sha256": "9976e06d101eb88c1044251c8093f09951a107e7f109a02fa21fcc23fb7dd3f8",
+   "sha256": "521dbbf02493c5cc7ece231366eed6e5968983f381bee135dd380c28872dc191",
+   "bytes": 71568,
+   "atlas": [
+    1024,
+    512
+   ],
+   "px_per_m": 81.9,
+   "charts": 62,
+   "triangles": 124,
+   "patterns": {
+    "2": 124
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/torch_post.glb",
+   "source_sha256": "558ecb29781732e272a8eafb901224a2f6ccf6881d6017de357707956ff3d39d",
+   "sha256": "ce39477e2c6c4c89c8f56638f74d9c4f1a9e5a3bdf24a2e573c0e0d794e32249",
+   "bytes": 36972,
+   "atlas": [
+    128,
+    1024
+   ],
+   "px_per_m": 128.0,
+   "charts": 65,
+   "triangles": 89,
+   "patterns": {
+    "1": 24,
+    "8": 42,
+    "0": 23
+   },
+   "glow": true,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/training_dummy.glb",
+   "source_sha256": "76235c915a241c960f5bdfbd47c1ca60b1c891c37a5c4b93a47b0db0c5d50676",
+   "sha256": "920ca5d3270334d1e371c2b0a3ec400ab5649ea84bed99f2b404d62d3782ce34",
+   "bytes": 34076,
+   "atlas": [
+    512,
+    512
+   ],
+   "px_per_m": 128.0,
+   "charts": 72,
+   "triangles": 100,
+   "patterns": {
+    "2": 36,
+    "6": 32,
+    "9": 32
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/trophy_shield.glb",
+   "source_sha256": "cec4f854501851f44ab08bbb5c6ee32bf73e4c4b8e55e970ce297a3f0fc7f0bb",
+   "sha256": "3fb8ba3aec422845607c6dadaa26888c67606d38e8b29ac34ab8de9b237fb381",
+   "bytes": 23240,
+   "atlas": [
+    256,
+    512
+   ],
+   "px_per_m": 128.0,
+   "charts": 48,
+   "triangles": 74,
+   "patterns": {
+    "2": 30,
+    "8": 44
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/viewing_stand.glb",
+   "source_sha256": "5e656bbd5a60bc3e8dbd517d32f35701fc533b82f84a0a4c9156e9cea3854cf5",
+   "sha256": "1cac2bf57d526c4fc1611c283516ada14bed2ea6e9d3e0337b8fa2ca86777589",
+   "bytes": 130400,
+   "atlas": [
+    1024,
+    1024
+   ],
+   "px_per_m": 41.9,
+   "charts": 59,
+   "triangles": 118,
+   "patterns": {
+    "2": 94,
+    "10": 24
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/wall_lantern.glb",
+   "source_sha256": "4ab1fc0dbc1b81308cb5ac28cf1d38de96f5638644a7b8b53ae85f4dcc6a1f1c",
+   "sha256": "e9d67539f2dfd423938a18f79adb3b33e3c1fc6b1438b83d62f326ddc4264ff1",
+   "bytes": 13052,
+   "atlas": [
+    128,
+    256
+   ],
+   "px_per_m": 128.0,
+   "charts": 19,
+   "triangles": 30,
+   "patterns": {
+    "8": 18,
+    "0": 12
+   },
+   "glow": true,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/wall_rack.glb",
+   "source_sha256": "bcc2a5501c41c6509de502f01c7e51c2cba3c60517a496d8e9e807b2e3a6fcbe",
+   "sha256": "e6cc01eeb90b3891774ad622889399ea13b8c9ecf84e6fc3c319f93b1717a33d",
+   "bytes": 62904,
+   "atlas": [
+    256,
+    1024
+   ],
+   "px_per_m": 128.0,
+   "charts": 114,
+   "triangles": 212,
+   "patterns": {
+    "2": 80,
+    "8": 132
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/warriors_banner.glb",
+   "source_sha256": "0195209dce1843ea152b3750cf4e083c3f1f400b299cc3be10197b3eaadb14ff",
+   "sha256": "b24065138c30bfdc264d93867bcc9d259db98cc9ea157876b75769ad34d12e1e",
+   "bytes": 17616,
+   "atlas": [
+    256,
+    512
+   ],
+   "px_per_m": 128.0,
+   "charts": 25,
+   "triangles": 48,
+   "patterns": {
+    "8": 10,
+    "2": 12,
+    "9": 12,
+    "0": 14
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/weapon_rack.glb",
+   "source_sha256": "d56d80c83086fbaa9724c2f7f594fa128f407b8b69486649fabe49d8422029f3",
+   "sha256": "874097e07eb1e3a1b74fcb957457722f1763217b4c13b18783faf29af9586d61",
+   "bytes": 61908,
+   "atlas": [
+    512,
+    512
+   ],
+   "px_per_m": 128.0,
+   "charts": 110,
+   "triangles": 196,
+   "patterns": {
+    "2": 84,
+    "8": 104,
+    "9": 8
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/weathervane.glb",
+   "source_sha256": "5000df9baa952ca6db245fff457eee7f50e7314f55a69c849ee16c3a4e5d05e3",
+   "sha256": "5b4cf41378e82423e7bcd089f69c23358576efd1a4d9b9cdcf30f5cbb5496089",
+   "bytes": 18156,
+   "atlas": [
+    256,
+    256
+   ],
+   "px_per_m": 128.0,
+   "charts": 47,
+   "triangles": 72,
+   "patterns": {
+    "8": 72
+   },
+   "glow": false,
+   "baker_commit": ""
+  },
+  {
+   "file": "props/well.glb",
+   "source_sha256": "60c4639e757b9538e40a2e86b93aea64ed776c28eaec5bd8f7a602a10e1bfc16",
+   "sha256": "c8d3daf779ca780af875eae0b00b259a7213a602d89321280a5ea23d47aeae61",
+   "bytes": 144232.0,
+   "atlas": [
+    1024.0,
+    1024.0
+   ],
+   "px_per_m": 102.4,
+   "charts": 230.0,
+   "triangles": 344.0,
+   "patterns": {
+    "1": 192.0,
+    "0": 44.0,
+    "2": 84.0,
+    "3": 24.0
+   },
+   "glow": false,
+   "baker_commit": ""
+  }
+ ]
+}

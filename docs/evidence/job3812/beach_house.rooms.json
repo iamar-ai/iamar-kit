@@ -1,0 +1,592 @@
+{
+ "facing": [
+  -1,
+  0,
+  0
+ ],
+ "floors": 2,
+ "front_door": [
+  -4.9,
+  0.15,
+  0.0
+ ],
+ "furnished": true,
+ "furniture_triangles": 2286,
+ "lights": [
+  {
+   "color": "#ffdcb0",
+   "energy": 1.2,
+   "id": "light_1",
+   "position": [
+    -3.1,
+    2.6,
+    0.0
+   ],
+   "range": 6.2,
+   "type": "point"
+  },
+  {
+   "color": "#ffdcb0",
+   "energy": 1.2,
+   "id": "light_2",
+   "position": [
+    0.5,
+    2.6,
+    0.0
+   ],
+   "range": 6.2,
+   "type": "point"
+  },
+  {
+   "color": "#ffdcb0",
+   "energy": 1.2,
+   "id": "light_3",
+   "position": [
+    -3.1,
+    5.6,
+    0.0
+   ],
+   "range": 6.2,
+   "type": "point"
+  },
+  {
+   "color": "#ffdcb0",
+   "energy": 1.2,
+   "id": "light_4",
+   "position": [
+    0.5,
+    5.6,
+    0.0
+   ],
+   "range": 6.2,
+   "type": "point"
+  }
+ ],
+ "roof": "gable",
+ "rooms": [
+  {
+   "door": [
+    -1.3,
+    0.15,
+    -0.7
+   ],
+   "floor": 0,
+   "furniture": [
+    {
+     "asset": "coastal/sofa.glb",
+     "footprint": [
+      -2.35,
+      -4.65,
+      -0.25,
+      -3.75
+     ],
+     "item": "sofa",
+     "position": [
+      -1.3,
+      0.15,
+      -4.2
+     ],
+     "yaw": 0.0
+    },
+    {
+     "asset": "coastal/rug.glb",
+     "footprint": [
+      -2.6,
+      -3.65,
+      0.0,
+      -1.95
+     ],
+     "item": "rug",
+     "position": [
+      -1.3,
+      0.15,
+      -2.8
+     ],
+     "yaw": 0.0
+    },
+    {
+     "asset": "furniture/armchair.glb",
+     "footprint": [
+      -4.65,
+      -4.65,
+      -3.86,
+      -3.81
+     ],
+     "item": "armchair",
+     "position": [
+      -4.26,
+      0.15,
+      -4.23
+     ],
+     "yaw": 90.0
+    },
+    {
+     "asset": "furniture/bookshelf.glb",
+     "footprint": [
+      1.63,
+      -4.65,
+      2.05,
+      -2.98
+     ],
+     "item": "bookshelf",
+     "position": [
+      1.84,
+      0.15,
+      -3.78
+     ],
+     "yaw": -90.0
+    }
+   ],
+   "lit_by": [
+    "light_1",
+    "light_2"
+   ],
+   "name": "living_1",
+   "rect": [
+    -4.9,
+    -4.9,
+    2.3,
+    -0.7
+   ],
+   "type": "living",
+   "windows": [
+    {
+     "c": -2.5,
+     "high": false,
+     "w": 1.2,
+     "wall": "north"
+    },
+    {
+     "c": -0.1,
+     "high": false,
+     "w": 1.2,
+     "wall": "north"
+    },
+    {
+     "c": -2.8,
+     "high": false,
+     "w": 1.0,
+     "wall": "west"
+    }
+   ]
+  },
+  {
+   "door": [
+    -3.1,
+    0.15,
+    0.7
+   ],
+   "floor": 0,
+   "furniture": [
+    {
+     "asset": "coastal/kitchen_counter.glb",
+     "footprint": [
+      -2.21,
+      2.25,
+      -1.55,
+      4.65
+     ],
+     "item": "kitchen_counter",
+     "position": [
+      -1.86,
+      0.15,
+      3.45
+     ],
+     "yaw": -90.0
+    }
+   ],
+   "lit_by": [
+    "light_1",
+    "light_2"
+   ],
+   "name": "kitchen_2",
+   "rect": [
+    -4.9,
+    0.7,
+    -1.3,
+    4.9
+   ],
+   "skipped": [
+    "kitchen_dresser"
+   ],
+   "type": "kitchen",
+   "windows": [
+    {
+     "c": -3.1,
+     "high": false,
+     "w": 1.2,
+     "wall": "south"
+    },
+    {
+     "c": 2.8,
+     "high": false,
+     "w": 1.0,
+     "wall": "west"
+    }
+   ]
+  },
+  {
+   "door": [
+    0.5,
+    0.15,
+    0.7
+   ],
+   "floor": 0,
+   "furniture": [
+    {
+     "asset": "coastal/bathtub.glb",
+     "footprint": [
+      -0.35,
+      3.87,
+      1.35,
+      4.65
+     ],
+     "item": "bathtub",
+     "position": [
+      0.5,
+      0.15,
+      4.26
+     ],
+     "yaw": 180.0
+    }
+   ],
+   "lit_by": [
+    "light_1",
+    "light_2"
+   ],
+   "name": "bath_3",
+   "rect": [
+    -1.3,
+    0.7,
+    2.3,
+    4.9
+   ],
+   "type": "bath",
+   "windows": [
+    {
+     "c": 0.5,
+     "high": true,
+     "w": 0.6,
+     "wall": "south"
+    }
+   ]
+  },
+  {
+   "door": [
+    -3.1,
+    3.15,
+    -0.7
+   ],
+   "floor": 1,
+   "furniture": [
+    {
+     "asset": "furniture/cot_bed.glb",
+     "footprint": [
+      -4.1,
+      -4.65,
+      -2.1,
+      -3.75
+     ],
+     "item": "cot_bed",
+     "position": [
+      -3.1,
+      3.15,
+      -4.2
+     ],
+     "yaw": 0.0
+    },
+    {
+     "asset": "coastal/wardrobe.glb",
+     "footprint": [
+      -2.21,
+      -3.65,
+      -1.55,
+      -2.41
+     ],
+     "item": "wardrobe",
+     "position": [
+      -1.86,
+      3.15,
+      -3.03
+     ],
+     "yaw": -90.0
+    },
+    {
+     "asset": "coastal/rug.glb",
+     "footprint": [
+      -4.4,
+      -3.65,
+      -1.8,
+      -1.95
+     ],
+     "item": "rug",
+     "position": [
+      -3.1,
+      3.15,
+      -2.8
+     ],
+     "yaw": 0.0
+    }
+   ],
+   "lit_by": [
+    "light_3",
+    "light_4"
+   ],
+   "name": "bedroom_4",
+   "rect": [
+    -4.9,
+    -4.9,
+    -1.3,
+    -0.7
+   ],
+   "type": "bedroom",
+   "windows": [
+    {
+     "c": -3.1,
+     "high": false,
+     "w": 1.2,
+     "wall": "north"
+    },
+    {
+     "c": -2.8,
+     "high": false,
+     "w": 1.0,
+     "wall": "west"
+    }
+   ]
+  },
+  {
+   "door": [
+    0.5,
+    3.15,
+    -0.7
+   ],
+   "floor": 1,
+   "furniture": [
+    {
+     "asset": "furniture/cot_bed.glb",
+     "footprint": [
+      -0.5,
+      -4.65,
+      1.5,
+      -3.75
+     ],
+     "item": "cot_bed",
+     "position": [
+      0.5,
+      3.15,
+      -4.2
+     ],
+     "yaw": 0.0
+    },
+    {
+     "asset": "coastal/wardrobe.glb",
+     "footprint": [
+      -1.05,
+      -3.65,
+      -0.39,
+      -2.41
+     ],
+     "item": "wardrobe",
+     "position": [
+      -0.74,
+      3.15,
+      -3.03
+     ],
+     "yaw": 90.0
+    },
+    {
+     "asset": "coastal/rug.glb",
+     "footprint": [
+      -0.8,
+      -3.65,
+      1.8,
+      -1.95
+     ],
+     "item": "rug",
+     "position": [
+      0.5,
+      3.15,
+      -2.8
+     ],
+     "yaw": 0.0
+    }
+   ],
+   "lit_by": [
+    "light_3",
+    "light_4"
+   ],
+   "name": "bedroom_5",
+   "rect": [
+    -1.3,
+    -4.9,
+    2.3,
+    -0.7
+   ],
+   "type": "bedroom",
+   "windows": [
+    {
+     "c": 0.5,
+     "high": false,
+     "w": 1.2,
+     "wall": "north"
+    }
+   ]
+  },
+  {
+   "door": [
+    -3.1,
+    3.15,
+    0.7
+   ],
+   "floor": 1,
+   "furniture": [
+    {
+     "asset": "furniture/cot_bed.glb",
+     "footprint": [
+      -4.1,
+      3.75,
+      -2.1,
+      4.65
+     ],
+     "item": "cot_bed",
+     "position": [
+      -3.1,
+      3.15,
+      4.2
+     ],
+     "yaw": 180.0
+    },
+    {
+     "asset": "coastal/wardrobe.glb",
+     "footprint": [
+      -2.21,
+      2.4,
+      -1.55,
+      3.64
+     ],
+     "item": "wardrobe",
+     "position": [
+      -1.86,
+      3.15,
+      3.02
+     ],
+     "yaw": -90.0
+    },
+    {
+     "asset": "coastal/rug.glb",
+     "footprint": [
+      -4.4,
+      1.95,
+      -1.8,
+      3.65
+     ],
+     "item": "rug",
+     "position": [
+      -3.1,
+      3.15,
+      2.8
+     ],
+     "yaw": 0.0
+    }
+   ],
+   "lit_by": [
+    "light_3",
+    "light_4"
+   ],
+   "name": "bedroom_6",
+   "rect": [
+    -4.9,
+    0.7,
+    -1.3,
+    4.9
+   ],
+   "type": "bedroom",
+   "windows": [
+    {
+     "c": -3.1,
+     "high": false,
+     "w": 1.2,
+     "wall": "south"
+    },
+    {
+     "c": 2.8,
+     "high": false,
+     "w": 1.0,
+     "wall": "west"
+    }
+   ]
+  },
+  {
+   "door": [
+    0.5,
+    3.15,
+    0.7
+   ],
+   "floor": 1,
+   "furniture": [
+    {
+     "asset": "coastal/bathtub.glb",
+     "footprint": [
+      -0.35,
+      3.87,
+      1.35,
+      4.65
+     ],
+     "item": "bathtub",
+     "position": [
+      0.5,
+      3.15,
+      4.26
+     ],
+     "yaw": 180.0
+    }
+   ],
+   "lit_by": [
+    "light_3",
+    "light_4"
+   ],
+   "name": "bath_7",
+   "rect": [
+    -1.3,
+    0.7,
+    2.3,
+    4.9
+   ],
+   "type": "bath",
+   "windows": [
+    {
+     "c": 0.5,
+     "high": true,
+     "w": 0.6,
+     "wall": "south"
+    }
+   ]
+  }
+ ],
+ "size": [
+  9.8,
+  9.8
+ ],
+ "stair": {
+  "bottom": [
+   4.2,
+   0.15,
+   4.6
+  ],
+  "rect": [
+   3.7,
+   0.12,
+   4.7,
+   4.6
+  ],
+  "top": [
+   4.2,
+   3.15,
+   0.12
+  ]
+ },
+ "storey": 3.0,
+ "style": "beach",
+ "triangles": 4020
+}

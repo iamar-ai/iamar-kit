@@ -1,0 +1,87 @@
+{
+  "vision": "A lantern festival evening in the market square for forty friends.",
+  "audience": {
+    "access": "buddies",
+    "concurrent": 40
+  },
+  "type": "event",
+  "extra_types": [],
+  "track": "A",
+  "style_profile": "iamar",
+  "mood": {
+    "words": [
+      "festive",
+      "warm",
+      "bright"
+    ],
+    "time": "dusk",
+    "weather": "clear"
+  },
+  "setup": {
+    "blender": false,
+    "gpu": false,
+    "scripts_ok": false,
+    "build_tier": 0
+  },
+  "tier_target": "medium",
+  "budgets": {
+    "triangles": 280000,
+    "texture_size": 2048,
+    "texture_bytes": 100663296,
+    "download_mb": 100
+  },
+  "reuse": [
+    {
+      "catalog_id": "lantern_paper",
+      "use": "square"
+    },
+    {
+      "catalog_id": "banner_cloth",
+      "use": "square"
+    }
+  ],
+  "connections": {
+    "portal_from_city": true,
+    "name": "iamar://example-event",
+    "hosting": "own-computer"
+  },
+  "features": [
+    {
+      "id": "script_running_order",
+      "kind": "script"
+    },
+    {
+      "id": "audio_music",
+      "kind": "audio"
+    }
+  ],
+  "checkpoints": [
+    "greybox",
+    "scale check",
+    "paint"
+  ],
+  "open_questions": [],
+  "answers": [
+    {
+      "id": "V1",
+      "value": "One evening, 2 hours",
+      "source": "default",
+      "shown": true
+    },
+    {
+      "id": "V2",
+      "value": "40 guests, all at once",
+      "source": "default",
+      "shown": true
+    },
+    {
+      "id": "V3",
+      "value": "speech",
+      "source": "chosen"
+    }
+  ],
+  "approval": {
+    "date": "2026-10-20",
+    "user_words": "Yes, build it."
+  }
+}

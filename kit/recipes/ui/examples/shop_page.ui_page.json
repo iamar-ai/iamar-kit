@@ -1,0 +1,35 @@
+{
+  "theme": {
+    "bg": "#2b2118f0",
+    "fg": "#efe3c2",
+    "accent": "#f2c75c",
+    "border": "#b8923e",
+    "border_width": 1,
+    "radius": 6,
+    "padding": 14,
+    "font": "serif",
+    "font_size": 18,
+    "shadow": "soft"
+  },
+  "root": {
+    "type": "column",
+    "gap": 10,
+    "children": [
+      {"type": "heading", "text": "Mirela's Lanterns", "level": 1, "style": {"fg": "#f2c75c"}},
+      {"type": "image", "src": "asset:img/lantern.webp", "width": 240, "height": 160, "fit": "cover"},
+      {"type": "text", "text": "Hand-blown glass, **3 gold** each. Warm light for any hall."},
+      {
+        "type": "row",
+        "gap": 8,
+        "align": "center",
+        "children": [
+          {"type": "input", "id": 11, "placeholder": "How many?", "max_length": 3},
+          {"type": "button", "id": 10, "text": "Buy", "style": {"bg": "#5a1d12", "accent": "#ffe9a8"}}
+        ]
+      },
+      {"type": "progress", "id": 13, "value": 0.4, "style": {"accent": "#f2c75c"}},
+      {"type": "text", "id": 12, "text": "You have 10 gold.", "style": {"font_size": 16}},
+      {"type": "link", "id": 14, "text": "Leave the shop"}
+    ]
+  }
+}

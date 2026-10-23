@@ -1,0 +1,24 @@
+{
+ "format": "iamar-scene",
+ "format_version": 0,
+ "environment": {
+  "ambient": {"color": "#808080", "energy": 1.0, "source": "sky"},
+  "sky": {"type": "procedural"},
+  "sun": {"color": "#fff4e0", "enabled": true, "energy": 1.0, "shadows": true},
+  "time_of_day": 10.5
+ },
+ "terrain": {"materials": [{"color": "#c2b280"}], "position": [0, 0, 0], "size": [160, 160], "type": "flat"},
+ "spawn_points": [{"id": "spawn", "position": [6, 0, 0], "yaw": 0}],
+ "objects": [
+  {"id": "house", "asset": "assets/house.glb", "position": [20, 0, 0], "collision": "mesh"}
+ ],
+ "primitives": [
+  {"id": "crate", "shape": "box", "size": [1, 1, 1], "position": [4, 0.5, 10], "color": "#7a5a3a", "collision": "box"}
+ ],
+ "water": [
+  {"id": "pool", "position": [-20, 3.5, 0], "size": [16, 16], "depth": 3.5, "color": "#2d6a7acc", "swimmable": true}
+ ],
+ "portals": [
+  {"id": "to_roofed", "to": "pt-roofed", "label": "To the roofed hall", "position": [0, 0, -20], "yaw": 0}
+ ]
+}

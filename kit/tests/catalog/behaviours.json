@@ -1,0 +1,17 @@
+{
+  "format": "iamar-catalog-behaviours/1",
+  "note": "Maps every behaviour word a catalogue entry declares to the check in city_assets_test.gd that proves it. Pattern is a regex over the behaviour text; marker is a substring of the check's name in the .gd file. test_behaviours.py fails on an unmapped behaviour or a marker the .gd file no longer has.",
+  "rules": [
+    {"pattern": "^wander$", "marker": "wander inside their radius"},
+    {"pattern": "^(graze|nibble|peck)$", "marker": "head goes down when idle"},
+    {"pattern": "^(hop|crawl)$", "marker": "gait phase advances while moving"},
+    {"pattern": "^(sniff|dabble)$", "marker": "head dips when idle"},
+    {"pattern": "^flee$", "marker": "runs from the player"},
+    {"pattern": "^float$", "marker": "floats on the water surface"},
+    {"pattern": "^swim$", "marker": "swims below the water surface"},
+    {"pattern": "\\(clip (bob|ring|perch|sway)\\)|in flight \\(clip fly\\)", "marker": "plays its clip"},
+    {"pattern": "\\(clip (flap|fly|glide|rest)\\)", "marker": "loops its clip"},
+    {"pattern": "^(ambient loop|positional, once|positional loop)$", "marker": "sound loads and plays in the world"},
+    {"pattern": "^sways in the wind \\(scene\\.json \"sway\": true\\)$", "marker": "sways in the shared wind"}
+  ]
+}

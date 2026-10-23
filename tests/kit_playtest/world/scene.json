@@ -1,0 +1,139 @@
+{
+ "format": "iamar-scene",
+ "format_version": 0,
+ "environment": {
+  "ambient": {
+   "color": "#808080",
+   "energy": 1.0,
+   "source": "sky"
+  },
+  "sky": {
+   "type": "procedural"
+  },
+  "sun": {
+   "color": "#fff4e0",
+   "enabled": true,
+   "energy": 1.0,
+   "shadows": true
+  },
+  "time_of_day": 10.5
+ },
+ "terrain": {
+  "materials": [
+   {
+    "color": "#6f9a4a"
+   }
+  ],
+  "position": [
+   0,
+   0,
+   0
+  ],
+  "size": [
+   120,
+   120
+  ],
+  "type": "flat"
+ },
+ "primitives": [
+  {
+   "collision": "box",
+   "color": "#c8b890",
+   "height": 3,
+   "id": "well",
+   "position": [
+    10,
+    1.5,
+    -6
+   ],
+   "radius": 0.8,
+   "shape": "cylinder"
+  }
+ ],
+ "spawn_points": [
+  {
+   "id": "spawn",
+   "position": [
+    0,
+    0,
+    8
+   ],
+   "yaw": 0
+  }
+ ],
+ "triggers": [
+  {
+   "id": "well",
+   "shape": "sphere",
+   "position": [
+    10,
+    1,
+    -6
+   ],
+   "radius": 2.5
+  }
+ ],
+ "npcs": [
+  {
+   "id": "miller",
+   "name": "Miller Ada",
+   "title": "Miller",
+   "kind": "villager",
+   "look": {
+    "hero": "villager_man"
+   },
+   "position": [
+    0,
+    0,
+    0
+   ],
+   "yaw": 0,
+   "idle": "idle",
+   "wander_radius": 0,
+   "greeting": [
+    "Good day."
+   ]
+  }
+ ],
+ "quests": [
+  {
+   "id": "sack",
+   "title": "The Flour Sack",
+   "giver": "miller",
+   "offer": "I dropped a sack of flour by the old stone. Would you fetch it?",
+   "accept": "Thank you! It is east of here.",
+   "waiting": "The sack is by the old stone, to the east.",
+   "thanks": "Splendid. Here is a coin for your trouble.",
+   "requires": [],
+   "steps": [
+    {
+     "kind": "pickup",
+     "item": "Flour Sack",
+     "look": "herb",
+     "spots": [
+      [
+       -8,
+       4
+      ]
+     ],
+     "text": "Find the flour sack"
+    },
+    {
+     "kind": "talk",
+     "npc": "miller",
+     "text": "Bring the sack to the miller",
+     "choice": "Here is your sack.",
+     "line": "My flour! Now look at the well for me."
+    },
+    {
+     "kind": "goto",
+     "trigger": "well",
+     "text": "Go to the well"
+    }
+   ],
+   "gold": 5,
+   "xp": 5,
+   "reward": []
+  }
+ ]
+}

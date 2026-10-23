@@ -1,0 +1,75 @@
+{
+ "region": "warriors",
+ "houses": [
+  {
+   "id": "plain",
+   "position": [
+    -22,
+    0,
+    0
+   ],
+   "seed": 3,
+   "footprint": "9x7",
+   "storeys": 3,
+   "tower": false,
+   "oriel": false,
+   "timber": "plain"
+  },
+  {
+   "id": "post",
+   "position": [
+    -11,
+    0,
+    0
+   ],
+   "seed": 3,
+   "footprint": "9x7",
+   "storeys": 3,
+   "tower": false,
+   "oriel": false,
+   "timber": "post"
+  },
+  {
+   "id": "studs",
+   "position": [
+    0,
+    0,
+    0
+   ],
+   "seed": 3,
+   "footprint": "9x7",
+   "storeys": 3,
+   "tower": false,
+   "oriel": false,
+   "timber": "studs"
+  },
+  {
+   "id": "braced",
+   "position": [
+    11,
+    0,
+    0
+   ],
+   "seed": 3,
+   "footprint": "9x7",
+   "storeys": 3,
+   "tower": false,
+   "oriel": false,
+   "timber": "braced"
+  },
+  {
+   "id": "crossed",
+   "position": [
+    22,
+    0,
+    0
+   ],
+   "seed": 3,
+   "footprint": "9x7",
+   "storeys": 3,
+   "tower": false,
+   "oriel": false,
+   "timber": "crossed"
+  }
+ ]
+}

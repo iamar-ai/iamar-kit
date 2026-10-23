@@ -1,0 +1,8 @@
+{
+ "about": "tests/kit_playtest/reach: use goes through the interact key's reach (nearest script entity within 2.5 m).",
+ "steps": [
+  {"do": "use", "entity": "cylinder", "expect": [{"note": "used the cylinder"}, {"sound": "asset:audio/ding.ogg"}, {"sound": "ding"}]},
+  {"do": "use", "entity": "sphere", "expect": [{"note": "used the high sphere"}]},
+  {"do": "use", "entity": "box", "expect": [{"note": "used the box"}]}
+ ]
+}

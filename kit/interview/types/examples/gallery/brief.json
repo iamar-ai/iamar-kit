@@ -1,0 +1,87 @@
+{
+  "vision": "A bright hall showing twelve of my watercolour paintings along one loop.",
+  "audience": {
+    "access": "public",
+    "concurrent": 15
+  },
+  "type": "gallery",
+  "extra_types": [],
+  "track": "B",
+  "style_profile": "worlds/glass_hall/style.json",
+  "mood": {
+    "words": [
+      "calm",
+      "bright",
+      "quiet"
+    ],
+    "time": "morning",
+    "weather": "clear"
+  },
+  "setup": {
+    "blender": false,
+    "gpu": false,
+    "scripts_ok": false,
+    "build_tier": 0
+  },
+  "tier_target": "low",
+  "budgets": {
+    "triangles": 120000,
+    "texture_size": 1024,
+    "texture_bytes": 100663296,
+    "download_mb": 90
+  },
+  "reuse": [
+    {
+      "catalog_id": "frame_wood",
+      "use": "walls"
+    },
+    {
+      "catalog_id": "bench_wood",
+      "use": "hall"
+    }
+  ],
+  "connections": {
+    "portal_from_city": false,
+    "name": "iamar://example-gallery",
+    "hosting": "own-computer"
+  },
+  "features": [
+    {
+      "id": "ui_plaques",
+      "kind": "ui"
+    },
+    {
+      "id": "script_tour",
+      "kind": "script"
+    }
+  ],
+  "checkpoints": [
+    "greybox",
+    "scale check",
+    "paint"
+  ],
+  "open_questions": [],
+  "answers": [
+    {
+      "id": "G1",
+      "value": "12 paintings",
+      "source": "default",
+      "shown": true
+    },
+    {
+      "id": "G2",
+      "value": "User-supplied images, rights are the user's",
+      "source": "default",
+      "shown": true
+    },
+    {
+      "id": "G3",
+      "value": "free walk",
+      "source": "chosen"
+    }
+  ],
+  "approval": {
+    "date": "2026-10-20",
+    "user_words": "Yes, build it."
+  }
+}

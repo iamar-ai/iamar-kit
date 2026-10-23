@@ -1,0 +1,34 @@
+{
+  "schema": "iamar-lighting-preset/1",
+  "id": "golden_hour",
+  "title": "Golden hour",
+  "description": "Late-afternoon sun low in the west, warm light on the walls, cool blue shadows and sky, a light cool haze.",
+  "derived_from": "kit/style/iamar/style.json atmosphere.presets.golden (the city's mp_look.gd LOOKS.golden), retuned for the package linear tonemap",
+  "environment": {
+    "sky": {
+      "type": "procedural",
+      "top_color": "#3f78d0",
+      "horizon_color": "#f2dcbe",
+      "ground_color": "#6e6a5c"
+    },
+    "time_of_day": 16.6,
+    "day_length_minutes": 0,
+    "sun": {
+      "enabled": true,
+      "color": "#ffb064",
+      "energy": 1.8,
+      "shadows": true
+    },
+    "ambient": {
+      "color": "#98a2c4",
+      "energy": 0.6,
+      "source": "color"
+    },
+    "fog": {
+      "enabled": true,
+      "color": "#ccd8ea",
+      "density": 0.0015
+    },
+    "exposure": 1.0
+  }
+}

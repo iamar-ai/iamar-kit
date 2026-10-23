@@ -1,0 +1,13 @@
+"""Recipe gltf_texture_colours (one recipe per file; kit/recipes/make_recipes.py collects them, sorted by ORDER)."""
+
+# ---- models for world packages (traps found exporting the catalogue's insects, an internal task)
+ORDER = 610
+r("gltf_texture_colours", "Vertex colours in package worlds: which browser draws them, and in which colour space", "packaging",
+  "glTF COLOR_0 multiplies the base colour, but Godot's runtime glTF import leaves vertex_color_use_as_albedo off. Browsers before the iamar browser source (not public) d7d034da (an internal task-10-20) therefore draw a model painted only with vertex colours white in a world package; from d7d034da on, WorldPackage turns the flag on for every surface with COLOR_0 and picks the colour space.",
+  "Every .glb a world package ships that carries COLOR_0 (status: FAILED on browsers before d7d034da, WORKS from d7d034da on; Godot 4.7.2).",
+  ["Colour space: a .glb exported by Godot (asset.generator 'Godot Engine ...', as the catalogue's city exports are) is read as sRGB, because Godot writes its colours as they are; any other file is read as linear (the glTF spec: Blender writes linear). To say it outright, set asset.extras.iamar_vertex_colour to \"srgb\" or \"linear\".",
+   "For worlds that must also look right on older browsers, put the colours in a texture: a small palette image (one 8 px block per colour, so far mip levels keep them) with each face's UV on its block, or bake vertex colours to a texture in Blender; then leave COLOR_0 out or white, since it multiplies the texture.",
+   "Swayed trees (scene.json \"sway\": true) keep the colours and the colour space in the wind material (wind_plant use_vcol, vcol_srgb).",
+   "Look at the model through the browser's own path (a sample world, or WorldPackage._glb_decode) before shipping; the editor's import shows the colours whatever the runtime does."],
+  {"palette_block_px": 8, "vertex_colour_extras_key": "iamar_vertex_colour"}, "the iamar browser source (not public) tests/package_vertex_colour/vcol_test.gd (colours on, sRGB/linear choice, textured models untouched, swayed trees); kit/tests/catalog/city_assets_test.gd (every vertex-painted catalogue model draws its colours).", "None with a browser from d7d034da; one small texture per model for older browsers.",
+  "the iamar browser source (not public) d7d034da scripts/worlds/world_package.gd _glb_decode (_glb_vertex_colours, _glb_vcol_srgb), shaders/wind_plant.gdshaderinc vcol_srgb; iamar-kit kit/catalog/assets/export_insects.gd (_pal_material, the texture route); before the fix the city's vertex-painted exports in kit/catalog/assets (C2a) loaded white", "manual")

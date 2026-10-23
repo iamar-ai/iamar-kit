@@ -1,0 +1,25 @@
+{
+  "world": "harbour-quarter",
+  "signs": [
+    {"id": "fingerpost_quay", "kind": "fingerpost", "letter_m": 0.25, "read_distance_m": 15, "mount_m": 2.6, "mirrored": false, "lit": true, "blocks_opening": false},
+    {"id": "board_fish_hall", "kind": "landmark", "letter_m": 0.55, "read_distance_m": 30, "mount_m": 3.2, "mirrored": false, "lit": true, "blocks_opening": false},
+    {"id": "board_lighthouse", "kind": "landmark", "letter_m": 0.7, "read_distance_m": 40, "mount_m": 3.6, "mirrored": false, "lit": true, "blocks_opening": false}
+  ],
+  "vistas": [
+    {"id": "arrival_from_old_town", "eye_xz": [0, 0],
+     "targets": [
+       {"name": "lighthouse", "xz": [-20, 120]},
+       {"name": "fish_hall", "xz": [10, 80]},
+       {"name": "harbour_gate", "xz": [38, 100]}]}
+  ],
+  "obstacles": [
+    {"id": "net_shed", "rect": [30, 20, 40, 30]},
+    {"id": "crane", "rect": [-60, 40, -50, 50]}
+  ],
+  "roofs": [
+    {"id": "H01", "rise_m": 2.4}, {"id": "H02", "rise_m": 3.6}, {"id": "H03", "rise_m": 2.9},
+    {"id": "H04", "rise_m": 4.4}, {"id": "H05", "rise_m": 3.1}, {"id": "H06", "rise_m": 2.2}
+  ],
+  "first_view": {"spawn_xz": [0, 0], "heading_deg": 0,
+                 "focals": [{"name": "fish_hall", "xz": [10, 80]}]}
+}

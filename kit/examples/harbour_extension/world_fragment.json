@@ -1,0 +1,22 @@
+{
+  "objects": [
+    {"id": "founder_statue", "asset": "assets/founder_statue_lod0.glb", "position": [10, 0, 62], "rotation": [0, 180, 0], "collision": "box"},
+    {"id": "bollard_01", "asset": "assets/bollard.glb", "position": [8, 0, 70], "collision": "box"}
+  ],
+  "spawn_points": [{"id": "from_old_town", "position": [0, 0, 0], "yaw": 0}],
+  "portals": [
+    {"id": "to_old_town", "to": "oakhaven#from_harbour", "label": "To Oakhaven", "position": [0, 0, -6], "yaw": 180, "size": [2.4, 3.2, 0.8], "visual": "arch", "color": "#7fd6ff"}
+  ],
+  "npcs": [
+    {"id": "harbour_master", "name": "Harbour Master Brenna", "title": "Quays", "kind": "villager",
+     "look": {"hero": "villager_woman", "height": 1.72}, "position": [9, 0, 66], "yaw": 180, "idle": "idle",
+     "greeting": ["The founder watches every ship in. Mind the ropes."]}
+  ],
+  "quests": [
+    {"id": "founders_ledger", "title": "The Founder's Ledger", "giver": "harbour_master",
+     "offer": "Read the plinth of the founder's statue and tell me the year it was raised.",
+     "accept": "The statue stands at the end of the quay.", "waiting": "Have you found the plinth yet?",
+     "thanks": "Quite right. Take this for your trouble.", "requires": [],
+     "steps": [{"kind": "goto", "target": [10.0, 62.0], "radius": 3.0, "text": "Read the plinth of the founder's statue"}]}
+  ]
+}

@@ -1,0 +1,49 @@
+diff --git a/schemas/scene.schema.json b/schemas/scene.schema.json
+index 44ce0b97..ffc0a753 100644
+--- a/schemas/scene.schema.json
++++ b/schemas/scene.schema.json
+@@ -691,12 +691,13 @@
+             "cylinder",
+             "capsule",
+             "plane",
+-            "wedge"
++            "wedge",
++            "frame"
+           ]
+         },
+         "size": {
+           "$ref": "#/$defs/vec3",
+-          "description": "box: [x, y, z]; plane: [x, 0, z]; wedge (gable roof): [width x, rise y, length z], ridge along z."
++          "description": "box: [x, y, z]; plane: [x, 0, z]; wedge (gable roof): [width x, rise y, length z], ridge along z; frame (door/window opening): outer [width x, height y, depth z]."
+         },
+         "radius": {
+           "type": "number",
+@@ -706,6 +707,15 @@
+           "type": "number",
+           "exclusiveMinimum": 0
+         },
++        "thickness": {
++          "type": "number",
++          "exclusiveMinimum": 0,
++          "description": "frame: width of the posts and lintel in metres (default 0.1, at most half the width or height)"
++        },
++        "sill": {
++          "type": "boolean",
++          "description": "frame: true closes the bottom (a window frame); default false leaves a door open at the floor"
++        },
+         "position": {
+           "$ref": "#/$defs/vec3"
+         },
+diff --git a/scripts/worlds/world_format.gd b/scripts/worlds/world_format.gd
+index d5f2922c..9d126100 100644
+--- a/scripts/worlds/world_format.gd
++++ b/scripts/worlds/world_format.gd
+@@ -466,7 +466,7 @@ static func check_references(m: Dictionary, s: Dictionary, has_file: Callable) -
+ 			need.call(s.primitives[i].texture, "scene.primitives[%d].texture" % i)
+ 		var p: Dictionary = s.primitives[i]
+ 		match String(p.shape):
+-			"box", "plane", "wedge":
++			"box", "plane", "wedge", "frame":
+ 				if not p.has("size"):
+ 					errs.append("scene.primitives[%d]: a %s needs size" % [i, p.shape])
+ 			"sphere":

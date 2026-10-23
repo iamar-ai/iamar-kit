@@ -1,0 +1,91 @@
+{
+  "vision": "A desert trading post where visitors find three lost caravan items.",
+  "audience": {
+    "access": "public",
+    "concurrent": 12
+  },
+  "type": "quest",
+  "extra_types": [],
+  "track": "B",
+  "style_profile": "worlds/lost_oasis/style.json",
+  "mood": {
+    "words": [
+      "dusty",
+      "adventurous",
+      "warm"
+    ],
+    "time": "noon",
+    "weather": "clear"
+  },
+  "setup": {
+    "blender": false,
+    "gpu": false,
+    "scripts_ok": false,
+    "build_tier": 0
+  },
+  "tier_target": "medium",
+  "budgets": {
+    "triangles": 300000,
+    "texture_size": 2048,
+    "texture_bytes": 100663296,
+    "download_mb": 120
+  },
+  "reuse": [
+    {
+      "catalog_id": "npc_body_a",
+      "use": "trader"
+    },
+    {
+      "catalog_id": "crate_wood",
+      "use": "market"
+    }
+  ],
+  "connections": {
+    "portal_from_city": false,
+    "name": "iamar://example-quest",
+    "hosting": "own-computer"
+  },
+  "features": [
+    {
+      "id": "npc_trader",
+      "kind": "npc"
+    },
+    {
+      "id": "quest_lost_items",
+      "kind": "quest"
+    },
+    {
+      "id": "script_pickup",
+      "kind": "script"
+    }
+  ],
+  "checkpoints": [
+    "greybox",
+    "quest walkthrough",
+    "paint"
+  ],
+  "open_questions": [],
+  "answers": [
+    {
+      "id": "Q1",
+      "value": "Find three lost items and return them",
+      "source": "default",
+      "shown": true
+    },
+    {
+      "id": "Q2",
+      "value": "20 minutes",
+      "source": "default",
+      "shown": true
+    },
+    {
+      "id": "Q3",
+      "value": "a merchant",
+      "source": "chosen"
+    }
+  ],
+  "approval": {
+    "date": "2026-10-20",
+    "user_words": "Yes, build it."
+  }
+}

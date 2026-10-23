@@ -1,0 +1,8 @@
+build/
+*.pck
+.godot/
+*.import
+__pycache__/
+*.pyc
+node_modules/
+kit/runtime/

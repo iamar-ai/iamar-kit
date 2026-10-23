@@ -1,0 +1,38 @@
+{
+ "format": "iamar-world",
+ "format_version": 0,
+ "id": "lint_desert_post",
+ "name": "Style lint sample: desert trading post",
+ "description": "A Track B world with its own style.json: flat-roofed adobe houses and a brass lamp.",
+ "author": {
+  "name": "iamar kit"
+ },
+ "version": "1.0.0",
+ "api_version": "0.1",
+ "scene": "scene.json",
+ "budgets": {
+  "triangles": 150000,
+  "objects": 64,
+  "texture_size": 1024,
+  "texture_bytes": 33554432,
+  "lights": 4,
+  "package_bytes": 16777216,
+  "audio_bytes": 0,
+  "script_bytes": 0
+ },
+ "features": [
+  "sky",
+  "objects",
+  "primitives"
+ ],
+ "license": "CC0-1.0",
+ "credits": [
+  {
+   "files": [
+    "assets/*.glb"
+   ],
+   "author": "iamar kit test fixture",
+   "license": "CC0-1.0"
+  }
+ ]
+}

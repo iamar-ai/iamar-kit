@@ -1,0 +1,1123 @@
+{
+ "format": "iamar-catalog-city-models",
+ "version": 1,
+ "note": "Single pieces of the city's furniture, crops and flora, exported from the iamar browser source (not public)'s builders by kit/catalog/assets/export_city_pieces.gd and measured by import_city_models.py --pieces. Files live in kit/catalog/assets/<file>. Never edit by hand.",
+ "iamar_commit": "001ff0e6",
+ "licence": "CC0-1.0",
+ "models": [
+  {
+   "models_id": null,
+   "export": true,
+   "file": "crops/cabbage.glb",
+   "name": "cabbage",
+   "category": "crop",
+   "description": "A cabbage: a low dome of blue-green leaves in a seven-leaf skirt, about 0.5 m across.",
+   "synonyms": [
+    "cabbage",
+    "kale",
+    "vegetable",
+    "kitchen garden",
+    "crop"
+   ],
+   "collision": "none",
+   "sha256": "f05a0704d66abb650d8a34a1dbd4ec8be801ee4a969c8fa365b5d898ad7f1d48",
+   "bytes": 5592,
+   "place_scale": 1.0,
+   "triangles": 21,
+   "models_json_triangles": null,
+   "size": [
+    0.47,
+    0.21,
+    0.46
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "seats": [],
+   "culled_faces": 0,
+   "builder": "MpCropBeds._dome(0.24, 0.22)",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpCropBeds._dome(0.24, 0.22) (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "crops/carrot.glb",
+   "name": "carrot",
+   "category": "crop",
+   "description": "A carrot: a feathery tuft of bright leaves over the orange shoulder of the root.",
+   "synonyms": [
+    "carrot",
+    "root vegetable",
+    "vegetable",
+    "crop"
+   ],
+   "collision": "none",
+   "sha256": "0d02ad7e4305e38eaa73f2323e11e99ef02d59411d3b1d3672a60f795322605b",
+   "bytes": 7628,
+   "place_scale": 1.0,
+   "triangles": 33,
+   "models_json_triangles": null,
+   "size": [
+    0.23,
+    0.24,
+    0.23
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "seats": [],
+   "culled_faces": 0,
+   "builder": "MpCropBeds._carrot",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpCropBeds._carrot (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "crops/leek.glb",
+   "name": "leek",
+   "category": "crop",
+   "description": "A leek: three crossed blades, white at the foot and dark green at the tips.",
+   "synonyms": [
+    "leek",
+    "allium",
+    "vegetable",
+    "crop"
+   ],
+   "collision": "none",
+   "sha256": "f6a05ee2aa8c9bf0cff9c8c60b132e1362c8d0526d0156e70b69d7d5f9b9961c",
+   "bytes": 3508,
+   "place_scale": 1.0,
+   "triangles": 9,
+   "models_json_triangles": null,
+   "size": [
+    0.1,
+    0.46,
+    0.09
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "seats": [],
+   "culled_faces": 0,
+   "builder": "MpCropBeds._leek",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpCropBeds._leek (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "crops/lettuce.glb",
+   "name": "lettuce",
+   "category": "crop",
+   "description": "A lettuce: a small bright-green leafy dome.",
+   "synonyms": [
+    "lettuce",
+    "salad",
+    "greens",
+    "vegetable",
+    "crop"
+   ],
+   "collision": "none",
+   "sha256": "727fe948af79c4c23637d845fc512c95b79e3c57d90a10988e82345d37c3150d",
+   "bytes": 5592,
+   "place_scale": 1.0,
+   "triangles": 21,
+   "models_json_triangles": null,
+   "size": [
+    0.33,
+    0.11,
+    0.32
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "seats": [],
+   "culled_faces": 0,
+   "builder": "MpCropBeds._dome(0.17, 0.12)",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpCropBeds._dome(0.17, 0.12) (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "crops/onion.glb",
+   "name": "onion",
+   "category": "crop",
+   "description": "An onion: a pale bulb with thin upright blue-green spikes.",
+   "synonyms": [
+    "onion",
+    "shallot",
+    "allium",
+    "vegetable",
+    "crop"
+   ],
+   "collision": "none",
+   "sha256": "2fb92ff8d99647017df82947cde9cb556e25c79457b0e68620122ac601be3b39",
+   "bytes": 6428,
+   "place_scale": 1.0,
+   "triangles": 26,
+   "models_json_triangles": null,
+   "size": [
+    0.12,
+    0.34,
+    0.11
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "seats": [],
+   "culled_faces": 0,
+   "builder": "MpCropBeds._onion",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpCropBeds._onion (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "crops/runner_beans.glb",
+   "name": "runner beans",
+   "category": "crop",
+   "description": "Runner beans: a 1.5 m wigwam of three tied canes leafed up their length, with a few red flowers.",
+   "synonyms": [
+    "beans",
+    "bean poles",
+    "cane wigwam",
+    "climbing beans",
+    "crop"
+   ],
+   "collision": "none",
+   "sha256": "49524d7d3ecb6685a2326fa726458aaf7b540451f44829ccfcb0814de514a1c7",
+   "bytes": 5556,
+   "place_scale": 1.0,
+   "triangles": 21,
+   "models_json_triangles": null,
+   "size": [
+    0.63,
+    1.5,
+    0.67
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "seats": [],
+   "culled_faces": 0,
+   "builder": "MpCropBeds._beans",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpCropBeds._beans (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "crops/squash.glb",
+   "name": "squash",
+   "category": "crop",
+   "description": "A squash plant: a sprawling mound of big dark leaves with an orange fruit beside it.",
+   "synonyms": [
+    "squash",
+    "pumpkin",
+    "gourd",
+    "marrow",
+    "vegetable",
+    "crop"
+   ],
+   "collision": "none",
+   "sha256": "e930703a688b1f4f4eab1fa1913aac6356532a10fb37a9bf7777980b9d7bc399",
+   "bytes": 9196,
+   "place_scale": 1.0,
+   "triangles": 42,
+   "models_json_triangles": null,
+   "size": [
+    0.85,
+    0.19,
+    0.8
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "seats": [],
+   "culled_faces": 0,
+   "builder": "MpCropBeds._squash",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpCropBeds._squash (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "flora/buttercups.glb",
+   "name": "buttercups",
+   "category": "flower",
+   "description": "A clump of yellow buttercups on a painted card pair (4 triangles).",
+   "synonyms": [
+    "buttercup",
+    "yellow flowers",
+    "wildflowers",
+    "meadow flowers"
+   ],
+   "collision": "none",
+   "sha256": "1931a2b898d09776fde397463a372d3c8aebcea201f06420e6a2d8f3da5e2ea4",
+   "bytes": 59276,
+   "place_scale": 1.0,
+   "triangles": 4,
+   "models_json_triangles": null,
+   "size": [
+    0.8,
+    0.75,
+    0.8
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "seats": [],
+   "culled_faces": 0,
+   "builder": "MpFlora flower (atlas cell 3)",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpFlora flower (atlas cell 3) (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "flora/daisies.glb",
+   "name": "daisies",
+   "category": "flower",
+   "description": "A clump of white daisies with yellow hearts on a painted card pair (two crossed quads, 4 triangles).",
+   "synonyms": [
+    "daisy",
+    "white flowers",
+    "wildflowers",
+    "meadow flowers"
+   ],
+   "collision": "none",
+   "sha256": "023e06dd77fca6ee6f6a1efcccb663e3ffd5f5cd7bf598abb7e3d2da881d0474",
+   "bytes": 64636,
+   "place_scale": 1.0,
+   "triangles": 4,
+   "models_json_triangles": null,
+   "size": [
+    0.8,
+    0.75,
+    0.8
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "seats": [],
+   "culled_faces": 0,
+   "builder": "MpFlora flower (atlas cell 2)",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpFlora flower (atlas cell 2) (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "flora/grass_tuft.glb",
+   "name": "grass tuft",
+   "category": "ground-flora",
+   "description": "A tuft of meadow grass on a painted card pair (4 triangles); scatter it by the hundred.",
+   "synonyms": [
+    "grass",
+    "tuft",
+    "meadow grass",
+    "ground cover",
+    "undergrowth"
+   ],
+   "collision": "none",
+   "sha256": "9a9acca41da004aad92863a1c28d904edb45fc8d9b1d3bb50c1f1101b920184d",
+   "bytes": 63848,
+   "place_scale": 1.0,
+   "triangles": 4,
+   "models_json_triangles": null,
+   "size": [
+    0.9,
+    0.7,
+    0.9
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "seats": [],
+   "culled_faces": 0,
+   "builder": "MpFlora tuft (atlas cell 0)",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpFlora tuft (atlas cell 0) (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "flora/lily_pad.glb",
+   "name": "lily pad",
+   "category": "ground-flora",
+   "description": "A flowering water-lily pad, one painted card that lies on the water (2 triangles).",
+   "synonyms": [
+    "water lily",
+    "lily pad",
+    "pond plant",
+    "lotus"
+   ],
+   "collision": "none",
+   "sha256": "22c71168538ff3c9670ee172be29c72711df37532f5bf68d64af5a61ad545d47",
+   "bytes": 67204,
+   "place_scale": 1.0,
+   "triangles": 2,
+   "models_json_triangles": null,
+   "size": [
+    1.6,
+    0.0,
+    1.6
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "seats": [],
+   "culled_faces": 0,
+   "builder": "MpFlora lily (atlas cell 6)",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpFlora lily (atlas cell 6) (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "flora/pink_campion.glb",
+   "name": "pink campion",
+   "category": "flower",
+   "description": "A clump of pink meadow flowers on a painted card pair (4 triangles).",
+   "synonyms": [
+    "pink flowers",
+    "campion",
+    "wildflowers",
+    "meadow flowers"
+   ],
+   "collision": "none",
+   "sha256": "4ecbd737b5876b4b9d740d9c1d39bb0128948ebbcbd777e3398fbda6e4f4eed8",
+   "bytes": 66700,
+   "place_scale": 1.0,
+   "triangles": 4,
+   "models_json_triangles": null,
+   "size": [
+    0.8,
+    0.75,
+    0.8
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "seats": [],
+   "culled_faces": 0,
+   "builder": "MpFlora flower (atlas cell 4)",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpFlora flower (atlas cell 4) (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "flora/pond_stone.glb",
+   "name": "pond stone",
+   "category": "rock",
+   "description": "A chunky river stone (24 triangles), warm lit top to mossy foot, for pond edges and paths.",
+   "synonyms": [
+    "stone",
+    "rock",
+    "pebble",
+    "boulder",
+    "river stone"
+   ],
+   "collision": "none",
+   "sha256": "364fe062d857f29aa4c4a0657d03265a4f6a74a6a4376571292a3e3372dc6cfc",
+   "bytes": 6096,
+   "place_scale": 1.0,
+   "triangles": 24,
+   "models_json_triangles": null,
+   "size": [
+    0.51,
+    0.37,
+    0.5
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "seats": [],
+   "culled_faces": 0,
+   "builder": "MpFlora._stone",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpFlora._stone (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "flora/reeds.glb",
+   "name": "reeds",
+   "category": "ground-flora",
+   "description": "A clump of 1.9 m pond reeds and bulrushes on three crossed painted cards (6 triangles), for pond edges and moats.",
+   "synonyms": [
+    "reeds",
+    "bulrushes",
+    "cattails",
+    "rushes",
+    "pond plants",
+    "water plants"
+   ],
+   "collision": "none",
+   "sha256": "5a86a6a898dfc2540d7be8cf4ba5713910a4b3c9f24d35c4dc3db645519a78a8",
+   "bytes": 64308,
+   "place_scale": 1.0,
+   "triangles": 6,
+   "models_json_triangles": null,
+   "size": [
+    1.3,
+    1.9,
+    1.13
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "seats": [],
+   "culled_faces": 0,
+   "builder": "MpFlora reeds (atlas cell 5)",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpFlora reeds (atlas cell 5) (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "flora/tall_grass.glb",
+   "name": "tall grass",
+   "category": "ground-flora",
+   "description": "A tuft of tall seeding grass on a painted card pair (4 triangles).",
+   "synonyms": [
+    "long grass",
+    "wild grass",
+    "seed heads",
+    "meadow grass",
+    "ground cover"
+   ],
+   "collision": "none",
+   "sha256": "b3f0b7b35bedafc98b86eafa0e304173eee4a46f64e0f360818fd0af3e55bb4a",
+   "bytes": 90160,
+   "place_scale": 1.0,
+   "triangles": 4,
+   "models_json_triangles": null,
+   "size": [
+    0.9,
+    0.7,
+    0.9
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "seats": [],
+   "culled_faces": 0,
+   "builder": "MpFlora tuft (atlas cell 1)",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpFlora tuft (atlas cell 1) (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "furniture/armchair.glb",
+   "name": "armchair",
+   "category": "furniture",
+   "description": "A deep upholstered fireside armchair in muted wine cloth with rolled arms and oak feet, from the inn's snug. Seats one (the city's sit spot is at its front).",
+   "synonyms": [
+    "easy chair",
+    "fireside chair",
+    "upholstered chair",
+    "inn",
+    "seat"
+   ],
+   "collision": "box",
+   "sha256": "6b68d1fea968ed391120169962941b20eea584734e82b7df0e3b7c9592eb1083",
+   "bytes": 50884,
+   "place_scale": 1.0,
+   "triangles": 274,
+   "models_json_triangles": null,
+   "size": [
+    0.84,
+    1.36,
+    0.79
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "seats": [
+    {
+     "pos": [
+      0.0,
+      0.0,
+      0.06
+     ],
+     "yaw": -3.142,
+     "kind": "Chair"
+    }
+   ],
+   "culled_faces": 0,
+   "painted_bake": {
+    "atlas": [
+     512,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 153,
+    "patterns": {
+     "2": 40,
+     "9": 224,
+     "18": 10
+    },
+    "glow": false
+   },
+   "builder": "MpInnWing._armchair",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpInnWing._armchair (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "furniture/bookshelf.glb",
+   "name": "bookshelf",
+   "category": "furniture",
+   "description": "A tall open timber shelf with runs of coloured book spines on the two lower boards; stands against a wall (no back panel).",
+   "synonyms": [
+    "bookcase",
+    "shelf",
+    "library",
+    "books",
+    "study"
+   ],
+   "collision": "box",
+   "sha256": "1fa3702638a49575af84f070b52b8fb1ec55589f7564ea2ba2483fa04e09e02f",
+   "bytes": 37156,
+   "place_scale": 1.0,
+   "triangles": 108,
+   "models_json_triangles": null,
+   "size": [
+    1.67,
+    1.9,
+    0.42
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "seats": [],
+   "culled_faces": 13,
+   "painted_bake": {
+    "atlas": [
+     512,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 54,
+    "patterns": {
+     "2": 48,
+     "9": 60
+    },
+    "glow": false
+   },
+   "builder": "MpInteriors._shelf (goods books)",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpInteriors._shelf (goods books) (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "furniture/cot_bed.glb",
+   "name": "cot bed",
+   "category": "furniture",
+   "description": "A simple wooden cot bed with a cream mattress and a pillow, for barracks, healers and back rooms.",
+   "synonyms": [
+    "bed",
+    "cot",
+    "bunk",
+    "sleeping place",
+    "infirmary bed"
+   ],
+   "collision": "box",
+   "sha256": "c50e0b841411bdc6daaf4143309dfadf72faf3bf8c11a93af17b7e89947be9a2",
+   "bytes": 22436,
+   "place_scale": 1.0,
+   "triangles": 30,
+   "models_json_triangles": null,
+   "size": [
+    2.0,
+    0.65,
+    0.9
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "seats": [],
+   "culled_faces": 1,
+   "painted_bake": {
+    "atlas": [
+     512,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 15,
+    "patterns": {
+     "2": 10,
+     "9": 10,
+     "4": 10
+    },
+    "glow": false
+   },
+   "builder": "MpInteriors._cot",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpInteriors._cot (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "furniture/hall_bench.glb",
+   "name": "hall bench",
+   "category": "furniture",
+   "description": "A 2.2 m plank bench on two oak end blocks that goes beside a trestle table; seats three.",
+   "synonyms": [
+    "bench",
+    "seat",
+    "form",
+    "tavern bench",
+    "pew"
+   ],
+   "collision": "box",
+   "sha256": "21c1d872c27119919ea3f79af82c13862b2adeb4c28c5e70b8b12b097e9a669a",
+   "bytes": 17184,
+   "place_scale": 1.0,
+   "triangles": 32,
+   "models_json_triangles": null,
+   "size": [
+    2.2,
+    0.48,
+    0.4
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "seats": [
+    {
+     "pos": [
+      -0.6,
+      0.0,
+      0.05
+     ],
+     "yaw": -3.142,
+     "kind": "Bench"
+    },
+    {
+     "pos": [
+      0.0,
+      0.0,
+      0.05
+     ],
+     "yaw": -3.142,
+     "kind": "Bench"
+    },
+    {
+     "pos": [
+      0.6,
+      0.0,
+      0.05
+     ],
+     "yaw": -3.142,
+     "kind": "Bench"
+    }
+   ],
+   "culled_faces": 2,
+   "painted_bake": {
+    "atlas": [
+     512,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 16,
+    "patterns": {
+     "2": 32
+    },
+    "glow": false
+   },
+   "builder": "MpInteriorKits.bench",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpInteriorKits.bench (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "furniture/hearth.glb",
+   "name": "hearth",
+   "category": "building-part",
+   "description": "A stone hearth with glowing coals and a flame and a stone hood above (2.6 m tall); stands against a wall, the chimney is the building's.",
+   "synonyms": [
+    "fireplace",
+    "fire",
+    "hearth fire",
+    "stove",
+    "kitchen"
+   ],
+   "collision": "box",
+   "sha256": "43dcd76e4e288a27c7fd4b5843c5504777ad05ca739705a12cce835d9b0a1d1f",
+   "bytes": 55248,
+   "place_scale": 1.0,
+   "triangles": 36,
+   "models_json_triangles": null,
+   "size": [
+    2.0,
+    2.6,
+    0.9
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 2,
+   "physics_body": false,
+   "seats": [],
+   "culled_faces": 4,
+   "painted_bake": {
+    "atlas": [
+     512,
+     1024
+    ],
+    "px_per_m": 128.0,
+    "charts": 18,
+    "patterns": {
+     "1": 16,
+     "0": 20
+    },
+    "glow": true
+   },
+   "builder": "MpInteriors._hearth",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpInteriors._hearth (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "furniture/high_chair.glb",
+   "name": "high chair",
+   "category": "furniture",
+   "description": "A guild master's high-backed oak chair with a red cushion and a gilded crest on the back.",
+   "synonyms": [
+    "throne",
+    "master's chair",
+    "high-backed chair",
+    "seat",
+    "guild hall"
+   ],
+   "collision": "box",
+   "sha256": "1417cd391d601fd6d60557fe49fc11dc1a436f60073367f80bd135264ba031c0",
+   "bytes": 24592,
+   "place_scale": 1.0,
+   "triangles": 84,
+   "models_json_triangles": null,
+   "size": [
+    0.5,
+    2.13,
+    0.5
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "seats": [
+    {
+     "pos": [
+      0.0,
+      0.0,
+      0.05
+     ],
+     "yaw": -3.142,
+     "kind": "Hall"
+    }
+   ],
+   "culled_faces": 1,
+   "painted_bake": {
+    "atlas": [
+     256,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 42,
+    "patterns": {
+     "18": 12,
+     "2": 52,
+     "9": 10,
+     "8": 10
+    },
+    "glow": false
+   },
+   "builder": "MpGuildhallInterior._chair (high)",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpGuildhallInterior._chair (high) (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "furniture/iron-bound_chest.glb",
+   "name": "iron-bound chest",
+   "category": "furniture",
+   "description": "A wooden storage chest bound with black iron and a brass lock plate.",
+   "synonyms": [
+    "chest",
+    "trunk",
+    "coffer",
+    "strongbox",
+    "storage"
+   ],
+   "collision": "box",
+   "sha256": "df5550c43ba47089b0fe5036a45f8541d19222d17c55449723bc53899e9ada40",
+   "bytes": 13616,
+   "place_scale": 1.0,
+   "triangles": 30,
+   "models_json_triangles": null,
+   "size": [
+    0.62,
+    0.6,
+    0.47
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "seats": [],
+   "culled_faces": 1,
+   "painted_bake": {
+    "atlas": [
+     256,
+     256
+    ],
+    "px_per_m": 128.0,
+    "charts": 15,
+    "patterns": {
+     "2": 10,
+     "8": 20
+    },
+    "glow": false
+   },
+   "builder": "MpInteriors._chests",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpInteriors._chests (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "furniture/kitchen_dresser.glb",
+   "name": "kitchen dresser",
+   "category": "furniture",
+   "description": "An oak kitchen dresser: a cupboard with two panelled doors and an open plate rack above, set with pewter jugs, bowls and mugs; stands against a wall.",
+   "synonyms": [
+    "dresser",
+    "cupboard",
+    "sideboard",
+    "hutch",
+    "kitchen",
+    "crockery"
+   ],
+   "collision": "box",
+   "sha256": "2be45ac7ae5c012a624db0294ce22dc6b21a6667c274ca87a26b7f94adaff22a",
+   "bytes": 93396,
+   "place_scale": 1.0,
+   "triangles": 391,
+   "models_json_triangles": null,
+   "size": [
+    1.68,
+    2.11,
+    0.63
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "seats": [],
+   "culled_faces": 8,
+   "painted_bake": {
+    "atlas": [
+     512,
+     1024
+    ],
+    "px_per_m": 128.0,
+    "charts": 246,
+    "patterns": {
+     "2": 88,
+     "1": 303
+    },
+    "glow": false
+   },
+   "builder": "MpInnWing._build_dresser",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpInnWing._build_dresser (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "furniture/oak_chair.glb",
+   "name": "oak chair",
+   "category": "furniture",
+   "description": "A plain oak chair with four square legs and a low back, from the guild hall's tables.",
+   "synonyms": [
+    "chair",
+    "wooden chair",
+    "dining chair",
+    "seat",
+    "guild hall"
+   ],
+   "collision": "box",
+   "sha256": "544ebf08426acb01cb356c4b5d42e2801e2fe7b5c40de68485c6cbae2fdee2f4",
+   "bytes": 16676,
+   "place_scale": 1.0,
+   "triangles": 64,
+   "models_json_triangles": null,
+   "size": [
+    0.5,
+    1.22,
+    0.49
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "seats": [
+    {
+     "pos": [
+      0.0,
+      0.0,
+      0.05
+     ],
+     "yaw": -3.142,
+     "kind": "Hall"
+    }
+   ],
+   "culled_faces": 0,
+   "painted_bake": {
+    "atlas": [
+     256,
+     256
+    ],
+    "px_per_m": 128.0,
+    "charts": 32,
+    "patterns": {
+     "18": 12,
+     "2": 52
+    },
+    "glow": false
+   },
+   "builder": "MpGuildhallInterior._chair",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpGuildhallInterior._chair (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "furniture/shop_shelf.glb",
+   "name": "shop shelf",
+   "category": "furniture",
+   "description": "A tall open timber shelf, four boards, the two at hand height stocked with jars and pots; stands against a wall (no back panel).",
+   "synonyms": [
+    "shelf",
+    "shelves",
+    "shelving",
+    "rack",
+    "apothecary shelf",
+    "pantry shelf"
+   ],
+   "collision": "box",
+   "sha256": "094dee16fbfcd8eb82c771d2dd7c5425218a9bfa14c1d015c382d60761aedd3d",
+   "bytes": 80048,
+   "place_scale": 1.0,
+   "triangles": 243,
+   "models_json_triangles": null,
+   "size": [
+    1.6,
+    1.9,
+    0.42
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 2,
+   "physics_body": false,
+   "seats": [],
+   "culled_faces": 13,
+   "painted_bake": {
+    "atlas": [
+     512,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 154,
+    "patterns": {
+     "2": 78,
+     "4": 60,
+     "7": 105
+    },
+    "glow": true
+   },
+   "builder": "MpInteriors._shelf (goods jars)",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpInteriors._shelf (goods jars) (kit/catalog/assets/export_city_pieces.gd)"
+  },
+  {
+   "models_id": null,
+   "export": true,
+   "file": "furniture/trestle_table.glb",
+   "name": "trestle table",
+   "category": "furniture",
+   "description": "A 2 m plank trestle table on oak end trestles with a plank bench along each side, set with pewter mugs and green bottles; the tavern and hall table.",
+   "synonyms": [
+    "table",
+    "dining table",
+    "long table",
+    "tavern table",
+    "feast table",
+    "benches"
+   ],
+   "collision": "box",
+   "sha256": "d360ebf6099b295907c521ee602fe5f94f9fb6db23c7f5cfa8e9f2a19ace3db3",
+   "bytes": 47668,
+   "place_scale": 1.0,
+   "triangles": 114,
+   "models_json_triangles": null,
+   "size": [
+    2.0,
+    1.06,
+    1.92
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "seats": [],
+   "culled_faces": 6,
+   "painted_bake": {
+    "atlas": [
+     512,
+     1024
+    ],
+    "px_per_m": 128.0,
+    "charts": 60,
+    "patterns": {
+     "2": 96,
+     "0": 18
+    },
+    "glow": false
+   },
+   "builder": "MpInteriorKits.trestle",
+   "builder_commit": "001ff0e6",
+   "cite": "the iamar browser source (not public) 001ff0e6 MpInteriorKits.trestle (kit/catalog/assets/export_city_pieces.gd)"
+  }
+ ]
+}

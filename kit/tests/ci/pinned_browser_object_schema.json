@@ -1,0 +1,68 @@
+{
+  "_note": "Fixture: the $defs/object schema of the browser build pinned in kit/runtime.lock. Regenerate when the pin changes: fetch schemas/scene.schema.json at the new pinned commit from the iamar browser source (not public) and copy $defs/object here; update pinned_browser_sha.",
+  "object": {
+    "additionalProperties": false,
+    "patternProperties": {
+      "^x-": {}
+    },
+    "properties": {
+      "animation": {
+        "description": "Animation to loop, by glTF animation name.",
+        "maxLength": 64,
+        "type": "string"
+      },
+      "asset": {
+        "$ref": "#/$defs/glb"
+      },
+      "attach": {
+        "items": {
+          "$ref": "#/$defs/attachment"
+        },
+        "type": "array"
+      },
+      "cast_shadow": {
+        "type": "boolean"
+      },
+      "collision": {
+        "$ref": "#/$defs/collision"
+      },
+      "id": {
+        "$ref": "#/$defs/id"
+      },
+      "impostor": {
+        "description": "beyond this many metres the object is drawn as its impostor card (WorldImpostors; pictures from iamar-world impostors)",
+        "maximum": 100000,
+        "minimum": 5,
+        "type": "number"
+      },
+      "min_tier": {
+        "description": "drawn only at this hardware tier and better (docs/WORLD_TIERS.md)",
+        "enum": [
+          "low",
+          "medium",
+          "high",
+          "ultra"
+        ]
+      },
+      "position": {
+        "$ref": "#/$defs/vec3"
+      },
+      "rotation": {
+        "$ref": "#/$defs/vec3"
+      },
+      "scale": {
+        "$ref": "#/$defs/scale"
+      },
+      "visible_range": {
+        "description": "Hide beyond this distance (0 = always).",
+        "minimum": 0,
+        "type": "number"
+      }
+    },
+    "required": [
+      "asset"
+    ],
+    "type": "object"
+  },
+  "pinned_browser_sha": "0bef8c6d"
+}

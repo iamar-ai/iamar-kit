@@ -1,0 +1,2796 @@
+{
+ "format": "iamar-catalog-city-models",
+ "version": 1,
+ "note": "Closed variants of the open-sided houses in sources/city_buildings.json, written by kit/catalog/assets/close_open_sides.py (party-wall side walled up, roof ends capped). Never edit by hand: rerun the script.",
+ "licence": "CC0-1.0",
+ "models": [
+  {
+   "models_id": "B001",
+   "file": "buildings/b001_closed.glb",
+   "name": "warriors' quarter bird supply shop (closed)",
+   "category": "building",
+   "description": "A large two-storey corner shop on an L-shaped plan: whitewashed walls in a dark timber frame, red-brown window frames, two shop doors and broad hipped slate roofs with dormers and a chimney. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Closed variant: the -z side (1.2 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "bird shop",
+    "pet shop",
+    "corner shop",
+    "store",
+    "half-timbered house",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Bird supply shop",
+   "floors": 2,
+   "open_sides": [],
+   "sha256": "13293662bea58832c1f8084224f4995ee62076aa7de68e4a22862f67e77c6c0e",
+   "bytes": 879068,
+   "source_sha256": "22b40e4233e14dd46aabcf7d90a2c5f2065233da9d211930ea8b47026cda9fb6",
+   "recentred_by": [
+    86.263,
+    -0.006,
+    6.675
+   ],
+   "place_scale": 1.0,
+   "triangles": 4847,
+   "models_json_triangles": 4312,
+   "size": [
+    19.49,
+    10.14,
+    28.98
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B001.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b001.glb",
+    "sha256": "09fe2a1c674c30ca6ffd85595442122d6161cf3eb56450642d43f5e4ddd7880c",
+    "sides": [
+     {
+      "plane_m": -2.591,
+      "corners_m": [
+       -2.591,
+       -2.6
+      ],
+      "samples": 20,
+      "section_segments": 88,
+      "covered_faces": 34,
+      "faces": "-z",
+      "length_m": 1.2,
+      "cap_triangles": 282
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B005",
+   "file": "buildings/b005_closed.glb",
+   "name": "mages' quarter wandmaker (closed)",
+   "category": "building",
+   "description": "A three-storey wandmaker's shop on an L-shaped plan: pale walls with violet string courses, ochre window surrounds, a shop door and a blue hipped roof with a chimney. From the mages' quarter: pale walls with violet trim, tall blue roofs. Closed variant: the -x side (4.1 m) and +x side (6.8 m) and +z side (6.6 m) and +x side (1.8 m) and -x side (8 m) and -z side (1.6 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "wand shop",
+    "wandmaker",
+    "magic shop",
+    "store",
+    "town house",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: mages' quarter",
+   "quarter": "DIST_M",
+   "plan_purpose": "Wands",
+   "floors": 3,
+   "open_sides": [],
+   "sha256": "b5beac171e6b898400fa1e085da33228b99ee8fa8af0774e33fb6140d5537f7e",
+   "bytes": 667080,
+   "source_sha256": "fd5024a8bcb02e1e84c0fc852f5003690f00e0e1de5031bdcfef9af62828c9aa",
+   "recentred_by": [
+    -15.689,
+    -0.336,
+    6.342
+   ],
+   "place_scale": 1.0,
+   "triangles": 3334,
+   "models_json_triangles": 1934,
+   "size": [
+    14.72,
+    14.16,
+    14.04
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B005.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b005.glb",
+    "sha256": "b2fd3f22f687e2cbf8814adeb8872de55d5cbc518dd6312ab86fdbae19a5c619",
+    "sides": [
+     {
+      "plane_m": 7.528,
+      "corners_m": [
+       7.528,
+       7.51
+      ],
+      "samples": 15,
+      "section_segments": 46,
+      "covered_faces": 13,
+      "faces": "-x",
+      "length_m": 4.1,
+      "cap_triangles": 96
+     },
+     {
+      "plane_m": 6.403,
+      "corners_m": [
+       6.403,
+       6.172
+      ],
+      "samples": 23,
+      "section_segments": 152,
+      "covered_faces": 13,
+      "faces": "+x",
+      "length_m": 6.8,
+      "cap_triangles": 321
+     },
+     {
+      "plane_m": 4.661,
+      "corners_m": [
+       4.661,
+       4.571
+      ],
+      "samples": 21,
+      "section_segments": 108,
+      "covered_faces": 13,
+      "faces": "+z",
+      "length_m": 6.6,
+      "cap_triangles": 205
+     },
+     {
+      "plane_m": 0.062,
+      "corners_m": [
+       0.062,
+       0.052
+      ],
+      "samples": 19,
+      "section_segments": 76,
+      "covered_faces": 24,
+      "faces": "+x",
+      "length_m": 1.8,
+      "cap_triangles": 208
+     },
+     {
+      "plane_m": 5.692,
+      "corners_m": [
+       5.692,
+       5.689
+      ],
+      "samples": 27,
+      "section_segments": 82,
+      "covered_faces": 24,
+      "faces": "-x",
+      "length_m": 8.0,
+      "cap_triangles": 320
+     },
+     {
+      "plane_m": 1.988,
+      "corners_m": [
+       1.988,
+       1.988
+      ],
+      "samples": 11,
+      "section_segments": 15,
+      "covered_faces": 4,
+      "faces": "-z",
+      "length_m": 1.6,
+      "cap_triangles": 118
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B007",
+   "file": "buildings/b007_closed.glb",
+   "name": "warriors' quarter smithy (closed)",
+   "category": "building",
+   "description": "A two-storey smithy with an attic: plaster walls in a dark timber frame with cross braces, small red-framed windows, a hipped slate roof and two chimneys. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Closed variant: the +x side (2.1 m) and +x side (6.4 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "smith",
+    "smithy",
+    "blacksmith",
+    "workshop",
+    "half-timbered house",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Smith",
+   "floors": 2,
+   "open_sides": [],
+   "sha256": "87a9acdd36404f89ddd50fa8be1cab74c75baf5cf4aa7ae414532b8841f9b442",
+   "bytes": 653896,
+   "source_sha256": "3ceae3872a4ba29140a8633b68a03fe9738a6207b052bf6cf242da61b83fd06c",
+   "recentred_by": [
+    17.591,
+    -0.32,
+    1.534
+   ],
+   "place_scale": 1.0,
+   "triangles": 3523,
+   "models_json_triangles": 3062,
+   "size": [
+    8.2,
+    10.47,
+    18.75
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B007.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b007.glb",
+    "sha256": "211af458eea3ab8a8d66e4edcfd2d6710b1395b8baf2fe04ac891dac1d569248",
+    "sides": [
+     {
+      "plane_m": 4.628,
+      "corners_m": [
+       4.628,
+       4.612
+      ],
+      "samples": 16,
+      "section_segments": 80,
+      "covered_faces": 20,
+      "faces": "+x",
+      "length_m": 2.1,
+      "cap_triangles": 112
+     },
+     {
+      "plane_m": 2.59,
+      "corners_m": [
+       2.59,
+       2.59
+      ],
+      "samples": 19,
+      "section_segments": 39,
+      "covered_faces": 10,
+      "faces": "+x",
+      "length_m": 6.4,
+      "cap_triangles": 212
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B008",
+   "file": "buildings/b008_closed.glb",
+   "name": "mages' quarter curio shop (closed)",
+   "category": "building",
+   "description": "A long two-storey curio shop: pale walls in a timber frame with violet trim, small framed windows, a shop door under a front gable, a dormer and broad blue hipped roofs with a chimney. From the mages' quarter: pale walls with violet trim, tall blue roofs. Closed variant: the -x side (1.8 m) and -z side (7 m) and -z side (4.1 m) and +x side (6.8 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "curio shop",
+    "curiosities",
+    "antiques",
+    "magic shop",
+    "store",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: mages' quarter",
+   "quarter": "DIST_M",
+   "plan_purpose": "Curios",
+   "floors": 2,
+   "open_sides": [],
+   "sha256": "fd1e5bf1a3a10619ecd1f02554b90ef55eba706f4468876607d9417360451a18",
+   "bytes": 468420,
+   "source_sha256": "02926b9fcc51b944262a404d8d05071c5baf2fb66d9720bd16c0956c7d7edc56",
+   "recentred_by": [
+    -18.711,
+    -0.716,
+    -2.05
+   ],
+   "place_scale": 1.0,
+   "triangles": 2449,
+   "models_json_triangles": 1729,
+   "size": [
+    16.47,
+    10.26,
+    8.45
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B008.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b008.glb",
+    "sha256": "60e0af44c2f22886977b0953f4984eeae389129c71e7fe75d7c4ccfa98fc1b97",
+    "sides": [
+     {
+      "plane_m": 2.976,
+      "corners_m": [
+       2.976,
+       2.976
+      ],
+      "samples": 17,
+      "section_segments": 42,
+      "covered_faces": 5,
+      "faces": "-x",
+      "length_m": 1.8,
+      "cap_triangles": 132
+     },
+     {
+      "plane_m": 3.919,
+      "corners_m": [
+       3.919,
+       3.913
+      ],
+      "samples": 18,
+      "section_segments": 35,
+      "covered_faces": 6,
+      "faces": "-z",
+      "length_m": 7.0,
+      "cap_triangles": 219
+     },
+     {
+      "plane_m": 5.04,
+      "corners_m": [
+       5.04,
+       5.04
+      ],
+      "samples": 18,
+      "section_segments": 36,
+      "covered_faces": 8,
+      "faces": "-z",
+      "length_m": 4.1,
+      "cap_triangles": 156
+     },
+     {
+      "plane_m": 6.902,
+      "corners_m": [
+       6.902,
+       6.902
+      ],
+      "samples": 15,
+      "section_segments": 78,
+      "covered_faces": 22,
+      "faces": "+x",
+      "length_m": 6.8,
+      "cap_triangles": 151
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B021",
+   "file": "buildings/b021_closed.glb",
+   "name": "warriors' quarter blacksmith forge (closed)",
+   "category": "building",
+   "description": "A long two-storey forge: plaster walls with red-framed windows, an open timber arcade along the ground floor where the work is done, a hipped slate roof with a dormer; the city's working forge. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Closed variant: the +z side (1.2 m) and -x side (3 m) and -z side (8.9 m) and -z side (7.5 m) and +x side (6.4 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "forge",
+    "blacksmith",
+    "smithy",
+    "workshop",
+    "smith",
+    "ironworks",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Blacksmith forge",
+   "floors": 2,
+   "open_sides": [],
+   "sha256": "2727be64e3650ef4beb194c0c7aacaf2d7d73284d1f9c0a95d37f02d8c2bac58",
+   "bytes": 341660,
+   "source_sha256": "c963c3465a29c619d20dbc5a84429c275c1dd8281fea389e53c01d3be3ad448b",
+   "recentred_by": [
+    41.95,
+    -0.568,
+    -24.218
+   ],
+   "place_scale": 1.0,
+   "triangles": 1705,
+   "models_json_triangles": 1026,
+   "size": [
+    15.31,
+    8.67,
+    8.24
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B021.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b021.glb",
+    "sha256": "e7d942d7bb5c32c401c1284cc44b907832915dd92d689a08f58c824e067047e3",
+    "sides": [
+     {
+      "plane_m": 2.432,
+      "corners_m": [
+       2.432,
+       2.432
+      ],
+      "samples": 16,
+      "section_segments": 29,
+      "covered_faces": 14,
+      "faces": "+z",
+      "length_m": 1.2,
+      "cap_triangles": 74
+     },
+     {
+      "plane_m": 7.608,
+      "corners_m": [
+       7.608,
+       7.602
+      ],
+      "samples": 14,
+      "section_segments": 68,
+      "covered_faces": 17,
+      "faces": "-x",
+      "length_m": 3.0,
+      "cap_triangles": 129
+     },
+     {
+      "plane_m": 3.45,
+      "corners_m": [
+       3.45,
+       3.405
+      ],
+      "samples": 21,
+      "section_segments": 33,
+      "covered_faces": 10,
+      "faces": "-z",
+      "length_m": 8.9,
+      "cap_triangles": 166
+     },
+     {
+      "plane_m": 4.008,
+      "corners_m": [
+       4.008,
+       3.998
+      ],
+      "samples": 16,
+      "section_segments": 37,
+      "covered_faces": 8,
+      "faces": "-z",
+      "length_m": 7.5,
+      "cap_triangles": 142
+     },
+     {
+      "plane_m": 7.6,
+      "corners_m": [
+       7.6,
+       7.6
+      ],
+      "samples": 14,
+      "section_segments": 35,
+      "covered_faces": 8,
+      "faces": "+x",
+      "length_m": 6.4,
+      "cap_triangles": 106
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B023",
+   "file": "buildings/b023_closed.glb",
+   "name": "warriors' quarter bakery (closed)",
+   "category": "building",
+   "description": "A three-storey bakery with a half-timbered front (cross-braced panels), red window frames, a shop door, a gabled dormer and a slate roof with a chimney. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Closed variant: the -x side (4.7 m) and -z side (4.1 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "bakery",
+    "baker",
+    "bakehouse",
+    "store",
+    "half-timbered house",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Baker",
+   "floors": 3,
+   "open_sides": [],
+   "sha256": "04adbe3372b8f2be916cc9d7e1082c797e3f1f56c39c0798cca96bbb465ac694",
+   "bytes": 711244,
+   "source_sha256": "ef129993b59c924b524a65001827c97f395dd7371f250c0fa00cebf3925c22b4",
+   "recentred_by": [
+    13.413,
+    -0.72,
+    -23.17
+   ],
+   "place_scale": 1.0,
+   "triangles": 3789,
+   "models_json_triangles": 3354,
+   "size": [
+    11.45,
+    12.86,
+    9.37
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B023.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b023.glb",
+    "sha256": "331fde52c56b4e468bb31da9a2a9f88dfc660b9aef6ddb0f1e44e214d19ed37b",
+    "sides": [
+     {
+      "plane_m": 5.667,
+      "corners_m": [
+       5.65,
+       5.667
+      ],
+      "samples": 22,
+      "section_segments": 104,
+      "covered_faces": 26,
+      "faces": "-x",
+      "length_m": 4.7,
+      "cap_triangles": 169
+     },
+     {
+      "plane_m": 0.639,
+      "corners_m": [
+       0.619,
+       0.639
+      ],
+      "samples": 17,
+      "section_segments": 34,
+      "covered_faces": 31,
+      "faces": "-z",
+      "length_m": 4.1,
+      "cap_triangles": 169
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B024",
+   "file": "buildings/b024_closed.glb",
+   "name": "mages' quarter tailor (closed)",
+   "category": "building",
+   "description": "A tall three-storey tailor's shop: pale walls with violet trim, arched ground-floor doors, a bay window and a very steep blue hipped roof with dormers and a chimney. From the mages' quarter: pale walls with violet trim, tall blue roofs. Closed variant: the +x side (9.9 m) and -z side (1.8 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "tailor",
+    "dressmaker",
+    "clothier",
+    "store",
+    "tall house",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: mages' quarter",
+   "quarter": "DIST_M",
+   "plan_purpose": "Tailor",
+   "floors": 3,
+   "open_sides": [],
+   "sha256": "ccf23759e738319742c7304f0d1065ade7e1dc80b01667f948f597db720c2850",
+   "bytes": 674360,
+   "source_sha256": "5ddb62471569bd2eea3e196139efa9d001a72a3f1f7e53ba8d3b521ce390bbbe",
+   "recentred_by": [
+    -6.737,
+    -0.8,
+    -22.636
+   ],
+   "place_scale": 1.0,
+   "triangles": 3577,
+   "models_json_triangles": 3172,
+   "size": [
+    10.08,
+    16.66,
+    12.26
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "bdcc95bc",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B024.glb (the iamar browser source (not public) bdcc95bc, plan sha256 62746e9dc333...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b024.glb",
+    "sha256": "48d448d4561aeba194ed085c8b0d72f8a576ff8bab397f8115e711ae69a065fa",
+    "sides": [
+     {
+      "plane_m": 4.017,
+      "corners_m": [
+       4.017,
+       4.017
+      ],
+      "samples": 17,
+      "section_segments": 46,
+      "covered_faces": 8,
+      "faces": "+x",
+      "length_m": 9.9,
+      "cap_triangles": 223
+     },
+     {
+      "plane_m": 5.236,
+      "corners_m": [
+       5.236,
+       5.236
+      ],
+      "samples": 9,
+      "section_segments": 26,
+      "covered_faces": 14,
+      "faces": "-z",
+      "length_m": 1.8,
+      "cap_triangles": 48
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B028",
+   "file": "buildings/b028_closed.glb",
+   "name": "herbalists' quarter armourer (closed)",
+   "category": "building",
+   "description": "A three-storey armourer's shop with a rounded corner bay: cream walls, green shutters, flower boxes under the windows and a broad ochre hipped roof with a chimney. From the herbalists' and healers' quarter: cream walls, ochre roofs, flower boxes. Closed variant: the +x side (4.6 m) and +z side (6.4 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "armourer",
+    "armory",
+    "armoury",
+    "store",
+    "corner house",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: herbalists' quarter",
+   "quarter": "DIST_H",
+   "plan_purpose": "Armor",
+   "floors": 3,
+   "open_sides": [],
+   "sha256": "6321f3304d4924753383da549a4918973ade3745f39214c70eaa673949294075",
+   "bytes": 1106580,
+   "source_sha256": "283454ee3df4886c0f06dcbd5792cc5f7c419c0713519df5a7ce40f1cf4796b7",
+   "recentred_by": [
+    -92.987,
+    0.08,
+    -27.196
+   ],
+   "place_scale": 1.0,
+   "triangles": 6049,
+   "models_json_triangles": 5436,
+   "size": [
+    11.07,
+    12.27,
+    14.26
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B028.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b028.glb",
+    "sha256": "7a07f2d2b3119f2eac9b59dd68ce96e484b0c209fc8e32017ff2412c02df882c",
+    "sides": [
+     {
+      "plane_m": 1.379,
+      "corners_m": [
+       1.379,
+       1.379
+      ],
+      "samples": 11,
+      "section_segments": 58,
+      "covered_faces": 8,
+      "faces": "+x",
+      "length_m": 4.6,
+      "cap_triangles": 173
+     },
+     {
+      "plane_m": 2.251,
+      "corners_m": [
+       2.251,
+       2.241
+      ],
+      "samples": 26,
+      "section_segments": 118,
+      "covered_faces": 38,
+      "faces": "+z",
+      "length_m": 6.4,
+      "cap_triangles": 346
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B029",
+   "file": "buildings/b029_closed.glb",
+   "name": "herbalists' quarter bakery (closed)",
+   "category": "building",
+   "description": "A three-storey corner bakery: cream walls, green shutters and flower boxes, a canted corner bay and an ochre hipped roof with chimneys. From the herbalists' and healers' quarter: cream walls, ochre roofs, flower boxes. Closed variant: the -z side (8.1 m) and +x side (1 m) and -z side (1 m) and -z side (2.2 m) and +x side (1.3 m) and +x side (2.3 m) and +z side (2.1 m) and +x side (3.4 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "bakery",
+    "baker",
+    "bakehouse",
+    "store",
+    "corner house",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: herbalists' quarter",
+   "quarter": "DIST_H",
+   "plan_purpose": "Baker",
+   "floors": 3,
+   "open_sides": [],
+   "sha256": "9df2109d842ce28093e448c1cb64c28d3718189fab60abca28934a9b85d7a10d",
+   "bytes": 1015868,
+   "source_sha256": "bea8b048bb450a391c418adf3bf27ba1302e0bc3d1674921a45f00bac363ee7d",
+   "recentred_by": [
+    -100.777,
+    0.078,
+    -19.688
+   ],
+   "place_scale": 1.0,
+   "triangles": 5407,
+   "models_json_triangles": 4231,
+   "size": [
+    14.09,
+    13.27,
+    18.51
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B029.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b029.glb",
+    "sha256": "7ad80430e5500d73110297ba65ef6df0a4220240eb8b1900c6bbef723f79ff1b",
+    "sides": [
+     {
+      "plane_m": 7.105,
+      "corners_m": [
+       7.105,
+       7.056
+      ],
+      "samples": 20,
+      "section_segments": 70,
+      "covered_faces": 26,
+      "faces": "-z",
+      "length_m": 8.1,
+      "cap_triangles": 131
+     },
+     {
+      "plane_m": 5.514,
+      "corners_m": [
+       5.413,
+       5.514
+      ],
+      "samples": 20,
+      "section_segments": 82,
+      "covered_faces": 8,
+      "faces": "+x",
+      "length_m": 1.0,
+      "cap_triangles": 98
+     },
+     {
+      "plane_m": 8.201,
+      "corners_m": [
+       8.201,
+       8.192
+      ],
+      "samples": 22,
+      "section_segments": 132,
+      "covered_faces": 18,
+      "faces": "-z",
+      "length_m": 1.0,
+      "cap_triangles": 304
+     },
+     {
+      "plane_m": 6.639,
+      "corners_m": [
+       6.639,
+       6.536
+      ],
+      "samples": 16,
+      "section_segments": 78,
+      "covered_faces": 17,
+      "faces": "-z",
+      "length_m": 2.2,
+      "cap_triangles": 104
+     },
+     {
+      "plane_m": 4.504,
+      "corners_m": [
+       4.504,
+       4.431
+      ],
+      "samples": 16,
+      "section_segments": 65,
+      "covered_faces": 6,
+      "faces": "+x",
+      "length_m": 1.3,
+      "cap_triangles": 100
+     },
+     {
+      "plane_m": 5.931,
+      "corners_m": [
+       5.917,
+       5.931
+      ],
+      "samples": 14,
+      "section_segments": 37,
+      "covered_faces": 6,
+      "faces": "+x",
+      "length_m": 2.3,
+      "cap_triangles": 84
+     },
+     {
+      "plane_m": 4.985,
+      "corners_m": [
+       4.985,
+       4.975
+      ],
+      "samples": 15,
+      "section_segments": 35,
+      "covered_faces": 6,
+      "faces": "+z",
+      "length_m": 2.1,
+      "cap_triangles": 80
+     },
+     {
+      "plane_m": 5.799,
+      "corners_m": [
+       5.689,
+       5.799
+      ],
+      "samples": 18,
+      "section_segments": 80,
+      "covered_faces": 6,
+      "faces": "+x",
+      "length_m": 3.4,
+      "cap_triangles": 114
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B033",
+   "file": "buildings/b033_closed.glb",
+   "name": "mages' quarter workshop (closed)",
+   "category": "building",
+   "description": "A narrow three-storey workshop (the plan's arcane smith) with a pointed blue roof and a chimney. From the mages' quarter: pale walls with violet trim, tall blue roofs. Closed variant: the +z side (10.8 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "smith",
+    "workshop",
+    "magic shop",
+    "store",
+    "narrow house",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: mages' quarter",
+   "quarter": "DIST_M",
+   "plan_purpose": "Smith",
+   "floors": 3,
+   "open_sides": [],
+   "sha256": "90aa25a323708dc76fccc0411916623053c8f73d6b1a17a1db5e73b7911922a5",
+   "bytes": 422836,
+   "source_sha256": "44b8e910ff3c4555494217f7b3f7000f45a7a94f450cb8d3c725bb8201c4752d",
+   "recentred_by": [
+    -8.265,
+    -0.77,
+    -36.723
+   ],
+   "place_scale": 1.0,
+   "triangles": 2189,
+   "models_json_triangles": 1828,
+   "size": [
+    12.54,
+    14.0,
+    5.65
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B033.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b033.glb",
+    "sha256": "3704af085107e1b34158418a02deade918a6a051e6fc1952e9d89f9b3fdbcfee",
+    "sides": [
+     {
+      "plane_m": 2.59,
+      "corners_m": [
+       2.564,
+       2.59
+      ],
+      "samples": 22,
+      "section_segments": 86,
+      "covered_faces": 25,
+      "faces": "+z",
+      "length_m": 10.8,
+      "cap_triangles": 255
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B036",
+   "file": "buildings/b036_closed.glb",
+   "name": "mages' quarter rune carver (closed)",
+   "category": "building",
+   "description": "A three-storey rune carver's shop: pale walls with violet string courses, a canted corner, an arched shop window and a blue hipped roof with two chimneys. From the mages' quarter: pale walls with violet trim, tall blue roofs. Closed variant: the +x side (8.1 m) and -z side (4.7 m) and -z side (1.3 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "rune carver",
+    "runes",
+    "magic shop",
+    "stone carver",
+    "store",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: mages' quarter",
+   "quarter": "DIST_M",
+   "plan_purpose": "Runes",
+   "floors": 3,
+   "open_sides": [],
+   "sha256": "3d3916823918eb50534234827c778bd2d663afa9f5006261a3cb881c17a6e9f5",
+   "bytes": 427156,
+   "source_sha256": "58566a3119441255af744848898f8edf14e497aed48bac6cbdc7ad3ab033b75e",
+   "recentred_by": [
+    -36.388,
+    -0.716,
+    -38.034
+   ],
+   "place_scale": 1.0,
+   "triangles": 2220,
+   "models_json_triangles": 1559,
+   "size": [
+    13.32,
+    13.0,
+    12.2
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B036.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b036.glb",
+    "sha256": "fe83b9660028da0437623769404c976d2388d6abda226b8e7a13ad15401879b9",
+    "sides": [
+     {
+      "plane_m": 4.959,
+      "corners_m": [
+       4.959,
+       4.959
+      ],
+      "samples": 24,
+      "section_segments": 73,
+      "covered_faces": 20,
+      "faces": "+x",
+      "length_m": 8.1,
+      "cap_triangles": 222
+     },
+     {
+      "plane_m": 5.7,
+      "corners_m": [
+       5.7,
+       5.7
+      ],
+      "samples": 20,
+      "section_segments": 96,
+      "covered_faces": 14,
+      "faces": "-z",
+      "length_m": 4.7,
+      "cap_triangles": 190
+     },
+     {
+      "plane_m": 5.383,
+      "corners_m": [
+       5.383,
+       5.383
+      ],
+      "samples": 27,
+      "section_segments": 80,
+      "covered_faces": 14,
+      "faces": "-z",
+      "length_m": 1.3,
+      "cap_triangles": 140
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B038",
+   "file": "buildings/b038_closed.glb",
+   "name": "herbalists' quarter bookshop (closed)",
+   "category": "building",
+   "description": "A small single-storey bookshop under a tall ochre pyramid roof: a half-timbered front gable, wide shop windows, a deep open entrance porch and a bench outside. From the herbalists' and healers' quarter: cream walls, ochre roofs, flower boxes. Closed variant: the +x side (4.6 m) and -z side (5.6 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "bookshop",
+    "bookseller",
+    "books",
+    "library",
+    "cottage",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: herbalists' quarter",
+   "quarter": "DIST_H",
+   "plan_purpose": "Books",
+   "floors": 1,
+   "open_sides": [],
+   "sha256": "3f48eb3d328cbcc132f62e1c0c06cdc971934d62776d6ed6763f3e64f0455a08",
+   "bytes": 293460,
+   "source_sha256": "9373cbe3a343479d34d7d1fb1e72ab748d3950fc92fa7d9ee44cc47a50b0e04a",
+   "recentred_by": [
+    -91.602,
+    0.079,
+    -32.497
+   ],
+   "place_scale": 1.0,
+   "triangles": 1487,
+   "models_json_triangles": 1071,
+   "size": [
+    6.78,
+    6.23,
+    6.52
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B038.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b038.glb",
+    "sha256": "3bdab32a20433e58765c1112d86a58283bb1321f35368573ebf95643dd10d19d",
+    "sides": [
+     {
+      "plane_m": 3.04,
+      "corners_m": [
+       2.961,
+       3.04
+      ],
+      "samples": 21,
+      "section_segments": 58,
+      "covered_faces": 6,
+      "faces": "+x",
+      "length_m": 4.6,
+      "cap_triangles": 188
+     },
+     {
+      "plane_m": 3.026,
+      "corners_m": [
+       3.026,
+       3.026
+      ],
+      "samples": 20,
+      "section_segments": 74,
+      "covered_faces": 23,
+      "faces": "-z",
+      "length_m": 5.6,
+      "cap_triangles": 168
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B043",
+   "file": "buildings/b043_closed.glb",
+   "name": "warriors' quarter wandmaker (closed)",
+   "category": "building",
+   "description": "A three-storey wandmaker's shop: grey-green plaster in a dark timber frame, a first-floor bay window, arched doors, dormers in a slate hipped roof and a chimney. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Closed variant: the -x side (10.5 m) and -z side (2.5 m) and -z side (6.2 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "wandmaker",
+    "magic shop",
+    "store",
+    "town house",
+    "half-timbered house",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Wands",
+   "floors": 3,
+   "open_sides": [],
+   "sha256": "d01a6d87f06687971b5ee539ddd1e58d04f11016c769a725e892914a1660ef25",
+   "bytes": 596300,
+   "source_sha256": "9046caad696066e6fd6645a9bc159b937b68c04d820fd0e984ee24a0f4950254",
+   "recentred_by": [
+    69.091,
+    -0.507,
+    -52.925
+   ],
+   "place_scale": 1.0,
+   "triangles": 3155,
+   "models_json_triangles": 2649,
+   "size": [
+    14.81,
+    15.66,
+    13.07
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "bdcc95bc",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B043.glb (the iamar browser source (not public) bdcc95bc, plan sha256 62746e9dc333...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b043.glb",
+    "sha256": "ec07ed531fefd47e14b603d03af87b7964d3a1191446696cb9b84f17c50b190e",
+    "sides": [
+     {
+      "plane_m": 6.769,
+      "corners_m": [
+       6.717,
+       6.769
+      ],
+      "samples": 16,
+      "section_segments": 35,
+      "covered_faces": 20,
+      "faces": "-x",
+      "length_m": 10.5,
+      "cap_triangles": 136
+     },
+     {
+      "plane_m": 5.925,
+      "corners_m": [
+       5.925,
+       5.925
+      ],
+      "samples": 9,
+      "section_segments": 42,
+      "covered_faces": 0,
+      "faces": "-z",
+      "length_m": 2.5,
+      "cap_triangles": 50
+     },
+     {
+      "plane_m": 5.664,
+      "corners_m": [
+       5.664,
+       5.664
+      ],
+      "samples": 18,
+      "section_segments": 40,
+      "covered_faces": 9,
+      "faces": "-z",
+      "length_m": 6.2,
+      "cap_triangles": 195
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B046",
+   "file": "buildings/b046_closed.glb",
+   "name": "mages' quarter armourer (closed)",
+   "category": "building",
+   "description": "A narrow three-storey armourer's shop, 5.6 m wide: pale walls, a shop window, a dormer in a steep blue hipped roof; built into a terrace between two neighbours. From the mages' quarter: pale walls with violet trim, tall blue roofs. Closed variant: the +z side (10.8 m) and -z side (10.8 m) and +x side (5.6 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "armourer",
+    "armory",
+    "narrow house",
+    "store",
+    "terraced house",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: mages' quarter",
+   "quarter": "DIST_M",
+   "plan_purpose": "Armor",
+   "floors": 3,
+   "open_sides": [],
+   "sha256": "a9c2f8fd5bb434a44f42910bed3c47029d010d6fca3fdcbff52615b4891e7656",
+   "bytes": 299548,
+   "source_sha256": "9fb2a0e3a196421d77199759422327e9d7c1c273b2c09c96bd17db919d2658b1",
+   "recentred_by": [
+    -7.983,
+    -1.2,
+    -47.365
+   ],
+   "place_scale": 1.0,
+   "triangles": 1401,
+   "models_json_triangles": 571,
+   "size": [
+    11.59,
+    12.95,
+    6.08
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B046.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b046.glb",
+    "sha256": "fd2994dce32501109014b7649d00a928251653fd7ec0465485ab9f2de1a518f9",
+    "sides": [
+     {
+      "plane_m": 2.826,
+      "corners_m": [
+       2.826,
+       2.826
+      ],
+      "samples": 18,
+      "section_segments": 60,
+      "covered_faces": 14,
+      "faces": "+z",
+      "length_m": 10.8,
+      "cap_triangles": 288
+     },
+     {
+      "plane_m": 2.765,
+      "corners_m": [
+       2.765,
+       2.765
+      ],
+      "samples": 21,
+      "section_segments": 67,
+      "covered_faces": 14,
+      "faces": "-z",
+      "length_m": 10.8,
+      "cap_triangles": 344
+     },
+     {
+      "plane_m": 5.683,
+      "corners_m": [
+       5.683,
+       5.683
+      ],
+      "samples": 18,
+      "section_segments": 33,
+      "covered_faces": 6,
+      "faces": "+x",
+      "length_m": 5.6,
+      "cap_triangles": 174
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B051",
+   "file": "buildings/b051_closed.glb",
+   "name": "warriors' quarter weaponsmith (closed)",
+   "category": "building",
+   "description": "A long, shallow single-storey weaponsmith's shop (10 by 2.6 m): wide shop windows, a central door, a gabled dormer and a slate roof; a lean shopfront for a market row. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Closed variant: the -z side (10.1 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "weaponsmith",
+    "weapons",
+    "armory",
+    "market shop",
+    "shopfront",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Weapons",
+   "floors": 1,
+   "open_sides": [],
+   "sha256": "638e63fec23c3b75788cbc647414761bc09ad91b4a269e8e779372928390643c",
+   "bytes": 246292,
+   "source_sha256": "cace0f652687a406b71cbbe1288a487343546f3445a0dea1ec1b2602ec6c5674",
+   "recentred_by": [
+    31.855,
+    -0.832,
+    -58.912
+   ],
+   "place_scale": 1.0,
+   "triangles": 1253,
+   "models_json_triangles": 875,
+   "size": [
+    11.45,
+    6.15,
+    3.72
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B051.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b051.glb",
+    "sha256": "691244fa4bfb612eae438a4e5afc2aca669273c641946f64734f155d74cf0bb3",
+    "sides": [
+     {
+      "plane_m": 1.502,
+      "corners_m": [
+       1.502,
+       1.502
+      ],
+      "samples": 26,
+      "section_segments": 96,
+      "covered_faces": 22,
+      "faces": "-z",
+      "length_m": 10.1,
+      "cap_triangles": 339
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B052",
+   "file": "buildings/b052_closed.glb",
+   "name": "warriors' quarter armourer (closed)",
+   "category": "building",
+   "description": "A long, very shallow three-storey frontage (19.5 by 2.8 m): rows of red-framed windows, a half-timbered gable, two shop doors and a slate roof; a street facade for a row. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Closed variant: the -z side (11.9 m) and -z side (1.2 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "armourer",
+    "facade",
+    "street front",
+    "row house",
+    "terraced house",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Armor",
+   "floors": 3,
+   "open_sides": [],
+   "sha256": "aff3fbfb4c2593211ae9f3306a008f884bc6ec36f3c0253389531a799a6d2031",
+   "bytes": 746592,
+   "source_sha256": "2ec6ccfd879627b2162bee8caabdf9f8dbffbffaf7666c92feb484f5b1689d50",
+   "recentred_by": [
+    17.121,
+    -0.878,
+    -58.695
+   ],
+   "place_scale": 1.0,
+   "triangles": 4061,
+   "models_json_triangles": 3466,
+   "size": [
+    20.45,
+    14.49,
+    3.98
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B052.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b052.glb",
+    "sha256": "de8aa9fcc1abd278272706eba1253d06430df220152a51800435475c34d28d75",
+    "sides": [
+     {
+      "plane_m": 1.495,
+      "corners_m": [
+       1.495,
+       1.495
+      ],
+      "samples": 18,
+      "section_segments": 34,
+      "covered_faces": 18,
+      "faces": "-z",
+      "length_m": 11.9,
+      "cap_triangles": 324
+     },
+     {
+      "plane_m": 6.9,
+      "corners_m": [
+       6.9,
+       6.9
+      ],
+      "samples": 23,
+      "section_segments": 108,
+      "covered_faces": 4,
+      "faces": "-z",
+      "length_m": 1.2,
+      "cap_triangles": 146
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B053",
+   "file": "buildings/b053_closed.glb",
+   "name": "mages' quarter house (closed)",
+   "category": "building",
+   "description": "A tall three-storey house with a steep front gable, rows of small framed windows and a high blue roof. From the mages' quarter: pale walls with violet trim, tall blue roofs. Closed variant: the +x side (7.9 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "house",
+    "home",
+    "tall house",
+    "dwelling",
+    "magic",
+    "terraced house",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: mages' quarter",
+   "quarter": "DIST_M",
+   "plan_purpose": "Home",
+   "floors": 3,
+   "open_sides": [],
+   "sha256": "4a25b7d8c8fcd8519efd840717f9977c29078133028d4e6710b5af3dbf7397a4",
+   "bytes": 751360,
+   "source_sha256": "6e3a495d14e7fa90f9b4c80c66fd039147d3668b2963e604d4e5d32f4ea507cc",
+   "recentred_by": [
+    -23.585,
+    -0.925,
+    -61.784
+   ],
+   "place_scale": 1.0,
+   "triangles": 4029,
+   "models_json_triangles": 3737,
+   "size": [
+    17.68,
+    18.37,
+    8.79
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "bdcc95bc",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B053.glb (the iamar browser source (not public) bdcc95bc, plan sha256 62746e9dc333...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b053.glb",
+    "sha256": "24cafa3b9e9d28450197ab80f9a5c007087c5c51fd8d450f785e167768db4bbb",
+    "sides": [
+     {
+      "plane_m": 6.554,
+      "corners_m": [
+       6.554,
+       6.519
+      ],
+      "samples": 13,
+      "section_segments": 61,
+      "covered_faces": 14,
+      "faces": "+x",
+      "length_m": 7.9,
+      "cap_triangles": 148
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B056",
+   "file": "buildings/b056_closed.glb",
+   "name": "civic heart town house (closed)",
+   "category": "building",
+   "description": "A two-storey town house with a cross-gabled dormer, two front doors and a blue hipped roof; its other walls are plain, as neighbours stood against them. From the civic heart (homes and crafts): white plaster, dark timber frames, blue-slate roofs. Closed variant: the +x side (8.9 m) and -x side (1.7 m) and -x side (10.3 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "house",
+    "home",
+    "town house",
+    "dwelling",
+    "residence",
+    "terraced house",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: civic heart",
+   "quarter": "CIVIC",
+   "plan_purpose": "Home",
+   "floors": 2,
+   "open_sides": [],
+   "sha256": "a1baf7b881a30e073bb89a47d6e92fc995b0c46ee1da2c7b5973f44f656dfacf",
+   "bytes": 253908,
+   "source_sha256": "7653c76ed0a8c4b02ecc6dbaee60d1748170f295e8c9c91f607977a9b5a9cdb4",
+   "recentred_by": [
+    115.097,
+    -0.369,
+    -110.724
+   ],
+   "place_scale": 1.0,
+   "triangles": 1273,
+   "models_json_triangles": 894,
+   "size": [
+    12.85,
+    9.4,
+    12.85
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B056.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b056.glb",
+    "sha256": "a0a9236b02840d837290157872f3a75652cb674e67e643d638600252003ca215",
+    "sides": [
+     {
+      "plane_m": 5.687,
+      "corners_m": [
+       5.623,
+       5.687
+      ],
+      "samples": 15,
+      "section_segments": 27,
+      "covered_faces": 18,
+      "faces": "+x",
+      "length_m": 8.9,
+      "cap_triangles": 104
+     },
+     {
+      "plane_m": 0.245,
+      "corners_m": [
+       0.245,
+       0.24
+      ],
+      "samples": 8,
+      "section_segments": 21,
+      "covered_faces": 8,
+      "faces": "-x",
+      "length_m": 1.7,
+      "cap_triangles": 48
+     },
+     {
+      "plane_m": 5.476,
+      "corners_m": [
+       5.411,
+       5.476
+      ],
+      "samples": 13,
+      "section_segments": 60,
+      "covered_faces": 16,
+      "faces": "-x",
+      "length_m": 10.3,
+      "cap_triangles": 174
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B067",
+   "file": "buildings/b067_closed.glb",
+   "name": "warriors' quarter spice seller (closed)",
+   "category": "building",
+   "description": "A two-storey spice seller's shop with a curved street front: half-timbered upper floor, stone below, gabled dormers and a slate hipped roof. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Closed variant: the -x side (4.9 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "spice seller",
+    "spices",
+    "grocer",
+    "store",
+    "half-timbered house",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Spice seller",
+   "floors": 2,
+   "open_sides": [],
+   "sha256": "5de12127d17f47eeb019d4045932be8edf4517f65719a846b0e506a33a6d844a",
+   "bytes": 449108,
+   "source_sha256": "cdca584842fd1df0910a05a1e21eef1f908fbba33bcd839a963e124b36130c04",
+   "recentred_by": [
+    11.315,
+    -0.4,
+    -125.805
+   ],
+   "place_scale": 1.0,
+   "triangles": 2418,
+   "models_json_triangles": 2144,
+   "size": [
+    9.47,
+    8.68,
+    9.99
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B067.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b067.glb",
+    "sha256": "81e85cbcb2613e176f8d7b2772b4305b5faf48f16dfcd1292e0ba438a173e64a",
+    "sides": [
+     {
+      "plane_m": 4.685,
+      "corners_m": [
+       4.685,
+       4.685
+      ],
+      "samples": 23,
+      "section_segments": 79,
+      "covered_faces": 20,
+      "faces": "-x",
+      "length_m": 4.9,
+      "cap_triangles": 201
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B069",
+   "file": "buildings/b069_closed.glb",
+   "name": "warriors' quarter cobbler (closed)",
+   "category": "building",
+   "description": "A two-storey cobbler's shop with a bay corner, dark timber frame over stone, a front gable and a slate roof. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Closed variant: the -z side (6.5 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "cobbler",
+    "shoemaker",
+    "store",
+    "workshop",
+    "row house",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Cobbler",
+   "floors": 2,
+   "open_sides": [],
+   "sha256": "a8cbf3d08b9e0a6d5639ae3a77326494bd8ce2e95db5a79e3ffd982da3ee7bd1",
+   "bytes": 417728,
+   "source_sha256": "ffc6b4f18b9858db1feaf4548afa16bae855771acd87e6fa11777c29f2ce6145",
+   "recentred_by": [
+    -10.495,
+    -0.4,
+    -134.015
+   ],
+   "place_scale": 1.0,
+   "triangles": 2234,
+   "models_json_triangles": 1966,
+   "size": [
+    7.69,
+    8.61,
+    8.91
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B069.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b069.glb",
+    "sha256": "3cd51ec2f2681405bf79f20e305d7fecb68de23dfcfbebdfb3ff75db209d05fe",
+    "sides": [
+     {
+      "plane_m": 4.365,
+      "corners_m": [
+       4.365,
+       4.365
+      ],
+      "samples": 23,
+      "section_segments": 97,
+      "covered_faces": 22,
+      "faces": "-z",
+      "length_m": 6.5,
+      "cap_triangles": 215
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B084",
+   "file": "buildings/b084_closed.glb",
+   "name": "civic heart tailor (closed)",
+   "category": "building",
+   "description": "A single-storey tailor's shop: wide shop windows either side of a timber door, a hipped blue roof with a gabled dormer and a tall chimney. From the civic heart (homes and crafts): white plaster, dark timber frames, blue-slate roofs. Closed variant: the +x side (8.8 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "tailor",
+    "clothier",
+    "cottage",
+    "store",
+    "bungalow",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: civic heart",
+   "quarter": "CIVIC",
+   "plan_purpose": "Tailor",
+   "floors": 1,
+   "open_sides": [],
+   "sha256": "c09a9594360b7c204304f51c4daa5fff6ef489d6a92e20eb58565242969e7f55",
+   "bytes": 264572,
+   "source_sha256": "c23364c67a7ea4177d35b24bb07ba075dd7d940f93462f9cde8d1e9dce4a26d5",
+   "recentred_by": [
+    23.354,
+    -0.688,
+    -150.8
+   ],
+   "place_scale": 1.0,
+   "triangles": 1414,
+   "models_json_triangles": 1189,
+   "size": [
+    6.93,
+    7.33,
+    10.18
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B084.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b084.glb",
+    "sha256": "c878718360a6541aec0339315c4f3ad2e00ea100bd0f01e54dcca7158ba68135",
+    "sides": [
+     {
+      "plane_m": 3.354,
+      "corners_m": [
+       3.354,
+       3.354
+      ],
+      "samples": 22,
+      "section_segments": 93,
+      "covered_faces": 26,
+      "faces": "+x",
+      "length_m": 8.8,
+      "cap_triangles": 174
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B098",
+   "file": "buildings/b098_closed.glb",
+   "name": "warriors' quarter chandler (closed)",
+   "category": "building",
+   "description": "A two-storey chandler's shop: plaster walls with red window frames, a half-timbered corner bay, a shop door and a dark hipped slate roof with a chimney. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Closed variant: the +x side (9.8 m) and -x side (1.3 m) and -x side (9.3 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "chandler",
+    "candle maker",
+    "candles",
+    "store",
+    "town house",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Chandler",
+   "floors": 2,
+   "open_sides": [],
+   "sha256": "e0d6e11ed0c90f82a6064cb99a0d930fe19c81bf51ff979b434e79516a52be37",
+   "bytes": 560044,
+   "source_sha256": "9e7fdb399af9cce74b6d23671187a5d1ce4d77521afd920706cbe19b71ec3c6d",
+   "recentred_by": [
+    78.133,
+    -0.37,
+    -163.398
+   ],
+   "place_scale": 1.0,
+   "triangles": 2820,
+   "models_json_triangles": 1964,
+   "size": [
+    13.7,
+    9.95,
+    13.66
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B098.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b098.glb",
+    "sha256": "3f0ce3f5bd0ce5d42b3f2633fffe5006132d893e3debc1e8da192804976a92ed",
+    "sides": [
+     {
+      "plane_m": 6.783,
+      "corners_m": [
+       6.783,
+       6.783
+      ],
+      "samples": 21,
+      "section_segments": 88,
+      "covered_faces": 20,
+      "faces": "+x",
+      "length_m": 9.8,
+      "cap_triangles": 233
+     },
+     {
+      "plane_m": 4.389,
+      "corners_m": [
+       4.383,
+       4.389
+      ],
+      "samples": 28,
+      "section_segments": 174,
+      "covered_faces": 30,
+      "faces": "-x",
+      "length_m": 1.3,
+      "cap_triangles": 245
+     },
+     {
+      "plane_m": 6.617,
+      "corners_m": [
+       6.617,
+       6.617
+      ],
+      "samples": 27,
+      "section_segments": 113,
+      "covered_faces": 26,
+      "faces": "-x",
+      "length_m": 9.3,
+      "cap_triangles": 290
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B099",
+   "file": "buildings/b099_closed.glb",
+   "name": "civic heart toolmaker (closed)",
+   "category": "building",
+   "description": "A two-storey toolmaker's shop: big ground-floor windows, a half-timbered gabled dormer with a finial and a blue hipped roof. From the civic heart (homes and crafts): white plaster, dark timber frames, blue-slate roofs. Closed variant: the +x side (4.2 m) and +x side (5 m) and -x side (9.8 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "toolmaker",
+    "tools",
+    "hardware",
+    "store",
+    "town house",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: civic heart",
+   "quarter": "CIVIC",
+   "plan_purpose": "Tools",
+   "floors": 2,
+   "open_sides": [],
+   "sha256": "ff566b3abc42dc69b397ede554204ec8efad345fc5e61d620cb53071732abca1",
+   "bytes": 309200,
+   "source_sha256": "6866f70e4680c493155402086e7cde17d125bef59926d2d25320f08d39f4f9ed",
+   "recentred_by": [
+    66.14,
+    -0.4,
+    -163.286
+   ],
+   "place_scale": 1.0,
+   "triangles": 1539,
+   "models_json_triangles": 954,
+   "size": [
+    10.5,
+    8.99,
+    11.19
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B099.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b099.glb",
+    "sha256": "4ffa0eb7c4b720e904b818513f34dc616d1bc4db76ad3f8fce7a56acae1df5d0",
+    "sides": [
+     {
+      "plane_m": 3.879,
+      "corners_m": [
+       3.879,
+       3.879
+      ],
+      "samples": 13,
+      "section_segments": 62,
+      "covered_faces": 18,
+      "faces": "+x",
+      "length_m": 4.2,
+      "cap_triangles": 122
+     },
+     {
+      "plane_m": 4.024,
+      "corners_m": [
+       4.024,
+       4.024
+      ],
+      "samples": 14,
+      "section_segments": 57,
+      "covered_faces": 19,
+      "faces": "+x",
+      "length_m": 5.0,
+      "cap_triangles": 185
+     },
+     {
+      "plane_m": 5.163,
+      "corners_m": [
+       5.16,
+       5.163
+      ],
+      "samples": 20,
+      "section_segments": 97,
+      "covered_faces": 24,
+      "faces": "-x",
+      "length_m": 9.8,
+      "cap_triangles": 248
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B105",
+   "file": "buildings/b105_closed.glb",
+   "name": "warriors' quarter house (closed)",
+   "category": "building",
+   "description": "A two-storey house with a stone ground floor, dark timber frame above, a chimney and a dark slate roof. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Closed variant: the +z side (6.5 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "house",
+    "home",
+    "town house",
+    "dwelling",
+    "terraced house",
+    "row house",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Home",
+   "floors": 2,
+   "open_sides": [],
+   "sha256": "6449adcd1664a4c7c0734b32f01868755b2885d5ef9b99213246b5085ae34e98",
+   "bytes": 356304,
+   "source_sha256": "fa5e74eb0893f559b866c8ae09efad9b724104dd99ce9a17faeaedaaf513b38f",
+   "recentred_by": [
+    10.603,
+    -0.4,
+    -143.11
+   ],
+   "place_scale": 1.0,
+   "triangles": 1960,
+   "models_json_triangles": 1675,
+   "size": [
+    7.6,
+    9.45,
+    8.43
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B105.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b105.glb",
+    "sha256": "5211f171505e8c8b24850eca7f387ff74421da2d834a503d80dff308bac463e1",
+    "sides": [
+     {
+      "plane_m": 4.11,
+      "corners_m": [
+       4.11,
+       4.11
+      ],
+      "samples": 23,
+      "section_segments": 135,
+      "covered_faces": 32,
+      "faces": "+z",
+      "length_m": 6.5,
+      "cap_triangles": 220
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B106",
+   "file": "buildings/b106_closed.glb",
+   "name": "herbalists' quarter healer's shop (closed)",
+   "category": "building",
+   "description": "A two-storey healer's shop with a front gable and dormer, shop windows, flower boxes and a broad roof. From the herbalists' and healers' quarter: cream walls, ochre roofs, flower boxes. Closed variant: the -z side (7.3 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "healer",
+    "apothecary",
+    "herbalist",
+    "store",
+    "row house",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: herbalists' quarter",
+   "quarter": "DIST_H",
+   "plan_purpose": "Healer",
+   "floors": 2,
+   "open_sides": [],
+   "sha256": "5756004a69de8cdd1166c04df548a328d5ae2ed0d794098a5c975fd77c351c03",
+   "bytes": 443396,
+   "source_sha256": "be5eaddce768485a88914337a7263305828b21435361a844b5150eced9e3923f",
+   "recentred_by": [
+    -24.522,
+    -0.6,
+    -155.884
+   ],
+   "place_scale": 1.0,
+   "triangles": 2466,
+   "models_json_triangles": 2213,
+   "size": [
+    8.03,
+    9.78,
+    10.89
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B106.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b106.glb",
+    "sha256": "dc447fd9dc117b0805f35e2b966c76b001b598b85d95bf285f811bc7123cda68",
+    "sides": [
+     {
+      "plane_m": 5.384,
+      "corners_m": [
+       5.384,
+       5.384
+      ],
+      "samples": 21,
+      "section_segments": 68,
+      "covered_faces": 19,
+      "faces": "-z",
+      "length_m": 7.3,
+      "cap_triangles": 199
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B107",
+   "file": "buildings/b107_closed.glb",
+   "name": "herbalists' quarter house (closed)",
+   "category": "building",
+   "description": "A two-storey house with a steep gable, timber frame, green shutters and flower boxes under the windows. From the herbalists' and healers' quarter: cream walls, ochre roofs, flower boxes. Closed variant: the -z side (6.1 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "house",
+    "home",
+    "town house",
+    "dwelling",
+    "terraced house",
+    "row house",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: herbalists' quarter",
+   "quarter": "DIST_H",
+   "plan_purpose": "Home",
+   "floors": 2,
+   "open_sides": [],
+   "sha256": "6d99305ed581fb55998c077df97afc64d2611f3000ad9fb74f3d4d739efc8fd7",
+   "bytes": 574060,
+   "source_sha256": "d4ddaef94db03b78c576438a18dd86d5d155072e48bcbbc8f492422c415510a4",
+   "recentred_by": [
+    -32.45,
+    -0.8,
+    -159.576
+   ],
+   "place_scale": 1.0,
+   "triangles": 3134,
+   "models_json_triangles": 2912,
+   "size": [
+    7.95,
+    9.74,
+    8.65
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B107.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b107.glb",
+    "sha256": "39f2ec6779e05af62efa749bb420fc65cd911c0e6a539e3059cff136a45eabab",
+    "sides": [
+     {
+      "plane_m": 4.063,
+      "corners_m": [
+       4.063,
+       4.015
+      ],
+      "samples": 19,
+      "section_segments": 66,
+      "covered_faces": 14,
+      "faces": "-z",
+      "length_m": 6.1,
+      "cap_triangles": 148
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B120",
+   "file": "buildings/b120_closed.glb",
+   "name": "herbalists' quarter herbalist (closed)",
+   "category": "building",
+   "description": "A three-storey herbalist's shop with a bent street front: cream walls, green shutters and flower boxes, shop windows below and an ochre hipped roof. From the herbalists' and healers' quarter: cream walls, ochre roofs, flower boxes. Closed variant: the +z side (8.1 m) and -x side (6.3 m) and +x side (2.8 m) and -z side (4.7 m) and +x side (3.8 m) and +x side (2.8 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "herbalist",
+    "herbs",
+    "apothecary",
+    "healer",
+    "store",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: herbalists' quarter",
+   "quarter": "DIST_H",
+   "plan_purpose": "Herbs",
+   "floors": 3,
+   "open_sides": [],
+   "sha256": "ee2778862412c94f220b40005aca8dcea99db42c13575e3cc52393f5743f928b",
+   "bytes": 452492,
+   "source_sha256": "c9a1861d95c3fdb3865b200793c5fb06897318d35d39485cedb860cb6f795528",
+   "recentred_by": [
+    -20.746,
+    -0.352,
+    -169.603
+   ],
+   "place_scale": 1.0,
+   "triangles": 2248,
+   "models_json_triangles": 1281,
+   "size": [
+    15.31,
+    12.64,
+    8.73
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B120.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b120.glb",
+    "sha256": "764054816e4fe7292a09a19aafb2ff3ed7496f52d146ac9e65c224dad2baa3ef",
+    "sides": [
+     {
+      "plane_m": 4.16,
+      "corners_m": [
+       4.153,
+       4.16
+      ],
+      "samples": 15,
+      "section_segments": 40,
+      "covered_faces": 10,
+      "faces": "+z",
+      "length_m": 8.1,
+      "cap_triangles": 123
+     },
+     {
+      "plane_m": 6.897,
+      "corners_m": [
+       6.892,
+       6.897
+      ],
+      "samples": 22,
+      "section_segments": 72,
+      "covered_faces": 14,
+      "faces": "-x",
+      "length_m": 6.3,
+      "cap_triangles": 201
+     },
+     {
+      "plane_m": 6.836,
+      "corners_m": [
+       6.836,
+       6.836
+      ],
+      "samples": 14,
+      "section_segments": 74,
+      "covered_faces": 20,
+      "faces": "+x",
+      "length_m": 2.8,
+      "cap_triangles": 132
+     },
+     {
+      "plane_m": 3.06,
+      "corners_m": [
+       3.039,
+       3.06
+      ],
+      "samples": 8,
+      "section_segments": 15,
+      "covered_faces": 4,
+      "faces": "-z",
+      "length_m": 4.7,
+      "cap_triangles": 194
+     },
+     {
+      "plane_m": 1.574,
+      "corners_m": [
+       1.563,
+       1.574
+      ],
+      "samples": 19,
+      "section_segments": 32,
+      "covered_faces": 10,
+      "faces": "+x",
+      "length_m": 3.8,
+      "cap_triangles": 182
+     },
+     {
+      "plane_m": 1.224,
+      "corners_m": [
+       1.22,
+       1.224
+      ],
+      "samples": 12,
+      "section_segments": 35,
+      "covered_faces": 18,
+      "faces": "+x",
+      "length_m": 2.8,
+      "cap_triangles": 70
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B127",
+   "file": "buildings/b127_closed.glb",
+   "name": "herbalists' quarter toolmaker (closed)",
+   "category": "building",
+   "description": "A large three-storey corner building: cream walls with dark frames, green shutters on every window, a dormer and broad ochre hipped roofs; the quarter's toolmaker. From the herbalists' and healers' quarter: cream walls, ochre roofs, flower boxes. Closed variant: the -x side (6.4 m) and -z side (7.3 m) and +x side (5 m) and +x side (5.2 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "toolmaker",
+    "tools",
+    "hardware",
+    "corner house",
+    "store",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: herbalists' quarter",
+   "quarter": "DIST_H",
+   "plan_purpose": "Tools",
+   "floors": 3,
+   "open_sides": [],
+   "sha256": "89ba0c2252a9483be03405017fc49a3997e28ea5890525b989de7b558d0c7aa7",
+   "bytes": 1121876,
+   "source_sha256": "015083b32de7367d15cfe4ec94498b35e8df899cca5ab9385eb1295fbe626524",
+   "recentred_by": [
+    -13.562,
+    -0.342,
+    -176.281
+   ],
+   "place_scale": 1.0,
+   "triangles": 6196,
+   "models_json_triangles": 5399,
+   "size": [
+    13.59,
+    11.87,
+    21.73
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B127.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b127.glb",
+    "sha256": "e70927c678ec5a087c071eab5990434a092d1b5dd9849af237d72a2a38f74453",
+    "sides": [
+     {
+      "plane_m": 1.647,
+      "corners_m": [
+       1.647,
+       1.647
+      ],
+      "samples": 12,
+      "section_segments": 71,
+      "covered_faces": 5,
+      "faces": "-x",
+      "length_m": 6.4,
+      "cap_triangles": 228
+     },
+     {
+      "plane_m": 3.869,
+      "corners_m": [
+       3.869,
+       3.869
+      ],
+      "samples": 14,
+      "section_segments": 29,
+      "covered_faces": 8,
+      "faces": "-z",
+      "length_m": 7.3,
+      "cap_triangles": 183
+     },
+     {
+      "plane_m": 6.078,
+      "corners_m": [
+       6.076,
+       6.078
+      ],
+      "samples": 16,
+      "section_segments": 35,
+      "covered_faces": 14,
+      "faces": "+x",
+      "length_m": 5.0,
+      "cap_triangles": 108
+     },
+     {
+      "plane_m": 5.292,
+      "corners_m": [
+       5.292,
+       5.292
+      ],
+      "samples": 21,
+      "section_segments": 76,
+      "covered_faces": 18,
+      "faces": "+x",
+      "length_m": 5.2,
+      "cap_triangles": 168
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B132",
+   "file": "buildings/b132_closed.glb",
+   "name": "civic heart bakery (closed)",
+   "category": "building",
+   "description": "A two-storey bakery with a steep cross gable: half-timbered upper floor, shop windows and doors below, a small balcony and a blue roof. From the civic heart (homes and crafts): white plaster, dark timber frames, blue-slate roofs. Closed variant: the -x side (10.7 m) and -z side (8.9 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "bakery",
+    "baker",
+    "bakehouse",
+    "store",
+    "half-timbered house",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: civic heart",
+   "quarter": "CIVIC",
+   "plan_purpose": "Baker",
+   "floors": 2,
+   "open_sides": [],
+   "sha256": "de64ad2468506ac1b72178f10b4d1006599158a0909a6d9bca1b53d4bf9e2991",
+   "bytes": 244032,
+   "source_sha256": "11176d21e60e7251dc10ec5c78dc1477543c42747620a1c25168a75728cefd25",
+   "recentred_by": [
+    22.869,
+    0.007,
+    -188.706
+   ],
+   "place_scale": 1.0,
+   "triangles": 1242,
+   "models_json_triangles": 821,
+   "size": [
+    9.66,
+    11.02,
+    11.6
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "bdcc95bc",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B132.glb (the iamar browser source (not public) bdcc95bc, plan sha256 62746e9dc333...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b132.glb",
+    "sha256": "f1e6c67e1886c31895b357424be64b75efeb648d729cf79c2cd675dcccd11f5f",
+    "sides": [
+     {
+      "plane_m": 4.741,
+      "corners_m": [
+       4.741,
+       4.741
+      ],
+      "samples": 18,
+      "section_segments": 41,
+      "covered_faces": 6,
+      "faces": "-x",
+      "length_m": 10.7,
+      "cap_triangles": 188
+     },
+     {
+      "plane_m": 5.706,
+      "corners_m": [
+       5.706,
+       5.706
+      ],
+      "samples": 16,
+      "section_segments": 52,
+      "covered_faces": 12,
+      "faces": "-z",
+      "length_m": 8.9,
+      "cap_triangles": 159
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B133",
+   "file": "buildings/b133_closed.glb",
+   "name": "civic heart rune carver (closed)",
+   "category": "building",
+   "description": "A three-storey rune carver's shop built as a cluster of blocks, each under its own blue hipped roof, with a chimney and a shop door. From the civic heart (homes and crafts): white plaster, dark timber frames, blue-slate roofs. Closed variant: the +z side (5.9 m) and -x side (6.5 m) and -z side (4.2 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "rune carver",
+    "runes",
+    "stone carver",
+    "store",
+    "town house",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: civic heart",
+   "quarter": "CIVIC",
+   "plan_purpose": "Runes",
+   "floors": 3,
+   "open_sides": [],
+   "sha256": "77e9135f60ea960b8854feede2937457679f7cf2ebfdefa0d0649907e8cf504e",
+   "bytes": 786880,
+   "source_sha256": "4fa86566e978a1f1c45704dfe2f527cbfd62950e7261172ded15fac85010932b",
+   "recentred_by": [
+    15.65,
+    0.075,
+    -198.933
+   ],
+   "place_scale": 1.0,
+   "triangles": 4343,
+   "models_json_triangles": 3877,
+   "size": [
+    17.89,
+    14.67,
+    16.95
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B133.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b133.glb",
+    "sha256": "142f9b25d951ba8385eb34303271b157d90a5c202877eb61258f7761d4c84da6",
+    "sides": [
+     {
+      "plane_m": 5.875,
+      "corners_m": [
+       5.875,
+       5.831
+      ],
+      "samples": 14,
+      "section_segments": 28,
+      "covered_faces": 12,
+      "faces": "+z",
+      "length_m": 5.9,
+      "cap_triangles": 35
+     },
+     {
+      "plane_m": 4.288,
+      "corners_m": [
+       4.247,
+       4.288
+      ],
+      "samples": 14,
+      "section_segments": 29,
+      "covered_faces": 16,
+      "faces": "-x",
+      "length_m": 6.5,
+      "cap_triangles": 46
+     },
+     {
+      "plane_m": 0.981,
+      "corners_m": [
+       0.981,
+       0.971
+      ],
+      "samples": 14,
+      "section_segments": 57,
+      "covered_faces": 32,
+      "faces": "-z",
+      "length_m": 4.2,
+      "cap_triangles": 206
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B137",
+   "file": "buildings/b137_closed.glb",
+   "name": "herbalists' quarter arcaded shop row (closed)",
+   "category": "building",
+   "description": "A two-storey shop row: cream walls, green shutters and flower boxes, round-arched shop loggia on stone piers on the ground floor, gabled dormers and an ochre roof. From the herbalists' and healers' quarter: cream walls, ochre roofs, flower boxes. Closed variant: the -x side (6 m) and +x side (6.4 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "shop row",
+    "arcade",
+    "loggia",
+    "market hall",
+    "row house",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: herbalists' quarter",
+   "quarter": "DIST_H",
+   "plan_purpose": "Arcaded shop row",
+   "floors": 2,
+   "open_sides": [],
+   "sha256": "41d348e2b780c8fc26d760a2c00d2af951de43e9e9001519feeced8b2b08cba9",
+   "bytes": 1137772,
+   "source_sha256": "f035762cd01c07f982464f4508e23528a9c38a1ee1b0306e0fe83165c87f3bef",
+   "recentred_by": [
+    -12.994,
+    -0.37,
+    -144.0
+   ],
+   "place_scale": 1.0,
+   "triangles": 6238,
+   "models_json_triangles": 5401,
+   "size": [
+    12.39,
+    11.27,
+    13.4
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B137.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b137.glb",
+    "sha256": "40800452245d88ba453d7a0b46d295ce2ad5a076abe55c202758d5677b6face7",
+    "sides": [
+     {
+      "plane_m": 1.067,
+      "corners_m": [
+       1.067,
+       1.022
+      ],
+      "samples": 15,
+      "section_segments": 193,
+      "covered_faces": 59,
+      "faces": "-x",
+      "length_m": 6.0,
+      "cap_triangles": 516
+     },
+     {
+      "plane_m": 5.999,
+      "corners_m": [
+       5.997,
+       5.999
+      ],
+      "samples": 25,
+      "section_segments": 97,
+      "covered_faces": 20,
+      "faces": "+x",
+      "length_m": 6.4,
+      "cap_triangles": 224
+     }
+    ]
+   }
+  },
+  {
+   "models_id": "B138",
+   "file": "buildings/b138_closed.glb",
+   "name": "warriors' quarter cloth merchant (closed)",
+   "category": "building",
+   "description": "A small two-storey cloth merchant's shop with steep front gables: half-timbered walls, red-framed windows, shop windows below and a slate roof. From the warriors' quarter: dark timber frames over grey stone, dark slate roofs. Closed variant: the -z side (6.5 m) and +x side (5.3 m) and -z side (2.6 m) and -z side (1.3 m) it shared with a neighbour is walled up in its wall colour and the roof ends there are capped, so it stands alone.",
+   "synonyms": [
+    "shop",
+    "cloth merchant",
+    "draper",
+    "fabric",
+    "store",
+    "half-timbered house",
+    "free-standing house",
+    "detached house"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "quarter": "DIST_W",
+   "plan_purpose": "Cloth merchant",
+   "floors": 2,
+   "open_sides": [],
+   "sha256": "cb331bfda76a2a15f35b92a0536313b001c85e457bd2acf563390fb5e88b1bce",
+   "bytes": 699160,
+   "source_sha256": "db95b746b6f2b7d686c60b543eb7f2d6b022af976db8330668a7c6fb0d4b1aad",
+   "recentred_by": [
+    10.55,
+    -0.4,
+    -151.432
+   ],
+   "place_scale": 1.0,
+   "triangles": 3602,
+   "models_json_triangles": 2512,
+   "size": [
+    7.49,
+    9.36,
+    8.52
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 buildings/B138.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...); closed by kit/catalog/assets/close_open_sides.py",
+   "closed_from": {
+    "file": "buildings/b138.glb",
+    "sha256": "8bf3d1fdfb05dcb9f9f736847c48e8a48907ae923aa7ccdb59cb8379dafa017e",
+    "sides": [
+     {
+      "plane_m": 4.212,
+      "corners_m": [
+       4.212,
+       4.212
+      ],
+      "samples": 20,
+      "section_segments": 126,
+      "covered_faces": 28,
+      "faces": "-z",
+      "length_m": 6.5,
+      "cap_triangles": 213
+     },
+     {
+      "plane_m": 1.456,
+      "corners_m": [
+       1.456,
+       1.456
+      ],
+      "samples": 33,
+      "section_segments": 141,
+      "covered_faces": 20,
+      "faces": "+x",
+      "length_m": 5.3,
+      "cap_triangles": 384
+     },
+     {
+      "plane_m": 1.615,
+      "corners_m": [
+       1.614,
+       1.615
+      ],
+      "samples": 7,
+      "section_segments": 141,
+      "covered_faces": 48,
+      "faces": "-z",
+      "length_m": 2.6,
+      "cap_triangles": 281
+     },
+     {
+      "plane_m": 1.614,
+      "corners_m": [
+       1.614,
+       1.614
+      ],
+      "samples": 16,
+      "section_segments": 89,
+      "covered_faces": 52,
+      "faces": "-z",
+      "length_m": 1.3,
+      "cap_triangles": 96
+     }
+    ]
+   }
+  }
+ ]
+}

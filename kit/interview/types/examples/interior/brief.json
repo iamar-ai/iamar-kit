@@ -1,0 +1,91 @@
+{
+  "vision": "A tavern hall with a hearth where the innkeeper tells tales to travellers.",
+  "audience": {
+    "access": "buddies",
+    "concurrent": 6
+  },
+  "type": "interior",
+  "extra_types": [],
+  "track": "A",
+  "style_profile": "iamar",
+  "mood": {
+    "words": [
+      "warm",
+      "smoky",
+      "lively"
+    ],
+    "time": "night",
+    "weather": "clear"
+  },
+  "setup": {
+    "blender": false,
+    "gpu": false,
+    "scripts_ok": false,
+    "build_tier": 0
+  },
+  "tier_target": "low",
+  "budgets": {
+    "triangles": 80000,
+    "texture_size": 1024,
+    "texture_bytes": 33554432,
+    "download_mb": 40
+  },
+  "reuse": [
+    {
+      "catalog_id": "table_long",
+      "use": "hall"
+    },
+    {
+      "catalog_id": "hearth_stone",
+      "use": "north wall"
+    }
+  ],
+  "connections": {
+    "portal_from_city": true,
+    "name": "iamar://example-interior",
+    "hosting": "own-computer"
+  },
+  "features": [
+    {
+      "id": "npc_innkeeper",
+      "kind": "npc"
+    },
+    {
+      "id": "script_door",
+      "kind": "script"
+    },
+    {
+      "id": "audio_fire",
+      "kind": "audio"
+    }
+  ],
+  "checkpoints": [
+    "greybox",
+    "scale check",
+    "paint"
+  ],
+  "open_questions": [],
+  "answers": [
+    {
+      "id": "I1",
+      "value": "One main room plus one side room",
+      "source": "default",
+      "shown": true
+    },
+    {
+      "id": "I2",
+      "value": "About 12 by 8 metres",
+      "source": "default",
+      "shown": true
+    },
+    {
+      "id": "I3",
+      "value": "candles only",
+      "source": "chosen"
+    }
+  ],
+  "approval": {
+    "date": "2026-10-20",
+    "user_words": "Yes, build it."
+  }
+}

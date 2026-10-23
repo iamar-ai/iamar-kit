@@ -1,0 +1,34 @@
+{
+  "schema": "iamar-lighting-preset/1",
+  "id": "day",
+  "title": "Day (moving sun)",
+  "description": "A running day: the sun moves from morning to evening, near-white so grey cobbles stay grey-brown and grass stays green at noon, a clear blue sky and a light cool haze. The preset for a world with a clock; warm the look with sky, surfaces and lamps, not with the sun.",
+  "derived_from": "kit/style/iamar/style.json atmosphere.presets.midday (the city's mp_look.gd LOOKS.midday), sun energy lowered for the package linear tonemap; made after harbour a4/a5 (an internal task) ran the golden-hour sun on a moving clock and turned noon orange",
+  "environment": {
+    "sky": {
+      "type": "procedural",
+      "top_color": "#2f6ccc",
+      "horizon_color": "#c2d8f0",
+      "ground_color": "#7e8884"
+    },
+    "time_of_day": 10.5,
+    "day_length_minutes": 360,
+    "sun": {
+      "enabled": true,
+      "color": "#fff3df",
+      "energy": 1.1,
+      "shadows": true
+    },
+    "ambient": {
+      "color": "#a2b2d0",
+      "energy": 0.6,
+      "source": "color"
+    },
+    "fog": {
+      "enabled": true,
+      "color": "#d4dde8",
+      "density": 0.0012
+    },
+    "exposure": 1.0
+  }
+}

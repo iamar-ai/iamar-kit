@@ -1,0 +1,37 @@
+{
+  "schema": "iamar-lighting-preset/1",
+  "id": "overcast",
+  "title": "Overcast",
+  "description": "A grey-blue sky, soft light from everywhere, faint shadows, a heavier grey haze that hides the far distance.",
+  "derived_from": "new for the kit (the city has no overcast look); weather.kind cloudy is accepted and reserved in the v0 browser, so the look comes from sky, sun, ambient and fog alone",
+  "environment": {
+    "sky": {
+      "type": "procedural",
+      "top_color": "#737f90",
+      "horizon_color": "#c2c8ce",
+      "ground_color": "#62645e"
+    },
+    "time_of_day": 13.0,
+    "day_length_minutes": 0,
+    "sun": {
+      "enabled": true,
+      "color": "#e6eaf0",
+      "energy": 0.35,
+      "shadows": true
+    },
+    "ambient": {
+      "color": "#b4bcc6",
+      "energy": 0.8,
+      "source": "color"
+    },
+    "fog": {
+      "enabled": true,
+      "color": "#bcc2c8",
+      "density": 0.0045
+    },
+    "weather": {
+      "kind": "cloudy"
+    },
+    "exposure": 0.95
+  }
+}

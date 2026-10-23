@@ -1,0 +1,307 @@
+extends SceneTree
+## Signing and packing for iamar world packages (docs/WORLD_FORMAT.md 9, 9a).
+##
+##   godot --headless --path . -s res://scripts/kit/world_sign.gd -- keygen <private.key>
+##   godot --headless --path . -s res://scripts/kit/world_sign.gd -- sign <folder> <private.key> "<Signer Name>"
+##   godot --headless --path . -s res://scripts/kit/world_sign.gd -- verify <folder or .iamar>
+##   godot --headless --path . -s res://scripts/kit/world_sign.gd -- pack <folder> <out.iamar> [<private.key> "<Signer Name>"]
+##   godot --headless --path . -s res://scripts/kit/world_sign.gd -- keyid <private.key or public.pem>
+##
+## keygen writes an RSA-2048 private key (PEM, mode 600) and <key>.pub beside it.
+## sign sets manifest.signer (editing only that member of manifest.json) and
+## writes signature.json. The private key never goes into a package or a repo.
+
+
+static func _abs(p: String) -> String:
+	return KitLoop.absolute_path(p)
+
+
+func _init() -> void:
+	var a := KitLoop.user_args()
+	var code := 2
+	if a.size() >= 2:
+		match a[0]:
+			"keygen": code = _keygen(_abs(a[1]))
+			"sign": code = _sign(_abs(a[1]), _abs(a[2]), a[3]) if a.size() >= 4 else 2
+			"verify": code = _verify(_abs(a[1]))
+			"pack": code = _pack(_abs(a[1]), _abs(a[2]), _abs(a[3]) if a.size() >= 4 else "", a[4] if a.size() >= 5 else "") if a.size() >= 3 else 2
+			"keyid": code = _keyid(_abs(a[1]))
+	if code == 2:
+		printerr("usage: world_sign.gd -- keygen <key> | sign <folder> <key> <name> | verify <pkg> | pack <folder> <out.iamar> [<key> <name>] | keyid <key>")
+	quit(code)
+
+
+func _load_key(p: String) -> CryptoKey:
+	var k := CryptoKey.new()
+	if k.load(p) != OK:
+		printerr("cannot read private key ", p)
+		return null
+	return k
+
+
+func _keygen(p: String) -> int:
+	if FileAccess.file_exists(p):
+		printerr("refusing to overwrite ", p)
+		return 1
+	DirAccess.make_dir_recursive_absolute(p.get_base_dir())
+	var k := Crypto.new().generate_rsa(2048)
+	if k.save(p) != OK:
+		printerr("cannot write ", p)
+		return 1
+	# owner-only on Linux/macOS; a Windows user profile is already private
+	if not FilePerms.private_file(p):
+		printerr("warning: could not make ", p, " readable by you only")
+	var pub := FileAccess.open(p + ".pub", FileAccess.WRITE)
+	pub.store_string(k.save_to_string(true))
+	pub.close()
+	print("KEY ", p)
+	print("PUBLIC ", p + ".pub")
+	print("KEY_ID ", WorldSignature.key_id(k.save_to_string(true)))
+	return 0
+
+
+func _keyid(p: String) -> int:
+	var k := CryptoKey.new()
+	if k.load(p) != OK and k.load(p, true) != OK:
+		printerr("cannot read key ", p)
+		return 1
+	print("KEY_ID ", WorldSignature.key_id(k.save_to_string(true)))
+	return 0
+
+
+## Sets only the root manifest.signer value, preserving all other source bytes.
+## JSON strings and extension objects may contain braces or their own "signer".
+## Reject duplicate root claims instead of choosing an ambiguous signing input.
+static func _set_signer(text: String, signer_json: String) -> String:
+	var manifest: Variant = JSON.parse_string(text)
+	if not manifest is Dictionary or not JSON.parse_string(signer_json) is Dictionary:
+		return ""
+	var depth := 0
+	var string_start := -1
+	var escaped := false
+	var value_start := -1
+	var value_end := -1
+	var root_end := -1
+	for i in text.length():
+		var c := text[i]
+		if string_start >= 0:
+			if escaped:
+				escaped = false
+			elif c == "\\":
+				escaped = true
+			elif c == "\"":
+				if depth == 1:
+					var colon := _skip_json_space(text, i + 1)
+					if colon < text.length() and text[colon] == ":" \
+							and JSON.parse_string(text.substr(string_start, i - string_start + 1)) == "signer":
+						if value_start >= 0:
+							return ""
+						value_start = _skip_json_space(text, colon + 1)
+						if value_start >= text.length() or text[value_start] != "{":
+							return ""
+				string_start = -1
+			continue
+		# Refuse non-JSON control whitespace (including NUL) outside strings.
+		# The engine parser may accept it or treat it as an early end of input.
+		if c.unicode_at(0) < 32 and not (c in ["\t", "\r", "\n"]):
+			return ""
+		if c == "\"":
+			string_start = i
+		elif c == "{" or c == "[":
+			depth += 1
+		elif c == "}" or c == "]":
+			depth -= 1
+			if value_start >= 0 and value_end < 0 and depth == 1:
+				value_end = i + 1
+			elif depth == 0:
+				root_end = i
+	if value_start >= 0:
+		if value_end < value_start:
+			return ""
+		return text.substr(0, value_start) + signer_json + text.substr(value_end)
+	if root_end < 0:
+		return ""
+	# Insert before existing trailing object whitespace; do not reserialize the
+	# manifest, strip its final newline or normalize unrelated numeric values.
+	var insert_at := root_end
+	while insert_at > 0 and text[insert_at - 1] in [" ", "\t", "\r", "\n"]:
+		insert_at -= 1
+	var comma := "" if manifest.is_empty() else ","
+	# Godot's JSON parser accepts trailing commas. Reuse one already present.
+	if insert_at > 0 and text[insert_at - 1] == ",":
+		comma = ""
+	return text.substr(0, insert_at) + comma + "\n  \"signer\": " + signer_json + text.substr(insert_at)
+
+
+static func _skip_json_space(text: String, start: int) -> int:
+	while start < text.length() and text[start] in [" ", "\t", "\r", "\n"]:
+		start += 1
+	return start
+
+
+func _sign(folder: String, key_path: String, signer: String) -> int:
+	var key := _load_key(key_path)
+	if key == null:
+		return 1
+	var output_dir := DirAccess.open(folder)
+	if output_dir == null:
+		printerr("cannot open signing folder ", folder)
+		return 1
+	if output_dir.is_link(WorldFormat.MANIFEST) or output_dir.is_link(WorldFormat.SIGNATURE):
+		printerr("refusing to sign through a manifest.json or signature.json symlink")
+		return 1
+	# Admit the existing folder before changing either output. This is a byte
+	# snapshot, not signature verification; an old signature may be replaced.
+	var preflight := WorldSource.open(folder)
+	if not preflight.ok():
+		printerr(preflight.error)
+		return 1
+	var mpath := folder.path_join(WorldFormat.MANIFEST)
+	var text := preflight.read(WorldFormat.MANIFEST).get_string_from_utf8()
+	if text == "":
+		printerr("no manifest.json in ", folder)
+		return 1
+	var kid := WorldSignature.key_id(key.save_to_string(true))
+	var out := _set_signer(text, JSON.stringify({"name": signer, "key_id": kid}))
+	if out == "":
+		printerr("manifest.json must be a JSON object with at most one object-valued root signer")
+		return 1
+	preflight.close()
+	preflight = null   # release the old folder snapshot before capturing new bytes
+	# These are in-place writes, not a transaction. A later failure can leave
+	# manifest.json changed, and signature.json missing or partial after removal.
+	# Link checks are best effort; they cannot prevent concurrent path changes.
+	if output_dir.is_link(WorldFormat.MANIFEST):
+		printerr("refusing to write manifest.json through a symlink")
+		return 1
+	# Replacing signature.json needs entry create/remove rights in the folder.
+	# Probe them now, so a folder that cannot take the new signature refuses
+	# before manifest.json gets a signer the old signature does not cover.
+	if not _folder_writable(folder):
+		return 1
+	var f := FileAccess.open(mpath, FileAccess.WRITE)
+	if f == null:
+		printerr("cannot open manifest.json for writing: ", FileAccess.get_open_error())
+		return 1
+	var stored := f.store_string(out)
+	var store_error := f.get_error()
+	f.flush()
+	var flush_error := f.get_error()
+	f.close()
+	if not stored or store_error != OK or flush_error != OK:
+		printerr("cannot write manifest.json (store error %d, flush error %d)" % [store_error, flush_error])
+		return 1
+	# Recapture the changed manifest. Some FileAccess backends do not surface
+	# flush failures through get_error(), so compare the actual bytes as well.
+	var sig_path := folder.path_join(WorldFormat.SIGNATURE)
+	var src := WorldSource.open(folder)
+	if not src.ok():
+		printerr(src.error)
+		return 1
+	if src.read(WorldFormat.MANIFEST) != out.to_utf8_buffer():
+		printerr("manifest.json readback does not match the requested write")
+		return 1
+	# WorldSignature.hash_files excludes signature.json, so defer replacing the
+	# old signature until the source and new signature have passed these checks.
+	var sig := WorldSignature.make(src, key, signer)
+	src.close()
+	src = null
+	var sig_text := JSON.stringify(sig, "  ") + "\n"
+	var sig_bytes := sig_text.to_utf8_buffer()
+	if sig_bytes.size() > WorldSignature.MAX_SIGNATURE_JSON:
+		printerr("signature.json exceeds the browser's signature size limit")
+		return 1
+	if output_dir.is_link(WorldFormat.SIGNATURE):
+		printerr("refusing to write signature.json through a symlink")
+		return 1
+	# Retain unlink-before-create semantics: WRITE on an existing hard link
+	# would otherwise truncate that shared inode. No rollback follows removal.
+	if FileAccess.file_exists(sig_path):
+		var remove_error := DirAccess.remove_absolute(sig_path)
+		if remove_error != OK:
+			printerr("cannot remove old signature.json: ", remove_error)
+			return 1
+	f = FileAccess.open(sig_path, FileAccess.WRITE)
+	if f == null:
+		printerr("cannot open signature.json for writing: ", FileAccess.get_open_error())
+		return 1
+	stored = f.store_string(sig_text)
+	store_error = f.get_error()
+	f.flush()
+	flush_error = f.get_error()
+	f.close()
+	if not stored or store_error != OK or flush_error != OK:
+		printerr("cannot write signature.json (store error %d, flush error %d)" % [store_error, flush_error])
+		return 1
+	f = FileAccess.open(sig_path, FileAccess.READ)
+	if f == null:
+		printerr("cannot read back signature.json: ", FileAccess.get_open_error())
+		return 1
+	var readback := PackedByteArray()
+	if f.get_length() == sig_bytes.size():
+		readback = f.get_buffer(sig_bytes.size())
+	var read_error := f.get_error()
+	var size_matches := f.get_length() == sig_bytes.size()
+	f.close()
+	if read_error != OK or not size_matches or readback != sig_bytes:
+		printerr("signature.json readback does not match the requested write")
+		return 1
+	if _verify(folder) != 0:
+		return 1
+	print("SIGNED %s: %d files, key %s, signer %s" % [folder, (sig.files as Dictionary).size(), kid, signer])
+	return 0
+
+
+func _folder_writable(folder: String) -> bool:
+	var probe := ""
+	for i in 8:
+		var name := ".iamar-sign-probe-%d-%d" % [OS.get_process_id(), Time.get_ticks_usec() + i]
+		if not FileAccess.file_exists(folder.path_join(name)):
+			probe = folder.path_join(name)
+			break
+	if probe == "":
+		printerr("cannot pick a probe name in ", folder)
+		return false
+	var f := FileAccess.open(probe, FileAccess.WRITE)
+	if f == null:
+		printerr("signing folder is not writable (cannot create entries): ", FileAccess.get_open_error())
+		return false
+	f.close()
+	var remove_error := DirAccess.remove_absolute(probe)
+	if remove_error != OK:
+		printerr("signing folder is not writable (cannot remove entries, left %s): %d" % [probe, remove_error])
+		return false
+	return true
+
+
+func _verify(p: String) -> int:
+	var pkg := WorldPackage.open(p)
+	print("SIGNER ", pkg.signer_text())
+	print("STATUS ", pkg.signature.get("status", "?"))
+	for e in pkg.errors:
+		print("ERROR ", e)
+	if not pkg.ok:
+		return 1
+	print("OK")
+	return 0
+
+
+func _pack(folder: String, out: String, key_path: String, signer: String) -> int:
+	var key: CryptoKey = null
+	if key_path == "" or signer == "":
+		printerr("pack needs your key and name: visitors refuse unsigned worlds (see `keygen`)")
+		return 2
+	key = _load_key(key_path)
+	if key == null:
+		return 1
+	# sign the folder itself (signature.json inside the package), then pack it
+	if _sign(folder, key_path, signer) != 0:
+		return 1
+	var r := WorldPieces.pack(folder, out, key, signer)
+	for e in r.errors:
+		print("ERROR ", e)
+	if not r.ok:
+		return 1
+	print("PACKED %s (%d bytes, %d pieces, sha256 %s)" % [r.path, int(r.list["size"]), (r.list.pieces as Array).size(), r.list.sha256])
+	print("PIECES ", r.pieces_path, " (", "signed" if r.list.has("signature") else "unsigned", ")")
+	return _verify(out)

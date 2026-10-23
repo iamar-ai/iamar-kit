@@ -1,0 +1,91 @@
+{
+  "vision": "A harbour quarter beside the iamar city where visitors can fish and trade.",
+  "audience": {
+    "access": "buddies",
+    "concurrent": 8
+  },
+  "type": "town",
+  "extra_types": [],
+  "track": "A",
+  "style_profile": "iamar",
+  "mood": {
+    "words": [
+      "cosy",
+      "salty",
+      "busy"
+    ],
+    "time": "golden hour",
+    "weather": "clear"
+  },
+  "setup": {
+    "blender": false,
+    "gpu": false,
+    "scripts_ok": false,
+    "build_tier": 0
+  },
+  "tier_target": "low",
+  "budgets": {
+    "triangles": 150000,
+    "texture_size": 1024,
+    "texture_bytes": 67108864,
+    "download_mb": 100
+  },
+  "reuse": [
+    {
+      "catalog_id": "tree_oak",
+      "use": "village green"
+    },
+    {
+      "catalog_id": "lamp_post",
+      "use": "quayside"
+    }
+  ],
+  "connections": {
+    "portal_from_city": true,
+    "name": "iamar://example-town",
+    "hosting": "own-computer"
+  },
+  "features": [
+    {
+      "id": "npc_fisher",
+      "kind": "npc"
+    },
+    {
+      "id": "quest_first_catch",
+      "kind": "quest"
+    },
+    {
+      "id": "script_tide_bell",
+      "kind": "script"
+    }
+  ],
+  "checkpoints": [
+    "greybox",
+    "scale check",
+    "paint"
+  ],
+  "open_questions": [],
+  "answers": [
+    {
+      "id": "T1",
+      "value": "A hamlet of about 20 buildings",
+      "source": "default",
+      "shown": true
+    },
+    {
+      "id": "T2",
+      "value": "Beside the city, on flat ground with a river on one side",
+      "source": "default",
+      "shown": true
+    },
+    {
+      "id": "T3",
+      "value": "an inn, 3 shops, a chapel",
+      "source": "chosen"
+    }
+  ],
+  "approval": {
+    "date": "2026-10-20",
+    "user_words": "Yes, build it."
+  }
+}

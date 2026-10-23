@@ -1,0 +1,203 @@
+{
+  "about": "City views for the interview's B3 track question (kit/interview/common.md): a street, a landmark and the skyline per quarter. Plan coordinates of the iamar browser source (not public) worlds/oakhaven_masterplan/city-masterplan.json (x, z; south gate at +z). eye_h / target_h are metres above the ground at that point.",
+  "hour": 16.5,
+  "fov": 62,
+  "views": [
+    {
+      "id": "civic_street",
+      "quarter": "civic",
+      "kind": "street",
+      "title": "West gate street into the cathedral market",
+      "eye": [
+        -104.0,
+        148.0
+      ],
+      "eye_h": 1.7,
+      "target": [
+        -80.0,
+        112.0
+      ],
+      "target_h": 6.0
+    },
+    {
+      "id": "civic_landmark",
+      "quarter": "civic",
+      "kind": "landmark",
+      "title": "The cathedral from its fountain market",
+      "eye": [
+        -57.0,
+        134.0
+      ],
+      "eye_h": 5.0,
+      "target": [
+        -72.0,
+        86.0
+      ],
+      "target_h": 20.0,
+      "fov": 70
+    },
+    {
+      "id": "civic_skyline",
+      "quarter": "civic",
+      "kind": "skyline",
+      "title": "Approach from the forest: South Gate, cathedral spire, guardian dragon",
+      "eye": [
+        -8.0,
+        285.0
+      ],
+      "eye_h": 1.7,
+      "target": [
+        -3.0,
+        170.0
+      ],
+      "target_h": 16.0,
+      "fov": 55
+    },
+    {
+      "id": "mages_street",
+      "quarter": "mages",
+      "kind": "street",
+      "title": "North back lane through the mages' quarter",
+      "eye": [
+        44.0,
+        -9.0
+      ],
+      "eye_h": 1.7,
+      "target": [
+        10.0,
+        -16.0
+      ],
+      "target_h": 4.0
+    },
+    {
+      "id": "mages_landmark",
+      "quarter": "mages",
+      "kind": "landmark",
+      "title": "The mage school from the portal court",
+      "eye": [
+        50.0,
+        -30.0
+      ],
+      "eye_h": 1.7,
+      "target": [
+        17.5,
+        -34.3
+      ],
+      "target_h": 10.0
+    },
+    {
+      "id": "mages_skyline",
+      "quarter": "mages",
+      "kind": "skyline",
+      "title": "The mages' and herbalists' roofs from the east gate bridge",
+      "eye": [
+        160.0,
+        5.0
+      ],
+      "eye_h": 3.0,
+      "target": [
+        60.0,
+        25.0
+      ],
+      "target_h": 8.0
+    },
+    {
+      "id": "warriors_street",
+      "quarter": "warriors",
+      "kind": "street",
+      "title": "Inn and warriors' lane",
+      "eye": [
+        -90.0,
+        34.2
+      ],
+      "eye_h": 1.7,
+      "target": [
+        -55.0,
+        28.0
+      ],
+      "target_h": 4.0
+    },
+    {
+      "id": "warriors_landmark",
+      "quarter": "warriors",
+      "kind": "landmark",
+      "title": "The big weapons shop on the north gate street",
+      "eye": [
+        -17.0,
+        -46.0
+      ],
+      "eye_h": 1.7,
+      "target": [
+        -27.0,
+        -36.0
+      ],
+      "target_h": 7.0,
+      "fov": 75
+    },
+    {
+      "id": "warriors_skyline",
+      "quarter": "warriors",
+      "kind": "skyline",
+      "title": "The north gate and the warriors' roofs from the north bridge",
+      "eye": [
+        -37.0,
+        -108.0
+      ],
+      "eye_h": 3.0,
+      "target": [
+        -25.0,
+        -20.0
+      ],
+      "target_h": 8.0
+    },
+    {
+      "id": "herbalists_street",
+      "quarter": "herbalists",
+      "kind": "street",
+      "title": "The processional high street from inside the South Gate",
+      "eye": [
+        -3.3,
+        200.0
+      ],
+      "eye_h": 1.7,
+      "target": [
+        -3.3,
+        120.0
+      ],
+      "target_h": 6.0
+    },
+    {
+      "id": "herbalists_landmark",
+      "quarter": "herbalists",
+      "kind": "landmark",
+      "title": "The library from its viewing forecourt",
+      "eye": [
+        20.0,
+        82.0
+      ],
+      "eye_h": 1.7,
+      "target": [
+        65.0,
+        101.0
+      ],
+      "target_h": 10.0,
+      "fov": 70
+    },
+    {
+      "id": "herbalists_skyline",
+      "quarter": "herbalists",
+      "kind": "skyline",
+      "title": "Herb garden and the eastern roofs from the herbalist portal landing",
+      "eye": [
+        114.0,
+        84.0
+      ],
+      "eye_h": 4.0,
+      "target": [
+        60.0,
+        110.0
+      ],
+      "target_h": 6.0
+    }
+  ]
+}

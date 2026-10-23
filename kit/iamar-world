@@ -1,0 +1,360 @@
+#!/usr/bin/env bash
+# Thin Linux/macOS convenience wrapper for the kit CLI built into Oakhaven.
+# Direct equivalent: Oakhaven [--headless] -- --kit <command> --cwd "$PWD" ...
+set -euo pipefail
+here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+project="${IAMAR_PROJECT:-$(dirname "$here")}"; browser="${IAMAR_BROWSER:-}"
+cmd="${1:-help}"; shift || true
+# download-login: a download pass for the invitation-only iamar browser, approved once by the
+# person in their web browser (device code); kit/runtime_fetch.sh then uses it.
+if [[ "$cmd" == download-login ]]; then exec "$here/download_login.sh" "$@"; fi
+# --json (agents): the command prints one JSON object instead of text, with a fix hint on every
+# ERROR/WARN and the next command (kit/agent_output/README.md). Commands that print their own JSON
+# (doctor, lint, audit, assets search, terrain, ...) take --json themselves. Human-mode runs end
+# with a NEXT: line instead (next_hint below; IAMAR_KIT_NO_NEXT=1 turns it off).
+agent_py() {
+  local p="${PYTHON:-}"
+  [[ -n "$p" ]] || p="$(command -v python3 || command -v python || true)"
+  [[ -n "$p" ]] && "$p" -c 'import json' >/dev/null 2>&1 && printf '%s\n' "$p"
+}
+next_hint() {
+  [[ -z "${IAMAR_KIT_OUTPUT_CHILD:-}" ]] || return 0
+  local p; p="$(agent_py)" || return 0
+  # activity log: one line in <world>/.iamar/activity.jsonl (agent_output.py; IAMAR_KIT_NO_ACTIVITY=1 turns it off)
+  "$p" "$here/agent_output/agent_output.py" activity "$cmd" "$@" 2>/dev/null || true
+  [[ -z "${IAMAR_KIT_NO_NEXT:-}" ]] || return 0
+  "$p" "$here/agent_output/agent_output.py" next "$cmd" "$@" 2>/dev/null || true
+}
+case " new validate preview perf techniques tiers impostors assets package pack sign verify keygen add-to-browser playtest where " in
+  *" $cmd "*)
+    want_json=0; for a in "$@"; do [[ "$a" == --json ]] && want_json=1; done
+    if [[ -z "${IAMAR_KIT_OUTPUT_CHILD:-}" && $want_json == 1 && ! ( "$cmd" == assets && "${1:-}" == search && "${2:-}" != --worlds ) ]]; then
+      p="$(agent_py)" || {
+        printf '{"schema": "iamar-kit-output/1", "command": "%s", "exit_code": 2, "ok": false, "errors": [{"message": "--json needs Python 3", "fix": "Install Python 3 or set PYTHON=/path/to/python3 (iamar-world doctor)"}]}\n' "$cmd"
+        exit 2
+      }
+      exec "$p" "$here/agent_output/agent_output.py" run "$cmd" -- "${BASH:-bash}" "$here/iamar-world" "$cmd" "$@"
+    fi;;
+esac
+# compile-typescript: pack world.ts into a world script.
+# Default is the fast path: the pure-Node packer writes the compiled JS into
+# the prebuilt QuickJS guest (Linux, macOS and Windows; Node >= 20).
+# --from-source keeps the old per-world clang guest build (Linux x86_64 only,
+# needs the IAMAR_TS_* toolchain variables).
+if [[ "$cmd" == compile-typescript ]]; then
+  from_source=0
+  if [[ "${1:-}" == --from-source ]]; then from_source=1; shift; fi
+  [[ $# == 3 ]] || { echo 'usage: iamar-world compile-typescript [--from-source] <world.ts> <template-folder> <fresh-output>' >&2; exit 2; }
+  [[ -f "$1" && -d "$2" ]] || { echo 'compile-typescript: source file and package template directory are required' >&2; exit 2; }
+  if (( from_source )); then
+  [[ "${OSTYPE:-}" == linux* && "${HOSTTYPE:-}" == x86_64 ]] || {
+    echo 'compile-typescript --from-source currently requires Linux x86_64' >&2; exit 2;
+  }
+  [[ -f "$project/tools/typescript-world/build.mjs" && -f "$project/api/typescript/iamar-world.d.ts" ]] || {
+    echo 'compile-typescript --from-source needs a source checkout' >&2; exit 2;
+  }
+  for key in IAMAR_TS_NODE IAMAR_TS_COMPILER IAMAR_TS_QUICKJS IAMAR_TS_WASI_SDK IAMAR_TS_DEPENDENCY_LOCK; do
+    value="${!key:-}"
+    [[ "$value" == /* ]] || { printf 'compile-typescript: configure %s as an absolute approved local path\n' "$key" >&2; exit 2; }
+  done
+  [[ -f "$IAMAR_TS_NODE" && -x "$IAMAR_TS_NODE" ]] || { echo 'compile-typescript: configured Node executable is unavailable' >&2; exit 2; }
+  [[ -f "$IAMAR_TS_COMPILER" && -f "$IAMAR_TS_DEPENDENCY_LOCK" && -d "$IAMAR_TS_QUICKJS" && -d "$IAMAR_TS_WASI_SDK" ]] || {
+    echo 'compile-typescript: configured compiler, dependency lock or toolchain directory is unavailable' >&2; exit 2;
+  }
+  exec "$IAMAR_TS_NODE" "$project/tools/typescript-world/build.mjs" \
+    --source "$1" --sdk "$project/api/typescript/iamar-world.d.ts" \
+    --typescript "$IAMAR_TS_COMPILER" --quickjs "$IAMAR_TS_QUICKJS" \
+    --wasi-sdk "$IAMAR_TS_WASI_SDK" --dependency-lock "$IAMAR_TS_DEPENDENCY_LOCK" \
+    --template "$2" --out "$3"
+  fi
+  # An explicit compiler override is authoritative, even when empty or invalid.
+  # Validate it before probing Node; never silently substitute another compiler.
+  tsc=""
+  if [[ "${IAMAR_TS_COMPILER+x}" == x ]]; then
+    [[ "$IAMAR_TS_COMPILER" == /* && -f "$IAMAR_TS_COMPILER" && -r "$IAMAR_TS_COMPILER" ]] || {
+      echo 'compile-typescript: IAMAR_TS_COMPILER must name an absolute readable compiler file' >&2; exit 2;
+    }
+    tsc="$IAMAR_TS_COMPILER"
+  fi
+  # A kit packer selects the complete kit set, never a mixture with source.
+  # Preserve source-checkout fallback only when no kit packer entry exists.
+  # IAMAR_PROJECT retains its existing meaning as the source project path.
+  base="$here/ts-world"
+  sdk="$base/iamar-world.d.ts"
+  if [[ ! -e "$base/pack.mjs" && ! -L "$base/pack.mjs" ]]; then
+    base="$project/tools/typescript-world"
+    sdk="$project/api/typescript/iamar-world.d.ts"
+  fi
+  packer="$base/pack.mjs"
+  prebuilt="$base/prebuilt/iamar_ts_guest.wasm"
+  [[ -f "$packer" && -r "$packer" && -f "$prebuilt" && -r "$prebuilt" && -f "$sdk" && -r "$sdk" ]] || {
+    echo 'compile-typescript: selected dependency set is incomplete (packer, prebuilt guest and SDK required)' >&2
+    echo '  Use a complete kit/ts-world bundle or a complete source checkout; selected kit files never fall back individually.' >&2
+    exit 2
+  }
+  if [[ -z "$tsc" ]]; then
+    for tsc_path in "$base/node_modules/typescript/lib/typescript.js" "$base/typescript.js"; do
+      [[ -f "$tsc_path" && -r "$tsc_path" ]] && { tsc="$tsc_path"; break; }
+    done
+  fi
+  if [[ -z "$tsc" ]]; then
+    echo 'compile-typescript: the official TypeScript 5.9.3 compiler is required.' >&2
+    echo "  npm i typescript@5.9.3 --prefix \"$base\"  (or set IAMAR_TS_COMPILER=/absolute/typescript.js)" >&2
+    exit 2
+  fi
+  # An explicitly set Node override is authoritative, including an empty value.
+  # Only an unset override may discover a different executable on PATH.
+  if [[ "${IAMAR_TS_NODE+x}" == x ]]; then
+    node_bin="$IAMAR_TS_NODE"
+  else
+    node_bin="$(command -v node || true)"
+    # No Node 20+ on PATH: the kit's own pinned Node (fetched once, kit/runtime_fetch.sh).
+    if [[ -z "$node_bin" || "$("$node_bin" -p 'Number(process.versions.node.split(".")[0]) >= 20' 2>/dev/null)" != true ]]; then
+      node_bin="$("$here/runtime_fetch.sh" node)" || node_bin=""
+    fi
+  fi
+  [[ -n "$node_bin" && -x "$node_bin" ]] || { echo 'compile-typescript: Node >= 20 is required (PATH or IAMAR_TS_NODE)' >&2; exit 2; }
+  [[ "$("$node_bin" -p 'Number(process.versions.node.split(".")[0]) >= 20')" == true ]] || {
+    echo 'compile-typescript: Node >= 20 is required' >&2; exit 2;
+  }
+  exec "$node_bin" "$packer" \
+    --source "$1" --sdk "$sdk" --typescript "$tsc" \
+    --prebuilt "$prebuilt" --template "$2" --out "$3"
+fi
+# lint and compare-shots: style-profile checks in Python 3 (kit/lint), no browser needed.
+# shots: fixed-camera review sheets (kit/shots/shots.py); Python drives preview through this launcher.
+# audit: geometry audits (closure, zfight, roof, edge, door, dark-bake; kit/audit/audit.py), numpy only.
+# materials: painted material library, texel-density rule, texture budget (kit/style/materials/materials.py).
+# style-gen: masterplan house, convex-wing roof and door arch from a style profile (kit/style/gen/gen.py).
+if [[ "$cmd" == lint || "$cmd" == compare-shots || "$cmd" == shots || "$cmd" == lowtier || "$cmd" == audit || "$cmd" == version || "$cmd" == doctor || "$cmd" == style-gen || "$cmd" == materials || "$cmd" == terrain || "$cmd" == publish-local ]]; then
+  py="${PYTHON:-$(command -v python3 || command -v python || true)}"
+  [[ -n "$py" ]] || { echo "iamar-world $cmd: needs Python 3 (texture and screenshot checks also numpy and Pillow)" >&2; exit 2; }
+  tool=style_lint.py; [[ "$cmd" == compare-shots ]] && tool=compare_shots.py; [[ "$cmd" == shots ]] && tool=../shots/shots.py; [[ "$cmd" == lowtier ]] && tool=../shots/lowtier/lowtier.py
+  [[ "$cmd" == audit ]] && tool=../audit/audit.py
+  [[ "$cmd" == version ]] && tool=../version/version.py
+  [[ "$cmd" == doctor ]] && tool=../doctor/doctor.py
+  [[ "$cmd" == publish-local ]] && tool=../publish/publish.py
+  [[ "$cmd" == style-gen ]] && tool=../style/gen/gen.py
+  [[ "$cmd" == materials ]] && tool=../style/materials/materials.py
+  [[ "$cmd" == terrain ]] && tool=../terrain/terrain.py
+  exec "$py" "$here/lint/$tool" "$@"
+fi
+# assets search: the object catalogue (kit/catalog/catalog.py: descriptions, synonyms, categories),
+# Python 3 only, no browser needed. assets search --worlds: objects in downloaded worlds (browser).
+if [[ "$cmd" == assets && "${1:-}" == search ]]; then
+  if [[ "${2:-}" == --worlds ]]; then
+    set -- search "${@:3}"
+  elif [[ -f "$here/catalog/catalog.json" ]]; then
+    py="${PYTHON:-$(command -v python3 || command -v python || true)}"
+    [[ -n "$py" ]] && exec "$py" "$here/catalog/catalog.py" "$@"
+  fi
+fi
+# assets show <id|name>: an id printed by `assets search` resolves in the same catalogue; anything
+# else (a hash or name of a downloaded world's object) falls through to the browser.
+if [[ "$cmd" == assets && "${1:-}" == show && -n "${2:-}" && -f "$here/catalog/catalog.json" ]]; then
+  py="${PYTHON:-$(command -v python3 || command -v python || true)}"
+  if [[ -n "$py" ]]; then
+    "$py" "$here/catalog/catalog.py" show "$2" && exit 0
+  fi
+fi
+# assets use <world> <id|name>: a catalogue object made for iamar (city models, harbour set, sounds) is
+# copied into the world by the catalogue, with its tier files; built-in objects and objects of downloaded
+# worlds (catalog.py exit 3) go on to the browser, which references them by hash.
+if [[ "$cmd" == assets && "${1:-}" == use && -n "${3:-}" && -f "$here/catalog/catalog.json" ]]; then
+  py="${PYTHON:-$(command -v python3 || command -v python || true)}"
+  if [[ -n "$py" ]]; then
+    rc=0; "$py" "$here/catalog/catalog.py" "$@" || rc=$?
+    [[ $rc -ne 3 ]] && exit $rc
+  fi
+fi
+# assets ref <world> <id|name>: reference a public catalogue object by hash instead of carrying it
+# (kit/catalog/refs.py, docs/CATALOG_PACKS.md). package/pack: the same module checks every catalogue
+# reference and copy (hash, licence, attribution, release) before signing; skipped without Python.
+if [[ "$cmd" == assets && "${1:-}" == ref && -f "$here/catalog/refs.py" ]]; then
+  py="$(agent_py)" || { echo "assets ref needs Python 3 (set PYTHON=/path/to/python3)" >&2; exit 2; }
+  exec "$py" "$here/catalog/refs.py" "$@"
+fi
+# assets fetch <world>: make the world's catalogue references available here, downloading each release
+# pack once into the shared catalogue cache and keeping only objects that hash to their names (kit/catalog/packs.py).
+if [[ "$cmd" == assets && "${1:-}" == fetch && -f "$here/catalog/packs.py" ]]; then
+  py="$(agent_py)" || { echo "assets fetch needs Python 3 (set PYTHON=/path/to/python3)" >&2; exit 2; }
+  exec "$py" "$here/catalog/packs.py" "$@"
+fi
+if [[ ( "$cmd" == package || "$cmd" == pack ) && -n "${1:-}" && -f "$1/manifest.json" && -f "$here/catalog/refs.py" ]]; then
+  if py="$(agent_py)"; then
+    "$py" "$here/catalog/refs.py" check "$1" || exit 1
+  fi
+fi
+# The developer kit ships its tools as iamar-kit.pck beside this launcher; the browser
+# mounts it on demand (KitLoop.ensure_tool). Say where it is, whatever the browser path.
+[[ -z "${IAMAR_KIT_PACK:-}" && -f "$here/iamar-kit.pck" ]] && export IAMAR_KIT_PACK="$here/iamar-kit.pck"
+if [[ -z "$browser" && ! -f "$project/project.godot" && "$cmd" != blender && "$cmd" != blender-run ]]; then
+  # Also the two homepage downloads unzipped side by side: <dir>/kit/ and <dir>/iamar/<browser>.
+  for c in "$here/../Oakhaven.x86_64" "$here"/../*.AppImage \
+      "$here/../iamar.app/Contents/MacOS/Oakhaven" "$here/../Oakhaven.app/Contents/MacOS/Oakhaven" "$here/../iamar" \
+      "$here/../iamar.x86_64" "$here/../iamar/iamar" "$here/../iamar/iamar.x86_64" "$here"/../iamar/*.AppImage \
+      "$here/../iamar/iamar.app/Contents/MacOS/iamar" "$here/../iamar/iamar.app/Contents/MacOS/Oakhaven"; do
+    [[ -f "$c" && -x "$c" ]] && { browser="$(cd "$(dirname "$c")" && pwd)/$(basename "$c")"; break; }
+  done
+  # A kit downloaded on its own: use (or fetch once) the pinned iamar browser in kit/runtime/.
+  if [[ -z "$browser" && "$cmd" != where ]]; then
+    browser="$("$here/runtime_fetch.sh" browser)" || browser=""
+  fi
+fi
+if [[ -z "$browser" && ! -f "$project/project.godot" && "$cmd" != blender && "$cmd" != blender-run ]]; then
+  echo "iamar-world: no iamar browser found beside $here (looked in $here/.. and $here/../iamar/)" >&2
+  echo "  Unzip the browser download next to the kit folder (kit/ and iamar/ side by side)," >&2
+  echo "  or set IAMAR_BROWSER=/path/to/iamar, or allow" >&2
+  echo "  kit/runtime_fetch.sh browser to fetch it (needs the network; IAMAR_KIT_NO_FETCH unset)." >&2
+  exit 2
+fi
+# An older iamar browser has no kit commands: it starts the game and never answers. Ask it once
+# (`--kit where` returns at once, status 0, or 3 when the kit pack is missing) and remember the answer
+# for that exact file, so a wrong browser ends with a plain message instead of a hang.
+check_browser() {
+  local b="$1" key stamp pid rc="" i
+  key="$(printf '%s' "$b" | cksum | cut -d' ' -f1)-$(stat -c '%s-%Y' "$b" 2>/dev/null || stat -f '%z-%m' "$b" 2>/dev/null)"
+  stamp="$here/runtime/.compatible-$key"
+  [[ -f "$stamp" ]] && return 0
+  "$b" --headless --audio-driver Dummy -- --kit where >/dev/null 2>&1 & pid=$!
+  for ((i = 0; i < ${IAMAR_KIT_PROBE_TENTHS:-250}; i++)); do
+    kill -0 "$pid" 2>/dev/null || { wait "$pid" && rc=0 || rc=$?; break; }
+    sleep 0.1
+  done
+  local timed_out=0
+  if [[ -z "$rc" ]]; then timed_out=1; kill -9 "$pid" 2>/dev/null || true; wait "$pid" 2>/dev/null || true; fi
+  if [[ "$rc" == 0 || "$rc" == 3 ]]; then mkdir -p "$here/runtime" 2>/dev/null && : > "$stamp"; return 0; fi
+  if (( timed_out )); then
+    local secs=$(( ${IAMAR_KIT_PROBE_TENTHS:-250} / 10 ))
+    echo "iamar-world: the iamar browser at $b did not answer a kit command within ${secs} s (TIMED OUT)." >&2
+    echo "  It is either too old (an old browser starts the game and never answers) or only slow: on a busy" >&2
+    echo "  computer it first waits for a render slot (every command queues, headless ones too). Retry with a longer wait, e.g. IAMAR_KIT_PROBE_TENTHS=3000" >&2
+    echo "  iamar-world <command>; on a shared computer use IAMAR_KIT_PROBE_TENTHS=36000 (1 h) in the background and do the Python-only" >&2
+    echo "  work meanwhile. If that also times out, download the latest browser from https://iamar.ai/download." >&2
+  else
+    echo "iamar-world: the iamar browser at $b cannot run the developer kit commands (it exited with status $rc" >&2
+    echo "  instead of answering, so it is too old). Download the latest iamar browser from https://iamar.ai/download, put kit/ beside it," >&2
+    echo "  or set IAMAR_BROWSER=/path/to/a/newer/iamar. The kit needs the iamar browser to run its tools." >&2
+  fi
+  exit 2
+}
+case "$browser" in *.AppImage) export APPIMAGE_EXTRACT_AND_RUN=1;; esac   # an AppImage browser needs no FUSE
+if [[ -n "$browser" && "$cmd" != blender && "$cmd" != blender-run ]]; then check_browser "$browser"; fi
+# Blender remains an optional external modeller, not part of the browser. Keep its
+# two convenience probes here; all world-kit behavior below is native.
+find_blender() {
+  local c
+  for c in "${BLENDER:-}" "$(command -v blender 2>/dev/null || true)" \
+      "$HOME"/opt/blender-*/blender /opt/blender*/blender /usr/bin/blender /snap/bin/blender \
+      /Applications/Blender.app/Contents/MacOS/Blender "$HOME"/Applications/Blender.app/Contents/MacOS/Blender; do
+    [[ -n "$c" && -x "$c" ]] && { printf '%s\n' "$c"; return; }
+  done
+  return 1
+}
+if [[ "$cmd" == blender || "$cmd" == blender-run ]]; then
+  b="$(find_blender)" || { echo "NO BLENDER: install Blender 4.x or set BLENDER=/path/to/blender" >&2; exit 1; }
+  if [[ "$cmd" == blender-run ]]; then exec "$b" -b --factory-startup --python "$@"; fi
+  echo "BLENDER $b"
+  "$b" --version & pid=$!
+  for _ in {1..100}; do kill -0 "$pid" 2>/dev/null || { wait "$pid"; exit; }; sleep 0.1; done
+  kill "$pid" 2>/dev/null || true; sleep 0.2; kill -9 "$pid" 2>/dev/null || true; wait "$pid" 2>/dev/null || true
+  echo "BLENDER ERROR: version probe did not finish successfully within 10s" >&2; exit 1
+fi
+# playtest: drive a visitor through a world in the real browser game (talk, pick up, use,
+# triggers) and report quest state, script effects and a shot per step (kit/playtest/README.md).
+# The browser gets a private profile for the run, so the player's own settings, saves and
+# world data are never read or written. --headless skips the shots.
+if [[ "$cmd" == playtest ]]; then
+  pt="$(mktemp -d "${TMPDIR:-/tmp}/iamar-playtest.XXXXXX")"; trap 'rm -rf -- "$pt"' EXIT
+  pt_head=(); pt_args=()
+  for a in "$@"; do if [[ "$a" == --headless ]]; then pt_head=(--headless); else pt_args+=("$a"); fi; done
+  pt_env=(env XDG_DATA_HOME="$pt/data" XDG_CONFIG_HOME="$pt/config" OAK_SETTINGS="$pt/settings.cfg")
+  if [[ -n "$browser" ]]; then
+    "${pt_env[@]}" "$browser" --audio-driver Dummy ${pt_head[@]+"${pt_head[@]}"} -- --kit-script res://scripts/kit/world_playtest.gd --cwd "$PWD" ${pt_args[@]+"${pt_args[@]}"}
+  else
+    "${pt_env[@]}" "${GODOT:-godot}" --audio-driver Dummy ${pt_head[@]+"${pt_head[@]}"} --path "$project" -- --kit-script res://scripts/kit/world_playtest.gd --cwd "$PWD" ${pt_args[@]+"${pt_args[@]}"}
+  fi && rc=0 || rc=$?
+  next_hint "$rc" ${pt_args[@]+"${pt_args[@]}"}
+  exit $rc
+fi
+# play: walk an unsigned draft in the real browser game at once, offline, reloading on save
+# (kit/play/README.md). A separate draft profile kept between runs, never the player's own.
+# The person plays it, so it has sound; --headless (tests) and --mute run silent.
+if [[ "$cmd" == play ]]; then
+  prof="${IAMAR_PLAY_PROFILE:-${XDG_DATA_HOME:-$HOME/.local/share}/iamar-draft-profile}"
+  mkdir -p "$prof/data" "$prof/config" "$prof/appdata"
+  pl_head=(); pl_args=(); pl_audio=()
+  for a in "$@"; do
+    case "$a" in --headless) pl_head=(--headless);; --mute) pl_audio=(--audio-driver Dummy);; *) pl_args+=("$a");; esac
+  done
+  pl_env=(env XDG_DATA_HOME="$prof/data" XDG_CONFIG_HOME="$prof/config" APPDATA="$prof/appdata" OAK_SETTINGS="$prof/settings.cfg")
+  # Line-buffer the browser's output: redirected to a file or pipe, stdio holds "PLAY READY" and
+  # "PLAY RELOADED" back until the buffer fills or the run ends, so an agent (or the reload test)
+  # tailing the log waits for a line that was already true (an internal task).
+  command -v stdbuf >/dev/null 2>&1 && pl_env=(stdbuf -oL -eL "${pl_env[@]}")
+  next_hint 0 ${pl_args[@]+"${pl_args[@]}"}   # play runs until the person closes it: log that it started
+  if [[ -n "$browser" ]]; then
+    exec "${pl_env[@]}" "$browser" ${pl_audio[@]+"${pl_audio[@]}"} ${pl_head[@]+"${pl_head[@]}"} -- --kit-script res://scripts/kit/world_play.gd --cwd "$PWD" ${pl_args[@]+"${pl_args[@]}"}
+  fi
+  exec "${pl_env[@]}" "${GODOT:-godot}" ${pl_audio[@]+"${pl_audio[@]}"} ${pl_head[@]+"${pl_head[@]}"} --path "$project" -- --kit-script res://scripts/kit/world_play.gd --cwd "$PWD" ${pl_args[@]+"${pl_args[@]}"}
+fi
+run_native() {
+  local headless=(--headless) command="$1"; shift
+  case "$command" in preview|perf|impostors) headless=();; esac
+  if [[ -n "$browser" ]]; then
+    "$browser" --audio-driver Dummy ${headless[@]+"${headless[@]}"} -- --kit "$command" --cwd "$PWD" "$@"
+  else
+    "${GODOT:-godot}" --audio-driver Dummy ${headless[@]+"${headless[@]}"} --path "$project" -- --kit "$command" --cwd "$PWD" "$@"
+  fi
+}
+# Managed upload is deliberately still a wrapper-side compatibility command: it
+# packages through the native CLI, then uses the platform curl with explicit owner
+# credentials. Current public guidance uses browser self-hosting instead.
+if [[ "$cmd" == publish ]]; then
+  folder="${1:?publish <folder> <signing key> <your name>}"; key="${2:?signing key}"; who="${3:?your name}"
+  hub="${IAMAR_HUB:-https://hub.vessences.com}"; hub="${hub%/}"; hub="${hub/#ws:/http:}"; hub="${hub/#wss:/https:}"; hub="${hub%/signal}"
+  # The builder key is a bearer secret: only ever send it over TLS (plain http only to this machine).
+  case "$hub" in
+    https://*) ;;
+    http://localhost|http://localhost:*|http://127.0.0.1|http://127.0.0.1:*|http://\[::1\]|http://\[::1\]:*) ;;
+    *) echo "publish: refusing to send the builder key to $hub (https required)" >&2; exit 1;;
+  esac
+  bkey="${IAMAR_BUILDER_KEY:?set IAMAR_BUILDER_KEY to the builder key from the game}"
+  tmp="$(mktemp -d "${TMPDIR:-/tmp}/iamar-publish.XXXXXX")"; trap 'rm -rf "$tmp"' EXIT
+  run_native package "$folder" "$tmp/package.iamar" "$key" "$who"
+  pieces=""; for candidate in "$tmp"/*.pieces.json; do [[ -f "$candidate" ]] && { pieces="$candidate"; break; }; done
+  [[ -f "$tmp/package.iamar" && -n "$pieces" ]] || { echo "publish: packing failed" >&2; exit 1; }
+  # -q: ignore the user's curlrc. The key goes in a config on stdin, never on the command line (visible in ps).
+  reply="$(printf 'header = "Authorization: Bearer %s"\n' "$bkey" | curl -q -sS -K - --proto '=https,http' --max-redirs 0 -w '\n%{http_code}' -F "pieces=@$pieces" -F "package=@$tmp/package.iamar" "$hub/api/builder/worlds")"
+  code="${reply##*$'\n'}"; body="${reply%$'\n'*}"
+  if [[ "$code" == 200 || "$code" == 201 ]]; then
+    addr="$(printf '%s' "$body" | grep -o '"address":"[^"]*"' | head -1 | cut -d'"' -f4)"
+    echo "PUBLISHED $addr  (HTTP $code)"
+  else
+    # the hub's body is untrusted: show a short, control-character-free excerpt only
+    echo "publish failed (HTTP $code): $(printf '%s' "$body" | head -c 200 | tr -c '[:print:]' '?')" >&2; exit 1
+  fi
+  exit 0
+fi
+# preview: the renderer sometimes aborts at random (glibc "double free or corruption" /
+# "realloc(): invalid old size", exit 134; or a segfault, 139) and the same command then works
+# (kit/blindtest/harbour/gaps.md G7). Run it once more in that case; IAMAR_PREVIEW_RETRY=0 turns it off.
+if [[ "$cmd" == preview && "${IAMAR_PREVIEW_RETRY:-1}" != 0 ]]; then
+  rc=0; run_native preview "$@" || rc=$?
+  if [[ $rc == 134 || $rc == 139 ]]; then
+    echo "iamar-world: preview crashed (exit $rc), running it once more (known intermittent renderer crash, gaps G7)" >&2
+    rc=0; run_native preview "$@" || rc=$?
+  fi
+  next_hint "$rc" "$@"
+  exit $rc
+fi
+headless=(--headless)
+case "$cmd" in preview|perf|impostors) headless=();; esac
+rc=0
+if [[ -n "$browser" ]]; then
+  "$browser" --audio-driver Dummy ${headless[@]+"${headless[@]}"} -- --kit "$cmd" --cwd "$PWD" "$@" || rc=$?
+else
+  "${GODOT:-godot}" --audio-driver Dummy ${headless[@]+"${headless[@]}"} --path "$project" -- --kit "$cmd" --cwd "$PWD" "$@" || rc=$?
+fi
+next_hint "$rc" "$@"
+exit $rc

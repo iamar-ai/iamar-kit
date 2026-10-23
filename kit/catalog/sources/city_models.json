@@ -1,0 +1,2637 @@
+{
+ "format": "iamar-catalog-city-models",
+ "version": 1,
+ "note": "The city's single-object exports, copied from the iamar-models mesh archive (not public) by kit/catalog/assets/import_city_models.py. Files live in kit/catalog/assets/<file>. Never edit by hand: rerun the import.",
+ "models_commit": "0d15ab92",
+ "licence": "CC0-1.0",
+ "models": [
+  {
+   "models_id": "creature_cow",
+   "file": "creatures/cow.glb",
+   "name": "cow",
+   "category": "livestock",
+   "description": "A dairy cow with a patched coat, standing; separate head, legs and tail for grazing and walking.",
+   "synonyms": [
+    "cattle",
+    "dairy cow",
+    "bovine",
+    "farm animal"
+   ],
+   "collision": "box",
+   "sha256": "be93a72a202ddb49c3c0591d9c49908de3c3343ca751e290ad51dab2744a55dd",
+   "bytes": 221332,
+   "place_scale": 1.0,
+   "triangles": 5300,
+   "models_json_triangles": 5300,
+   "size": [
+    0.86,
+    1.41,
+    2.4
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "builder": "MpCreatures",
+   "builder_commit": "c6100e8a",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 creatures/cow.glb (the iamar browser source (not public) c6100e8a)"
+  },
+  {
+   "models_id": "creature_deer",
+   "file": "creatures/deer.glb",
+   "name": "deer",
+   "category": "wildlife",
+   "description": "A slender red deer with antlers, standing alert; for meadows and forest edges.",
+   "synonyms": [
+    "stag",
+    "doe",
+    "hind",
+    "wild animal",
+    "forest animal"
+   ],
+   "collision": "none",
+   "sha256": "1a82f06c883ce13b4d85246d73f2d868f5be4f70ed095b98d7010e4fa37d0cc3",
+   "bytes": 173628,
+   "place_scale": 1.0,
+   "triangles": 3776,
+   "models_json_triangles": 3776,
+   "size": [
+    0.47,
+    1.7,
+    2.31
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "builder": "MpCreatures",
+   "builder_commit": "c6100e8a",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 creatures/deer.glb (the iamar browser source (not public) c6100e8a)"
+  },
+  {
+   "models_id": "creature_drake",
+   "file": "creatures/duck.glb",
+   "name": "duck",
+   "category": "bird",
+   "description": "A mallard drake with a green head, floating pose; for ponds and moats.",
+   "synonyms": [
+    "mallard",
+    "drake",
+    "waterfowl",
+    "pond bird"
+   ],
+   "collision": "none",
+   "sha256": "6ef61e0bdf2fb3f2716e39cddcf14e04cc0cc7efbe8dfbbe92e39b56dff1b881",
+   "bytes": 135988,
+   "place_scale": 1.0,
+   "triangles": 2392,
+   "models_json_triangles": 2392,
+   "size": [
+    0.27,
+    0.35,
+    0.63
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "builder": "MpCreatures",
+   "builder_commit": "c6100e8a",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 creatures/drake.glb (the iamar browser source (not public) c6100e8a)"
+  },
+  {
+   "models_id": "creature_duckling",
+   "file": "creatures/duckling.glb",
+   "name": "duckling",
+   "category": "bird",
+   "description": "A small yellow duckling that follows its mother across a pond.",
+   "synonyms": [
+    "baby duck",
+    "chick",
+    "waterfowl",
+    "pond bird",
+    "small animal"
+   ],
+   "collision": "none",
+   "sha256": "f309c4ea5cf3e072bb05a7547e8aca714187b16441bc15f2e4be85287696f295",
+   "bytes": 39136,
+   "place_scale": 1.0,
+   "triangles": 586,
+   "models_json_triangles": 586,
+   "size": [
+    0.1,
+    0.14,
+    0.22
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "builder": "MpCreatures",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 creatures/duckling.glb (the iamar browser source (not public) 75f3268)"
+  },
+  {
+   "models_id": "creature_fish",
+   "file": "creatures/fish.glb",
+   "name": "fish",
+   "category": "fish",
+   "description": "A small pond fish (carp-like) with body, tail and fins, for ponds, fountains and moats.",
+   "synonyms": [
+    "carp",
+    "koi",
+    "pond fish",
+    "minnow"
+   ],
+   "collision": "none",
+   "sha256": "b6e4b66791d3d55623219e66ca9a6ffa3a593c997c46be9b30dee51b6138d659",
+   "bytes": 48548,
+   "place_scale": 1.0,
+   "triangles": 760,
+   "models_json_triangles": 760,
+   "size": [
+    0.08,
+    0.21,
+    0.45
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "builder": "MpCreatures",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 creatures/fish.glb (the iamar browser source (not public) 75f3268)"
+  },
+  {
+   "models_id": "creature_frog",
+   "file": "creatures/frog.glb",
+   "name": "frog",
+   "category": "animal-small",
+   "description": "A small green frog crouched on a lily pad or pond edge.",
+   "synonyms": [
+    "toad",
+    "amphibian",
+    "pond animal",
+    "small animal"
+   ],
+   "collision": "none",
+   "sha256": "94ce18be7a4d9489f9361e6a55bf986312350ca199219bfd393b7d5277546283",
+   "bytes": 36288,
+   "place_scale": 1.0,
+   "triangles": 484,
+   "models_json_triangles": 484,
+   "size": [
+    0.13,
+    0.1,
+    0.23
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "builder": "MpCreatures",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 creatures/frog.glb (the iamar browser source (not public) 75f3268)"
+  },
+  {
+   "models_id": "guardian_dragon",
+   "file": "creatures/guardian_dragon.glb",
+   "name": "guardian dragon",
+   "category": "mythical",
+   "description": "The great red guardian dragon of the south gate: skinned, 33 bones, painted scales and glowing wing membranes; a hero creature.",
+   "synonyms": [
+    "dragon",
+    "red dragon",
+    "wyrm",
+    "boss",
+    "hero creature"
+   ],
+   "collision": "box",
+   "sha256": "ae322ae3b4c9dd48536663fa3f17558e6cd18ab322fb83fd9abd4fccb060540c",
+   "bytes": 2068836,
+   "place_scale": 1.35,
+   "triangles": 9820,
+   "models_json_triangles": 9820,
+   "size": [
+    39.99,
+    23.67,
+    37.5
+   ],
+   "skinned": true,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "builder": "DragonKit v23",
+   "builder_commit": "c6100e8a",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 creatures/guardian_dragon_v23.glb (the iamar browser source (not public) c6100e8a)"
+  },
+  {
+   "models_id": "creature_hen",
+   "file": "creatures/hen.glb",
+   "name": "hen",
+   "category": "bird",
+   "description": "A plump brown laying hen, standing; lighter than the rooster, for farmyards and markets.",
+   "synonyms": [
+    "chicken",
+    "poultry",
+    "fowl",
+    "farm animal",
+    "small animal"
+   ],
+   "collision": "none",
+   "sha256": "7cfc5fd08c14cf3aab939ed32bdfc1dbc011379c75227aaad6b38c1952c812f4",
+   "bytes": 87164,
+   "place_scale": 1.0,
+   "triangles": 1330,
+   "models_json_triangles": 1330,
+   "size": [
+    0.27,
+    0.36,
+    0.63
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "builder": "MpCreatures",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 creatures/hen.glb (the iamar browser source (not public) 75f3268)"
+  },
+  {
+   "models_id": "creature_bunny",
+   "file": "creatures/rabbit.glb",
+   "name": "rabbit",
+   "category": "animal-small",
+   "description": "A small brown rabbit in its standing rest pose, body, head, ears and legs as separate parts so a script can hop it.",
+   "synonyms": [
+    "bunny",
+    "hare",
+    "critter",
+    "small animal",
+    "wildlife"
+   ],
+   "collision": "none",
+   "sha256": "93b578391e9ea2de9a0cebc212b7231b585299744edae8e5890b82fcffe4d3f6",
+   "bytes": 130160,
+   "place_scale": 1.0,
+   "triangles": 2422,
+   "models_json_triangles": 2422,
+   "size": [
+    0.26,
+    0.39,
+    0.46
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "builder": "MpCreatures",
+   "builder_commit": "c6100e8a",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 creatures/bunny.glb (the iamar browser source (not public) c6100e8a)"
+  },
+  {
+   "models_id": "creature_chicken",
+   "file": "creatures/rooster.glb",
+   "name": "rooster",
+   "category": "bird",
+   "description": "A farmyard rooster with a red comb, standing; separate head and legs for pecking and walking.",
+   "synonyms": [
+    "chicken",
+    "cockerel",
+    "poultry",
+    "fowl",
+    "farm animal",
+    "small animal"
+   ],
+   "collision": "none",
+   "sha256": "e90efebb184e97332cc5dd0432c1edf91aaed09afd7f7c524b4a4e25e1514353",
+   "bytes": 193056,
+   "place_scale": 1.0,
+   "triangles": 3651,
+   "models_json_triangles": 3651,
+   "size": [
+    0.3,
+    0.5,
+    0.45
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "builder": "MpCreatures",
+   "builder_commit": "c6100e8a",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 creatures/chicken.glb (the iamar browser source (not public) c6100e8a)"
+  },
+  {
+   "models_id": "creature_turtle",
+   "file": "creatures/turtle.glb",
+   "name": "turtle",
+   "category": "animal-small",
+   "description": "A pond turtle with a domed shell, basking pose.",
+   "synonyms": [
+    "tortoise",
+    "terrapin",
+    "pond animal",
+    "small animal"
+   ],
+   "collision": "none",
+   "sha256": "7d1353b05547b230bd1cf878a95955aa92b4b263eab83ae9e72e4d9e2176dc89",
+   "bytes": 85884,
+   "place_scale": 1.0,
+   "triangles": 1446,
+   "models_json_triangles": 1446,
+   "size": [
+    0.34,
+    0.16,
+    0.57
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "builder": "MpCreatures",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 creatures/turtle.glb (the iamar browser source (not public) 75f3268)"
+  },
+  {
+   "models_id": "creature_wolf",
+   "file": "creatures/wolf.glb",
+   "name": "wolf",
+   "category": "wildlife",
+   "description": "A grey wolf with a thick ruff and bushy tail, standing; the city's wild-wood predator.",
+   "synonyms": [
+    "grey wolf",
+    "wild dog",
+    "predator",
+    "forest animal"
+   ],
+   "collision": "none",
+   "sha256": "ca68aa1cf8c93efaf31cef4397f37664472be327444ea80163ddf48653563d03",
+   "bytes": 307004,
+   "place_scale": 1.0,
+   "triangles": 6769,
+   "models_json_triangles": 6769,
+   "size": [
+    0.41,
+    1.17,
+    1.8
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "builder": "MpCreatures",
+   "builder_commit": "c6100e8a",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 creatures/wolf.glb (the iamar browser source (not public) c6100e8a)"
+  },
+  {
+   "models_id": "MOUNT_stable_dragon",
+   "file": "creatures/young_dragon.glb",
+   "name": "young dragon",
+   "category": "mythical",
+   "description": "A young stable dragon, skinned (one mesh on a bone skeleton, wings folded), painted scales; the city's rideable mount.",
+   "synonyms": [
+    "dragon",
+    "drake",
+    "wyrm",
+    "mount",
+    "stable dragon",
+    "flying mount"
+   ],
+   "collision": "box",
+   "sha256": "ba23fe101d3150cacce4b3f37f53cd133795676619585213835a2e9d87ca16a6",
+   "bytes": 509984,
+   "place_scale": 0.16,
+   "triangles": 5562,
+   "models_json_triangles": 5562,
+   "size": [
+    38.02,
+    23.24,
+    36.14
+   ],
+   "skinned": true,
+   "animations": [],
+   "images": 1,
+   "physics_body": false,
+   "builder": "MpDragonKit",
+   "builder_commit": "05cfddf20",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 mounts/stable_dragon.glb (the iamar browser source (not public) 05cfddf20)"
+  },
+  {
+   "models_id": "prop_anvil",
+   "file": "props/anvil.glb",
+   "name": "anvil",
+   "category": "tool",
+   "description": "A blacksmith's iron anvil on a wooden block.",
+   "synonyms": [
+    "smithy",
+    "forge",
+    "blacksmith"
+   ],
+   "collision": "box",
+   "sha256": "915e5313bc61ca925dc5b4e1dc91aae40feaab45c67822e5d6245f0a84f34fb3",
+   "bytes": 19432,
+   "place_scale": 1.0,
+   "triangles": 60,
+   "models_json_triangles": 60,
+   "size": [
+    0.61,
+    1.54,
+    0.56
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/anvil.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "21ac8dc08a6250c3e5cd854c7dbee83b817708a027826dc9ab3c9fc1a3a5d050",
+    "sha256": "915e5313bc61ca925dc5b4e1dc91aae40feaab45c67822e5d6245f0a84f34fb3",
+    "atlas": [
+     256.0,
+     512.0
+    ],
+    "px_per_m": 128.0,
+    "charts": 40.0,
+    "patterns": {
+     "2": 32.0,
+     "8": 28.0
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_backstop",
+   "file": "props/archery_backstop.glb",
+   "name": "archery backstop",
+   "category": "fence",
+   "description": "A wooden board wall that stops stray arrows behind targets.",
+   "synonyms": [
+    "backboard",
+    "range wall",
+    "training"
+   ],
+   "collision": "box",
+   "sha256": "11c0cf7ee6348286b02b23cfa11a58ebeca9ff4f050432a915c3d6130ac34ea9",
+   "bytes": 121080,
+   "place_scale": 1.0,
+   "triangles": 92,
+   "models_json_triangles": 92,
+   "size": [
+    9.0,
+    3.0,
+    0.75
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/backstop.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "4c2e92a916122552e5d38655ca29802ea0671472061e184c10bc8062268df33e",
+    "sha256": "11c0cf7ee6348286b02b23cfa11a58ebeca9ff4f050432a915c3d6130ac34ea9",
+    "atlas": [
+     1024,
+     1024
+    ],
+    "px_per_m": 81.9,
+    "charts": 46,
+    "patterns": {
+     "2": 12,
+     "6": 80
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_archery_target",
+   "file": "props/archery_target.glb",
+   "name": "archery target",
+   "category": "prop",
+   "description": "A round straw archery butt with painted rings on a wooden stand.",
+   "synonyms": [
+    "target",
+    "butt",
+    "bow range",
+    "training"
+   ],
+   "collision": "box",
+   "sha256": "05dc61e897094d1e8f43d50e2ad635a30705ff0ef611fac63fcf64f5d56b3d8f",
+   "bytes": 51464,
+   "place_scale": 1.0,
+   "triangles": 108,
+   "models_json_triangles": 108,
+   "size": [
+    1.2,
+    1.61,
+    0.44
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/archery_target.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "ff2325045524b69452218c6201435c03d31ebe09a315ae15ff084a5d7e86ee7a",
+    "sha256": "05dc61e897094d1e8f43d50e2ad635a30705ff0ef611fac63fcf64f5d56b3d8f",
+    "atlas": [
+     256,
+     1024
+    ],
+    "px_per_m": 128.0,
+    "charts": 84,
+    "patterns": {
+     "2": 24,
+     "6": 36,
+     "9": 36,
+     "8": 12
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_basket",
+   "file": "props/basket.glb",
+   "name": "basket",
+   "category": "prop",
+   "description": "A woven wicker basket of goods for market stalls and doorsteps.",
+   "synonyms": [
+    "wicker basket",
+    "hamper",
+    "market goods"
+   ],
+   "collision": "box",
+   "sha256": "d2cf89a0c39bcfe10303dec493bfe76a8ff81084f928a60085478e13272972da",
+   "bytes": 42496,
+   "place_scale": 1.0,
+   "triangles": 176,
+   "models_json_triangles": 176,
+   "size": [
+    0.6,
+    0.9,
+    0.57
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/basket.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "b5d665020cf904f0271b2eefcdfb2ec288c43d1b36ab1d01a3a4a118ac81cfc9",
+    "sha256": "d2cf89a0c39bcfe10303dec493bfe76a8ff81084f928a60085478e13272972da",
+    "atlas": [
+     256,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 132,
+    "patterns": {
+     "6": 70,
+     "0": 106
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_beehive",
+   "file": "props/beehive.glb",
+   "name": "beehive",
+   "category": "prop",
+   "description": "A domed straw skep beehive on a stand, for gardens and herbalists.",
+   "synonyms": [
+    "skep",
+    "bee skep",
+    "hive",
+    "garden"
+   ],
+   "collision": "box",
+   "sha256": "baa3b94405bf53a1307b4c6e19bd06903cd4195a329af79fcd1401fc6b968fe9",
+   "bytes": 46764,
+   "place_scale": 1.0,
+   "triangles": 152,
+   "models_json_triangles": 152,
+   "size": [
+    0.6,
+    1.7,
+    0.57
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/beehive.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "d6687247d1dc6f11b215e7500c32d27100987796f48c8d90e72a0e25330be023",
+    "sha256": "baa3b94405bf53a1307b4c6e19bd06903cd4195a329af79fcd1401fc6b968fe9",
+    "atlas": [
+     512,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 101,
+    "patterns": {
+     "2": 12,
+     "6": 130,
+     "0": 10
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_bench",
+   "file": "props/bench.glb",
+   "name": "bench",
+   "category": "furniture",
+   "description": "A plain wooden bench, the cheapest seat in the city.",
+   "synonyms": [
+    "seat",
+    "plank bench",
+    "pew"
+   ],
+   "collision": "box",
+   "sha256": "6367f9f1ac54e8c0621f66375bf8a5bdda283ea4cd169c5f3a83973b695db31d",
+   "bytes": 31656,
+   "place_scale": 1.0,
+   "triangles": 32,
+   "models_json_triangles": 32,
+   "size": [
+    2.1,
+    1.05,
+    0.48
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/bench.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "31c7428e677c4be12f7eb3d25695a71c6be28ab95b20ca1d8fa92abf49333428",
+    "sha256": "6367f9f1ac54e8c0621f66375bf8a5bdda283ea4cd169c5f3a83973b695db31d",
+    "atlas": [
+     512,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 16,
+    "patterns": {
+     "1": 32
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_brass_star",
+   "file": "props/brass_star.glb",
+   "name": "brass star",
+   "category": "building-part",
+   "description": "A small brass star ornament for doors and facades.",
+   "synonyms": [
+    "ornament",
+    "star",
+    "decoration"
+   ],
+   "collision": "none",
+   "sha256": "6537f6071f3e82c0b1093242af7bc81e6244a3b7d2707fa1dddb92096b45ce4d",
+   "bytes": 12180,
+   "place_scale": 1.0,
+   "triangles": 32,
+   "models_json_triangles": 32,
+   "size": [
+    0.44,
+    0.61,
+    0.44
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/brass_star.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "e5e02c10155a38df679f160fb1775450522684e2f19312e8b73b0f597a29687d",
+    "sha256": "6537f6071f3e82c0b1093242af7bc81e6244a3b7d2707fa1dddb92096b45ce4d",
+    "atlas": [
+     128,
+     256
+    ],
+    "px_per_m": 128.0,
+    "charts": 24,
+    "patterns": {
+     "8": 32
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_chimney",
+   "file": "props/chimney.glb",
+   "name": "chimney",
+   "category": "building-part",
+   "description": "A square stone chimney stack with a cap, set on roofs.",
+   "synonyms": [
+    "chimney stack",
+    "flue",
+    "roof"
+   ],
+   "collision": "box",
+   "sha256": "c3ce51ef235eef81eeb0c0c894b96a95ad986606591db61374ec0b0148ec6ef8",
+   "bytes": 32384,
+   "place_scale": 1.0,
+   "triangles": 24,
+   "models_json_triangles": 24,
+   "size": [
+    0.82,
+    2.72,
+    0.82
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/chimney.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "ae1ee7cb68343a1da249189fc3710aeafa19dc8a4edd46821324d74087f8aa8b",
+    "sha256": "c3ce51ef235eef81eeb0c0c894b96a95ad986606591db61374ec0b0148ec6ef8",
+    "atlas": [
+     512,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 12,
+    "patterns": {
+     "1": 24
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_coal_sacks",
+   "file": "props/coal_sacks.glb",
+   "name": "coal sacks",
+   "category": "prop",
+   "description": "A pile of filled coal sacks beside a forge.",
+   "synonyms": [
+    "sacks",
+    "bags",
+    "smithy",
+    "fuel"
+   ],
+   "collision": "box",
+   "sha256": "c8e8aa452748cb1c2bba584c46c47bce87dcefaf2149bf03020bf69829543d47",
+   "bytes": 36296,
+   "place_scale": 1.0,
+   "triangles": 150,
+   "models_json_triangles": 150,
+   "size": [
+    1.07,
+    1.11,
+    1.02
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/coal_sacks.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "5d901cb3fcb04e6212697706474190df5094b2b2d73c0dbedc94a8c220ed60a8",
+    "sha256": "c8e8aa452748cb1c2bba584c46c47bce87dcefaf2149bf03020bf69829543d47",
+    "atlas": [
+     512,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 114,
+    "patterns": {
+     "9": 144,
+     "0": 6
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_crystal_finial",
+   "file": "props/crystal_finial.glb",
+   "name": "crystal finial",
+   "category": "building-part",
+   "description": "A glowing crystal spike that tops the mages' towers and posts.",
+   "synonyms": [
+    "finial",
+    "crystal",
+    "magic",
+    "mages"
+   ],
+   "collision": "none",
+   "sha256": "a141c7ae4f84a21d28940f8b59203bd58df1f48e8bbdcae3dd9d182e0d74065a",
+   "bytes": 37940,
+   "place_scale": 1.0,
+   "triangles": 54,
+   "models_json_triangles": 54,
+   "size": [
+    0.56,
+    2.6,
+    0.42
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 2,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/crystal_finial.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "764f2069ba71f6f5a16679616a985e8649ac57443f105d4d1f6c8ca8f61f06b2",
+    "sha256": "a141c7ae4f84a21d28940f8b59203bd58df1f48e8bbdcae3dd9d182e0d74065a",
+    "atlas": [
+     512,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 48,
+    "patterns": {
+     "8": 18,
+     "0": 36
+    },
+    "glow": true,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_fence",
+   "file": "props/fence.glb",
+   "name": "fence",
+   "category": "fence",
+   "description": "A short wooden post-and-rail fence section.",
+   "synonyms": [
+    "rail fence",
+    "paddock fence",
+    "fencing"
+   ],
+   "collision": "box",
+   "sha256": "4a28b180aa98beb812212a80518ad31c896e4c7e50cc353b7f31f2d7cc2a85f8",
+   "bytes": 20812,
+   "place_scale": 1.0,
+   "triangles": 36,
+   "models_json_triangles": 36,
+   "size": [
+    2.4,
+    1.8,
+    0.12
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/fence.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "bb7e81bfb2bb9be7d9c7435080ac18382c95c48d017330d0b36326f25340300a",
+    "sha256": "4a28b180aa98beb812212a80518ad31c896e4c7e50cc353b7f31f2d7cc2a85f8",
+    "atlas": [
+     512,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 18,
+    "patterns": {
+     "2": 36
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_floating_lantern",
+   "file": "props/floating_lantern.glb",
+   "name": "floating lantern",
+   "category": "lamp",
+   "description": "A small paper lantern that hovers in the mages' quarter.",
+   "synonyms": [
+    "lantern",
+    "magic light",
+    "sky lantern",
+    "mages"
+   ],
+   "collision": "none",
+   "sha256": "c71967cd57b12f05a24b832b59eabb78b17854333b050bda1c3664b3885c1501",
+   "bytes": 20380,
+   "place_scale": 1.0,
+   "triangles": 40,
+   "models_json_triangles": 40,
+   "size": [
+    0.5,
+    0.86,
+    0.5
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 2,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/floating_lantern.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "773b28aafa0ddd6b98a1dfda9e8d2842cffd72ddd57ae1b45df7c192ee721988",
+    "sha256": "c71967cd57b12f05a24b832b59eabb78b17854333b050bda1c3664b3885c1501",
+    "atlas": [
+     256,
+     256
+    ],
+    "px_per_m": 128.0,
+    "charts": 28,
+    "patterns": {
+     "0": 12,
+     "8": 28
+    },
+    "glow": true,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_forge_mouth",
+   "file": "props/forge_mouth.glb",
+   "name": "forge mouth",
+   "category": "building-part",
+   "description": "The arched glowing mouth of a smithy forge, set into a wall.",
+   "synonyms": [
+    "forge",
+    "furnace",
+    "smithy",
+    "hearth"
+   ],
+   "collision": "none",
+   "sha256": "8d8e4d807539427d37dc5ce416b79facfc2b791eaadcbb3403528ff7747f9f81",
+   "bytes": 55664,
+   "place_scale": 1.0,
+   "triangles": 34,
+   "models_json_triangles": 34,
+   "size": [
+    1.7,
+    2.5,
+    0.4
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 2,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/forge_mouth.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "2acddc019c5020eff119a021be25949e788d62aef812b632db9a23d0aaf9334c",
+    "sha256": "8d8e4d807539427d37dc5ce416b79facfc2b791eaadcbb3403528ff7747f9f81",
+    "atlas": [
+     512,
+     1024
+    ],
+    "px_per_m": 128.0,
+    "charts": 17,
+    "patterns": {
+     "1": 24,
+     "0": 10
+    },
+    "glow": true,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_fountain",
+   "file": "props/fountain.glb",
+   "name": "fountain",
+   "category": "landmark",
+   "description": "The market fountain: a stone basin with an upper bowl, a square's centrepiece.",
+   "synonyms": [
+    "water fountain",
+    "basin",
+    "market fountain",
+    "square"
+   ],
+   "collision": "mesh",
+   "sha256": "ab95d7655106c2f56bd1bde670f5242df50fa346e38c3173ae252c613473b816",
+   "bytes": 547480,
+   "place_scale": 1.0,
+   "triangles": 2764,
+   "models_json_triangles": 2220,
+   "size": [
+    5.3,
+    3.65,
+    5.3
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "a9c3d8e",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/fountain.glb (the iamar browser source (not public) a9c3d8e)",
+   "painted_bake": {
+    "source_sha256": "3a547563eacb2b16776c966fa71790fb42284e0c402a2e63cf9fe897900b54a6",
+    "sha256": "ab95d7655106c2f56bd1bde670f5242df50fa346e38c3173ae252c613473b816",
+    "atlas": [
+     1024,
+     1024
+    ],
+    "px_per_m": 52.4,
+    "charts": 1220,
+    "patterns": {
+     "4": 2136,
+     "1": 84
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_grindstone",
+   "file": "props/grindstone.glb",
+   "name": "grindstone",
+   "category": "tool",
+   "description": "A round sharpening stone on a wooden frame with a crank.",
+   "synonyms": [
+    "whetstone",
+    "sharpening wheel",
+    "smithy"
+   ],
+   "collision": "box",
+   "sha256": "898c96fe4ed288dc7774f8991d4b5a92966db08fe406dcb61c24dc5117b01530",
+   "bytes": 34932,
+   "place_scale": 1.0,
+   "triangles": 84,
+   "models_json_triangles": 84,
+   "size": [
+    0.7,
+    1.7,
+    0.7
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/grindstone.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "4a966ef95fb1c2a1187e6fe0271993a86ac86229ed671013b60ab4ab5dc3b864",
+    "sha256": "898c96fe4ed288dc7774f8991d4b5a92966db08fe406dcb61c24dc5117b01530",
+    "atlas": [
+     512,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 54,
+    "patterns": {
+     "2": 24,
+     "1": 48,
+     "8": 12
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_herb_bundles",
+   "file": "props/herb_bundles.glb",
+   "name": "herb bundles",
+   "category": "prop",
+   "description": "Bundles of drying herbs hung from a rail, for herbalists.",
+   "synonyms": [
+    "dried herbs",
+    "herbs",
+    "herbalist",
+    "apothecary"
+   ],
+   "collision": "none",
+   "sha256": "2ade9e96ad433175d6825b666e20b4e68b072168b5ed850fe0d50b509b30908b",
+   "bytes": 20884,
+   "place_scale": 1.0,
+   "triangles": 98,
+   "models_json_triangles": 98,
+   "size": [
+    0.52,
+    0.26,
+    0.22
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/herb_bundles.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "2f1b0389dba2120db7bdedbd3dc6648134588d4ede17467b7fe15ccd63abcd6b",
+    "sha256": "2ade9e96ad433175d6825b666e20b4e68b072168b5ed850fe0d50b509b30908b",
+    "atlas": [
+     128,
+     128
+    ],
+    "px_per_m": 128.0,
+    "charts": 64,
+    "patterns": {
+     "2": 12,
+     "8": 20,
+     "0": 66
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_lamp_herbal",
+   "file": "props/herbal_lamp.glb",
+   "name": "herbal lamp",
+   "category": "lamp",
+   "description": "A street lamp in the herbalists' style with a green-tinted lantern.",
+   "synonyms": [
+    "lamppost",
+    "street light",
+    "herbalists"
+   ],
+   "collision": "box",
+   "sha256": "d7cc5ee162ab879ecdae0290057e6ee2b2865499f794ae203c81556a789f6e3e",
+   "bytes": 31296,
+   "place_scale": 1.0,
+   "triangles": 74,
+   "models_json_triangles": 74,
+   "size": [
+    0.48,
+    4.48,
+    0.48
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 2,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/lamp_herbal.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "7c44b1016040c53eeac558605cb7cb23996c0cb18db5b623c8a22f5e8d0c1e75",
+    "sha256": "d7cc5ee162ab879ecdae0290057e6ee2b2865499f794ae203c81556a789f6e3e",
+    "atlas": [
+     128,
+     1024
+    ],
+    "px_per_m": 128.0,
+    "charts": 50,
+    "patterns": {
+     "2": 62,
+     "0": 12
+    },
+    "glow": true,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_hitching_rail",
+   "file": "props/hitching_rail.glb",
+   "name": "hitching rail",
+   "category": "fence",
+   "description": "A wooden rail on posts where riders tie their horses.",
+   "synonyms": [
+    "hitching post",
+    "tie rail",
+    "horse rail",
+    "stable"
+   ],
+   "collision": "box",
+   "sha256": "ce4dec542c0c3798d14a54421bab7415c555d33d43d5b2369aedf539e9b288aa",
+   "bytes": 65884,
+   "place_scale": 1.0,
+   "triangles": 72,
+   "models_json_triangles": 72,
+   "size": [
+    6.2,
+    1.7,
+    0.92
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/hitching_rail.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "9a7f7971ebc51732cf21ef39e49661e64a86529bb6c16680461986e843005af9",
+    "sha256": "ce4dec542c0c3798d14a54421bab7415c555d33d43d5b2369aedf539e9b288aa",
+    "atlas": [
+     1024,
+     1024
+    ],
+    "px_per_m": 128.0,
+    "charts": 36,
+    "patterns": {
+     "2": 60,
+     "0": 12
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_iron_stack",
+   "file": "props/iron_bar_stack.glb",
+   "name": "iron bar stack",
+   "category": "prop",
+   "description": "A stack of iron bars and ingots outside a smithy.",
+   "synonyms": [
+    "ingots",
+    "metal bars",
+    "smithy",
+    "materials"
+   ],
+   "collision": "box",
+   "sha256": "acea2aa929493cea8b45032d4a1eb78b7d9d806cce270a720d7b35e0b622f17e",
+   "bytes": 69536,
+   "place_scale": 1.0,
+   "triangles": 148,
+   "models_json_triangles": 148,
+   "size": [
+    1.68,
+    1.16,
+    0.63
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 2,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/iron_stack.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "2ff9523b5c8347387ea77081e0a5a6d3c31f5bb8339849775a297a0b776f8d7f",
+    "sha256": "acea2aa929493cea8b45032d4a1eb78b7d9d806cce270a720d7b35e0b622f17e",
+    "atlas": [
+     512,
+     1024
+    ],
+    "px_per_m": 128.0,
+    "charts": 89,
+    "patterns": {
+     "8": 98,
+     "2": 40,
+     "0": 10
+    },
+    "glow": true,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_judges_box",
+   "file": "props/judges_box.glb",
+   "name": "judges' box",
+   "category": "furniture",
+   "description": "A raised wooden judges' box beside a tourney ground.",
+   "synonyms": [
+    "judges stand",
+    "booth",
+    "tourney",
+    "training ground"
+   ],
+   "collision": "box",
+   "sha256": "0b9d417939082dc17454cc3bf113ef338dca3d6eade782197847b9e0f29c5a20",
+   "bytes": 156048,
+   "place_scale": 1.0,
+   "triangles": 182,
+   "models_json_triangles": 182,
+   "size": [
+    13.8,
+    5.3,
+    3.3
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/judges_box.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "708890f515cf66d00ea27e8d4e480cba9b0d33a317406eac0860ce948c4e59dc",
+    "sha256": "0b9d417939082dc17454cc3bf113ef338dca3d6eade782197847b9e0f29c5a20",
+    "atlas": [
+     1024,
+     1024
+    ],
+    "px_per_m": 41.9,
+    "charts": 105,
+    "patterns": {
+     "2": 94,
+     "10": 24,
+     "8": 60,
+     "9": 4
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_banner_mages",
+   "file": "props/mages_banner.glb",
+   "name": "mages banner",
+   "category": "signage",
+   "description": "A hanging purple guild banner of the mages' quarter.",
+   "synonyms": [
+    "flag",
+    "guild banner",
+    "pennant",
+    "mages"
+   ],
+   "collision": "none",
+   "sha256": "642c957b24d06aea464a8421711eab4c359e8ec1b6b923f773786fe9b7644693",
+   "bytes": 22772,
+   "place_scale": 1.0,
+   "triangles": 66,
+   "models_json_triangles": 66,
+   "size": [
+    0.75,
+    1.58,
+    0.5
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/banner_mages.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "7933f5b0c4638cca32a8c3c1122a5c1b6cce4232097691aab12ceb4e4703f8da",
+    "sha256": "642c957b24d06aea464a8421711eab4c359e8ec1b6b923f773786fe9b7644693",
+    "atlas": [
+     256,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 43,
+    "patterns": {
+     "8": 42,
+     "2": 12,
+     "9": 12
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_manikin",
+   "file": "props/manikin.glb",
+   "name": "manikin",
+   "category": "prop",
+   "description": "A tailor's or armourer's wooden manikin on a stand.",
+   "synonyms": [
+    "mannequin",
+    "dummy",
+    "armour stand",
+    "tailor"
+   ],
+   "collision": "box",
+   "sha256": "5ece5431270c90d1c0504eb18b2dac772625951d73872dce0d559bae577b57cf",
+   "bytes": 40288,
+   "place_scale": 1.0,
+   "triangles": 130,
+   "models_json_triangles": 130,
+   "size": [
+    0.86,
+    2.44,
+    0.56
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/manikin.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "cd4bcccef2c263eadb73de31bd6b44a9ca56e0af18d9619e1823474d82961694",
+    "sha256": "5ece5431270c90d1c0504eb18b2dac772625951d73872dce0d559bae577b57cf",
+    "atlas": [
+     512,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 84,
+    "patterns": {
+     "2": 50,
+     "8": 80
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_stall",
+   "file": "props/market_stall.glb",
+   "name": "market stall",
+   "category": "furniture",
+   "description": "A wooden market stall with a striped awning and counter.",
+   "synonyms": [
+    "stand",
+    "booth",
+    "market",
+    "shop stall",
+    "vendor"
+   ],
+   "collision": "box",
+   "sha256": "b75c13f998e88ec54411eac88477fe25824bde84eb12e01fd22438e4fdbf7cac",
+   "bytes": 143976,
+   "place_scale": 1.0,
+   "triangles": 288,
+   "models_json_triangles": 288,
+   "size": [
+    3.6,
+    3.15,
+    2.61
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/stall.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "851553899a2a1307b431480070f17a3b000e1f7c780c546f693d4a0c3a771093",
+    "sha256": "b75c13f998e88ec54411eac88477fe25824bde84eb12e01fd22438e4fdbf7cac",
+    "atlas": [
+     1024,
+     1024
+    ],
+    "px_per_m": 102.4,
+    "charts": 168,
+    "patterns": {
+     "2": 96,
+     "0": 168,
+     "10": 24
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_mascherone",
+   "file": "props/mascherone.glb",
+   "name": "mascherone",
+   "category": "building-part",
+   "description": "A carved stone face mask (fountain spout) for walls and fountains.",
+   "synonyms": [
+    "stone mask",
+    "spout",
+    "carved face",
+    "gargoyle"
+   ],
+   "collision": "none",
+   "sha256": "764169b4d7999999ad4a6dbb34b10e52fdd2523f677fda6ccc43b7b6ded5c827",
+   "bytes": 429532,
+   "place_scale": 1.0,
+   "triangles": 2075,
+   "models_json_triangles": 2013,
+   "size": [
+    2.9,
+    4.04,
+    2.2
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "a9c3d8e",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/mascherone.glb (the iamar browser source (not public) a9c3d8e)",
+   "painted_bake": {
+    "source_sha256": "e1ac6b8cd52a828bc91578ea11dafc4150ee63050ff7860832807e6d0486b609",
+    "sha256": "764169b4d7999999ad4a6dbb34b10e52fdd2523f677fda6ccc43b7b6ded5c827",
+    "atlas": [
+     1024,
+     1024
+    ],
+    "px_per_m": 81.9,
+    "charts": 1211,
+    "patterns": {
+     "4": 1723,
+     "1": 218,
+     "0": 60,
+     "8": 12
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_notice_board",
+   "file": "props/notice_board.glb",
+   "name": "notice board",
+   "category": "signage",
+   "description": "A roofed wooden notice board with pinned papers.",
+   "synonyms": [
+    "bulletin board",
+    "quest board",
+    "posting board"
+   ],
+   "collision": "box",
+   "sha256": "eaf1e74f0a2ea8edef169b7d5b3216cd912cf33062f594f40eb4910bab1f0c39",
+   "bytes": 70876,
+   "place_scale": 1.0,
+   "triangles": 166,
+   "models_json_triangles": 166,
+   "size": [
+    2.18,
+    3.21,
+    0.73
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/notice_board.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "36dbdc7dac8e9f6231684e6d7fb806d301bc8fa692226326ffe943deef6aabf6",
+    "sha256": "eaf1e74f0a2ea8edef169b7d5b3216cd912cf33062f594f40eb4910bab1f0c39",
+    "atlas": [
+     512,
+     1024
+    ],
+    "px_per_m": 128.0,
+    "charts": 85,
+    "patterns": {
+     "2": 52,
+     "3": 24,
+     "0": 30,
+     "9": 60
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_bench_park",
+   "file": "props/park_bench.glb",
+   "name": "park bench",
+   "category": "furniture",
+   "description": "A park bench with a backrest for squares and gardens.",
+   "synonyms": [
+    "seat",
+    "garden bench",
+    "backrest bench"
+   ],
+   "collision": "box",
+   "sha256": "1ab8f2942223537e4d55c6af7df5003010a97896597d610091a6db0558221d69",
+   "bytes": 35448,
+   "place_scale": 1.0,
+   "triangles": 64,
+   "models_json_triangles": 64,
+   "size": [
+    2.0,
+    1.57,
+    0.49
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/bench_park.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "02e0f95e99763d960ae892a350b001570ebdd19b86f9631f521c7951822691d0",
+    "sha256": "1ab8f2942223537e4d55c6af7df5003010a97896597d610091a6db0558221d69",
+    "atlas": [
+     512,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 32,
+    "patterns": {
+     "1": 20,
+     "2": 44
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_planter",
+   "file": "props/planter.glb",
+   "name": "planter",
+   "category": "flower",
+   "description": "A wooden planter box of flowers for doorsteps and squares.",
+   "synonyms": [
+    "flower box",
+    "window box",
+    "flowers",
+    "garden"
+   ],
+   "collision": "box",
+   "sha256": "a45d363e2b6bbe4eb54743717d54b75b2e2686cecfd557f6f0b0ec5bf1efc1c7",
+   "bytes": 28476,
+   "place_scale": 1.0,
+   "triangles": 120,
+   "models_json_triangles": 120,
+   "size": [
+    0.56,
+    1.28,
+    0.56
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/planter.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "4ecba946bc3f9ddea918e53a74c4ba2d745cb5e171858735fbb4ee1a3a6da81c",
+    "sha256": "a45d363e2b6bbe4eb54743717d54b75b2e2686cecfd557f6f0b0ec5bf1efc1c7",
+    "atlas": [
+     256,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 75,
+    "patterns": {
+     "4": 24,
+     "0": 96
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_quench_barrel",
+   "file": "props/quench_barrel.glb",
+   "name": "quench barrel",
+   "category": "prop",
+   "description": "A water barrel beside an anvil where smiths quench hot iron.",
+   "synonyms": [
+    "barrel",
+    "water barrel",
+    "smithy"
+   ],
+   "collision": "box",
+   "sha256": "30eb317754e06be96c60934e43c59098c74bdc8db6042fde8138427e947fcf72",
+   "bytes": 38260,
+   "place_scale": 1.0,
+   "triangles": 120,
+   "models_json_triangles": 120,
+   "size": [
+    0.78,
+    1.35,
+    0.75
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/quench_barrel.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "33c7929f551de5065c981ce766e31f0e8d2b2ff474137f48e58066f0d35f3780",
+    "sha256": "30eb317754e06be96c60934e43c59098c74bdc8db6042fde8138427e947fcf72",
+    "atlas": [
+     512.0,
+     512.0
+    ],
+    "px_per_m": 128.0,
+    "charts": 80.0,
+    "patterns": {
+     "2": 70.0,
+     "0": 10.0,
+     "8": 40.0
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_quintain",
+   "file": "props/quintain.glb",
+   "name": "quintain",
+   "category": "prop",
+   "description": "A jousting quintain: a pivoting arm with a shield on a post.",
+   "synonyms": [
+    "jousting target",
+    "tilting post",
+    "training",
+    "tourney"
+   ],
+   "collision": "box",
+   "sha256": "84f31fcf0e348f8b7f466d05818d0a92ec646226740fb8d0c2274f100b3db552",
+   "bytes": 35640,
+   "place_scale": 1.0,
+   "triangles": 104,
+   "models_json_triangles": 104,
+   "size": [
+    2.36,
+    2.8,
+    0.28
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/quintain.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "b67e21e554d626e7db885d5e2e4c5e75d1d870ea9cf777232496a6aab73033f7",
+    "sha256": "84f31fcf0e348f8b7f466d05818d0a92ec646226740fb8d0c2274f100b3db552",
+    "atlas": [
+     512,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 72,
+    "patterns": {
+     "2": 60,
+     "9": 32,
+     "0": 12
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_rune_stone",
+   "file": "props/rune_stone.glb",
+   "name": "rune stone",
+   "category": "rock",
+   "description": "A standing stone carved with glowing runes, for the mages' quarter.",
+   "synonyms": [
+    "standing stone",
+    "menhir",
+    "runestone",
+    "magic"
+   ],
+   "collision": "box",
+   "sha256": "c5aeb3efcfc9e33b70c85715500160ffb52ee401921cb09f066e3b3ef6943915",
+   "bytes": 58972,
+   "place_scale": 1.0,
+   "triangles": 96,
+   "models_json_triangles": 96,
+   "size": [
+    1.0,
+    0.62,
+    1.0
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 2,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/rune_stone.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "3db8612dd3df5e36a1111de40c3167d279e17f9245229ca8300929c7119a301b",
+    "sha256": "c5aeb3efcfc9e33b70c85715500160ffb52ee401921cb09f066e3b3ef6943915",
+    "atlas": [
+     512,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 72,
+    "patterns": {
+     "1": 48,
+     "0": 48
+    },
+    "glow": true,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_scroll_rack",
+   "file": "props/scroll_rack.glb",
+   "name": "scroll rack",
+   "category": "furniture",
+   "description": "A wooden rack of rolled scrolls for libraries and mages.",
+   "synonyms": [
+    "shelf",
+    "scroll shelf",
+    "library",
+    "bookcase"
+   ],
+   "collision": "box",
+   "sha256": "367890b0ddbbdba31d7df58362b9e6e634418368c47dccdff1d370fdb4cbfcc6",
+   "bytes": 80904,
+   "place_scale": 1.0,
+   "triangles": 342,
+   "models_json_triangles": 342,
+   "size": [
+    0.96,
+    2.25,
+    0.4
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/scroll_rack.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "b23c1ab5b0fbf984299544fdaadacdce62aa662ec84d68ab18d7f69e2efb978b",
+    "sha256": "367890b0ddbbdba31d7df58362b9e6e634418368c47dccdff1d370fdb4cbfcc6",
+    "atlas": [
+     512,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 222,
+    "patterns": {
+     "2": 60,
+     "0": 162,
+     "9": 108,
+     "8": 12
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_sparring_ring",
+   "file": "props/sparring_ring.glb",
+   "name": "sparring ring",
+   "category": "fence",
+   "description": "A low wooden ring of rails marking a sparring ground.",
+   "synonyms": [
+    "arena",
+    "fighting ring",
+    "training ground"
+   ],
+   "collision": "mesh",
+   "sha256": "713015db0baf763e18e9d33f31ee70f78bf67114e79f85aa40becddaa23ae2f4",
+   "bytes": 83680,
+   "place_scale": 1.0,
+   "triangles": 288,
+   "models_json_triangles": 288,
+   "size": [
+    8.12,
+    1.6,
+    8.12
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/sparring_ring.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "6fca83d2e14d8311a41bcc52baf8c4a823709cf9f59dba1341d85cd1dd702312",
+    "sha256": "713015db0baf763e18e9d33f31ee70f78bf67114e79f85aa40becddaa23ae2f4",
+    "atlas": [
+     512,
+     1024
+    ],
+    "px_per_m": 128.0,
+    "charts": 144,
+    "patterns": {
+     "2": 144,
+     "0": 144
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_lamp",
+   "file": "props/street_lamp.glb",
+   "name": "street lamp",
+   "category": "lamp",
+   "description": "An iron street lamp on a post, lit at night; the city's standard lamp.",
+   "synonyms": [
+    "lamppost",
+    "lantern post",
+    "street light"
+   ],
+   "collision": "box",
+   "sha256": "40e41fec8278accc53002e076cb55ab7f3ee8200b3c8465c5b25eecd3f811a90",
+   "bytes": 32888,
+   "place_scale": 1.0,
+   "triangles": 74,
+   "models_json_triangles": 74,
+   "size": [
+    0.48,
+    4.48,
+    0.48
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 2,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/lamp.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "aafbb3a581fbcd6e088490d49d5866deed71f96da7ce86a2a8c4dcc88990ec94",
+    "sha256": "40e41fec8278accc53002e076cb55ab7f3ee8200b3c8465c5b25eecd3f811a90",
+    "atlas": [
+     128,
+     1024
+    ],
+    "px_per_m": 128.0,
+    "charts": 50,
+    "patterns": {
+     "1": 24,
+     "8": 38,
+     "0": 12
+    },
+    "glow": true,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_street_plaque",
+   "file": "props/street_plaque.glb",
+   "name": "street plaque",
+   "category": "signage",
+   "description": "A small wall plaque with a street name.",
+   "synonyms": [
+    "street sign",
+    "name plate",
+    "sign"
+   ],
+   "collision": "none",
+   "sha256": "175ddce21a353d51acbb0755918ddcdc795cac399bc9fec97eb0f99fc969d53a",
+   "bytes": 15204,
+   "place_scale": 1.0,
+   "triangles": 22,
+   "models_json_triangles": 22,
+   "size": [
+    1.52,
+    0.46,
+    0.09
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/street_plaque.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "041b6c4480ebf17c3d8f18d8d7e7de71a62f85291c188a225a8200a56954919a",
+    "sha256": "175ddce21a353d51acbb0755918ddcdc795cac399bc9fec97eb0f99fc969d53a",
+    "atlas": [
+     256,
+     256
+    ],
+    "px_per_m": 128.0,
+    "charts": 11,
+    "patterns": {
+     "1": 12,
+     "0": 10
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_tilt_barrier",
+   "file": "props/tilt_barrier.glb",
+   "name": "tilt barrier",
+   "category": "fence",
+   "description": "A long low tilt barrier that separates jousting riders.",
+   "synonyms": [
+    "tilt",
+    "jousting barrier",
+    "list",
+    "tourney"
+   ],
+   "collision": "box",
+   "sha256": "521dbbf02493c5cc7ece231366eed6e5968983f381bee135dd380c28872dc191",
+   "bytes": 71568,
+   "place_scale": 1.0,
+   "triangles": 124,
+   "models_json_triangles": 124,
+   "size": [
+    12.2,
+    2.16,
+    0.16
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/tilt_barrier.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "9976e06d101eb88c1044251c8093f09951a107e7f109a02fa21fcc23fb7dd3f8",
+    "sha256": "521dbbf02493c5cc7ece231366eed6e5968983f381bee135dd380c28872dc191",
+    "atlas": [
+     1024,
+     512
+    ],
+    "px_per_m": 81.9,
+    "charts": 62,
+    "patterns": {
+     "2": 124
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_lamp_torch",
+   "file": "props/torch_post.glb",
+   "name": "torch post",
+   "category": "lamp",
+   "description": "A wooden post with a burning torch, for the warriors' quarter and rough roads.",
+   "synonyms": [
+    "torch",
+    "brazier post",
+    "fire light",
+    "warriors"
+   ],
+   "collision": "box",
+   "sha256": "ce39477e2c6c4c89c8f56638f74d9c4f1a9e5a3bdf24a2e573c0e0d794e32249",
+   "bytes": 36972,
+   "place_scale": 1.0,
+   "triangles": 89,
+   "models_json_triangles": 89,
+   "size": [
+    0.52,
+    4.51,
+    0.45
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 2,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/lamp_torch.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "558ecb29781732e272a8eafb901224a2f6ccf6881d6017de357707956ff3d39d",
+    "sha256": "ce39477e2c6c4c89c8f56638f74d9c4f1a9e5a3bdf24a2e573c0e0d794e32249",
+    "atlas": [
+     128,
+     1024
+    ],
+    "px_per_m": 128.0,
+    "charts": 65,
+    "patterns": {
+     "1": 24,
+     "8": 42,
+     "0": 23
+    },
+    "glow": true,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_training_dummy",
+   "file": "props/training_dummy.glb",
+   "name": "training dummy",
+   "category": "prop",
+   "description": "A straw-stuffed training dummy on a post.",
+   "synonyms": [
+    "dummy",
+    "practice dummy",
+    "target",
+    "training"
+   ],
+   "collision": "box",
+   "sha256": "920ca5d3270334d1e371c2b0a3ec400ab5649ea84bed99f2b404d62d3782ce34",
+   "bytes": 34076,
+   "place_scale": 1.0,
+   "triangles": 100,
+   "models_json_triangles": 100,
+   "size": [
+    1.0,
+    2.5,
+    0.44
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/training_dummy.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "76235c915a241c960f5bdfbd47c1ca60b1c891c37a5c4b93a47b0db0c5d50676",
+    "sha256": "920ca5d3270334d1e371c2b0a3ec400ab5649ea84bed99f2b404d62d3782ce34",
+    "atlas": [
+     512,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 72,
+    "patterns": {
+     "2": 36,
+     "6": 32,
+     "9": 32
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_trophy_shield",
+   "file": "props/trophy_shield.glb",
+   "name": "trophy shield",
+   "category": "prop",
+   "description": "A painted shield trophy for walls and halls.",
+   "synonyms": [
+    "shield",
+    "heraldry",
+    "wall shield",
+    "trophy"
+   ],
+   "collision": "none",
+   "sha256": "3fb8ba3aec422845607c6dadaa26888c67606d38e8b29ac34ab8de9b237fb381",
+   "bytes": 23240,
+   "place_scale": 1.0,
+   "triangles": 74,
+   "models_json_triangles": 74,
+   "size": [
+    1.03,
+    1.03,
+    0.15
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/trophy_shield.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "cec4f854501851f44ab08bbb5c6ee32bf73e4c4b8e55e970ce297a3f0fc7f0bb",
+    "sha256": "3fb8ba3aec422845607c6dadaa26888c67606d38e8b29ac34ab8de9b237fb381",
+    "atlas": [
+     256,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 48,
+    "patterns": {
+     "2": 30,
+     "8": 44
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_viewing_stand",
+   "file": "props/viewing_stand.glb",
+   "name": "viewing stand",
+   "category": "furniture",
+   "description": "A small tiered wooden viewing stand for spectators.",
+   "synonyms": [
+    "bleachers",
+    "stands",
+    "grandstand",
+    "tourney"
+   ],
+   "collision": "box",
+   "sha256": "1cac2bf57d526c4fc1611c283516ada14bed2ea6e9d3e0337b8fa2ca86777589",
+   "bytes": 130400,
+   "place_scale": 1.0,
+   "triangles": 118,
+   "models_json_triangles": 118,
+   "size": [
+    12.6,
+    4.42,
+    3.3
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/viewing_stand.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "5e656bbd5a60bc3e8dbd517d32f35701fc533b82f84a0a4c9156e9cea3854cf5",
+    "sha256": "1cac2bf57d526c4fc1611c283516ada14bed2ea6e9d3e0337b8fa2ca86777589",
+    "atlas": [
+     1024,
+     1024
+    ],
+    "px_per_m": 41.9,
+    "charts": 59,
+    "patterns": {
+     "2": 94,
+     "10": 24
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_wall_lantern",
+   "file": "props/wall_lantern.glb",
+   "name": "wall lantern",
+   "category": "lamp",
+   "description": "An iron lantern on a wall bracket, for doors and lanes.",
+   "synonyms": [
+    "lantern",
+    "wall lamp",
+    "sconce"
+   ],
+   "collision": "none",
+   "sha256": "e9d67539f2dfd423938a18f79adb3b33e3c1fc6b1438b83d62f326ddc4264ff1",
+   "bytes": 13052,
+   "place_scale": 1.0,
+   "triangles": 30,
+   "models_json_triangles": 30,
+   "size": [
+    0.32,
+    0.45,
+    0.38
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 2,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/wall_lantern.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "4ab1fc0dbc1b81308cb5ac28cf1d38de96f5638644a7b8b53ae85f4dcc6a1f1c",
+    "sha256": "e9d67539f2dfd423938a18f79adb3b33e3c1fc6b1438b83d62f326ddc4264ff1",
+    "atlas": [
+     128,
+     256
+    ],
+    "px_per_m": 128.0,
+    "charts": 19,
+    "patterns": {
+     "8": 18,
+     "0": 12
+    },
+    "glow": true,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_wall_rack",
+   "file": "props/wall_rack.glb",
+   "name": "wall rack",
+   "category": "furniture",
+   "description": "A wall-mounted wooden rack of tools or goods.",
+   "synonyms": [
+    "rack",
+    "shelf",
+    "tool rack"
+   ],
+   "collision": "none",
+   "sha256": "e6cc01eeb90b3891774ad622889399ea13b8c9ecf84e6fc3c319f93b1717a33d",
+   "bytes": 62904,
+   "place_scale": 1.0,
+   "triangles": 212,
+   "models_json_triangles": 212,
+   "size": [
+    2.36,
+    2.2,
+    0.16
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/wall_rack.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "bcc2a5501c41c6509de502f01c7e51c2cba3c60517a496d8e9e807b2e3a6fcbe",
+    "sha256": "e6cc01eeb90b3891774ad622889399ea13b8c9ecf84e6fc3c319f93b1717a33d",
+    "atlas": [
+     256,
+     1024
+    ],
+    "px_per_m": 128.0,
+    "charts": 114,
+    "patterns": {
+     "2": 80,
+     "8": 132
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_banner_warriors",
+   "file": "props/warriors_banner.glb",
+   "name": "warriors banner",
+   "category": "signage",
+   "description": "A hanging red guild banner of the warriors' quarter.",
+   "synonyms": [
+    "flag",
+    "guild banner",
+    "pennant",
+    "warriors"
+   ],
+   "collision": "none",
+   "sha256": "b24065138c30bfdc264d93867bcc9d259db98cc9ea157876b75769ad34d12e1e",
+   "bytes": 17616,
+   "place_scale": 1.0,
+   "triangles": 48,
+   "models_json_triangles": 48,
+   "size": [
+    0.75,
+    1.58,
+    0.5
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/banner_warriors.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "0195209dce1843ea152b3750cf4e083c3f1f400b299cc3be10197b3eaadb14ff",
+    "sha256": "b24065138c30bfdc264d93867bcc9d259db98cc9ea157876b75769ad34d12e1e",
+    "atlas": [
+     256,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 25,
+    "patterns": {
+     "8": 10,
+     "2": 12,
+     "9": 12,
+     "0": 14
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_weapon_rack",
+   "file": "props/weapon_rack.glb",
+   "name": "weapon rack",
+   "category": "furniture",
+   "description": "A standing rack of swords, spears and shields.",
+   "synonyms": [
+    "arms rack",
+    "armoury",
+    "swords",
+    "warriors"
+   ],
+   "collision": "box",
+   "sha256": "874097e07eb1e3a1b74fcb957457722f1763217b4c13b18783faf29af9586d61",
+   "bytes": 61908,
+   "place_scale": 1.0,
+   "triangles": 196,
+   "models_json_triangles": 196,
+   "size": [
+    1.8,
+    3.02,
+    0.4
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/weapon_rack.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "d56d80c83086fbaa9724c2f7f594fa128f407b8b69486649fabe49d8422029f3",
+    "sha256": "874097e07eb1e3a1b74fcb957457722f1763217b4c13b18783faf29af9586d61",
+    "atlas": [
+     512,
+     512
+    ],
+    "px_per_m": 128.0,
+    "charts": 110,
+    "patterns": {
+     "2": 84,
+     "8": 104,
+     "9": 8
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_weathervane",
+   "file": "props/weathervane.glb",
+   "name": "weathervane",
+   "category": "building-part",
+   "description": "An iron weathervane for roof ridges and towers.",
+   "synonyms": [
+    "wind vane",
+    "weather cock",
+    "roof"
+   ],
+   "collision": "none",
+   "sha256": "5b4cf41378e82423e7bcd089f69c23358576efd1a4d9b9cdcf30f5cbb5496089",
+   "bytes": 18156,
+   "place_scale": 1.0,
+   "triangles": 72,
+   "models_json_triangles": 72,
+   "size": [
+    0.7,
+    2.07,
+    0.09
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/weathervane.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "5000df9baa952ca6db245fff457eee7f50e7314f55a69c849ee16c3a4e5d05e3",
+    "sha256": "5b4cf41378e82423e7bcd089f69c23358576efd1a4d9b9cdcf30f5cbb5496089",
+    "atlas": [
+     256,
+     256
+    ],
+    "px_per_m": 128.0,
+    "charts": 47,
+    "patterns": {
+     "8": 72
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_well",
+   "file": "props/well.glb",
+   "name": "well",
+   "category": "landmark",
+   "description": "A round stone well with a wooden roof, rope and bucket.",
+   "synonyms": [
+    "water well",
+    "wishing well",
+    "village well"
+   ],
+   "collision": "mesh",
+   "sha256": "c8d3daf779ca780af875eae0b00b259a7213a602d89321280a5ea23d47aeae61",
+   "bytes": 144232,
+   "place_scale": 1.0,
+   "triangles": 344,
+   "models_json_triangles": 344,
+   "size": [
+    2.95,
+    2.85,
+    2.4
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 1,
+   "physics_body": true,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/well.glb (the iamar browser source (not public) 2780ac2)",
+   "painted_bake": {
+    "source_sha256": "60c4639e757b9538e40a2e86b93aea64ed776c28eaec5bd8f7a602a10e1bfc16",
+    "sha256": "c8d3daf779ca780af875eae0b00b259a7213a602d89321280a5ea23d47aeae61",
+    "atlas": [
+     1024.0,
+     1024.0
+    ],
+    "px_per_m": 102.4,
+    "charts": 230.0,
+    "patterns": {
+     "1": 192.0,
+     "0": 44.0,
+     "2": 84.0,
+     "3": 24.0
+    },
+    "glow": false,
+    "baker_commit": ""
+   }
+  },
+  {
+   "models_id": "prop_tree_elm",
+   "file": "trees/elm_tree.glb",
+   "name": "elm tree",
+   "category": "tree",
+   "description": "A tall elm with a vase-shaped crown, for avenues and squares.",
+   "synonyms": [
+    "elm",
+    "broadleaf",
+    "deciduous tree",
+    "street tree"
+   ],
+   "collision": "box",
+   "sha256": "5ad9cabff89c865116829b03caea6037ddc719b8bb67d9299629dcd1433bcdde",
+   "bytes": 52588,
+   "place_scale": 1.0,
+   "triangles": 1198,
+   "models_json_triangles": 1198,
+   "size": [
+    5.48,
+    9.71,
+    5.42
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/tree_elm.glb (the iamar browser source (not public) 2780ac2)"
+  },
+  {
+   "models_id": "prop_tree_oak",
+   "file": "trees/oak_tree.glb",
+   "name": "oak tree",
+   "category": "tree",
+   "description": "A broad oak with a thick trunk and a round, lumpy crown of painted leaf blobs.",
+   "synonyms": [
+    "oak",
+    "broadleaf",
+    "deciduous tree",
+    "shade tree"
+   ],
+   "collision": "box",
+   "sha256": "9251dc346029f16c785150b549b813e17f2fb1c5a95b75931105c7c8aa183080",
+   "bytes": 53692,
+   "place_scale": 1.0,
+   "triangles": 1212,
+   "models_json_triangles": 1212,
+   "size": [
+    7.59,
+    7.46,
+    6.77
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/tree_oak.glb (the iamar browser source (not public) 2780ac2)"
+  },
+  {
+   "models_id": "prop_tree_pine",
+   "file": "trees/pine_tree.glb",
+   "name": "pine tree",
+   "category": "tree",
+   "description": "A slim conifer of stacked cones, very cheap; for hillsides and forest edges.",
+   "synonyms": [
+    "pine",
+    "fir",
+    "spruce",
+    "conifer",
+    "evergreen"
+   ],
+   "collision": "box",
+   "sha256": "5b336a5d80572625a14478821c46843aabcbf18e6602fadf9877e2c46ed03465",
+   "bytes": 54656,
+   "place_scale": 1.0,
+   "triangles": 402,
+   "models_json_triangles": 288,
+   "size": [
+    5.41,
+    9.2,
+    5.76
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "builder": "MpProps.sample",
+   "builder_commit": "2780ac2",
+   "cite": "the iamar-models mesh archive (not public) 0d15ab92 props/tree_pine.glb (the iamar browser source (not public) 2780ac2)",
+   "sealed": {
+    "source_sha256": "ac8d3f9ac894af9ac409d50f1a5a465d28845ab203a922f3e6eb273fb9141838",
+    "back_triangles": 114,
+    "by": "kit/catalog/assets/seal_props.py"
+   }
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "schema": "iamar-concept/1",
+ "world": "kit/lint/samples/iamar_city",
+ "note": "iamar-family (Track A) set. STYLE, LAYOUT and AVOID are the city's own blocks, verbatim from the iamar browser source (not public) docs/masterplan_targets/prompts.json (commit c2ec3b5e), which painted the city's 14 targets. Cameras: world metres, eye height 1.7 m.",
+ "size": [
+  1536,
+  864
+ ],
+ "blocks": {
+  "STYLE": "Painted concept art for a stylised fantasy game: a hand-painted fantasy capital city. Warm, saturated but never neon colour; chunky, slightly exaggerated proportions (thick walls, oversized doors and window frames, heavy beams, big roofs); ground floors of large rough-dressed warm stone, upper storeys of plaster and dark timber framing with jettied overhangs; steep flared roofs with deep eaves in slate-blue and terracotta tile; many banners, pennants and hanging lanterns in the city's colours (deep royal blue, gold, cream, with crimson accents); soft painted light with a warm late-afternoon sun, cool blue shadows, gentle bounce light, light atmospheric haze in the distance. Surfaces read as hand-painted textures with brush-stroke highlights on edges, ambient-occlusion darkening in corners, grime at the base of walls, moss in cracks. Simple, readable low-polygon shapes whose richness comes from painted texture, colour and light, not fine geometric detail. Clean painterly concept-art finish, game-ready look.",
+  "LAYOUT": "Keep the camera, horizon, perspective and the layout of streets, buildings, walls, towers, water and open ground from the input screenshot; repaint every surface and replace placeholder blocks with the described architecture at the same positions and sizes.",
+  "AVOID": "Original design only: no copyrighted game assets, characters, logos, emblems, heraldry or text from existing games or films; no readable lettering or signage text; no photorealism, no neon, no glossy plastic look, no lens flare, no watermark, no frame or border, no UI."
+ },
+ "image_model": {
+  "provider": "openai",
+  "model": "gpt-image-1.5",
+  "quality": "high",
+  "input_fidelity": "low",
+  "key_env": "OPENAI_API_KEY"
+ },
+ "cameras": [
+  {
+   "name": "street_from_spawn",
+   "eye": [
+    0,
+    1.7,
+    14
+   ],
+   "at": [
+    0,
+    4,
+    0
+   ],
+   "scene": "A short high street of three tall townhouses side by side seen from the street at eye height: stone ground floors with arched doors and painted shutters, timber-framed plaster upper storeys leaning over the street, steep flared slate and terracotta roofs with dormers and chimneys, blue-and-gold banners on iron brackets, a lantern by each door, worn cobbles with a gutter, another house closing the view at the end."
+  },
+  {
+   "name": "corner_three_quarter",
+   "eye": [
+    -24,
+    1.7,
+    12
+   ],
+   "at": [
+    -6,
+    5,
+    0
+   ],
+   "scene": "The corner townhouse seen three-quarter from the side lane at eye height: chunky warm stone plinth, jettied timber upper floors, a big steep roof with a chimney, flower boxes under the windows, a hanging shop sign shaped like a loaf (no letters), barrels and a bench by the door, the next houses stepping away along the street."
+  }
+ ]
+}

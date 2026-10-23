@@ -1,0 +1,21 @@
+{
+  "status": "authored, not executed",
+  "content": "INERT SELECTED KEY PLACEHOLDER: NOT A CRYPTOGRAPHIC KEY\n",
+  "cases": [
+    {"name":"direct root key", "folder":"/fixtures/world", "key":"/fixtures/world/private.key", "expected":"reject before signing"},
+    {"name":"nested arbitrary filename", "folder":"/fixtures/world", "key":"/fixtures/world/assets/data.bin", "expected":"reject before signing"},
+    {"name":"ignored hidden key", "folder":"/fixtures/world", "key":"/fixtures/world/.private.key", "expected":"reject before signing"},
+    {"name":"dot segments", "folder":"/fixtures/world/", "key":"/fixtures/world/assets/../private.key", "expected":"reject after normalization"},
+    {"name":"case alias", "folder":"C:/fixtures/World", "key":"c:/FIXTURES/world/private.key", "expected":"reject conservatively"},
+    {"name":"sibling prefix", "folder":"/fixtures/world", "key":"/fixtures/world-backup/private.key", "expected":"allow if readable link-free and no captured byte match"},
+    {"name":"external key", "folder":"/fixtures/world", "key":"/fixtures/keys/private.key", "expected":"allow if readable link-free and no captured byte match"},
+    {"name":"hardlink or copy inside world", "folder":"/fixtures/world", "key":"/fixtures/keys/private.key", "entry":"assets/opaque.bin", "entry_content":"same inert placeholder", "expected":"reject captured byte match"},
+    {"name":"selected key symlink into world", "key":"/fixtures/keys/link.key", "target":"/fixtures/world/private.key", "expected":"reject known link"},
+    {"name":"world root symlink", "folder":"/fixtures/world-link", "target":"/fixtures/world", "expected":"reject known link"},
+    {"name":"ancestor symlink or Windows junction", "folder":"/fixtures/link-parent/world", "expected":"reject known ancestor link"},
+    {"name":"unreadable parent or missing key", "expected":"reject inspection failure"},
+    {"name":"empty or oversized key placeholder", "expected":"reject bounded-read preflight"},
+    {"name":"unsupported OS", "expected":"reject unsupported path checks"},
+    {"name":"internal symlink to external key", "expected":"WorldSource skips link; selected external key can pass if no captured matching bytes"}
+  ]
+}

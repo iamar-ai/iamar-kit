@@ -1,0 +1,187 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "iamar-kit/style.schema.json",
+  "title": "iamar style profile (style.json)",
+  "description": "One world look: palette, weathering, dimensions, materials, glTF material recipes, atmosphere reference, budgets and lint tolerances. kit/style/iamar/style.json is the iamar profile; a world either ships its own style.json (Track B) or one that says {\"extends\": \"iamar\"} and overrides what it changes (Track A). Checked by kit/style/check_style.py. Engineering rules (budgets, closure, culling, LOD, bakes) are NOT style: they apply to every world and live in the recipes; a profile may only tighten budgets.",
+  "type": "object",
+  "required": ["schema", "id", "name", "description"],
+  "properties": {
+    "schema": {"const": "iamar-style/1"},
+    "id": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+    "name": {"type": "string", "minLength": 1},
+    "description": {"type": "string", "minLength": 1},
+    "extends": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$", "description": "Id of a profile under kit/style/<id>/style.json whose values this one starts from (deep merge, this file wins)."},
+    "sources": {"type": "object", "description": "Where the numbers come from (repository and commit), so they can be re-checked."},
+    "palette": {
+      "type": "object",
+      "description": "Named base colours. Each entry: hex, optional pattern (material layer it is painted with) and source.",
+      "additionalProperties": {"$ref": "#/$defs/swatch"}
+    },
+    "regions": {
+      "type": "object",
+      "description": "Per-area palettes (the city's quarters; a custom world's districts or biomes).",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "roof": {"$ref": "#/$defs/hex"},
+          "wall": {"$ref": "#/$defs/hex"},
+          "timber": {"$ref": "#/$defs/hex"},
+          "trim": {"$ref": "#/$defs/hex"},
+          "ground_stone": {"$ref": "#/$defs/hex"},
+          "ground_stone_share": {"type": "number", "minimum": 0, "maximum": 1},
+          "ground_storeys": {"type": "array", "items": {"$ref": "#/$defs/hex"}},
+          "paints": {"type": "array", "items": {"$ref": "#/$defs/hex"}},
+          "window_glow": {"$ref": "#/$defs/hex"},
+          "lamp": {"$ref": "#/$defs/hex"},
+          "fog_tint": {"$ref": "#/$defs/hex"},
+          "timber_frame_weights": {"$ref": "#/$defs/timber_frame_weights"},
+          "mood": {"type": "string"},
+          "source": {"type": "string"}
+        }
+      }
+    },
+    "weathering": {
+      "type": "object",
+      "properties": {
+        "roles": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": ["saturation_scale", "value_scale"],
+            "properties": {
+              "saturation_scale": {"type": "number", "minimum": 0, "maximum": 2},
+              "value_scale": {"type": "number", "minimum": 0, "maximum": 2},
+              "hue_jitter": {"type": "number", "minimum": 0, "maximum": 0.5},
+              "saturation_jitter": {"type": "number", "minimum": 0, "maximum": 1},
+              "value_jitter": {"type": "number", "minimum": 0, "maximum": 1}
+            }
+          }
+        },
+        "neighbour_rule": {"type": "string"},
+        "source": {"type": "string"}
+      }
+    },
+    "dimensions": {
+      "type": "object",
+      "description": "Scale and proportion rules in metres (or ratios where named). P3 lint checks models against them.",
+      "properties": {
+        "person_m": {"type": "number", "exclusiveMinimum": 0},
+        "door_m": {"$ref": "#/$defs/range"},
+        "roof_pitch_rise_per_run": {"type": "array", "items": {"type": "number"}, "description": "Allowed roof pitches: rise over half the roof's short span (the lint takes min-max)."},
+        "roof_height_fraction": {"$ref": "#/$defs/range", "description": "Roof height / whole model height; the lint uses it when no pitches are given (flat-roofed looks)."},
+        "arch_rise_half_span": {"$ref": "#/$defs/range", "description": "Arch rise / half its span (1 = semicircular)."},
+        "timber_frame_weights": {"$ref": "#/$defs/timber_frame_weights"}
+      },
+      "additionalProperties": true
+    },
+    "materials": {
+      "type": "object",
+      "properties": {
+        "painter": {"type": "string"},
+        "texels_per_metre": {"type": "number", "exclusiveMinimum": 0},
+        "tile_m": {"type": "number", "exclusiveMinimum": 0},
+        "warm_balance": {"type": "array", "items": {"type": "number"}, "minItems": 3, "maxItems": 3},
+        "layers": {
+          "type": "object",
+          "description": "Material name -> how this style uses it. `layer` names a painter layer (paint_materials.py --list); `tint` is the colour it is painted to.",
+          "additionalProperties": {
+            "type": "object",
+            "required": ["layer"],
+            "properties": {
+              "layer": {"type": "string"},
+              "tint": {"$ref": "#/$defs/hex"},
+              "use": {"type": "string"}
+            }
+          }
+        },
+        "trim_sheet": {"type": "object"}
+      }
+    },
+    "material_recipes": {
+      "type": "object",
+      "description": "Looks the city draws with its own shaders, restated as what a package can carry (glTF metallic-roughness, emissive, alpha, KHR_materials_unlit). A package cannot ship shaders.",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["gltf"],
+        "properties": {
+          "city_shader": {"type": "string"},
+          "gltf": {"type": "object"},
+          "notes": {"type": "string"}
+        }
+      }
+    },
+    "atmosphere": {
+      "type": "object",
+      "properties": {
+        "presets": {
+          "type": "object",
+          "description": "Values for scene.environment (docs/WORLD_FORMAT.md 4.1). Only fields that exist there.",
+          "additionalProperties": {"type": "object", "required": ["environment"], "properties": {"environment": {"type": "object"}, "source": {"type": "string"}, "tested": {"type": "boolean"}}}
+        },
+        "rules": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "budgets": {
+      "type": "object",
+      "description": "Triangle budgets at LOD0 per asset class and frame targets. A profile may tighten, never loosen, the engineering budgets.",
+      "properties": {
+        "triangles": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 1}}
+      }
+    },
+    "lint": {
+      "type": "object",
+      "description": "Tolerances the style lint (job P3) reads.",
+      "properties": {
+        "palette_max_delta_e": {"type": "number", "exclusiveMinimum": 0},
+        "min_albedo_value": {"type": "number", "minimum": 0, "maximum": 1},
+        "forbidden_colours": {"type": "array", "items": {"$ref": "#/$defs/hex"}},
+        "forbidden_delta_e": {"type": "number", "exclusiveMinimum": 0},
+        "max_saturation": {"type": "number", "minimum": 0, "maximum": 1},
+        "palette_max_off_share": {"type": "number", "minimum": 0, "maximum": 1, "description": "Share of a model's triangles that may be off the palette."},
+        "vertex_bad_share": {"type": "number", "minimum": 0, "maximum": 1, "description": "Share of a material's sampled surface (vertex colours, texture at its UVs) that may break a colour rule."},
+        "pink_texture_share": {"type": "number", "minimum": 0, "maximum": 1},
+        "min_efficiency": {"type": "number", "minimum": 0, "maximum": 100, "description": "An over-budget model whose Efficiency (100 x budget / triangles) is lower fails the lint."},
+        "neighbour_m": {"type": "number", "exclusiveMinimum": 0, "description": "Two placements of one building or landmark at the same scale closer than this are repeated neighbours."},
+        "flat_wall_max_m": {"type": "number", "exclusiveMinimum": 0, "description": "kit/audit/flat_wall.py: longest wall a walker sees at eye height with no opening, arch or relief, in metres. Absent: the audit is skipped (a Track B world decides by its own style bible)."},
+        "person_tolerance": {"type": "number", "minimum": 0, "maximum": 1},
+        "pitch_slack": {"type": "number", "minimum": 0, "maximum": 1},
+        "shot_palette_delta_e": {"type": "number", "exclusiveMinimum": 0, "description": "compare-shots: how close (delta E, lightness halved) a pixel must be to a profile colour to count as on-palette."},
+        "shot_palette_drop": {"type": "number", "minimum": 0, "maximum": 1, "description": "compare-shots: largest allowed fall of the on-palette pixel share."},
+        "shot_black_rise": {"type": "number", "minimum": 0, "maximum": 1, "description": "compare-shots: largest allowed rise of the black pixel share."},
+        "shot_ground_cast": {"type": "number", "exclusiveMinimum": 0, "description": "compare-shots: largest allowed colour distance (Lab) between a day shot's ground and the profile's ground colours; above it the shot fails (default 9)."},
+        "shot_ground_colours": {"type": "array", "items": {"type": "string", "pattern": "^#[0-9a-fA-F]{6}$"}, "description": "compare-shots: extra ground colours (hex) a day shot's ground may match, besides the profile's own ground materials."},
+        "notes": {"type": "string"}
+      }
+    },
+    "generators": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["status"],
+        "properties": {
+          "status": {"enum": ["available", "planned"]},
+          "command": {"type": "string"},
+          "job": {"type": "integer"},
+          "notes": {"type": "string"}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "hex": {"type": "string", "pattern": "^#[0-9a-fA-F]{6}$"},
+    "range": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+    "timber_frame_weights": {"type": "array", "items": {"type": "number", "minimum": 0}, "minItems": 5, "maxItems": 5,
+      "description": "style-gen house: relative weights of the upper storeys' timber frame, [plain, centre post, close studding, studs with corner braces, cross-braced] (kit/style/gen/frame.py). A region's weights win over dimensions'; a profile with neither builds plain walls."},
+    "swatch": {
+      "type": "object",
+      "required": ["hex"],
+      "properties": {
+        "hex": {"$ref": "#/$defs/hex"},
+        "pattern": {"type": "string"},
+        "glow": {"type": "boolean", "description": "Emissive in the world (lamps, embers, glowing magic): exempt from the lint's darkness and saturation rules."},
+        "allow_dark": {"type": "boolean", "description": "A deliberate dark (door openings, chimney mouths), never a lit surface: exempt from the darkness rule."},
+        "source": {"type": "string"}
+      }
+    }
+  }
+}

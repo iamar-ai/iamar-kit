@@ -1,0 +1,91 @@
+{
+  "vision": "A sunset plaza where friends meet, chat and watch weekly shows.",
+  "audience": {
+    "access": "buddies",
+    "concurrent": 24
+  },
+  "type": "social",
+  "extra_types": [],
+  "track": "C",
+  "style_profile": "worlds/sunset_lounge/style.json",
+  "mood": {
+    "words": [
+      "social",
+      "bright",
+      "relaxed"
+    ],
+    "time": "golden hour",
+    "weather": "clear"
+  },
+  "setup": {
+    "blender": false,
+    "gpu": false,
+    "scripts_ok": false,
+    "build_tier": 0
+  },
+  "tier_target": "medium",
+  "budgets": {
+    "triangles": 350000,
+    "texture_size": 2048,
+    "texture_bytes": 134217728,
+    "download_mb": 150
+  },
+  "reuse": [
+    {
+      "catalog_id": "bench_wood",
+      "use": "plaza"
+    },
+    {
+      "catalog_id": "lamp_post",
+      "use": "plaza"
+    }
+  ],
+  "connections": {
+    "portal_from_city": false,
+    "name": "iamar://example-social",
+    "hosting": "own-computer"
+  },
+  "features": [
+    {
+      "id": "ui_welcome",
+      "kind": "ui"
+    },
+    {
+      "id": "script_stage",
+      "kind": "script"
+    },
+    {
+      "id": "npc_host",
+      "kind": "npc"
+    }
+  ],
+  "checkpoints": [
+    "greybox",
+    "scale check",
+    "paint"
+  ],
+  "open_questions": [],
+  "answers": [
+    {
+      "id": "S1",
+      "value": "Talk and watch events",
+      "source": "default",
+      "shown": true
+    },
+    {
+      "id": "S2",
+      "value": "20",
+      "source": "default",
+      "shown": true
+    },
+    {
+      "id": "S3",
+      "value": "a campfire",
+      "source": "chosen"
+    }
+  ],
+  "approval": {
+    "date": "2026-10-20",
+    "user_words": "Yes, build it."
+  }
+}

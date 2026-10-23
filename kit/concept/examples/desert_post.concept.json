@@ -1,0 +1,49 @@
+{
+ "schema": "iamar-concept/1",
+ "world": "kit/lint/samples/desert_post",
+ "note": "Brand-new (Track B) set: the STYLE block is written from this world's style bible (kit/lint/samples/desert_post/style.json), not from the iamar city. LAYOUT and AVOID use the kit defaults (style-independent).",
+ "size": [
+  1536,
+  864
+ ],
+ "blocks": {
+  "STYLE": "Painted concept art for a stylised game: a desert trading post. Sun-baked adobe walls in warm sand and ochre with rounded edges and hand-smoothed plaster, palm-trunk beams poking through the walls, flat roofs with low parapets, deep-set small windows, indigo and saffron cloth awnings and hanging rugs, brass lamps. A hot pale-white sky, hard sun with short sharp shadows, warm bounce light from the sand, heat haze in the distance. Chunky, readable low-polygon shapes whose richness comes from painted texture, colour and light, not fine geometry; clean painterly finish, game-ready look."
+ },
+ "image_model": {
+  "provider": "openai",
+  "model": "gpt-image-1.5",
+  "quality": "high",
+  "input_fidelity": "low",
+  "key_env": "OPENAI_API_KEY"
+ },
+ "cameras": [
+  {
+   "name": "arrival",
+   "eye": [
+    0,
+    1.7,
+    14
+   ],
+   "at": [
+    0,
+    2.5,
+    0
+   ],
+   "scene": "Arriving at the trading post at eye height: two adobe houses either side of a sandy lane, a wide one on the right with a saffron cloth awning over its door, a brass lamp on a post in the middle of the lane, another adobe house further back on the left, sacks, clay jars and a rug hung over a parapet. Inviting, sunlit, makes the player want to walk in."
+  },
+  {
+   "name": "lane_side",
+   "eye": [
+    16,
+    1.7,
+    8
+   ],
+   "at": [
+    -4,
+    2.5,
+    -6
+   ],
+   "scene": "Looking across the lane from the east at eye height: the wide adobe house in front with palm-trunk beams poking through its wall and an indigo cloth shade, the brass lamp, and the two houses on the far side of the lane with flat roofs and low parapets; heat haze over the sand beyond."
+  }
+ ]
+}

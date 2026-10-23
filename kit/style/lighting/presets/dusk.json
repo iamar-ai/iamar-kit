@@ -1,0 +1,16 @@
+{
+  "schema": "iamar-lighting-preset/1",
+  "id": "dusk",
+  "title": "Dusk",
+  "description": "The sun just above the western horizon: orange rim light and long shadows, a violet-blue sky overhead, a cool mauve haze.",
+  "derived_from": "kit/style/iamar/style.json atmosphere.presets.dusk (mp_look.gd LOOKS.dusk). Uses sun.direction because time_of_day 18.5 puts the sun below the horizon in a package (zero sun).",
+  "environment": {
+    "sky": {"type": "procedural", "top_color": "#2e4486", "horizon_color": "#ff9e60", "ground_color": "#4c3c40"},
+    "time_of_day": 17.8,
+    "day_length_minutes": 0,
+    "sun": {"enabled": true, "color": "#ff9458", "energy": 1.25, "shadows": true, "direction": [0.985, -0.14, -0.075]},
+    "ambient": {"color": "#6c74a0", "energy": 0.75, "source": "color"},
+    "fog": {"enabled": true, "color": "#a89cb4", "density": 0.0022},
+    "exposure": 1.05
+  }
+}

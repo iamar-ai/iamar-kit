@@ -1,0 +1,78 @@
+{
+ "format": "iamar-catalog-mounts-export",
+ "version": 1,
+ "note": "The city's griffin, dragon breeds and giant eagle exported with code-built heads and per-LOD WebP textures by kit/catalog/assets/export_city_mounts.gd (run against the iamar browser source (not public)). Never edit by hand: rerun the export, then import_city_models.py --mounts.",
+ "iamar_commit": "8a152539",
+ "mounts": [
+  {
+   "file": "creatures/mounts/griffin.glb",
+   "name": "griffin",
+   "lod": 0,
+   "builder": "MpGriffinKit (LOD0, code-built head)",
+   "builder_commit": "8a152539",
+   "triangles": 5192,
+   "albedo_px": 1024,
+   "normal_px": 512
+  },
+  {
+   "file": "creatures/mounts/griffin_lod1.glb",
+   "name": "griffin lod1",
+   "lod": 1,
+   "builder": "MpGriffinKit (LOD1, code-built head)",
+   "builder_commit": "8a152539",
+   "triangles": 2956,
+   "albedo_px": 512,
+   "normal_px": 256
+  },
+  {
+   "file": "creatures/mounts/griffin_lod2.glb",
+   "name": "griffin lod2",
+   "lod": 2,
+   "builder": "MpGriffinKit (LOD2, code-built head)",
+   "builder_commit": "8a152539",
+   "triangles": 1080,
+   "albedo_px": 256,
+   "normal_px": 0
+  },
+  {
+   "file": "creatures/mounts/bronze_wyrm.glb",
+   "name": "bronze wyrm",
+   "lod": 0,
+   "builder": "MpDragonKit breed bronze_wyrm (LOD0, code-built skull)",
+   "builder_commit": "8a152539",
+   "triangles": 5282,
+   "albedo_px": 512,
+   "normal_px": 0
+  },
+  {
+   "file": "creatures/mounts/copper_runner.glb",
+   "name": "copper runner",
+   "lod": 0,
+   "builder": "MpDragonKit breed copper_runner (LOD0, code-built skull)",
+   "builder_commit": "8a152539",
+   "triangles": 5410,
+   "albedo_px": 512,
+   "normal_px": 0
+  },
+  {
+   "file": "creatures/mounts/teal_drake.glb",
+   "name": "teal drake",
+   "lod": 0,
+   "builder": "MpDragonKit breed teal_drake (LOD0, code-built skull)",
+   "builder_commit": "8a152539",
+   "triangles": 5218,
+   "albedo_px": 512,
+   "normal_px": 0
+  },
+  {
+   "file": "creatures/mounts/giant_eagle.glb",
+   "name": "giant eagle",
+   "lod": 0,
+   "builder": "MpBirdKit (LOD0, code-built head)",
+   "builder_commit": "8a152539",
+   "triangles": 5042,
+   "albedo_px": 512,
+   "normal_px": 0
+  }
+ ]
+}

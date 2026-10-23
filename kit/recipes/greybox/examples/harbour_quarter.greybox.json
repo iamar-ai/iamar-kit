@@ -1,0 +1,25 @@
+{
+  "world": "harbour_quarter",
+  "note": "EXAMPLE for the recipe book: values are illustrative, and the approval is an example entry, not a real user's words.",
+  "stage": "scale",
+  "measurements": {"person_m": 1.8, "door_m": 2.15, "storey_m": 3.2, "street_widths_m": {"lane": 5, "alley": 3, "quay": 10}},
+  "objects": [
+    {"id": "house_a", "class": "building", "triangles": 96, "painted": false, "openings": ["door"]},
+    {"id": "house_b", "class": "building", "triangles": 120, "painted": false, "openings": ["door", "arch"]},
+    {"id": "lighthouse", "class": "landmark", "triangles": 210, "painted": false, "openings": ["door"]},
+    {"id": "quay_wall", "class": "prop", "triangles": 40, "painted": false},
+    {"id": "boat_box", "class": "prop", "triangles": 24, "painted": false},
+    {"id": "person_marker", "class": "character", "triangles": 48, "painted": false}
+  ],
+  "shots": [
+    {"file": "shots/greybox/spawn.png", "eye_m": 1.7, "kind": "spawn"},
+    {"file": "shots/greybox/lane.png", "eye_m": 1.7, "kind": "street"},
+    {"file": "shots/greybox/quay.png", "eye_m": 1.7, "kind": "street"},
+    {"file": "shots/greybox/lighthouse_close.png", "eye_m": 1.7, "kind": "landmark"},
+    {"file": "shots/greybox/portal_arrival.png", "eye_m": 1.7, "kind": "portal"},
+    {"file": "shots/greybox/aerial.png", "eye_m": 60, "kind": "aerial"}
+  ],
+  "approvals": [
+    {"checkpoint": "greybox", "date": "2026-10-20", "words": "yes the layout feels right (example entry)"}
+  ]
+}

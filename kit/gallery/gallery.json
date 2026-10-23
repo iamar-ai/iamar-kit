@@ -1,0 +1,286 @@
+{
+  "description": "Annotated good and bad examples from the iamar build. Each entry is a real outcome that the source document records: WORKS, PARTIAL or FAILED. Pictures stay in the source repository; this file cites where each one lives (source). Rebuild gallery.md with gallery.py build.",
+  "categories": ["houses", "props", "creatures", "terrain", "water", "lighting", "statues", "process"],
+  "entries": [
+    {
+      "id": "G01", "category": "houses", "status": "FAILED", "layer": "engineering", "recipe": "traps",
+      "title": "Every landmark cut its door at the house height",
+      "seen": "Landmarks shared the house door height, so the big buildings lost their grandeur.",
+      "lesson": "Give each landmark its own entrance height in its spec; carry the scale with the arch ring and painted carving, not extra polygons.",
+      "source": "docs/MASTERPLAN_JOBS.md:78"
+    },
+    {
+      "id": "G02", "category": "houses", "status": "PARTIAL", "layer": "style", "recipe": "style_iamar_proportions",
+      "title": "Monumental gate and bridges: grandeur from width and rhythm",
+      "seen": "A 6.1 m bridge against a 14 m street narrowed the grandest moment of the route.",
+      "lesson": "Set gate and bridge widths from the approach, not from the minimum road. The South target of 18-20 m stayed open at the time of writing.",
+      "source": "docs/MASTERPLAN_ART_TECHNIQUES.md:158"
+    },
+    {
+      "id": "G03", "category": "houses", "status": "FAILED", "layer": "engineering", "recipe": "traps",
+      "title": "Street lamps placed inside the carriageway",
+      "seen": "On a 3 m castle road the lamps sat 0.35 m inside the paved edge.",
+      "lesson": "Offset lamps outside the road half-width plus a margin (w * 0.5 + 0.6 m) and test them against the road ribbon.",
+      "source": "docs/MASTERPLAN_JOBS.md:121"
+    },
+    {
+      "id": "G05", "category": "houses", "status": "FAILED", "layer": "engineering", "recipe": "lod_chain_baked_facades",
+      "title": "Extra LOD levels on baked building shells",
+      "seen": "Levels past the 1 m error cap lost windows, trims and lit windows at 50-110 m. Three audit rounds over 76 views gained 0.86% of primitives.",
+      "lesson": "Do not add simplifier levels to baked shells for a small gain. Lossless savings need per-building impostors or a far-LOD set.",
+      "source": "docs/perf/fps_f12_lod_chains.md:1"
+    },
+    {
+      "id": "G06", "category": "houses", "status": "FAILED", "layer": "engineering", "recipe": "baked_lod_chains",
+      "title": "Coarsest baked LOD cut on 148 of 197 meshes",
+      "seen": "The round cut 37.1% of triangles at the coarsest level (361,706 to 227,541). Windows and lit windows failed at 50-110 m and nothing was published.",
+      "lesson": "Judge a LOD round by what is visible at its switch distance, in a rendered view, before counting triangles.",
+      "source": "docs/perf/fps_f12_lod_chains_table.md:3"
+    },
+    {
+      "id": "G07", "category": "houses", "status": "PARTIAL", "layer": "engineering", "recipe": "never_seen_face_culling",
+      "title": "Hidden-face culling on buildings",
+      "seen": "Removing the hidden faces of buildings saved 0.8% of LOD0 triangles, because the generator already culled them. A dressing split netted -0.8% to +0.2% with 11 more draw calls.",
+      "lesson": "Measure a culling pass on the real building set before adding it. Long dressing pieces must stay readable at range.",
+      "source": "docs/masterplan_audit/a34_baseline.md:164"
+    },
+    {
+      "id": "G08", "category": "props", "status": "FAILED", "layer": "engineering", "recipe": "traps",
+      "title": "Instance uniforms for per-house looks",
+      "seen": "A shared instance-uniform buffer overflowed at 4,096 items.",
+      "lesson": "Use material variants for per-house looks; do not rely on instance uniform buffers for large sets.",
+      "source": "docs/MASTERPLAN_ART_TECHNIQUES.md:231"
+    },
+    {
+      "id": "G09", "category": "props", "status": "FAILED", "layer": "engineering", "recipe": "traps",
+      "title": "Night far trees glow white",
+      "seen": "Impostor billboards at night were not lit like real trees and glowed white.",
+      "lesson": "Fixed on 2026-10-09; the root cause was the same as the normal-atlas encoding trap. Check far impostors in night light.",
+      "source": "docs/MASTERPLAN_JOBS.md:740"
+    },
+    {
+      "id": "G10", "category": "props", "status": "FAILED", "layer": "style", "recipe": "forest_far_cards",
+      "title": "Far-only tree impostor cards",
+      "seen": "On the Balanced preset, far-only tree cards dropped the frame rate from 42 to 24 fps.",
+      "lesson": "Measure impostor cards on the target preset. Cutting at 50-60 m with better blended cards is the open proposal.",
+      "source": "docs/JANE_PARALLEL_WORK.md:19"
+    },
+    {
+      "id": "G11", "category": "props", "status": "FAILED", "layer": "style", "recipe": "traps",
+      "title": "Forest LOD: blocky canopy and snapping impostors",
+      "seen": "Blocky crowns and 22.5-degree view snapping made trees look as if they changed shape.",
+      "lesson": "Keep the crown silhouette across LODs and avoid snapping impostor views on a coarse angle grid.",
+      "source": "docs/MASTERPLAN_ART_TECHNIQUES.md:471"
+    },
+    {
+      "id": "G12", "category": "props", "status": "FAILED", "layer": "engineering", "recipe": "dynamic_mesh_lod_lever",
+      "title": "Raising the mesh LOD threshold under load",
+      "seen": "Raising the threshold above 4 px visibly broke a fountain about 15 m away and simplified stalls at x8.",
+      "lesson": "Under load, reduce render scale first; use mesh LOD only at the floor.",
+      "source": "docs/DYNAMIC_RESOLUTION.md:73"
+    },
+    {
+      "id": "G13", "category": "terrain", "status": "PARTIAL", "layer": "engineering", "recipe": "far_ground_lod",
+      "title": "LOD flag on painted ground",
+      "seen": "generate_lods on ground with class colours and UV seams cut the slice by 1.8%. Position-only far siblings halved the paved meshes but the net gain was about 1% of a view.",
+      "lesson": "Do not expect the LOD flag to help painted ground. Build a far re-gridded tile.",
+      "source": "docs/masterplan_audit/a34_baseline.md:141"
+    },
+    {
+      "id": "G14", "category": "creatures", "status": "FAILED", "layer": "style", "recipe": "traps",
+      "title": "Derivative bump on small creatures",
+      "seen": "bump * texture scale made a crosshatch on small creatures. Bump at 0 read as smooth feathers.",
+      "lesson": "Keep bump low on small creatures; test it at the viewing distance.",
+      "source": "docs/MASTERPLAN_ART_TECHNIQUES.md:541"
+    },
+    {
+      "id": "G15", "category": "creatures", "status": "FAILED", "layer": "style", "recipe": "traps",
+      "title": "Griffin beak covered the face like a mask",
+      "seen": "The beak grew from the skull end ring and read as a big yellow toucan beak.",
+      "lesson": "Grow the beak from the feathered face, compressed to about 0.74x with a dark tip.",
+      "source": "docs/masterplan_griffin/README.md:39"
+    },
+    {
+      "id": "G16", "category": "creatures", "status": "PARTIAL", "layer": "style", "recipe": "creature_triangle_budget",
+      "title": "Lowering horse detail to the budget",
+      "seen": "LOD0 went from 9,780 to 8,284 triangles against a 6k budget. Lower detail lost the hooves and the loft profile between stations.",
+      "lesson": "Keep hooves and the loft profile when cutting; meet the budget with texture and bake instead of cutting silhouette.",
+      "source": "docs/perf/horse_f10/README.md:43"
+    },
+    {
+      "id": "G17", "category": "creatures", "status": "FAILED", "layer": "engineering", "recipe": "multimesh_custom_data_colour",
+      "title": "Rebuilt MultiMesh lost the instance colour",
+      "seen": "A creature script rebuilt the body MultiMesh and read the coat tint back too early. The body drew black while head and legs kept colour.",
+      "lesson": "Each instance restores its coat on its first pose. Verify instance colours in the game, not in a headless run.",
+      "source": "docs/MASTERPLAN_TODO.md:124"
+    },
+    {
+      "id": "G18", "category": "creatures", "status": "PARTIAL", "layer": "style", "recipe": "creature_leg_flex_limits",
+      "title": "Procedural legs float on uneven ground",
+      "seen": "Separate lower-leg parts with knee and hock flex are not IK. Blender inspection caught floating wolf paws.",
+      "lesson": "Overlap the pastern and paw so no gap shows, and inspect feet in Blender at the walking pose.",
+      "source": "docs/wildlife_detail_upgrade.md:12"
+    },
+    {
+      "id": "G19", "category": "creatures", "status": "FAILED", "layer": "style", "recipe": "character_hair_fit_exclude_beard",
+      "title": "Beard stretched over the collar by the hair fit",
+      "seen": "A posed fit loop over every hair mesh, beards included, pushed the beard tip out over a chain collar. The run failed at score 87.4 from 90.4.",
+      "lesson": "Skip beards in the posed fit; they follow the build through body weights.",
+      "source": "docs/masterplan_shots/rv2/r65/VERDICT.md:1"
+    },
+    {
+      "id": "G20", "category": "creatures", "status": "PARTIAL", "layer": "engineering", "recipe": "herd_multimesh_lod",
+      "title": "Herd close and far mesh switch",
+      "seen": "A cow went from 7,604 close triangles to 21,924 with the close mesh; the far mesh is 2,418.",
+      "lesson": "Switch at 22 m and back within 18 m using the closest member. The swap is discrete with no crossfade, and close detail multiplies the cost, so set a budget first.",
+      "source": "docs/animal_detail_upgrade.md:12"
+    },
+    {
+      "id": "G21", "category": "statues", "status": "PARTIAL", "layer": "style", "recipe": "statue_from_concept",
+      "title": "Multi-view generation traps on a winged creature",
+      "seen": "Front-only views gave blob backs. Side views folded the wings into the cloak. A thin sword vanished. Flat grey patches became planks.",
+      "lesson": "Name the wings in the prompt with a negative prompt, pick from several seeds, and drop flat untextured patches before modelling.",
+      "source": "docs/masterplan_audit/south_gate_heroes/README.md:56"
+    },
+    {
+      "id": "G22", "category": "terrain", "status": "FAILED", "layer": "engineering", "recipe": "traps",
+      "title": "Paving disc 3 cm under the lowest ground point",
+      "seen": "The paving disc z-fought with the ground wherever the ground dipped below it.",
+      "lesson": "Cut the footprint out of the ground and lay paving 2-5 cm above it with a kerb ring. Check fountains, wells, statues and stalls.",
+      "source": "docs/MASTERPLAN_JOBS.md:109"
+    },
+    {
+      "id": "G23", "category": "terrain", "status": "PARTIAL", "layer": "engineering", "recipe": "far_ground_lod_visibility_range",
+      "title": "Far ground groups show coarse flat ground through fine paving",
+      "seen": "Far ground groups were measured from the group centre, so coarse ground showed through fine paving near the player.",
+      "lesson": "Measure far-LOD visibility range from the player, not from the group centre.",
+      "source": "docs/masterplan_audit/r11_gaps.md:63"
+    },
+    {
+      "id": "G24", "category": "terrain", "status": "PARTIAL", "layer": "engineering", "recipe": "bake_dark_texel_audit",
+      "title": "Footing faces below ground bake black",
+      "seen": "Footing tops at street level baked black and showed as strips where the ground dipped. Rebaking did not help until the geometry was culled or sunk.",
+      "lesson": "Cull or sink hidden footing faces before baking; a rebake alone will not fix them.",
+      "source": "docs/masterplan_audit/dark_bakes_player.md:61"
+    },
+    {
+      "id": "G26", "category": "water", "status": "PARTIAL", "layer": "engineering", "recipe": "water_effects",
+      "title": "Pond water floating above the terrain",
+      "seen": "Water was raised 0.25 m over a 1.42x shoreline, and the height shelf ran after the terrain hook.",
+      "lesson": "Dip the basin below ground and slope the banks. Apply the height shelf before the terrain hook.",
+      "source": "docs/MASTERPLAN_JOBS.md:760"
+    },
+    {
+      "id": "G27", "category": "water", "status": "FAILED", "layer": "style", "recipe": "traps",
+      "title": "Dry pale apron round a pond reads as a sand smear",
+      "seen": "The carve flattened an apron 0.2 m above the water. It read as a dry sand smear.",
+      "lesson": "Raise the water over the apron or dip the bowl; keep shafts and haze 8 m off the water.",
+      "source": "docs/masterplan_stream/README.md:30"
+    },
+    {
+      "id": "G28", "category": "water", "status": "FAILED", "layer": "engineering", "recipe": "traps",
+      "title": "Road ribbon built before the pond was carved",
+      "seen": "The road ribbon lay across the water and the bridge deck.",
+      "lesson": "Defer the road build until the ground is carved, skip rows over the pond and the bridge decks, and keep waymarkers off the bridge.",
+      "source": "docs/masterplan_forest/README.md:155"
+    },
+    {
+      "id": "G29", "category": "lighting", "status": "FAILED", "layer": "style", "recipe": "traps",
+      "title": "Warm peach fog tinted the valley yellow",
+      "seen": "Warm fog tinted the whole valley yellow when seen from the air.",
+      "lesson": "Keep the warmth in the sun and the surfaces; keep the fog cool and light.",
+      "source": "docs/WORLD_ART_GUIDE.md:192"
+    },
+    {
+      "id": "G30", "category": "lighting", "status": "PARTIAL", "layer": "style", "recipe": "lighting_presets",
+      "title": "Lighting a focal statue",
+      "seen": "Warm key from braziers, a cool rim, shafts and animated flame cards read well. A flickering light moved the shadows.",
+      "lesson": "Use real animated flames with embers so the light and the shadows move together.",
+      "source": "docs/MASTERPLAN_JOBS.md:607"
+    },
+    {
+      "id": "G31", "category": "lighting", "status": "FAILED", "layer": "engineering", "recipe": "lightmap_format_conversion",
+      "title": "Reduced lightmap decoded to the wrong format",
+      "seen": "An LA8 lightmap decoded as RGBA8 lost the sun shadows and washed out the walls.",
+      "lesson": "Convert decoded images back to the stored format, and test that the sun is read from alpha.",
+      "source": "docs/LOWEND_HALF_LIGHTMAPS.md:39"
+    },
+    {
+      "id": "G32", "category": "lighting", "status": "FAILED", "layer": "engineering", "recipe": "shadow_pass_measurement",
+      "title": "Shadow cost measured with the wrong sun",
+      "seen": "The budget tool used 4 splits over 60 m, so a 25k-triangle landmark drew as 101k shadow triangles. The shipped game uses 1 split over 45 m; the true share was 16-24% of the frame, not 41-49%.",
+      "lesson": "Measure with the shipped lighting, not a tool default.",
+      "source": "docs/MASTERPLAN_TODO.md:183"
+    },
+    {
+      "id": "G33", "category": "lighting", "status": "PARTIAL", "layer": "engineering", "recipe": "blob_shadow_ground_patch",
+      "title": "Blob shadow reads as a black hole",
+      "seen": "On the Fast preset the sun shadows were off, and an unshaded near-black disc drew under characters. Five players reported it as a black spot.",
+      "lesson": "Use alpha around 0.25, tint it to the ground, multiply-blend it and fade it at night and in rain.",
+      "source": "docs/masterplan_audit/f4_triage.md:144"
+    },
+    {
+      "id": "G34", "category": "lighting", "status": "PARTIAL", "layer": "engineering", "recipe": "bake_covered_floor_lift",
+      "title": "Covered passages bake near-black",
+      "seen": "Road decks inside gate passages baked at sky 0.08 with no sun and read 10-12% of open-road brightness.",
+      "lesson": "Hold sky light at 0.6 on up-facing texels of named fortification meshes, or add lamps.",
+      "source": "docs/masterplan_audit/dark_bakes.md:128"
+    },
+    {
+      "id": "G35", "category": "process", "status": "PARTIAL", "layer": "engineering", "recipe": "lod_popping_check",
+      "title": "LOD swaps judged on stills",
+      "seen": "Far-level switches and hand-overs show as horizon rings and pops that stills do not reveal.",
+      "lesson": "Judge LOD swaps on 30 fps frame sequences. A hard switch may need a 1-2 m hysteresis band.",
+      "source": "docs/masterplan_audit/r11_plan.md:72"
+    },
+    {
+      "id": "G36", "category": "statues", "status": "FAILED", "layer": "style", "recipe": "statue_pasted_hero_face",
+      "title": "Hero face pasted onto image-to-3D statues",
+      "seen": "Sculpts decimated to 3,500-8,000 triangles gave soft blob faces. A pasted hero face (about 10,032 triangles in total) was called horrible and removed in an internal task.",
+      "lesson": "Do not paste a hero face mesh onto a generated statue. Fix the sculpt at its source.",
+      "source": "docs/masterplan_shots/job1627_statue_faces/README.md:11"
+    },
+    {
+      "id": "G37", "category": "statues", "status": "PARTIAL", "layer": "style", "recipe": "statue_protocol",
+      "title": "Statues from posed character models",
+      "seen": "A CPU-skinned posed mesh of about 2k triangles with AO in vertex colour worked. The moat-bridge statue drew black and stays open.",
+      "lesson": "Check the bake and the UV2 and material of every statue after a worker-thread load.",
+      "source": "docs/MASTERPLAN_ART_TECHNIQUES.md:165"
+    },
+    {
+      "id": "G38", "category": "statues", "status": "PARTIAL", "layer": "engineering", "recipe": "bake_signature_mismatch",
+      "title": "Stale bake signature draws a statue unbaked",
+      "seen": "A reverted mesh no longer matched its bake, so the game drew it with live light and no baked AO.",
+      "lesson": "Compare before and after shots only after the bake signature matches the built mesh.",
+      "source": "docs/masterplan_shots/f4/f4_156_south_mage_gamelight.md:28"
+    },
+    {
+      "id": "G39", "category": "props", "status": "FAILED", "layer": "engineering", "recipe": "mesh_import_split_normals_lods",
+      "title": "Imported split normals stopped Godot making LODs",
+      "seen": "The first bake exported 23,970 split vertices. Godot generated no LODs for the custom split normals.",
+      "lesson": "Clear custom split normals before export, or Godot silently makes no LODs.",
+      "source": "docs/masterplan_shots/f4_135_face/README.md:27"
+    },
+    {
+      "id": "G40", "category": "process", "status": "FAILED", "layer": "engineering", "recipe": "stale_class_cache_false_pass",
+      "title": "Harness reported PASS despite script errors",
+      "seen": "A pond fixture reported PASS while its dependencies logged SCRIPT ERRORs.",
+      "lesson": "A green run is not proof. Fail the run on any script error in the log, and check the log, not only the exit code.",
+      "source": "docs/testing/pond_detail_fixture.md:20"
+    },
+    {
+      "id": "G41", "category": "process", "status": "FAILED", "layer": "engineering", "recipe": "stale_class_cache_false_pass",
+      "title": "Stale class cache gave RESULT ok with parse errors",
+      "seen": "A stale global script class cache printed RESULT ok while the scripts had parse errors.",
+      "lesson": "Clear the class cache before a gate run; treat parse errors as a failure.",
+      "source": "docs/testing/gate_statues_generator_1339.md:61"
+    },
+    {
+      "id": "G42", "category": "process", "status": "FAILED", "layer": "engineering", "recipe": "headless_false_pass",
+      "title": "Probe exited 0 while a check had failed",
+      "seen": "The probe printed exit 0 while script errors hid a failed check.",
+      "lesson": "Make the probe count errors and exit non-zero on any failed check.",
+      "source": "docs/masterplan_audit/citygrow_correspondence_holds.md:34"
+    }
+  ]
+}

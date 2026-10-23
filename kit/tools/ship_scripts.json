@@ -1,0 +1,1075 @@
+{
+ "schema": 1,
+ "note": "One entry per kit/inventory/scripts.json row marked ship / ship after wrapping that lives outside iamar-ai/iamar-kit (an internal task, PUB8). status: in-kit (copied into the kit), covered (a kit tool does the same job; reason says how), bundled (tools/kit_bundle.sh copies it into the kit download), browser (stays in the iamar browser, which every user has), internal (not for users; reason), pending (the named follow-up job brings it in). Checked by kit/tools/check_tools.py.",
+ "scripts": [
+  {
+   "repo": "iamar",
+   "path": "scripts/builders/builder_watcher.gd",
+   "status": "browser",
+   "reason": "stays in the iamar browser, not the kit (docs/KIT_SPLIT.md, What stays in the browser): every user already has it inside iamar; the kit reaches it through the browser (the in-game builder desk)",
+   "doc": "docs/KIT_SPLIT.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "scripts/builders/builders_guild.gd",
+   "status": "browser",
+   "reason": "stays in the iamar browser, not the kit (docs/KIT_SPLIT.md, What stays in the browser): every user already has it inside iamar; the kit reaches it through the browser (the in-game builder desk)",
+   "doc": "docs/KIT_SPLIT.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "scripts/builders/creator_bootstrap.gd",
+   "status": "browser",
+   "reason": "stays in the iamar browser, not the kit (docs/KIT_SPLIT.md, What stays in the browser): every user already has it inside iamar; the kit reaches it through the browser (the in-game builder desk)",
+   "doc": "docs/KIT_SPLIT.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "scripts/builders/creator_preview_acquisition.gd",
+   "status": "browser",
+   "reason": "stays in the iamar browser, not the kit (docs/KIT_SPLIT.md, What stays in the browser): every user already has it inside iamar; the kit reaches it through the browser (the in-game builder desk)",
+   "doc": "docs/KIT_SPLIT.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "scripts/builders/creator_preview_controller.gd",
+   "status": "browser",
+   "reason": "stays in the iamar browser, not the kit (docs/KIT_SPLIT.md, What stays in the browser): every user already has it inside iamar; the kit reaches it through the browser (the in-game builder desk)",
+   "doc": "docs/KIT_SPLIT.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "scripts/builders/creator_preview_descriptor.gd",
+   "status": "browser",
+   "reason": "stays in the iamar browser, not the kit (docs/KIT_SPLIT.md, What stays in the browser): every user already has it inside iamar; the kit reaches it through the browser (the in-game builder desk)",
+   "doc": "docs/KIT_SPLIT.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "scripts/builders/creator_preview_home.gd",
+   "status": "browser",
+   "reason": "stays in the iamar browser, not the kit (docs/KIT_SPLIT.md, What stays in the browser): every user already has it inside iamar; the kit reaches it through the browser (the in-game builder desk)",
+   "doc": "docs/KIT_SPLIT.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "scripts/builders/creator_preview_http.gd",
+   "status": "browser",
+   "reason": "stays in the iamar browser, not the kit (docs/KIT_SPLIT.md, What stays in the browser): every user already has it inside iamar; the kit reaches it through the browser (the in-game builder desk)",
+   "doc": "docs/KIT_SPLIT.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "scripts/builders/creator_preview_identity.gd",
+   "status": "browser",
+   "reason": "stays in the iamar browser, not the kit (docs/KIT_SPLIT.md, What stays in the browser): every user already has it inside iamar; the kit reaches it through the browser (the in-game builder desk)",
+   "doc": "docs/KIT_SPLIT.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "scripts/builders/creator_preview_identity_hooks.gd",
+   "status": "browser",
+   "reason": "stays in the iamar browser, not the kit (docs/KIT_SPLIT.md, What stays in the browser): every user already has it inside iamar; the kit reaches it through the browser (the in-game builder desk)",
+   "doc": "docs/KIT_SPLIT.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "scripts/builders/creator_preview_lifetime.gd",
+   "status": "browser",
+   "reason": "stays in the iamar browser, not the kit (docs/KIT_SPLIT.md, What stays in the browser): every user already has it inside iamar; the kit reaches it through the browser (the in-game builder desk)",
+   "doc": "docs/KIT_SPLIT.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "scripts/builders/creator_preview_root.gd",
+   "status": "browser",
+   "reason": "stays in the iamar browser, not the kit (docs/KIT_SPLIT.md, What stays in the browser): every user already has it inside iamar; the kit reaches it through the browser (the in-game builder desk)",
+   "doc": "docs/KIT_SPLIT.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "scripts/builders/creator_preview_wire.gd",
+   "status": "browser",
+   "reason": "stays in the iamar browser, not the kit (docs/KIT_SPLIT.md, What stays in the browser): every user already has it inside iamar; the kit reaches it through the browser (the in-game builder desk)",
+   "doc": "docs/KIT_SPLIT.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "scripts/builders/creator_progression.gd",
+   "status": "browser",
+   "reason": "stays in the iamar browser, not the kit (docs/KIT_SPLIT.md, What stays in the browser): every user already has it inside iamar; the kit reaches it through the browser (the in-game builder desk)",
+   "doc": "docs/KIT_SPLIT.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "scripts/builders/creator_quest_client.gd",
+   "status": "browser",
+   "reason": "stays in the iamar browser, not the kit (docs/KIT_SPLIT.md, What stays in the browser): every user already has it inside iamar; the kit reaches it through the browser (the in-game builder desk)",
+   "doc": "docs/KIT_SPLIT.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "scripts/builders/creator_setup.gd",
+   "status": "browser",
+   "reason": "stays in the iamar browser, not the kit (docs/KIT_SPLIT.md, What stays in the browser): every user already has it inside iamar; the kit reaches it through the browser (the in-game builder desk)",
+   "doc": "docs/KIT_SPLIT.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "scripts/builders/creator_worlds.gd",
+   "status": "browser",
+   "reason": "stays in the iamar browser, not the kit (docs/KIT_SPLIT.md, What stays in the browser): every user already has it inside iamar; the kit reaches it through the browser (the in-game builder desk)",
+   "doc": "docs/KIT_SPLIT.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "scripts/builders/local_creator_build.gd",
+   "status": "browser",
+   "reason": "stays in the iamar browser, not the kit (docs/KIT_SPLIT.md, What stays in the browser): every user already has it inside iamar; the kit reaches it through the browser (the in-game builder desk)",
+   "doc": "docs/KIT_SPLIT.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "scripts/builders/local_creator_files.gd",
+   "status": "browser",
+   "reason": "stays in the iamar browser, not the kit (docs/KIT_SPLIT.md, What stays in the browser): every user already has it inside iamar; the kit reaches it through the browser (the in-game builder desk)",
+   "doc": "docs/KIT_SPLIT.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "scripts/kit/kit_loop.gd",
+   "status": "browser",
+   "reason": "stays in the iamar browser, not the kit (docs/KIT_SPLIT.md, What stays in the browser): every user already has it inside iamar; the kit reaches it through the browser (KitLoop dispatcher, WorldScaffold, WorldTechniques)",
+   "doc": "docs/KIT_SPLIT.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "scripts/kit/world_scaffold.gd",
+   "status": "browser",
+   "reason": "stays in the iamar browser, not the kit (docs/KIT_SPLIT.md, What stays in the browser): every user already has it inside iamar; the kit reaches it through the browser (KitLoop dispatcher, WorldScaffold, WorldTechniques)",
+   "doc": "docs/KIT_SPLIT.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "scripts/kit/world_techniques.gd",
+   "status": "browser",
+   "reason": "stays in the iamar browser, not the kit (docs/KIT_SPLIT.md, What stays in the browser): every user already has it inside iamar; the kit reaches it through the browser (KitLoop dispatcher, WorldScaffold, WorldTechniques)",
+   "doc": "docs/KIT_SPLIT.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/bake.sh",
+   "status": "covered",
+   "kit": [
+    "kit/blender/bake_unlit.py"
+   ],
+   "command": "iamar-world blender-run kit/blender/bake_unlit.py -- in.glb out.glb [samples] [--sun=X,Y,Z]",
+   "test": "kit/tests/blender/sky_ao_bake_test.py",
+   "doc": "kit/blender/README.md",
+   "reason": "the city's two-channel lightmap bake (sky in red, sun in green) feeds the city's own baked_light shader through Godot lightmap UVs of the masterplan World; a world package cannot use that shader, so the kit bakes the light into unlit textures instead (recipe bake_sky_sun)"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/bake_chicken_ao.py",
+   "status": "covered",
+   "kit": [
+    "kit/blender/bake_vertex_ao.py"
+   ],
+   "command": "iamar-world blender-run kit/blender/bake_vertex_ao.py -- in.glb out.glb --distance D [--local]",
+   "test": "kit/tests/blender/sky_ao_bake_test.py",
+   "doc": "kit/blender/README.md",
+   "reason": "generalised: the animal kit's part-local AO bake became the kit's vertex AO bake for any glTF (recipe bake_ao_vertex cites it)"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/bake_export.gd",
+   "status": "covered",
+   "kit": [
+    "kit/blender/bake_unlit.py"
+   ],
+   "command": "iamar-world blender-run kit/blender/bake_unlit.py -- in.glb out.glb [samples] [--sun=X,Y,Z]",
+   "test": "kit/tests/blender/sky_ao_bake_test.py",
+   "doc": "kit/blender/README.md",
+   "reason": "the city's two-channel lightmap bake (sky in red, sun in green) feeds the city's own baked_light shader through Godot lightmap UVs of the masterplan World; a world package cannot use that shader, so the kit bakes the light into unlit textures instead (recipe bake_sky_sun)"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/bake_light.py",
+   "status": "covered",
+   "kit": [
+    "kit/blender/bake_unlit.py"
+   ],
+   "command": "iamar-world blender-run kit/blender/bake_unlit.py -- in.glb out.glb [samples] [--sun=X,Y,Z]",
+   "test": "kit/tests/blender/sky_ao_bake_test.py",
+   "doc": "kit/blender/README.md",
+   "reason": "the city's two-channel lightmap bake (sky in red, sun in green) feeds the city's own baked_light shader through Godot lightmap UVs of the masterplan World; a world package cannot use that shader, so the kit bakes the light into unlit textures instead (recipe bake_sky_sun)"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/bake_settle_scope.py",
+   "status": "internal",
+   "reason": "swarm tooling: reads `agentcoord settled` output to decide whether a city rebake may start; needs the Agent Coordination board, meaningless to a world builder"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/blender/hall_audio.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/examples/mission_hall/hall_audio.py"
+   ],
+   "command": "python3 kit/examples/mission_hall/hall_audio.py worlds/mission_hall",
+   "test": "kit/tests/examples/mission_hall_test.py",
+   "doc": "kit/examples/mission_hall/README.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/blender/hall_scene.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/examples/mission_hall/hall_scene.py"
+   ],
+   "command": "python3 kit/examples/mission_hall/hall_scene.py worlds/mission_hall [--city iamar://local/oakhaven --id mission_hall --owner you --author \"Name\"]",
+   "test": "kit/tests/examples/mission_hall_test.py",
+   "doc": "kit/examples/mission_hall/README.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/blender/mission_hall.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/examples/mission_hall/mission_hall.py"
+   ],
+   "command": "blender -b --python kit/examples/mission_hall/mission_hall.py -- worlds/mission_hall [samples] [--quick] [--preview] [--props DIR] [--textures DIR] [--work DIR]",
+   "test": "kit/tests/examples/mission_hall_test.py",
+   "doc": "kit/examples/mission_hall/README.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/face/portrait_paint.py",
+   "status": "internal",
+   "reason": "paints the City Hall heroines portrait from a city render and the civic atlas (city-only inputs; the photo mode reads private pictures)"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/forest_paint.py",
+   "status": "internal",
+   "reason": "repaints the city nature-kit leaf and bark textures in place (needs assets/naturekit, which the kit does not ship); a world of your own paints its trees with kit/tools/painters/forest_tree_paint.py"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/forest_road_paint.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/tools/painters/forest_road_paint.py"
+   ],
+   "command": "python3 kit/tools/painters/forest_road_paint.py [out]",
+   "test": "kit/tests/painters_test.py",
+   "doc": "kit/tools/TOOL.md",
+   "reason": "texture painter, seeded and procedural; no city inputs"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/forest_tree_paint.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/tools/painters/forest_tree_paint.py"
+   ],
+   "command": "python3 kit/tools/painters/forest_tree_paint.py [out]",
+   "test": "kit/tests/painters_test.py",
+   "doc": "kit/tools/TOOL.md",
+   "reason": "texture painter, seeded and procedural; no city inputs"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/hair/strand_paint.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/tools/painters/strand_paint.py"
+   ],
+   "command": "python3 kit/tools/painters/strand_paint.py [out]",
+   "test": "kit/tests/painters_test.py",
+   "doc": "kit/tools/TOOL.md",
+   "reason": "texture painter, seeded and procedural; no city inputs"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/masterplan_garden_paint.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/tools/painters/masterplan_garden_paint.py"
+   ],
+   "command": "python3 kit/tools/painters/masterplan_garden_paint.py [out]",
+   "test": "kit/tests/painters_test.py",
+   "doc": "kit/tools/TOOL.md",
+   "reason": "texture painter, seeded and procedural; no city inputs"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/masterplan_griffin_paint.py",
+   "status": "internal",
+   "reason": "regions are fixed to the city griffin kit (mp_griffin_kit.gd R_* rects) and a city reference image; not reusable as is"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/mp_fields_paint.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/tools/painters/mp_fields_paint.py"
+   ],
+   "command": "python3 kit/tools/painters/mp_fields_paint.py [out]",
+   "test": "kit/tests/painters_test.py",
+   "doc": "kit/tools/TOOL.md",
+   "reason": "texture painter, seeded and procedural; no city inputs"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/mp_flora_paint.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/tools/painters/mp_flora_paint.py"
+   ],
+   "command": "python3 kit/tools/painters/mp_flora_paint.py [out]",
+   "test": "kit/tests/painters_test.py",
+   "doc": "kit/tools/TOOL.md",
+   "reason": "texture painter, seeded and procedural; no city inputs"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/mp_herb_paint.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/tools/painters/mp_herb_paint.py"
+   ],
+   "command": "python3 kit/tools/painters/mp_herb_paint.py [out]",
+   "test": "kit/tests/painters_test.py",
+   "doc": "kit/tools/TOOL.md",
+   "reason": "texture painter, seeded and procedural; no city inputs"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/mp_textures/paint_library.py",
+   "status": "covered",
+   "kit": [
+    "kit/tools/paint_materials.py"
+   ],
+   "command": "python3 kit/tools/paint_materials.py <out_dir> [options]",
+   "test": "kit/tests/paint_materials_test.py",
+   "doc": "kit/blender/README.md",
+   "reason": "ported: kit/tools/paint_materials.py is the kit's version of the city's painted material library (recipe painted_materials)"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/mp_waterfall_paint.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/tools/painters/mp_waterfall_paint.py"
+   ],
+   "command": "python3 kit/tools/painters/mp_waterfall_paint.py [out]",
+   "test": "kit/tests/painters_test.py",
+   "doc": "kit/tools/TOOL.md",
+   "reason": "texture painter, seeded and procedural; no city inputs"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/road_lantern_paint.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/tools/painters/road_lantern_paint.py"
+   ],
+   "command": "python3 kit/tools/painters/road_lantern_paint.py [out]",
+   "test": "kit/tests/painters_test.py",
+   "doc": "kit/tools/TOOL.md",
+   "reason": "texture painter, seeded and procedural; no city inputs"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/test_forest_paint.py",
+   "status": "covered",
+   "kit": [
+    "kit/tests/painters_test.py"
+   ],
+   "command": "python3 kit/tests/painters_test.py",
+   "test": "kit/tests/painters_test.py",
+   "doc": "kit/tools/TOOL.md",
+   "reason": "pytest file replaced by kit/tests/painters_test.py, which runs every kit painter twice (no pytest needed)"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/test_forest_road_paint.py",
+   "status": "covered",
+   "kit": [
+    "kit/tests/painters_test.py"
+   ],
+   "command": "python3 kit/tests/painters_test.py",
+   "test": "kit/tests/painters_test.py",
+   "doc": "kit/tools/TOOL.md",
+   "reason": "pytest file replaced by kit/tests/painters_test.py, which runs every kit painter twice (no pytest needed)"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/test_mp_fields_paint.py",
+   "status": "covered",
+   "kit": [
+    "kit/tests/painters_test.py"
+   ],
+   "command": "python3 kit/tests/painters_test.py",
+   "test": "kit/tests/painters_test.py",
+   "doc": "kit/tools/TOOL.md",
+   "reason": "pytest file replaced by kit/tests/painters_test.py, which runs every kit painter twice (no pytest needed)"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/test_mp_flora_paint.py",
+   "status": "covered",
+   "kit": [
+    "kit/tests/painters_test.py"
+   ],
+   "command": "python3 kit/tests/painters_test.py",
+   "test": "kit/tests/painters_test.py",
+   "doc": "kit/tools/TOOL.md",
+   "reason": "pytest file replaced by kit/tests/painters_test.py, which runs every kit painter twice (no pytest needed)"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/test_mp_waterfall_paint.py",
+   "status": "covered",
+   "kit": [
+    "kit/tests/painters_test.py"
+   ],
+   "command": "python3 kit/tests/painters_test.py",
+   "test": "kit/tests/painters_test.py",
+   "doc": "kit/tools/TOOL.md",
+   "reason": "pytest file replaced by kit/tests/painters_test.py, which runs every kit painter twice (no pytest needed)"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/typescript-world/api_generated.mjs",
+   "status": "bundled",
+   "bundle": "tools/kit_bundle.sh",
+   "dest": "kit/ts-world/api_generated.mjs",
+   "command": "iamar-world compile-typescript <world.ts> <template-folder> <fresh-output>",
+   "test": "tests/creator_tool_bundle/test_kit_bundle.py",
+   "doc": "docs/TYPESCRIPT_WORLDS.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/typescript-world/audit-wasm.mjs",
+   "status": "bundled",
+   "bundle": "tools/kit_bundle.sh",
+   "dest": "kit/ts-world/audit-wasm.mjs",
+   "command": "iamar-world compile-typescript <world.ts> <template-folder> <fresh-output>",
+   "test": "tests/creator_tool_bundle/test_kit_bundle.py",
+   "doc": "docs/TYPESCRIPT_WORLDS.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/typescript-world/build.mjs",
+   "status": "browser",
+   "reason": "the compile-typescript --from-source path: needs a browser source checkout and the Linux toolchain (kit/iamar-world); the kit's default path is the bundled pack.mjs",
+   "doc": "docs/TYPESCRIPT_WORLDS.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/typescript-world/build_prebuilt.mjs",
+   "status": "browser",
+   "reason": "builds the prebuilt QuickJS guest (prebuilt/iamar_ts_guest.wasm) that tools/kit_bundle.sh copies into kit/ts-world; world builders never rebuild it",
+   "doc": "docs/TYPESCRIPT_WORLDS.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/typescript-world/bundle_node_runtime.py",
+   "status": "browser",
+   "reason": "builds the prebuilt QuickJS guest (prebuilt/iamar_ts_guest.wasm) that tools/kit_bundle.sh copies into kit/ts-world; world builders never rebuild it",
+   "doc": "docs/TYPESCRIPT_WORLDS.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/typescript-world/bundle_runtime.py",
+   "status": "bundled",
+   "bundle": "tools/kit_bundle.sh",
+   "dest": "(offline TypeScript assembly step)",
+   "command": "tools/kit_bundle.sh with a TypeScript archive (assembles kit/ts-world/node_modules/typescript)",
+   "test": "tests/creator_tool_bundle/test_bundle_runtime.py",
+   "doc": "docs/TYPESCRIPT_WORLDS.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/typescript-world/compiler.mjs",
+   "status": "bundled",
+   "bundle": "tools/kit_bundle.sh",
+   "dest": "kit/ts-world/compiler.mjs",
+   "command": "iamar-world compile-typescript <world.ts> <template-folder> <fresh-output>",
+   "test": "tests/creator_tool_bundle/test_kit_bundle.py",
+   "doc": "docs/TYPESCRIPT_WORLDS.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/typescript-world/dependencies.mjs",
+   "status": "bundled",
+   "bundle": "tools/kit_bundle.sh",
+   "dest": "kit/ts-world/dependencies.mjs",
+   "command": "iamar-world compile-typescript <world.ts> <template-folder> <fresh-output>",
+   "test": "tests/creator_tool_bundle/test_kit_bundle.py",
+   "doc": "docs/TYPESCRIPT_WORLDS.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/typescript-world/fetch_toolchain.sh",
+   "status": "browser",
+   "reason": "builds the prebuilt QuickJS guest (prebuilt/iamar_ts_guest.wasm) that tools/kit_bundle.sh copies into kit/ts-world; world builders never rebuild it",
+   "doc": "docs/TYPESCRIPT_WORLDS.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/typescript-world/gen_bindings.mjs",
+   "status": "bundled",
+   "bundle": "tools/kit_bundle.sh",
+   "dest": "kit/ts-world/gen_bindings.mjs",
+   "command": "iamar-world compile-typescript <world.ts> <template-folder> <fresh-output>",
+   "test": "tests/creator_tool_bundle/test_kit_bundle.py",
+   "doc": "docs/TYPESCRIPT_WORLDS.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/typescript-world/guest/adapter.c",
+   "status": "browser",
+   "reason": "builds the prebuilt QuickJS guest (prebuilt/iamar_ts_guest.wasm) that tools/kit_bundle.sh copies into kit/ts-world; world builders never rebuild it",
+   "doc": "docs/TYPESCRIPT_WORLDS.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/typescript-world/guest/bootstrap.js",
+   "status": "browser",
+   "reason": "builds the prebuilt QuickJS guest (prebuilt/iamar_ts_guest.wasm) that tools/kit_bundle.sh copies into kit/ts-world; world builders never rebuild it",
+   "doc": "docs/TYPESCRIPT_WORLDS.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/typescript-world/guest/platform.c",
+   "status": "browser",
+   "reason": "builds the prebuilt QuickJS guest (prebuilt/iamar_ts_guest.wasm) that tools/kit_bundle.sh copies into kit/ts-world; world builders never rebuild it",
+   "doc": "docs/TYPESCRIPT_WORLDS.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/typescript-world/make_lock.mjs",
+   "status": "browser",
+   "reason": "builds the prebuilt QuickJS guest (prebuilt/iamar_ts_guest.wasm) that tools/kit_bundle.sh copies into kit/ts-world; world builders never rebuild it",
+   "doc": "docs/TYPESCRIPT_WORLDS.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/typescript-world/pack.mjs",
+   "status": "bundled",
+   "bundle": "tools/kit_bundle.sh",
+   "dest": "kit/ts-world/pack.mjs",
+   "command": "iamar-world compile-typescript <world.ts> <template-folder> <fresh-output>",
+   "test": "tests/creator_tool_bundle/test_kit_bundle.py",
+   "doc": "docs/TYPESCRIPT_WORLDS.md"
+  },
+  {
+   "repo": "iamar",
+   "path": "tools/typescript-world/template-files.mjs",
+   "status": "bundled",
+   "bundle": "tools/kit_bundle.sh",
+   "dest": "kit/ts-world/template-files.mjs",
+   "command": "iamar-world compile-typescript <world.ts> <template-folder> <fresh-output>",
+   "test": "tests/creator_tool_bundle/test_kit_bundle.py",
+   "doc": "docs/TYPESCRIPT_WORLDS.md"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/add_blade.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/gpu/stages/add_blade.py"
+   ],
+   "command": "python kit/gpu/sculpt.py blade x_high.glb x_high_blade.glb --root=x,y,z --tip=x,y,z",
+   "test": "kit/tests/gpu/stages_blade_inpaint_test.py",
+   "doc": "kit/gpu/README.md"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/bake_stone.py",
+   "status": "covered",
+   "kit": [
+    "kit/gpu/statue/stages/bake_split_env.py",
+    "kit/gpu/statue/stages/relight.py",
+    "kit/gpu/sculpt.py"
+   ],
+   "command": "python kit/gpu/statue/statue.py chain ... (statues); python kit/gpu/sculpt.py game ... (props)",
+   "test": "kit/tests/gpu_statue/statue_test.py",
+   "doc": "kit/gpu/statue/README.md",
+   "reason": "the normal + sky-occlusion bake onto the cage and the occlusion-shaded stone albedo are the statue chain's bake and relight stages; props get the normal bake in sculpt.py game"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/bake_v2.py",
+   "status": "internal",
+   "reason": "city-specific fixes for the one-view eagle head (mirrored paint, feather whitening); kit/gpu/README.md lists them as not packaged: use the multiview steps instead"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/clean_concept.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/gpu/stages/clean_concept.py"
+   ],
+   "command": "python kit/gpu/sculpt.py clean busy.png out/x [--poly ... --grabcut --bg ...]",
+   "test": "kit/tests/gpu/gpu_mv_test.py",
+   "doc": "kit/gpu/README.md"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/dilate_maps.py",
+   "status": "covered",
+   "kit": [
+    "kit/gpu/statue/stages/dilate_nn.py"
+   ],
+   "command": "python kit/gpu/statue/statue.py chain ... (dilate stage)",
+   "test": "kit/tests/gpu_statue/statue_test.py",
+   "doc": "kit/gpu/statue/README.md",
+   "reason": "the nearest-texel fill past the UV charts is the chain's dilate_nn stage"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/face_graft.py",
+   "status": "internal",
+   "reason": "statue v3 face graft, superseded by statue v4, whose UltraShape refine gives the face (kit/gpu/statue/README.md)"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/gen3d.py",
+   "status": "covered",
+   "kit": [
+    "kit/gpu/stages/shape_hy21.py"
+   ],
+   "command": "python kit/gpu/sculpt.py shape x_rgba.png x_high.glb --region CC",
+   "test": "kit/tests/gpu/gpu_tier_test.py",
+   "doc": "kit/gpu/README.md",
+   "reason": "the single-view shape step; the kit runs Hunyuan3D-2.1 behind hardware and region checks instead of this first Hunyuan3D-2 script"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/gen3d_v2.py",
+   "status": "covered",
+   "kit": [
+    "kit/gpu/sculpt.py",
+    "kit/gpu/stages/cage.py"
+   ],
+   "command": "python kit/gpu/sculpt.py run concept.png out --height H --budget N --region CC",
+   "test": "kit/tests/gpu/gpu_tier_test.py",
+   "doc": "kit/gpu/README.md",
+   "reason": "shape, a light cage with large UV charts and the bake are sculpt.py shape / cage / game (an internal task)"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/glb_whiten.py",
+   "status": "internal",
+   "reason": "city-specific fixes for the one-view eagle head (mirrored paint, feather whitening); kit/gpu/README.md lists them as not packaged: use the multiview steps instead"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/head_lods.py",
+   "status": "covered",
+   "kit": [
+    "kit/gpu/sculpt.py",
+    "kit/blender/asset_pipeline.py"
+   ],
+   "command": "python kit/gpu/sculpt.py game x_cage.glb x_high.glb out/final --budget N",
+   "test": "kit/tests/gpu/gpu_tier_test.py",
+   "doc": "kit/gpu/README.md",
+   "reason": "kit/gpu/README.md: head_lods.py is what sculpt.py game does with kit/blender/asset_pipeline.py"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/head_mv.py",
+   "status": "covered",
+   "kit": [
+    "kit/gpu/stages/mv_views.py",
+    "kit/gpu/stages/shape_mv.py"
+   ],
+   "command": "python kit/gpu/sculpt.py views ...; python kit/gpu/sculpt.py shape --mv ...",
+   "test": "kit/tests/gpu/gpu_mv_test.py",
+   "doc": "kit/gpu/README.md",
+   "reason": "packaged as the multiview views and shape steps (kit/gpu/README.md, GPU pipelines from the city; an internal task)"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/head_tex.py",
+   "status": "covered",
+   "kit": [
+    "kit/gpu/stages/paint_mv.py"
+   ],
+   "command": "python kit/gpu/sculpt.py paint <cage> <views> <out> --region CC",
+   "test": "kit/tests/gpu/gpu_mv_test.py",
+   "doc": "kit/gpu/README.md",
+   "reason": "packaged as the multiview paint step (an internal task)"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/inpaint_part.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/gpu/stages/inpaint_part.py"
+   ],
+   "command": "python kit/gpu/sculpt.py inpaint concept.png mask.png out/parts --prompt \"...\"",
+   "test": "kit/tests/gpu/stages_blade_inpaint_test.py",
+   "doc": "kit/gpu/README.md"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/look_v2.py",
+   "status": "covered",
+   "kit": [
+    "kit/blender/look.py"
+   ],
+   "command": "iamar-world blender-run kit/blender/look.py -- ...",
+   "test": "kit/tests/blender_tools_test.py",
+   "doc": "kit/blender/README.md",
+   "reason": "quick Blender look renders: the kit's look.py does the same for any mesh"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/mirror_v2.py",
+   "status": "internal",
+   "reason": "city-specific fixes for the one-view eagle head (mirrored paint, feather whitening); kit/gpu/README.md lists them as not packaged: use the multiview steps instead"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/mv_recut.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/gpu/stages/mv_recut.py"
+   ],
+   "command": "python kit/gpu/sculpt.py recut out/views/x out/x_rgba.png",
+   "test": "kit/tests/gpu/gpu_mv_test.py",
+   "doc": "kit/gpu/README.md"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/reduce3d.py",
+   "status": "internal",
+   "reason": "textured decimation of a generated head, a documented failure (it shattered the eagle's feather sheets: kit/gpu/README.md, Lessons); the kit decimates the untextured shape and bakes the detail back (sculpt.py cage / game)"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/refimg.py",
+   "status": "covered",
+   "kit": [
+    "kit/gpu/stages/concept_sdxl.py"
+   ],
+   "command": "python kit/gpu/sculpt.py concept out/concepts --prompt \"...\"",
+   "test": "kit/tests/gpu/gpu_mv_test.py",
+   "doc": "kit/gpu/README.md",
+   "reason": "packaged as the SDXL concept step (an internal task)"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v3/align_icp.py",
+   "status": "internal",
+   "reason": "statue v3 pipeline, superseded by statue v4 (kit/gpu/statue, packaged in an internal task)"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v3/bake_split.py",
+   "status": "internal",
+   "reason": "statue v3 pipeline, superseded by statue v4 (kit/gpu/statue, packaged in an internal task)"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v3/cutbase.py",
+   "status": "internal",
+   "reason": "statue v3 pipeline, superseded by statue v4 (kit/gpu/statue, packaged in an internal task)"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v3/facegraft2.py",
+   "status": "internal",
+   "reason": "statue v3 pipeline, superseded by statue v4 (kit/gpu/statue, packaged in an internal task)"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v3/gen21.py",
+   "status": "internal",
+   "reason": "statue v3 pipeline, superseded by statue v4 (kit/gpu/statue, packaged in an internal task)"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v3/lowsplit2.py",
+   "status": "internal",
+   "reason": "statue v3 pipeline, superseded by statue v4 (kit/gpu/statue, packaged in an internal task)"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v3/nowhip.py",
+   "status": "internal",
+   "reason": "statue v3 pipeline, superseded by statue v4 (kit/gpu/statue, packaged in an internal task)"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v3/predec.py",
+   "status": "internal",
+   "reason": "statue v3 pipeline, superseded by statue v4 (kit/gpu/statue, packaged in an internal task)"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/auto_uv.sh",
+   "status": "covered",
+   "kit": [
+    "kit/gpu/statue/statue.py"
+   ],
+   "command": "python kit/gpu/statue/statue.py uv-search <work> --fdir DEG --fgx X --fgz Z",
+   "test": "kit/tests/gpu_statue/statue_test.py",
+   "doc": "kit/gpu/statue/README.md",
+   "reason": "the closed-loop face-UV search became statue.py uv-search"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/bake_split_env.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/gpu/statue/stages/bake_split_env.py"
+   ],
+   "command": "python kit/gpu/statue/statue.py chain <work> <refined.glb> --name x ...",
+   "test": "kit/tests/gpu_statue/statue_test.py",
+   "doc": "kit/gpu/statue/README.md",
+   "note": "copied unchanged apart from line endings (kit/gpu/statue/README.md)"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/chain.sh",
+   "status": "covered",
+   "kit": [
+    "kit/gpu/statue/statue.py"
+   ],
+   "command": "python kit/gpu/statue/statue.py chain <work> <refined.glb> --name x ...",
+   "test": "kit/tests/gpu_statue/statue_test.py",
+   "doc": "kit/gpu/statue/README.md",
+   "reason": "the chain script became statue.py chain (no host paths, runs on Windows too)"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/cutout.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/gpu/stages/cutout.py"
+   ],
+   "command": "python kit/gpu/sculpt.py cutout concept.png x_rgba.png --plinth-row N",
+   "test": "kit/tests/gpu/gpu_tier_test.py",
+   "doc": "kit/gpu/README.md"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/dilate_nn.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/gpu/statue/stages/dilate_nn.py"
+   ],
+   "command": "python kit/gpu/statue/statue.py chain <work> <refined.glb> --name x ...",
+   "test": "kit/tests/gpu_statue/statue_test.py",
+   "doc": "kit/gpu/statue/README.md",
+   "note": "copied unchanged apart from line endings (kit/gpu/statue/README.md)"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/feet_view2.py",
+   "status": "covered",
+   "kit": [
+    "kit/gpu/statue/stages/feet.py",
+    "kit/blender/look.py"
+   ],
+   "command": "statue.py chain (feet stage); look.py slab views of the lowest part",
+   "test": "kit/tests/gpu_statue/statue_test.py",
+   "doc": "kit/gpu/statue/README.md",
+   "reason": "the feet centre is measured by the feet stage; slab views of the soles by look.py (statue README step 4)"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/gate_four_2026-10-20/face_cycles.py",
+   "status": "internal",
+   "reason": "dated one-off run folder of the four gate statues (hard-coded paths into one host's scratch folder); its steps are the v4 chain packaged in kit/gpu/statue"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/gate_four_2026-10-20/gen.py",
+   "status": "internal",
+   "reason": "dated one-off run folder of the four gate statues (hard-coded paths into one host's scratch folder); its steps are the v4 chain packaged in kit/gpu/statue"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/gate_four_2026-10-20/icp_gen.py",
+   "status": "internal",
+   "reason": "dated one-off run folder of the four gate statues (hard-coded paths into one host's scratch folder); its steps are the v4 chain packaged in kit/gpu/statue"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/gate_four_2026-10-20/icp_king.py",
+   "status": "internal",
+   "reason": "dated one-off run folder of the four gate statues (hard-coded paths into one host's scratch folder); its steps are the v4 chain packaged in kit/gpu/statue"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/gate_four_2026-10-20/king_run.sh",
+   "status": "internal",
+   "reason": "dated one-off run folder of the four gate statues (hard-coded paths into one host's scratch folder); its steps are the v4 chain packaged in kit/gpu/statue"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/gate_four_2026-10-20/look.py",
+   "status": "internal",
+   "reason": "dated one-off run folder of the four gate statues (hard-coded paths into one host's scratch folder); its steps are the v4 chain packaged in kit/gpu/statue"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/gate_four_2026-10-20/lsvar.sh",
+   "status": "internal",
+   "reason": "dated one-off run folder of the four gate statues (hard-coded paths into one host's scratch folder); its steps are the v4 chain packaged in kit/gpu/statue"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/gate_four_2026-10-20/merge_head.py",
+   "status": "internal",
+   "reason": "dated one-off run folder of the four gate statues (hard-coded paths into one host's scratch folder); its steps are the v4 chain packaged in kit/gpu/statue"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/gate_four_2026-10-20/merge_head2.py",
+   "status": "internal",
+   "reason": "dated one-off run folder of the four gate statues (hard-coded paths into one host's scratch folder); its steps are the v4 chain packaged in kit/gpu/statue"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/gate_four_2026-10-20/mkblend.py",
+   "status": "internal",
+   "reason": "dated one-off run folder of the four gate statues (hard-coded paths into one host's scratch folder); its steps are the v4 chain packaged in kit/gpu/statue"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/gate_four_2026-10-20/run3.sh",
+   "status": "internal",
+   "reason": "dated one-off run folder of the four gate statues (hard-coded paths into one host's scratch folder); its steps are the v4 chain packaged in kit/gpu/statue"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/gate_four_2026-10-20/shoot.sh",
+   "status": "internal",
+   "reason": "dated one-off run folder of the four gate statues (hard-coded paths into one host's scratch folder); its steps are the v4 chain packaged in kit/gpu/statue"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/gate_four_2026-10-20/shoot_face.sh",
+   "status": "internal",
+   "reason": "dated one-off run folder of the four gate statues (hard-coded paths into one host's scratch folder); its steps are the v4 chain packaged in kit/gpu/statue"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/gate_four_2026-10-20/shot.py",
+   "status": "internal",
+   "reason": "dated one-off run folder of the four gate statues (hard-coded paths into one host's scratch folder); its steps are the v4 chain packaged in kit/gpu/statue"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/gate_four_2026-10-20/three_run.sh",
+   "status": "internal",
+   "reason": "dated one-off run folder of the four gate statues (hard-coded paths into one host's scratch folder); its steps are the v4 chain packaged in kit/gpu/statue"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/infer_fp16.py",
+   "status": "covered",
+   "kit": [
+    "kit/gpu/statue/statue.py",
+    "kit/gpu/patches"
+   ],
+   "command": "python kit/gpu/statue/statue.py patch; python kit/gpu/statue/statue.py refine ...",
+   "test": "kit/tests/gpu_statue/statue_test.py",
+   "doc": "kit/gpu/statue/README.md",
+   "reason": "the fp16 UltraShape inference is statue.py patch + refine"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/lowsplit3.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/gpu/statue/stages/lowsplit3.py"
+   ],
+   "command": "python kit/gpu/statue/statue.py chain <work> <refined.glb> --name x ...",
+   "test": "kit/tests/gpu_statue/statue_test.py",
+   "doc": "kit/gpu/statue/README.md",
+   "note": "copied unchanged apart from line endings (kit/gpu/statue/README.md)"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/mage_game_views2.gd",
+   "status": "internal",
+   "reason": "evidence shots of one city statue (STATUE_BRIDGE_1) built by the city's builders; the kit's equivalent for any world is `iamar-world shots`"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/mage_game_xclose.gd",
+   "status": "internal",
+   "reason": "evidence shots of one city statue (STATUE_BRIDGE_1) built by the city's builders; the kit's equivalent for any world is `iamar-world shots`"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/predec_joint.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/gpu/statue/stages/predec_joint.py"
+   ],
+   "command": "python kit/gpu/statue/statue.py chain <work> <refined.glb> --name x ...",
+   "test": "kit/tests/gpu_statue/statue_test.py",
+   "doc": "kit/gpu/statue/README.md",
+   "note": "copied unchanged apart from line endings (kit/gpu/statue/README.md)"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/prep_full.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/gpu/statue/stages/prep_full.py"
+   ],
+   "command": "python kit/gpu/statue/statue.py chain <work> <refined.glb> --name x ...",
+   "test": "kit/tests/gpu_statue/statue_test.py",
+   "doc": "kit/gpu/statue/README.md",
+   "note": "copied unchanged apart from line endings (kit/gpu/statue/README.md)"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/qa_statue.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/gpu/statue/stages/qa_statue.py"
+   ],
+   "command": "python kit/gpu/statue/statue.py chain <work> <refined.glb> --name x ...",
+   "test": "kit/tests/gpu_statue/statue_test.py",
+   "doc": "kit/gpu/statue/README.md",
+   "note": "copied unchanged apart from line endings (kit/gpu/statue/README.md)"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/qa_uv.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/gpu/statue/stages/qa_uv.py"
+   ],
+   "command": "python kit/gpu/statue/statue.py chain <work> <refined.glb> --name x ...",
+   "test": "kit/tests/gpu_statue/statue_test.py",
+   "doc": "kit/gpu/statue/README.md",
+   "note": "copied unchanged apart from line endings (kit/gpu/statue/README.md)"
+  },
+  {
+   "repo": "iamar-models",
+   "path": "tools/mesh3d/statue_v4/relight.py",
+   "status": "in-kit",
+   "kit": [
+    "kit/gpu/statue/stages/relight.py"
+   ],
+   "command": "python kit/gpu/statue/statue.py chain <work> <refined.glb> --name x ...",
+   "test": "kit/tests/gpu_statue/statue_test.py",
+   "doc": "kit/gpu/statue/README.md",
+   "note": "copied unchanged apart from line endings (kit/gpu/statue/README.md)"
+  }
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "format": "iamar-world",
+ "format_version": 0,
+ "id": "lint_iamar_city",
+ "name": "Style lint sample: iamar city street",
+ "description": "Three of the city's own masterplan houses (vertex-coloured, baked by the city builder) on a cobbled street.",
+ "author": {
+  "name": "iamar kit"
+ },
+ "version": "1.0.0",
+ "api_version": "0.1",
+ "scene": "scene.json",
+ "budgets": {
+  "triangles": 150000,
+  "objects": 64,
+  "texture_size": 1024,
+  "texture_bytes": 33554432,
+  "lights": 4,
+  "package_bytes": 16777216,
+  "audio_bytes": 0,
+  "script_bytes": 0
+ },
+ "features": [
+  "sky",
+  "objects",
+  "primitives"
+ ],
+ "license": "CC0-1.0",
+ "credits": [
+  {
+   "files": [
+    "assets/*.glb"
+   ],
+   "author": "iamar city masterplan builder",
+   "license": "CC0-1.0",
+   "source": "the iamar-models mesh archive (not public) buildings/ at 56aa77ee"
+  }
+ ]
+}

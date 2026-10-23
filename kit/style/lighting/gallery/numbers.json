@@ -1,0 +1,357 @@
+{
+ "world": "lighting_sample (lighting.py sample)",
+ "size": "1280x720",
+ "views": {
+  "street": "0,1.7,9>0,2.5,-14",
+  "houses": "13,1.7,4>-6,3,-12",
+  "above": "0,22,30>0,0,-8"
+ },
+ "presets": {
+  "dusk": {
+   "environment": {
+    "sky": {
+     "type": "procedural",
+     "top_color": "#2e4486",
+     "horizon_color": "#ff9e60",
+     "ground_color": "#4c3c40"
+    },
+    "time_of_day": 17.8,
+    "day_length_minutes": 0,
+    "sun": {
+     "enabled": true,
+     "color": "#ff9458",
+     "energy": 1.25,
+     "shadows": true,
+     "direction": [
+      0.985,
+      -0.14,
+      -0.075
+     ]
+    },
+    "ambient": {
+     "color": "#6c74a0",
+     "energy": 0.75,
+     "source": "color"
+    },
+    "fog": {
+     "enabled": true,
+     "color": "#a89cb4",
+     "density": 0.0022
+    },
+    "exposure": 1.05
+   },
+   "sun_energy_factor": 1.0,
+   "exit": 1,
+   "targets": [
+    "TARGET triangles        PASS  38544 (limit 150000)",
+    "TARGET draw_calls       FAIL  174 (limit 150)  -> recipes: merge_static, instancing, occluders",
+    "TARGET video_memory_mb  PASS  127.7 (limit 600.0)",
+    "TARGET worst_frame_ms   PASS  1.7 (limit 50.0)",
+    "TARGET world_scripts_ms INFO  no world scripts",
+    "TARGET fps_here         INFO  1077.2 (the 30 fps target is for the low tier, e.g. a Radeon HD 5750; measure there)"
+   ],
+   "shots": {
+    "street": {
+     "draw_calls": 175,
+     "primitives": 36210,
+     "objects": 175,
+     "fps": 653.5,
+     "image": "dusk_street.png",
+     "mean_luma": 0.319,
+     "p05_luma": 0.182,
+     "p95_luma": 0.498,
+     "clipped_pct": 0.0,
+     "crushed_pct": 0.0,
+     "warmth": 0.032,
+     "contrast": 0.102
+    },
+    "houses": {
+     "draw_calls": 171,
+     "primitives": 33714,
+     "objects": 171,
+     "fps": 1075.3,
+     "image": "dusk_houses.png",
+     "mean_luma": 0.309,
+     "p05_luma": 0.168,
+     "p95_luma": 0.626,
+     "clipped_pct": 0.0,
+     "crushed_pct": 0.0,
+     "warmth": 0.022,
+     "contrast": 0.137
+    },
+    "above": {
+     "draw_calls": 174,
+     "primitives": 38544,
+     "objects": 174,
+     "fps": 1077.2,
+     "image": "dusk_above.png",
+     "mean_luma": 0.432,
+     "p05_luma": 0.256,
+     "p95_luma": 0.641,
+     "clipped_pct": 0.0,
+     "crushed_pct": 0.0,
+     "warmth": 0.156,
+     "contrast": 0.102
+    }
+   }
+  },
+  "golden_hour": {
+   "environment": {
+    "sky": {
+     "type": "procedural",
+     "top_color": "#3f78d0",
+     "horizon_color": "#f2dcbe",
+     "ground_color": "#6e6a5c"
+    },
+    "time_of_day": 16.6,
+    "day_length_minutes": 0,
+    "sun": {
+     "enabled": true,
+     "color": "#ffb064",
+     "energy": 1.8,
+     "shadows": true
+    },
+    "ambient": {
+     "color": "#98a2c4",
+     "energy": 0.6,
+     "source": "color"
+    },
+    "fog": {
+     "enabled": true,
+     "color": "#ccd8ea",
+     "density": 0.0015
+    },
+    "exposure": 1.0
+   },
+   "sun_energy_factor": 1.0,
+   "exit": 1,
+   "targets": [
+    "TARGET triangles        PASS  38544 (limit 150000)",
+    "TARGET draw_calls       FAIL  174 (limit 150)  -> recipes: merge_static, instancing, occluders",
+    "TARGET video_memory_mb  PASS  127.7 (limit 600.0)",
+    "TARGET worst_frame_ms   PASS  2.3 (limit 50.0)",
+    "TARGET world_scripts_ms INFO  no world scripts",
+    "TARGET fps_here         INFO  896.7 (the 30 fps target is for the low tier, e.g. a Radeon HD 5750; measure there)"
+   ],
+   "shots": {
+    "street": {
+     "draw_calls": 176,
+     "primitives": 37298,
+     "objects": 176,
+     "fps": 567.5,
+     "image": "golden_hour_street.png",
+     "mean_luma": 0.455,
+     "p05_luma": 0.21,
+     "p95_luma": 0.646,
+     "clipped_pct": 0.0,
+     "crushed_pct": 0.0,
+     "warmth": 0.025,
+     "contrast": 0.14
+    },
+    "houses": {
+     "draw_calls": 171,
+     "primitives": 33714,
+     "objects": 171,
+     "fps": 892.9,
+     "image": "golden_hour_houses.png",
+     "mean_luma": 0.5,
+     "p05_luma": 0.215,
+     "p95_luma": 0.79,
+     "clipped_pct": 0.47,
+     "crushed_pct": 0.0,
+     "warmth": 0.069,
+     "contrast": 0.165
+    },
+    "above": {
+     "draw_calls": 174,
+     "primitives": 38544,
+     "objects": 174,
+     "fps": 896.7,
+     "image": "golden_hour_above.png",
+     "mean_luma": 0.623,
+     "p05_luma": 0.338,
+     "p95_luma": 0.831,
+     "clipped_pct": 0.0,
+     "crushed_pct": 0.0,
+     "warmth": 0.2,
+     "contrast": 0.119
+    }
+   }
+  },
+  "night": {
+   "environment": {
+    "sky": {
+     "type": "procedural",
+     "top_color": "#0b1434",
+     "horizon_color": "#24345c",
+     "ground_color": "#141a28"
+    },
+    "time_of_day": 21.5,
+    "day_length_minutes": 0,
+    "sun": {
+     "enabled": true,
+     "color": "#b8c8f0",
+     "energy": 0.35,
+     "shadows": true,
+     "direction": [
+      0.4,
+      -0.8,
+      -0.45
+     ]
+    },
+    "ambient": {
+     "color": "#4e5c86",
+     "energy": 0.42,
+     "source": "color"
+    },
+    "fog": {
+     "enabled": true,
+     "color": "#1c2646",
+     "density": 0.003
+    },
+    "exposure": 1.1
+   },
+   "sun_energy_factor": 1.0,
+   "exit": 1,
+   "targets": [
+    "TARGET triangles        PASS  38544 (limit 150000)",
+    "TARGET draw_calls       FAIL  174 (limit 150)  -> recipes: merge_static, instancing, occluders",
+    "TARGET video_memory_mb  PASS  127.7 (limit 600.0)",
+    "TARGET worst_frame_ms   PASS  3.6 (limit 50.0)",
+    "TARGET world_scripts_ms INFO  no world scripts",
+    "TARGET fps_here         INFO  892.4 (the 30 fps target is for the low tier, e.g. a Radeon HD 5750; measure there)"
+   ],
+   "shots": {
+    "street": {
+     "draw_calls": 176,
+     "primitives": 38098,
+     "objects": 176,
+     "fps": 681.8,
+     "image": "night_street.png",
+     "mean_luma": 0.263,
+     "p05_luma": 0.079,
+     "p95_luma": 0.464,
+     "clipped_pct": 0.0,
+     "crushed_pct": 0.0,
+     "warmth": -0.048,
+     "contrast": 0.132
+    },
+    "houses": {
+     "draw_calls": 172,
+     "primitives": 34802,
+     "objects": 172,
+     "fps": 689.1,
+     "image": "night_houses.png",
+     "mean_luma": 0.232,
+     "p05_luma": 0.075,
+     "p95_luma": 0.413,
+     "clipped_pct": 0.0,
+     "crushed_pct": 0.0,
+     "warmth": -0.049,
+     "contrast": 0.123
+    },
+    "above": {
+     "draw_calls": 174,
+     "primitives": 38544,
+     "objects": 174,
+     "fps": 892.4,
+     "image": "night_above.png",
+     "mean_luma": 0.293,
+     "p05_luma": 0.162,
+     "p95_luma": 0.32,
+     "clipped_pct": 0.0,
+     "crushed_pct": 0.0,
+     "warmth": -0.078,
+     "contrast": 0.058
+    }
+   }
+  },
+  "overcast": {
+   "environment": {
+    "sky": {
+     "type": "procedural",
+     "top_color": "#737f90",
+     "horizon_color": "#c2c8ce",
+     "ground_color": "#62645e"
+    },
+    "time_of_day": 13.0,
+    "day_length_minutes": 0,
+    "sun": {
+     "enabled": true,
+     "color": "#e6eaf0",
+     "energy": 0.35,
+     "shadows": true
+    },
+    "ambient": {
+     "color": "#b4bcc6",
+     "energy": 0.8,
+     "source": "color"
+    },
+    "fog": {
+     "enabled": true,
+     "color": "#bcc2c8",
+     "density": 0.0045
+    },
+    "weather": {
+     "kind": "cloudy"
+    },
+    "exposure": 0.95
+   },
+   "sun_energy_factor": 1.0,
+   "exit": 1,
+   "targets": [
+    "TARGET triangles        PASS  38544 (limit 150000)",
+    "TARGET draw_calls       FAIL  174 (limit 150)  -> recipes: merge_static, instancing, occluders",
+    "TARGET video_memory_mb  PASS  127.7 (limit 600.0)",
+    "TARGET worst_frame_ms   PASS  2.3 (limit 50.0)",
+    "TARGET world_scripts_ms INFO  no world scripts",
+    "TARGET fps_here         INFO  891.3 (the 30 fps target is for the low tier, e.g. a Radeon HD 5750; measure there)"
+   ],
+   "shots": {
+    "street": {
+     "draw_calls": 176,
+     "primitives": 38098,
+     "objects": 176,
+     "fps": 587.0,
+     "image": "overcast_street.png",
+     "mean_luma": 0.553,
+     "p05_luma": 0.325,
+     "p95_luma": 0.703,
+     "clipped_pct": 0.32,
+     "crushed_pct": 0.0,
+     "warmth": 0.028,
+     "contrast": 0.113
+    },
+    "houses": {
+     "draw_calls": 172,
+     "primitives": 34802,
+     "objects": 172,
+     "fps": 894.9,
+     "image": "overcast_houses.png",
+     "mean_luma": 0.533,
+     "p05_luma": 0.295,
+     "p95_luma": 0.677,
+     "clipped_pct": 0.04,
+     "crushed_pct": 0.0,
+     "warmth": 0.042,
+     "contrast": 0.106
+    },
+    "above": {
+     "draw_calls": 174,
+     "primitives": 38544,
+     "objects": 174,
+     "fps": 891.3,
+     "image": "overcast_above.png",
+     "mean_luma": 0.672,
+     "p05_luma": 0.548,
+     "p95_luma": 0.782,
+     "clipped_pct": 0.02,
+     "crushed_pct": 0.0,
+     "warmth": 0.034,
+     "contrast": 0.073
+    }
+   }
+  }
+ },
+ "renderer": "Godot 4.7.2 Compatibility (OpenGL 3.3), Intel Arc 140V, the iamar browser source (not public) 3671a8bb world_view.gd, 1280x720, 30 frames; gallery PNGs downscaled to 800x450"
+}

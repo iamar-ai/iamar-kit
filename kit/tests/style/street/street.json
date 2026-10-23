@@ -1,0 +1,196 @@
+{
+ "about": "Sample street for kit/tests/style/street: 12 style-gen houses on both sides of a 20 m street (the harbour blind test's layout, attempt 4, plus two houses).",
+ "region": "civic",
+ "houses": [
+  {
+   "id": "house_n1",
+   "position": [
+    3.0,
+    0,
+    -10.0
+   ],
+   "yaw": 180,
+   "seed": 11,
+   "footprint": "7x8",
+   "storeys": 2,
+   "jetty": true,
+   "oriel": false,
+   "tower": false
+  },
+  {
+   "id": "house_n2",
+   "position": [
+    11.2,
+    0,
+    -9.75
+   ],
+   "yaw": 180,
+   "seed": 12,
+   "footprint": "6.4x7.5",
+   "storeys": 2,
+   "jetty": false,
+   "oriel": true,
+   "tower": false
+  },
+  {
+   "id": "house_n3",
+   "position": [
+    19.4,
+    0,
+    -10.0
+   ],
+   "yaw": 180,
+   "seed": 13,
+   "footprint": "7.4x8",
+   "storeys": 3,
+   "jetty": false,
+   "oriel": false,
+   "tower": false,
+   "door_kind": 1
+  },
+  {
+   "id": "house_n4",
+   "position": [
+    27.6,
+    0,
+    -9.5
+   ],
+   "yaw": 180,
+   "seed": 14,
+   "footprint": "6.8x7",
+   "storeys": 2,
+   "jetty": true,
+   "oriel": false,
+   "tower": false,
+   "door_kind": 2
+  },
+  {
+   "id": "house_n5",
+   "position": [
+    35.8,
+    0,
+    -10.0
+   ],
+   "yaw": 180,
+   "seed": 15,
+   "footprint": "7x8",
+   "storeys": 2,
+   "jetty": true,
+   "oriel": true,
+   "tower": false,
+   "door_kind": 0
+  },
+  {
+   "id": "house_n6",
+   "position": [
+    44.0,
+    0,
+    -10.0
+   ],
+   "yaw": 180,
+   "seed": 16,
+   "footprint": "7x7.5",
+   "storeys": 2,
+   "jetty": false,
+   "oriel": false,
+   "tower": false,
+   "door_kind": 2
+  },
+  {
+   "id": "house_s1",
+   "position": [
+    20.5,
+    0,
+    10.0
+   ],
+   "yaw": 0,
+   "seed": 21,
+   "footprint": "7x8",
+   "storeys": 2,
+   "jetty": false,
+   "oriel": false,
+   "tower": false,
+   "door_kind": 2
+  },
+  {
+   "id": "house_s2",
+   "position": [
+    28.8,
+    0,
+    10.0
+   ],
+   "yaw": 0,
+   "seed": 22,
+   "footprint": "7.2x8",
+   "storeys": 3,
+   "jetty": true,
+   "oriel": false,
+   "tower": false,
+   "door_kind": 1
+  },
+  {
+   "id": "house_s3",
+   "position": [
+    37.0,
+    0,
+    9.75
+   ],
+   "yaw": 0,
+   "seed": 23,
+   "footprint": "6.6x7.5",
+   "storeys": 2,
+   "jetty": false,
+   "oriel": true,
+   "tower": false,
+   "door_kind": 0
+  },
+  {
+   "id": "house_s4",
+   "position": [
+    45.2,
+    0,
+    10.0
+   ],
+   "yaw": 0,
+   "seed": 24,
+   "footprint": "7x8",
+   "storeys": 2,
+   "jetty": true,
+   "oriel": false,
+   "tower": false,
+   "door_kind": 1
+  },
+  {
+   "id": "office",
+   "position": [
+    -5.5,
+    0,
+    -10.5
+   ],
+   "yaw": 90,
+   "seed": 3,
+   "footprint": "9x9",
+   "storeys": 2,
+   "jetty": false,
+   "oriel": false,
+   "tower": true,
+   "door_kind": 2
+  },
+  {
+   "id": "inn",
+   "position": [
+    -4.0,
+    0,
+    11.5
+   ],
+   "yaw": 90,
+   "seed": 31,
+   "footprint": "11x11",
+   "storeys": 3,
+   "jetty": true,
+   "oriel": true,
+   "tower": false,
+   "door_kind": 1
+  }
+ ]
+}

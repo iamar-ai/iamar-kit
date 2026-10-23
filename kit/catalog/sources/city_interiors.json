@@ -1,0 +1,1117 @@
+{
+ "format": "iamar-catalog-city-models",
+ "version": 1,
+ "note": "Room interiors of the iamar city, one per building purpose (public_selection.json), copied from the iamar-models mesh archive (not public) and moved by their shell building's offset by kit/catalog/assets/import_city_interiors.py, so a room and its shell placed at the same position line up. Files live in kit/catalog/assets/<file>. Never edit by hand: rerun the import.",
+ "models_commit": "de6b2675",
+ "licence": "CC0-1.0",
+ "models": [
+  {
+   "models_id": "Interior_B001",
+   "file": "interiors/interior_b001.glb",
+   "name": "warriors' quarter bird supply shop interior",
+   "category": "interior",
+   "description": "The inside of a long two-wing shop: an exposed timber ceiling grid under the roof pitch, framed inner walls, a row of wooden counters and shelves down the hall, hanging lanterns, a stone-arched inner doorway and a red rug at the door; 16 by 27 m.",
+   "synonyms": [
+    "bird shop",
+    "pet shop",
+    "shop interior",
+    "store interior",
+    "shelves",
+    "counters"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "shell": "B001",
+   "tags": [
+    "iamar city",
+    "interior",
+    "room"
+   ],
+   "parts": [],
+   "sha256": "3440ff360f47d618f2bb6d53001391c47d4d8dd4aa69e3df13cf54da071bedc3",
+   "bytes": 549736,
+   "source_sha256": "5d8800c2b8f0a0f21455134e5b696031514549e448839456f9847a746b1bd890",
+   "recentred_by": [
+    86.263,
+    -0.006,
+    6.675
+   ],
+   "place_scale": 1.0,
+   "triangles": 3134,
+   "models_json_triangles": 3134,
+   "size": [
+    16.31,
+    6.36,
+    27.47
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_B001.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "Interior_B007",
+   "file": "interiors/interior_b007.glb",
+   "name": "warriors' quarter smithy interior",
+   "category": "interior",
+   "description": "The inside of a long narrow smithy: exposed ceiling beams, timber wall frames, a stone forge block, hanging lanterns, wall panels and a stone-arched doorway; 7 by 17 m.",
+   "synonyms": [
+    "smithy",
+    "blacksmith",
+    "forge",
+    "workshop interior",
+    "metalwork",
+    "shop interior"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "shell": "B007",
+   "tags": [
+    "iamar city",
+    "interior",
+    "room"
+   ],
+   "parts": [],
+   "sha256": "8ecb8259faf36e5fbc2231d4a539be87889795f2c613a190d9bdb4d814b70105",
+   "bytes": 225476,
+   "source_sha256": "2cb4ce6e98b64c63181658e45aae3b94ac4b87537d607427a705d52a1c572450",
+   "recentred_by": [
+    17.591,
+    -0.32,
+    1.534
+   ],
+   "place_scale": 1.0,
+   "triangles": 1301,
+   "models_json_triangles": 1301,
+   "size": [
+    7.16,
+    6.35,
+    17.11
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_B007.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "Interior_B012",
+   "file": "interiors/interior_b012.glb",
+   "name": "mages' quarter rune shop interior",
+   "category": "interior",
+   "description": "The inside of a small rune carver's shop: exposed ceiling beams, violet wainscot walls, a wooden counter set with coloured runes, a violet rug, glowing blue hanging lamps and a stone-arched doorway; 7 by 14 m.",
+   "synonyms": [
+    "rune shop",
+    "magic shop",
+    "shop interior",
+    "counter",
+    "enchanter",
+    "store interior"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: mages' quarter",
+   "shell": "B012",
+   "tags": [
+    "iamar city",
+    "interior",
+    "room"
+   ],
+   "parts": [],
+   "sha256": "6b16a1c925660a1e6f1a667175c22bd4431cd581035a2974aeb2142b846c10d1",
+   "bytes": 162564,
+   "source_sha256": "6ef5314b6c76e488cb6c2488e2499d210e0d073c72edac64c22e0fad2e5b5b39",
+   "recentred_by": [
+    -46.1,
+    -0.309,
+    -5.978
+   ],
+   "place_scale": 1.0,
+   "triangles": 902,
+   "models_json_triangles": 902,
+   "size": [
+    7.48,
+    6.35,
+    13.97
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_B012.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "Interior_B021",
+   "file": "interiors/interior_b021.glb",
+   "name": "warriors' quarter blacksmith forge interior",
+   "category": "interior",
+   "description": "The inside of a wide forge hall: a timber ceiling grid, wooden wainscot, a stone forge block, hanging lanterns and three stone-arched doorways along the front; 15 by 7 m.",
+   "synonyms": [
+    "forge",
+    "blacksmith",
+    "smithy",
+    "workshop interior",
+    "ironworks",
+    "metalwork"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: warriors' quarter",
+   "shell": "B021",
+   "tags": [
+    "iamar city",
+    "interior",
+    "room"
+   ],
+   "parts": [],
+   "sha256": "1355a82c21db581474ee73ce7a24b511e9a9002d963488bd34c3d5b867e286b0",
+   "bytes": 173640,
+   "source_sha256": "fccdf55dcadc877633494ebe8ed2da4781402197265055e258fc5f93fa929e39",
+   "recentred_by": [
+    41.95,
+    -0.568,
+    -24.218
+   ],
+   "place_scale": 1.0,
+   "triangles": 964,
+   "models_json_triangles": 964,
+   "size": [
+    14.85,
+    6.35,
+    7.16
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_B021.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "Interior_B034",
+   "file": "interiors/interior_b034.glb",
+   "name": "mages' quarter curio shop interior",
+   "category": "interior",
+   "description": "The inside of a two-room curio shop: exposed ceiling beams, violet wainscot walls, wooden counters, a violet rug, glowing blue hanging lamps and two stone-arched doorways; 16 by 8 m.",
+   "synonyms": [
+    "curio shop",
+    "curiosities",
+    "antiques",
+    "magic shop",
+    "shop interior",
+    "counters"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: mages' quarter",
+   "shell": "B034",
+   "tags": [
+    "iamar city",
+    "interior",
+    "room"
+   ],
+   "parts": [],
+   "sha256": "926bf807189b8e8ce4f5f76ce8b0e7d4f8d8e856fe428710450f00026bf505dc",
+   "bytes": 239564,
+   "source_sha256": "a728bdcedf4fa734c3eae669564a7efaac00a87e778a2768b3c740211a6931ee",
+   "recentred_by": [
+    -10.739,
+    -1.04,
+    -40.893
+   ],
+   "place_scale": 1.0,
+   "triangles": 1325,
+   "models_json_triangles": 1325,
+   "size": [
+    16.31,
+    6.57,
+    7.97
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_B034.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "Interior_B039",
+   "file": "interiors/interior_b039.glb",
+   "name": "civic heart jousting supply store interior",
+   "category": "interior",
+   "description": "The inside of a large L-shaped store: a timber ceiling grid under a stepped roof, framed inner walls, many wooden counters and wall shelves, a red rug and stone-arched doorways; 11 by 24 m.",
+   "synonyms": [
+    "jousting",
+    "tack shop",
+    "saddler",
+    "store interior",
+    "shop interior",
+    "shelves"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: civic heart",
+   "shell": "B039",
+   "tags": [
+    "iamar city",
+    "interior",
+    "room"
+   ],
+   "parts": [],
+   "sha256": "b0c6cf102a7d8a5c48d5ea397f83911662248d1a22d11b18a1f511703095c9c0",
+   "bytes": 581492,
+   "source_sha256": "298707ac985c12a8fb8a7d08ae43011cb409eb8205f30294cd10765874d784d3",
+   "recentred_by": [
+    116.492,
+    -0.3,
+    -47.354
+   ],
+   "place_scale": 1.0,
+   "triangles": 3289,
+   "models_json_triangles": 3289,
+   "size": [
+    11.19,
+    6.35,
+    24.31
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_B039.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "Interior_B048",
+   "file": "interiors/interior_b048.glb",
+   "name": "mages' quarter wandmaker interior",
+   "category": "interior",
+   "description": "The inside of a wandmaker's shop: exposed ceiling beams, violet wainscot walls, a wooden counter with wands and phials, a violet rug, glowing blue hanging lamps and two stone-arched doorways; 13 by 8 m.",
+   "synonyms": [
+    "wand shop",
+    "wandmaker",
+    "magic shop",
+    "shop interior",
+    "counter",
+    "store interior"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: mages' quarter",
+   "shell": "B048",
+   "tags": [
+    "iamar city",
+    "interior",
+    "room"
+   ],
+   "parts": [],
+   "sha256": "e7efc9d5aff2d80e7290ff6a0b7d15368f79e3a02a02b5301fc51cf849f16d3e",
+   "bytes": 162896,
+   "source_sha256": "d7a3bf0f450e561bdc8595834b1eafa86f042dc4520221f896bb292f47b909a1",
+   "recentred_by": [
+    -24.41,
+    -0.953,
+    -46.496
+   ],
+   "place_scale": 1.0,
+   "triangles": 907,
+   "models_json_triangles": 907,
+   "size": [
+    12.81,
+    6.64,
+    8.28
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_B048.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "Interior_B055",
+   "file": "interiors/interior_b055.glb",
+   "name": "civic heart healer's shop interior",
+   "category": "interior",
+   "description": "The inside of a small healer's room: exposed ceiling beams, timber wall frames and panels, a cushioned treatment bed, a red rug, a hanging lantern and two stone-arched doorways; 8 by 6 m.",
+   "synonyms": [
+    "healer",
+    "clinic",
+    "infirmary",
+    "apothecary",
+    "sickroom",
+    "shop interior"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: civic heart",
+   "shell": "B055",
+   "tags": [
+    "iamar city",
+    "interior",
+    "room"
+   ],
+   "parts": [],
+   "sha256": "a143e7501680a527d3ac59b78403caedeab6a973c7b8debec006fe8f4f145c75",
+   "bytes": 126596,
+   "source_sha256": "8dece1cb254d6a90d92878726c3bb2362d9e605aa6fe939ddd33e89f263801ad",
+   "recentred_by": [
+    90.501,
+    -0.329,
+    -104.838
+   ],
+   "place_scale": 1.0,
+   "triangles": 689,
+   "models_json_triangles": 689,
+   "size": [
+    8.34,
+    6.35,
+    6.28
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_B055.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "Interior_B058",
+   "file": "interiors/interior_b058.glb",
+   "name": "city hall interior",
+   "category": "interior",
+   "description": "The inside of a city hall's long chamber: tall white arches along both walls, dark timber roof trusses, a raised dais with high-backed council seats, a wooden railing before it and a lectern; 27 by 11 m and 9.5 m high.",
+   "synonyms": [
+    "city hall",
+    "council chamber",
+    "town hall",
+    "court",
+    "assembly hall",
+    "throne room"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "shell": "B058",
+   "tags": [
+    "iamar city",
+    "interior",
+    "room"
+   ],
+   "parts": [],
+   "sha256": "9afc11a487a58d9794cad8dc4cb17aa245b3d636cd3cee9a92ce9a1b55e5c86c",
+   "bytes": 890932,
+   "source_sha256": "520d62d845ca2b67b1eecdab9fec4fdf1bd5a2b9c4104878ae213f3ff8c92c81",
+   "recentred_by": [
+    15.3,
+    -0.568,
+    -106.085
+   ],
+   "place_scale": 1.0,
+   "triangles": 5002,
+   "models_json_triangles": 5002,
+   "size": [
+    27.46,
+    9.54,
+    11.22
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_B058.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "Interior_B075",
+   "file": "interiors/interior_b075.glb",
+   "name": "herbalists' quarter tool shop interior",
+   "category": "interior",
+   "description": "The inside of a large L-shaped tool shop: a timber ceiling grid, framed inner walls, wooden counters and shelves, a green rug, hanging lanterns and stone-arched doorways; 21 by 32 m.",
+   "synonyms": [
+    "tool shop",
+    "toolmaker",
+    "hardware",
+    "shop interior",
+    "store interior",
+    "counters"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: herbalists' quarter",
+   "shell": "B075",
+   "tags": [
+    "iamar city",
+    "interior",
+    "room"
+   ],
+   "parts": [],
+   "sha256": "6a5a48c41e6c942cb05ef89c5479944c52d882221f1a11f95cced2861c4d2763",
+   "bytes": 553704,
+   "source_sha256": "a4752713e4db461c8a81c0d2ae018a5390df35062a9fe6329a73588839bc7720",
+   "recentred_by": [
+    -28.545,
+    -0.726,
+    -122.607
+   ],
+   "place_scale": 1.0,
+   "triangles": 3098,
+   "models_json_triangles": 3098,
+   "size": [
+    20.93,
+    6.49,
+    31.67
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_B075.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "Interior_B077",
+   "file": "interiors/interior_b077.glb",
+   "name": "herbalists' quarter herb shop interior",
+   "category": "interior",
+   "description": "The inside of a shallow herb shop: exposed ceiling beams, timber wall frames, wall panels, a green rug, a hanging lantern and two stone-arched doorways; 12 by 3 m.",
+   "synonyms": [
+    "herb shop",
+    "herbalist",
+    "apothecary",
+    "shop interior",
+    "store interior",
+    "healer"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: herbalists' quarter",
+   "shell": "B077",
+   "tags": [
+    "iamar city",
+    "interior",
+    "room"
+   ],
+   "parts": [],
+   "sha256": "01825c9fe930d3b4d620c56468dd405f505968b0ba65e0a602feb640a2097fab",
+   "bytes": 122724,
+   "source_sha256": "c096d32f19531056901736b7b437c5220fd50e2bda9b8cad8cc04e4875164875",
+   "recentred_by": [
+    -58.715,
+    -0.599,
+    -137.4
+   ],
+   "place_scale": 1.0,
+   "triangles": 656,
+   "models_json_triangles": 656,
+   "size": [
+    12.15,
+    6.35,
+    3.25
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_B077.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "Interior_B081",
+   "file": "interiors/interior_b081.glb",
+   "name": "bank interior",
+   "category": "interior",
+   "description": "The inside of a long bank hall: pale timber roof trusses on tall pale pillars, a pale inner wall with a long wooden counter, arched doorways and small chests along the walls; 59 by 20 m and 10 m high.",
+   "synonyms": [
+    "bank",
+    "counting house",
+    "treasury",
+    "vault",
+    "hall",
+    "money changer"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "shell": "B081",
+   "tags": [
+    "iamar city",
+    "interior",
+    "room"
+   ],
+   "parts": [],
+   "sha256": "c5c473d56b1bbe49002d20772c43d27ac23bda370731bd9a94c16a0f6fceffa2",
+   "bytes": 1498476,
+   "source_sha256": "a4f958b28fc676b5bbb0dd2392ca27b686fa5867f41764642f9087d00790b89b",
+   "recentred_by": [
+    62.604,
+    0.26,
+    -144.029
+   ],
+   "place_scale": 1.0,
+   "triangles": 8132,
+   "models_json_triangles": 8132,
+   "size": [
+    59.26,
+    10.29,
+    20.38
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_B081.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "Interior_B082",
+   "file": "interiors/interior_b082.glb",
+   "name": "trading hall interior",
+   "category": "interior",
+   "description": "The inside of a trading hall: heavy timber roof trusses over a floor of market stalls with blue and green awnings, crates, a notice board, a gallery and stone-arched doorways; 22 by 13 m and 9 m high.",
+   "synonyms": [
+    "trading hall",
+    "market hall",
+    "exchange",
+    "bazaar",
+    "stalls",
+    "guild hall"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "shell": "B082",
+   "tags": [
+    "iamar city",
+    "interior",
+    "room"
+   ],
+   "parts": [],
+   "sha256": "4c8d641cc20043c7e9a9d58fe817ebc1d591602656cfed21052784910851a364",
+   "bytes": 790900,
+   "source_sha256": "831993f501fd8b0550e98dde20712249912cbc1915a0a4db187090d87ceb9418",
+   "recentred_by": [
+    96.633,
+    0.28,
+    -119.135
+   ],
+   "place_scale": 1.0,
+   "triangles": 4482,
+   "models_json_triangles": 4482,
+   "size": [
+    21.79,
+    9.04,
+    13.4
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_B082.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "Interior_B086",
+   "file": "interiors/interior_b086.glb",
+   "name": "herbalists' quarter bookshop interior",
+   "category": "interior",
+   "description": "The inside of a small bookshop: a timber ceiling grid, timber wall frames, wooden wainscot and two hanging lanterns; 8 by 6 m.",
+   "synonyms": [
+    "bookshop",
+    "bookseller",
+    "books",
+    "shop interior",
+    "store interior",
+    "study"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: herbalists' quarter",
+   "shell": "B086",
+   "tags": [
+    "iamar city",
+    "interior",
+    "room"
+   ],
+   "parts": [],
+   "sha256": "2000c6bc272e9c8558f6a4128d7e5c311a4310a4351e2de8ab146999fcd67559",
+   "bytes": 91400,
+   "source_sha256": "38e1bf6eac671c6fe2d7719c98c810698fc9f643ff31736571f4a64f3c70e21e",
+   "recentred_by": [
+    -21.595,
+    -0.714,
+    -146.962
+   ],
+   "place_scale": 1.0,
+   "triangles": 507,
+   "models_json_triangles": 507,
+   "size": [
+    7.71,
+    6.47,
+    6.23
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_B086.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "Interior_B119",
+   "file": "interiors/interior_b119.glb",
+   "name": "civic heart bakery interior",
+   "category": "interior",
+   "description": "The inside of a small bakery: exposed ceiling beams, wooden wainscot, a wooden counter with loaves, a red rug, a hanging lantern and a stone-arched doorway; 5 by 7 m.",
+   "synonyms": [
+    "bakery",
+    "baker",
+    "bakehouse",
+    "shop interior",
+    "counter",
+    "store interior"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: civic heart",
+   "shell": "B119",
+   "tags": [
+    "iamar city",
+    "interior",
+    "room"
+   ],
+   "parts": [],
+   "sha256": "8b6ba00265a6979bfe53585950e78287708d6a87c93b19265a8b1a10faa90d72",
+   "bytes": 98988,
+   "source_sha256": "f045e64b353cbdbfd4fcbf8478487a0a24bdcf337ddce98e25b73c9dcb5345a4",
+   "recentred_by": [
+    9.844,
+    -0.117,
+    -169.723
+   ],
+   "place_scale": 1.0,
+   "triangles": 574,
+   "models_json_triangles": 574,
+   "size": [
+    5.11,
+    6.65,
+    6.98
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_B119.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "Interior_B129",
+   "file": "interiors/interior_b129.glb",
+   "name": "civic heart horse supply shop interior",
+   "category": "interior",
+   "description": "The inside of a long L-shaped saddlery: a timber ceiling grid, framed inner walls lined with wooden racks and shelves, a red rug and stone-arched doorways; 39 by 24 m.",
+   "synonyms": [
+    "saddler",
+    "tack shop",
+    "horse supplies",
+    "stable supplies",
+    "shop interior",
+    "store interior"
+   ],
+   "collision": "mesh",
+   "style": "iamar city: civic heart",
+   "shell": null,
+   "tags": [
+    "iamar city",
+    "interior",
+    "room"
+   ],
+   "parts": [],
+   "sha256": "7745d7aa5b2355fd02ba4074629822a30e5061b59d669d220ba3c9424c82fdba",
+   "bytes": 596908,
+   "source_sha256": "10cdd99b75422df28822f06b30cd66bea8c049184b278ee20b57e92db0759cd6",
+   "recentred_by": [
+    52.06,
+    -0.328,
+    -189.974
+   ],
+   "place_scale": 1.0,
+   "triangles": 3423,
+   "models_json_triangles": 3423,
+   "size": [
+    38.66,
+    6.68,
+    24.39
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_B129.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "Interior_BIRD01",
+   "file": "interiors/interior_bird01.glb",
+   "name": "giant-bird aerie interior",
+   "category": "interior",
+   "description": "The inside of a giant-bird aerie: a ring of open wooden roost stalls with straw beds around the walls and lamps hanging from the high roof; 28 by 29 m and 13.5 m high.",
+   "synonyms": [
+    "aerie",
+    "eyrie",
+    "roost",
+    "bird stable",
+    "mews",
+    "stalls"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "shell": "BIRD01",
+   "tags": [
+    "iamar city",
+    "interior",
+    "room"
+   ],
+   "parts": [],
+   "sha256": "678f02603af52ab9e13950921669fae7e15a200e93e1364da409d63f6d1f8d59",
+   "bytes": 217412,
+   "source_sha256": "91de04309e0fc5def8c77d64903872f99b6a7af67e0e08df61cbef6dd08dd408",
+   "recentred_by": [
+    63.533,
+    0.382,
+    19.304
+   ],
+   "place_scale": 1.0,
+   "triangles": 1266,
+   "models_json_triangles": 1266,
+   "size": [
+    27.57,
+    13.5,
+    29.49
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_BIRD01.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "Interior_C02",
+   "file": "interiors/interior_c02.glb",
+   "name": "library interior",
+   "category": "interior",
+   "description": "The inside of the city library, every part of the room in one file: a tall reading hall with a coffered timber ceiling, rows of reading desks and chairs, a red-carpeted aisle, an upper gallery with balusters, long book stacks, an archive, a scriptorium, a meeting room, glowing windows, a light shaft and a fireplace glow; 49 by 71 m and 18 m high.",
+   "synonyms": [
+    "library",
+    "reading room",
+    "archive",
+    "scriptorium",
+    "study hall",
+    "books"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "shell": "C02",
+   "tags": [
+    "iamar city",
+    "interior",
+    "room"
+   ],
+   "parts": [
+    {
+     "models_id": "Interior_C02_FireplaceGlow",
+     "source_sha256": "22657c3720c918f404272064831d9b553c24b5b2d7043bd4fb171bd9c3193c66",
+     "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_C02_FireplaceGlow.glb"
+    },
+    {
+     "models_id": "Interior_C02_archive",
+     "source_sha256": "2a50c2b25b0b181b7c1dbdd45975004631d4d6362b8906a6a7c9e7636f307a6b",
+     "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_C02_archive.glb"
+    },
+    {
+     "models_id": "Interior_C02_balusters",
+     "source_sha256": "526c6baed5e64ca3babbe2990cfe574411da8a905edcdbc4176eb6301878f234",
+     "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_C02_balusters.glb"
+    },
+    {
+     "models_id": "Interior_C02_books",
+     "source_sha256": "154dd9270669c1723ed2ae051dbd22771494c0b2e5fb26d83a35fbd925404120",
+     "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_C02_books.glb"
+    },
+    {
+     "models_id": "Interior_C02_coffers",
+     "source_sha256": "6f3935bb7fe42eb0c87343a1e347f27fab04dc0cce16d57c17215d7f47c19b33",
+     "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_C02_coffers.glb"
+    },
+    {
+     "models_id": "Interior_C02_glass",
+     "source_sha256": "1002ad408a05b14c33cdf270544fb23d5eef16fa310be780f70845382c914aa9",
+     "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_C02_glass.glb"
+    },
+    {
+     "models_id": "Interior_C02_lightshaft",
+     "source_sha256": "f47a01f8cf700cb1f449e917a10979a161f67dda7ce2bddfb059cfe2bb38ee6e",
+     "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_C02_lightshaft.glb"
+    },
+    {
+     "models_id": "Interior_C02_meeting",
+     "source_sha256": "c9f6ccc40ed599d038bf9cd088a5261d983424101b4f4bdc67d66899fe70f337",
+     "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_C02_meeting.glb"
+    },
+    {
+     "models_id": "Interior_C02_scriptorium",
+     "source_sha256": "7d0aee403737d4f6a628f547a6f1c27ae9298c5c518bc552dd44735c081b80ac",
+     "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_C02_scriptorium.glb"
+    }
+   ],
+   "sha256": "d7aa01b351eeb1d5e0421681464ba62dfa3591ac35cb6d96be73f05e17713447",
+   "bytes": 4828352,
+   "source_sha256": "f7f3fb9164b53a143037d92b9e1fe7725adc25c81c1d5b88fbd926f57e40a6a2",
+   "recentred_by": [
+    -64.196,
+    0.527,
+    -99.58
+   ],
+   "place_scale": 1.0,
+   "triangles": 26494,
+   "models_json_triangles": 26494,
+   "size": [
+    49.35,
+    18.17,
+    71.01
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_C02.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "Interior_C03",
+   "file": "interiors/interior_c03.glb",
+   "name": "inn and tavern interior",
+   "category": "interior",
+   "description": "The inside of a large inn and tavern: tall arched timber walls, long roof trusses, rows of trestle tables and benches, a long bar counter, a white kitchen wall with doors, a big hearth with a fire glow and hanging lamps; 39 by 28 m and 12 m high.",
+   "synonyms": [
+    "inn",
+    "tavern",
+    "pub",
+    "alehouse",
+    "dining hall",
+    "hearth"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "shell": "C03",
+   "tags": [
+    "iamar city",
+    "interior",
+    "room"
+   ],
+   "parts": [
+    {
+     "models_id": "Interior_C03_FireplaceGlow",
+     "source_sha256": "be2cbc8fbc52a98ae95209bed3311e194ab9f5af58d6c427f5985b85f31d3da5",
+     "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_C03_FireplaceGlow.glb"
+    }
+   ],
+   "sha256": "50684b1c655132147072d1b3dcf6f1f648c48e0663760fb1bcc1c7cfd7869a29",
+   "bytes": 1707664,
+   "source_sha256": "0e13a7ed857109c338b7a7c5401f1ef56d332769be1654fe59865b2178bb454a",
+   "recentred_by": [
+    24.696,
+    -0.16,
+    -45.575
+   ],
+   "place_scale": 1.0,
+   "triangles": 9610,
+   "models_json_triangles": 9610,
+   "size": [
+    38.5,
+    12.42,
+    28.09
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_C03.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "Interior_DRAGON01",
+   "file": "interiors/interior_dragon01.glb",
+   "name": "small-dragon stable interior",
+   "category": "interior",
+   "description": "The inside of a small-dragon stable: rows of open wooden stalls with straw beds along the walls and blue lamps hanging from the high roof; 30 by 21 m and 10.5 m high.",
+   "synonyms": [
+    "dragon stable",
+    "dragon pen",
+    "stable",
+    "stalls",
+    "roost",
+    "lair"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "shell": "DRAGON01",
+   "tags": [
+    "iamar city",
+    "interior",
+    "room"
+   ],
+   "parts": [],
+   "sha256": "aac3dcdff34cd34fec2161d62975f7cf03091520b7b37633e366022343dc1707",
+   "bytes": 146408,
+   "source_sha256": "8ef8d1c3762909456fceafbe0246a8d1aacd9416397b5d59a708bee78d79f12c",
+   "recentred_by": [
+    -72.234,
+    0.318,
+    -5.92
+   ],
+   "place_scale": 1.0,
+   "triangles": 808,
+   "models_json_triangles": 808,
+   "size": [
+    29.59,
+    10.5,
+    20.67
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_DRAGON01.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "Interior_S01",
+   "file": "interiors/interior_s01.glb",
+   "name": "horse stable interior",
+   "category": "interior",
+   "description": "The inside of a horse stable: a row of wooden stalls with straw beds along two walls and lanterns hanging from the beams; 29 by 16 m.",
+   "synonyms": [
+    "stable",
+    "stables",
+    "horse barn",
+    "stalls",
+    "livery",
+    "barn"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "shell": "S01",
+   "tags": [
+    "iamar city",
+    "interior",
+    "room"
+   ],
+   "parts": [],
+   "sha256": "e2bcc240a370a38024bc09087983b9b9fb486c1e3ddb7279c9bd267374f7ab9e",
+   "bytes": 116224,
+   "source_sha256": "7cb4826a7fb9050c15f14ed3e74d12e4df9b3509f31173d72d42dc81a704522f",
+   "recentred_by": [
+    48.079,
+    0.244,
+    -171.552
+   ],
+   "place_scale": 1.0,
+   "triangles": 648,
+   "models_json_triangles": 648,
+   "size": [
+    29.12,
+    3.5,
+    15.78
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_S01.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  },
+  {
+   "models_id": "Interior_W01",
+   "file": "interiors/interior_w01.glb",
+   "name": "weapons hall interior",
+   "category": "interior",
+   "description": "The inside of a big weapons shop: a long timber ceiling grid, a wall of tall stone arches, wooden counters and weapon racks, a red rug and stone-arched doorways; 45 by 24 m.",
+   "synonyms": [
+    "weapons shop",
+    "armory",
+    "armoury",
+    "weaponsmith",
+    "arms hall",
+    "shop interior"
+   ],
+   "collision": "mesh",
+   "style": "iamar city",
+   "shell": "W01",
+   "tags": [
+    "iamar city",
+    "interior",
+    "room"
+   ],
+   "parts": [],
+   "sha256": "3e26d18fb1a523866aae29b6d8fb7e0b84c38e2a6489679f3c8a582d7c75c160",
+   "bytes": 856876,
+   "source_sha256": "4b307bb44ceb75bf175a90f790cd8a38d6811d03f58a8074769d95f9259bd7f1",
+   "recentred_by": [
+    32.754,
+    0.257,
+    26.973
+   ],
+   "place_scale": 1.0,
+   "triangles": 4810,
+   "models_json_triangles": 4810,
+   "size": [
+    44.92,
+    6.72,
+    24.14
+   ],
+   "skinned": false,
+   "animations": [],
+   "images": 0,
+   "physics_body": false,
+   "licence": "CC0-1.0",
+   "builder": "",
+   "builder_commit": "75f3268",
+   "cite": "the iamar-models mesh archive (not public) de6b2675 interiors/Interior_W01.glb (the iamar browser source (not public) 75f3268, plan sha256 029117bd4180...)"
+  }
+ ]
+}

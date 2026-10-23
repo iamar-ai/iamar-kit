@@ -1,0 +1,186 @@
+{
+  "schema": "iamar-style/1",
+  "id": "orbital_station",
+  "name": "Orbital station (example custom profile, Track B)",
+  "description": "A brand-new sci-fi look: brushed steel panels, matte white hull, teal status lights, amber warning stripes, a black sky with a bright planet. Written from a style bible, not from the iamar city; its only purpose in the kit is to be a third, strongly contrasting look the interview can show next to the city and the desert. Only the engineering budgets carry over.",
+  "palette": {
+    "hull_white": {
+      "hex": "#dfe3e6",
+      "pattern": "plaster"
+    },
+    "hull_grey": {
+      "hex": "#8b939a",
+      "pattern": "ashlar"
+    },
+    "steel": {
+      "hex": "#5d666e",
+      "pattern": "iron"
+    },
+    "deck": {
+      "hex": "#3b4249",
+      "pattern": "cobble"
+    },
+    "teal": {
+      "hex": "#27c2b4"
+    },
+    "amber": {
+      "hex": "#f0a020"
+    },
+    "signal_red": {
+      "hex": "#c8322e"
+    },
+    "panel_blue": {
+      "hex": "#2b4c7e",
+      "pattern": "plaster"
+    }
+  },
+  "regions": {
+    "habitat": {
+      "mood": "clean, bright, quiet corridors",
+      "wall": "#dfe3e6",
+      "timber": "#8b939a",
+      "trim": "#27c2b4",
+      "paints": [
+        "#27c2b4",
+        "#f0a020",
+        "#2b4c7e",
+        "#c8322e"
+      ],
+      "window_glow": "#9ff0e6",
+      "lamp": "#9ff0e6"
+    },
+    "docks": {
+      "mood": "industrial, warning stripes, cargo",
+      "wall": "#8b939a",
+      "timber": "#5d666e",
+      "trim": "#f0a020",
+      "ground_stone": "#3b4249",
+      "ground_stone_share": 1.0
+    }
+  },
+  "weathering": {
+    "roles": {
+      "wall": {
+        "saturation_scale": 0.7,
+        "value_scale": 1.0,
+        "hue_jitter": 0.02,
+        "saturation_jitter": 0.1,
+        "value_jitter": 0.08
+      },
+      "timber": {
+        "saturation_scale": 0.7,
+        "value_scale": 0.9,
+        "hue_jitter": 0.02,
+        "saturation_jitter": 0.1,
+        "value_jitter": 0.12
+      }
+    },
+    "neighbour_rule": "Scuffed edges, darker grime at seams; no two neighbouring modules share a panel tint or stripe colour."
+  },
+  "dimensions": {
+    "person_m": 1.8,
+    "door_m": [
+      2.0,
+      2.4
+    ],
+    "storey_m": 3.0,
+    "wall_thickness_m": 0.45,
+    "roof_height_fraction": [
+      0.0,
+      0.1
+    ],
+    "street_width_m": {
+      "alley": 2.5,
+      "souk_lane": 4,
+      "caravan_road": 9
+    }
+  },
+  "materials": {
+    "painter": "kit/tools/paint_materials.py",
+    "texels_per_metre": 256,
+    "tile_m": 4.0,
+    "layers": {
+      "hull_white": {
+        "layer": "plaster",
+        "tint": "#dfe3e6",
+        "use": "walls"
+      },
+      "hull_grey": {
+        "layer": "ashlar",
+        "tint": "#8b939a",
+        "use": "bulkheads"
+      },
+      "steel": {
+        "layer": "iron",
+        "tint": "#5d666e",
+        "use": "frames, doors"
+      },
+      "deck": {
+        "layer": "cobble",
+        "tint": "#3b4249",
+        "use": "floors"
+      }
+    }
+  },
+  "atmosphere": {
+    "presets": {
+      "station_day": {
+        "tested": false,
+        "environment": {
+          "sky": {
+            "type": "procedural",
+            "top_color": "#02030a",
+            "horizon_color": "#10203a",
+            "ground_color": "#05070c"
+          },
+          "time_of_day": 13.0,
+          "sun": {
+            "enabled": true,
+            "color": "#f4f8ff",
+            "energy": 1.6,
+            "shadows": true
+          },
+          "ambient": {
+            "color": "#4a5668",
+            "energy": 0.8,
+            "source": "color"
+          },
+          "fog": {
+            "enabled": true,
+            "color": "#10203a",
+            "density": 0.0018,
+            "sky_affect": 0.2
+          },
+          "exposure": 1.0
+        }
+      }
+    },
+    "rules": [
+      "Heat haze is a warm, light fog; keep shadows blue-violet so the sand does not go flat."
+    ]
+  },
+  "budgets": {
+    "triangles": {
+      "building": 2500,
+      "prop": 300,
+      "character": 12000,
+      "creature": 6000
+    }
+  },
+  "lint": {
+    "palette_max_delta_e": 20,
+    "min_albedo_value": 0.1,
+    "forbidden_colours": [
+      "#000000",
+      "#ff00ff"
+    ],
+    "forbidden_delta_e": 12,
+    "max_saturation": 0.8
+  },
+  "generators": {
+    "materials": {
+      "status": "available",
+      "command": "python3 kit/style/check_style.py --paint <world>/textures --profile <this file>"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+ "about": "tests/kit_playtest/explore: the exploration steps walk and swim the visitor for real (an internal task): to a crate, into the generated house, up its stair, into an upstairs bedroom, into the pool, a dive, back up, out at the spawn, and a look at the house.",
+ "steps": [
+  {"do": "walk_to", "object": "crate"},
+  {"do": "enter", "object": "house", "from": "spawn"},
+  {"do": "climb", "object": "house", "expect": [{"player_y": [2.9, 3.5]}]},
+  {"do": "enter", "room": "house/bedroom_4", "from": "spawn", "expect": [{"in_room": "house/bedroom_4"}]},
+  {"do": "swim_to", "water": "pool", "from": "spawn", "expect": [{"swimming": true}]},
+  {"do": "dive", "depth": 1.5, "expect": [{"head_under": true}, {"underwater": true}]},
+  {"do": "surface", "expect": [{"head_under": false}, {"swimming": true}]},
+  {"do": "walk_to", "spawn": true, "expect": [{"swimming": false}]},
+  {"do": "look_at", "object": "house"}
+ ]
+}

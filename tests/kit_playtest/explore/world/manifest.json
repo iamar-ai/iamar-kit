@@ -1,0 +1,32 @@
+{
+  "api_version": "0.4",
+  "author": {
+    "name": "kit-test"
+  },
+  "budgets": {
+    "audio_bytes": 16777216,
+    "lights": 16,
+    "objects": 400,
+    "package_bytes": 64000000,
+    "script_bytes": 4194304,
+    "texture_bytes": 67108864,
+    "texture_size": 2048,
+    "triangles": 150000
+  },
+  "description": "Playtest sample for exploration steps (an internal task): a two-floor generated house with its rooms sidecar, a swimmable pool, a portal and a crate.",
+  "features": [
+    "sky",
+    "terrain",
+    "water",
+    "objects",
+    "primitives",
+    "portals"
+  ],
+  "format": "iamar-world",
+  "format_version": 0,
+  "id": "pt-explore",
+  "name": "Playtest explore",
+  "scene": "scene.json",
+  "spawn": "spawn",
+  "version": "0.1.0"
+}

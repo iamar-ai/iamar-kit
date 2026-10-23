@@ -1,0 +1,66 @@
+{
+  "schema": "iamar-style/1",
+  "id": "desert_trading_post",
+  "name": "Desert trading post (example custom profile, Track B)",
+  "description": "A brand-new, non-medieval look: sun-baked adobe, palm-trunk beams, indigo and saffron cloth, a hot white sky. Written from a style bible, not from the iamar city; it shows what a Track B world's style.json holds. Only the engineering budgets carry over.",
+  "palette": {
+    "adobe":      {"hex": "#d6b48a", "pattern": "plaster"},
+    "adobe_dark": {"hex": "#a9835c", "pattern": "plaster"},
+    "sandstone":  {"hex": "#c99d6a", "pattern": "ashlar"},
+    "palm_wood":  {"hex": "#6b4a2e", "pattern": "timber"},
+    "indigo":     {"hex": "#2f3f78"},
+    "saffron":    {"hex": "#d9962c"},
+    "sand":       {"hex": "#e0c79a", "pattern": "cobble"},
+    "brass":      {"hex": "#a8843e", "pattern": "iron"}
+  },
+  "regions": {
+    "souk":   {"mood": "shaded, crowded, cloth awnings", "wall": "#d6b48a", "timber": "#6b4a2e", "trim": "#2f3f78", "paints": ["#2f3f78", "#d9962c", "#8a2f2a", "#2f6a5a"], "window_glow": "#ffb25e", "lamp": "#ffb25e"},
+    "caravanserai": {"mood": "open courtyard, cool well", "wall": "#e2c6a0", "timber": "#5e4128", "trim": "#c99d6a", "ground_stone": "#c99d6a", "ground_stone_share": 1.0}
+  },
+  "weathering": {
+    "roles": {
+      "wall":   {"saturation_scale": 0.7, "value_scale": 1.0, "hue_jitter": 0.02, "saturation_jitter": 0.1, "value_jitter": 0.08},
+      "timber": {"saturation_scale": 0.7, "value_scale": 0.9, "hue_jitter": 0.02, "saturation_jitter": 0.1, "value_jitter": 0.12}
+    },
+    "neighbour_rule": "Sun-bleached tops, sand-darkened bases; no two neighbouring houses share a wall tint or awning colour."
+  },
+  "dimensions": {
+    "person_m": 1.8,
+    "door_m": [2.0, 2.4],
+    "storey_m": 3.0,
+    "wall_thickness_m": 0.45,
+    "roof_height_fraction": [0.0, 0.1],
+    "street_width_m": {"alley": 2.5, "souk_lane": 4, "caravan_road": 9}
+  },
+  "materials": {
+    "painter": "kit/tools/paint_materials.py",
+    "texels_per_metre": 256,
+    "tile_m": 4.0,
+    "layers": {
+      "adobe":     {"layer": "plaster", "tint": "#d6b48a", "use": "walls"},
+      "sandstone": {"layer": "ashlar",  "tint": "#c99d6a", "use": "gates, well, courtyard"},
+      "palm_wood": {"layer": "timber",  "tint": "#6b4a2e", "use": "beams sticking out of the walls, doors"},
+      "sand":      {"layer": "cobble",  "tint": "#e0c79a", "use": "packed ground"},
+      "brass":     {"layer": "iron",    "tint": "#a8843e", "use": "lamps, trays"}
+    }
+  },
+  "atmosphere": {
+    "presets": {
+      "noon_heat": {
+        "tested": false,
+        "environment": {
+          "sky": {"type": "procedural", "top_color": "#4f86c8", "horizon_color": "#f2e6d0", "ground_color": "#b89a72"},
+          "time_of_day": 13.0,
+          "sun": {"enabled": true, "color": "#fff1d6", "energy": 1.6, "shadows": true},
+          "ambient": {"color": "#c8b8a0", "energy": 0.8, "source": "color"},
+          "fog": {"enabled": true, "color": "#e8dcc8", "density": 0.0018, "sky_affect": 0.2},
+          "exposure": 1.0
+        }
+      }
+    },
+    "rules": ["Heat haze is a warm, light fog; keep shadows blue-violet so the sand does not go flat."]
+  },
+  "budgets": {"triangles": {"building": 2500, "prop": 300, "character": 12000, "creature": 6000}},
+  "lint": {"palette_max_delta_e": 20, "min_albedo_value": 0.1, "forbidden_colours": ["#000000", "#ff00ff"], "forbidden_delta_e": 12, "max_saturation": 0.8},
+  "generators": {"materials": {"status": "available", "command": "python3 kit/style/check_style.py --paint <world>/textures --profile <this file>"}}
+}

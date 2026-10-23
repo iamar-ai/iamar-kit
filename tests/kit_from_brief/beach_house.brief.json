@@ -1,0 +1,26 @@
+{
+  "vision": "A large 3-bedroom beach house by the beach, water clear enough to swim in, fish visible in the water.",
+  "audience": {"access": "buddies", "concurrent": 6},
+  "type": "nature",
+  "extra_types": ["interior"],
+  "track": "A",
+  "style_profile": "iamar",
+  "mood": {"words": ["bright", "calm", "summery"], "time": "golden hour", "weather": "clear"},
+  "setup": {"blender": false, "gpu": false, "scripts_ok": false, "build_tier": 0},
+  "tier_target": "low",
+  "budgets": {"triangles": 150000, "texture_size": 1024, "texture_bytes": 67108864, "download_mb": 100},
+  "reuse": [],
+  "connections": {"portal_from_city": true, "name": "iamar://beach-house", "hosting": "own-computer"},
+  "layout": {"zones": [
+    {"kind": "house", "rooms": "bedroom:3,living,kitchen,bath:2", "style": "beach", "floors": "2"},
+    "beach", "sea", "garden"
+  ]},
+  "features": [],
+  "checkpoints": ["greybox", "scale check", "paint"],
+  "open_questions": [],
+  "answers": [
+    {"id": "A1", "value": "A large 3-bedroom beach house by the beach, water clear enough to swim in, fish visible in the water.", "source": "chosen"},
+    {"id": "A2", "value": "up to 6 at once", "source": "default", "shown": true}
+  ],
+  "approval": {"date": "2026-10-22", "user_words": "Yes, build it."}
+}

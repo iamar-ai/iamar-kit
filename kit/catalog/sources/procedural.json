@@ -1,0 +1,322 @@
+{
+  "format": "iamar-catalog-procedural",
+  "version": 1,
+  "note": "Objects a world gets without a file: creatures built by kind (scene.creatures) and the town's procedural buildings (iamar-world assets building). Read from the iamar browser source (not public) 98c2ecd2 (creatures; was 79512407): scripts/worlds/asset_library.gd CREATURES and scripts/kit/kit_buildings.gd KINDS. Triangles are null until measured (C2/C3).",
+  "creatures": [
+    {
+      "kind": "cow",
+      "category": "livestock",
+      "name": "cow",
+      "description": "A dairy cow: wanders slowly within its radius and grazes when idle.",
+      "synonyms": [
+        "cattle",
+        "dairy cow",
+        "bovine",
+        "farm animal"
+      ],
+      "behaviours": [
+        "wander",
+        "graze"
+      ]
+    },
+    {
+      "kind": "horse",
+      "category": "horse",
+      "name": "horse",
+      "description": "A horse: wanders within its radius and grazes when idle (not rideable in a package world).",
+      "synonyms": [
+        "pony",
+        "steed",
+        "mare",
+        "stallion",
+        "mount",
+        "farm animal"
+      ],
+      "behaviours": [
+        "wander",
+        "graze"
+      ]
+    },
+    {
+      "kind": "chicken",
+      "category": "bird",
+      "name": "chicken",
+      "description": "A hen: wanders within its radius and pecks when idle. A small farm animal and a bird.",
+      "synonyms": [
+        "hen",
+        "rooster",
+        "poultry",
+        "fowl",
+        "small animal",
+        "farm animal"
+      ],
+      "behaviours": [
+        "wander",
+        "peck"
+      ]
+    },
+    {
+      "kind": "bunny",
+      "category": "animal-small",
+      "name": "bunny",
+      "description": "A rabbit: hops about within its radius and nibbles when idle.",
+      "synonyms": [
+        "rabbit",
+        "hare",
+        "critter",
+        "wildlife"
+      ],
+      "behaviours": [
+        "wander",
+        "hop",
+        "nibble"
+      ]
+    },
+    {
+      "kind": "deer",
+      "category": "wildlife",
+      "name": "deer",
+      "description": "A red deer: wanders within its radius and grazes when idle; every second one is a buck with antlers. Flees from the player.",
+      "synonyms": [
+        "red deer",
+        "stag",
+        "buck",
+        "doe",
+        "hind",
+        "wildlife",
+        "forest animal"
+      ],
+      "behaviours": [
+        "wander",
+        "graze",
+        "flee"
+      ],
+      "triangles": {
+        "lod0": 4436,
+        "lod1": 1702
+      },
+      "placement": "At a forest edge or meadow with room to run: they flee up to 1.5x the wander_radius (at least radius + 8 m) from home."
+    },
+    {
+      "kind": "wolf",
+      "category": "wildlife",
+      "name": "wolf",
+      "description": "A grey wolf: prowls within its radius and sniffs the ground when idle. Flees from the player (not hostile in a package world).",
+      "synonyms": [
+        "grey wolf",
+        "gray wolf",
+        "canine",
+        "predator",
+        "wildlife",
+        "forest animal"
+      ],
+      "behaviours": [
+        "wander",
+        "sniff",
+        "flee"
+      ],
+      "triangles": {
+        "lod0": 6769,
+        "lod1": 2273
+      },
+      "placement": "In a forest or on a hillside with room to run: they flee up to 1.5x the wander_radius (at least radius + 8 m) from home."
+    },
+    {
+      "kind": "duck",
+      "category": "bird",
+      "name": "duck",
+      "description": "Mallards, drakes and hens in turn: float on the water at the entry's height, paddle about within the radius and dabble when idle.",
+      "synonyms": [
+        "mallard",
+        "drake",
+        "duck hen",
+        "waterfowl",
+        "pond bird",
+        "bird"
+      ],
+      "behaviours": [
+        "wander",
+        "float",
+        "dabble"
+      ],
+      "triangles": {
+        "lod0": 2584,
+        "lod1": 572
+      },
+      "placement": "On a pond or river: set position y to the water surface and keep the wander_radius inside the water."
+    },
+    {
+      "kind": "duckling",
+      "category": "bird",
+      "name": "duckling",
+      "description": "A mallard duckling: floats on the water at the entry's height and paddles about within the radius.",
+      "synonyms": [
+        "baby duck",
+        "chick",
+        "waterfowl",
+        "pond bird",
+        "bird"
+      ],
+      "behaviours": [
+        "wander",
+        "float"
+      ],
+      "triangles": {
+        "lod0": 614,
+        "lod1": 124
+      },
+      "placement": "On a pond or river: set position y to the water surface and keep the wander_radius inside the water."
+    },
+    {
+      "kind": "fish",
+      "category": "fish",
+      "name": "fish",
+      "description": "A pond fish: swims just below the water surface (the entry's height) within the radius, tail beating.",
+      "synonyms": [
+        "carp",
+        "trout",
+        "pond fish",
+        "river fish"
+      ],
+      "behaviours": [
+        "wander",
+        "swim"
+      ],
+      "triangles": {
+        "lod0": 904,
+        "lod1": 240
+      },
+      "placement": "On a pond or river: set position y to the water surface and keep the wander_radius inside the water."
+    },
+    {
+      "kind": "frog",
+      "category": "animal-small",
+      "name": "frog",
+      "description": "A green frog: hops about within its radius.",
+      "synonyms": [
+        "toad",
+        "amphibian",
+        "pond animal",
+        "critter",
+        "wildlife"
+      ],
+      "behaviours": [
+        "wander",
+        "hop"
+      ],
+      "triangles": {
+        "lod0": 604,
+        "lod1": 240
+      },
+      "placement": "At a pond edge or in damp grass."
+    },
+    {
+      "kind": "turtle",
+      "category": "animal-small",
+      "name": "turtle",
+      "description": "A pond turtle: crawls slowly within its radius.",
+      "synonyms": [
+        "tortoise",
+        "terrapin",
+        "reptile",
+        "pond animal",
+        "wildlife"
+      ],
+      "behaviours": [
+        "wander",
+        "crawl"
+      ],
+      "triangles": {
+        "lod0": 1534,
+        "lod1": 610
+      },
+      "placement": "At a pond edge, on mud or flat stones."
+    }
+  ],
+  "creature_cite": "the iamar browser source (not public) 98c2ecd2 scripts/worlds/asset_library.gd CREATURES, scripts/worlds/world_creatures.gd (deer and wolves flee from the player; ducks float on and fish swim just below the water at the entry's y; no petting, riding or combat in package worlds)",
+  "generators": [
+    {
+      "kind": "house",
+      "name": "town house",
+      "description": "Oakhaven's procedural town house with open doorways and a furnished, walkable interior; width, depth, floors and wall style (plaster, stone, brick) are parameters. Or plan a house from its rooms: iamar-world assets building house <out.glb> --rooms bedroom:3,living,kitchen,bath:2 [--floors 1|2] [--style beach|modern|plaster|stone] [--roof gable|flat].",
+      "synonyms": [
+        "house",
+        "home",
+        "cottage",
+        "dwelling",
+        "residence",
+        "cabin",
+        "hut",
+        "villa",
+        "bungalow",
+        "beach house"
+      ],
+      "options": "--width 5..16 --depth 4..12 --floors 1..3 --style plaster|stone|brick"
+    },
+    {
+      "kind": "inn",
+      "name": "inn",
+      "description": "Oakhaven's procedural inn, built by the town's own builder: open doorways, furnished walkable interior, the city's colours.",
+      "synonyms": [
+        "tavern",
+        "pub",
+        "alehouse",
+        "hostel"
+      ]
+    },
+    {
+      "kind": "chapel",
+      "name": "chapel",
+      "description": "Oakhaven's procedural chapel, built by the town's own builder: open doorway, furnished walkable interior, the city's colours.",
+      "synonyms": [
+        "church",
+        "shrine",
+        "temple"
+      ]
+    },
+    {
+      "kind": "blacksmith",
+      "name": "blacksmith",
+      "description": "Oakhaven's procedural blacksmith's workshop, built by the town's own builder: open doorways, furnished walkable interior.",
+      "synonyms": [
+        "smithy",
+        "forge",
+        "smith"
+      ]
+    },
+    {
+      "kind": "alchemist",
+      "name": "alchemist",
+      "description": "Oakhaven's procedural alchemist's shop, built by the town's own builder: open doorways, furnished walkable interior.",
+      "synonyms": [
+        "apothecary",
+        "potion shop",
+        "herbalist"
+      ]
+    },
+    {
+      "kind": "general_store",
+      "name": "general store",
+      "description": "Oakhaven's procedural general store, built by the town's own builder: open doorways, furnished walkable interior.",
+      "synonyms": [
+        "shop",
+        "store",
+        "market",
+        "merchant",
+        "trader"
+      ]
+    },
+    {
+      "kind": "stable",
+      "name": "stable",
+      "description": "Oakhaven's procedural stable, built by the town's own builder: open doorways, walkable interior.",
+      "synonyms": [
+        "barn",
+        "stables",
+        "horse barn"
+      ]
+    }
+  ],
+  "generator_cite": "the iamar browser source (not public) 79512407 scripts/kit/kit_buildings.gd KINDS (town builder scripts/world/buildings.gd; furniture props are Kenney CC0)",
+  "triangles_note": "triangles: the masterplan's painted creature (MpCreatures.triangles, the iamar browser source (not public) 98c2ecd2) per animal; lod0 close, lod1 the far parts drawn beyond 30 m; duck is the drake (the hen is 1358 / 444)."
+}
